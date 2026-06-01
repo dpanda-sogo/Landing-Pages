@@ -11,7 +11,7 @@ export default function StickyBar() {
   }, []);
 
   const scrollToForm = () => {
-    document.getElementById("heroForm")?.scrollIntoView({ behavior: "smooth" });
+    document.getElementById("finalCTA")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -42,24 +42,44 @@ export default function StickyBar() {
       <button
         onClick={scrollToForm}
         style={{
-          background: "var(--green)",
-          color: "#fff",
-          padding: "8px 20px",
-          borderRadius: 6,
-          fontSize: 14,
-          fontWeight: 600,
-          cursor: "pointer",
+          display: "inline-flex",
+          alignItems: "center",
+          gap: 10,
+          background: "#F5E100",
+          color: "#0a1a18",
+          fontWeight: 700,
+          borderRadius: 50,
+          padding: "8px 20px 8px 6px",
           border: "none",
+          cursor: "pointer",
+          fontSize: 14,
           fontFamily: "inherit",
           transition: "background 0.2s",
         }}
         onMouseEnter={(e) =>
-          ((e.target as HTMLButtonElement).style.background = "var(--green-dark)")
+          ((e.currentTarget as HTMLButtonElement).style.background = "#e6d400")
         }
         onMouseLeave={(e) =>
-          ((e.target as HTMLButtonElement).style.background = "var(--green)")
+          ((e.currentTarget as HTMLButtonElement).style.background = "#F5E100")
         }
       >
+        <span
+          style={{
+            width: 28,
+            height: 28,
+            borderRadius: "50%",
+            background: "#0a1a18",
+            color: "#F5E100",
+            flexShrink: 0,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            fontSize: 14,
+            fontWeight: 700,
+          }}
+        >
+          →
+        </span>
         Request a Demo
       </button>
     </div>

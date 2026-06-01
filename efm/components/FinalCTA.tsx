@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function FinalCTA() {
   return (
-    <section style={{ padding: "80px 0", textAlign: "center", background: "var(--bg-soft)" }}>
+    <section id="finalCTA" style={{ padding: "80px 0", textAlign: "center", background: "var(--bg-soft)" }}>
       <div style={{ maxWidth: 1160, margin: "0 auto", padding: "0 24px" }}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -53,21 +53,42 @@ export default function FinalCTA() {
               type="submit"
               style={{
                 width: "100%",
-                padding: 13,
-                background: "var(--green)",
-                color: "#fff",
-                border: "none",
-                borderRadius: 8,
-                fontSize: 15,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: 12,
+                background: "#F5E100",
+                color: "#0a1a18",
                 fontWeight: 700,
+                borderRadius: 50,
+                padding: "14px 28px 14px 8px",
+                border: "none",
                 cursor: "pointer",
+                fontSize: 15,
                 fontFamily: "inherit",
                 transition: "background 0.2s",
               }}
-              onMouseEnter={(e) => ((e.target as HTMLButtonElement).style.background = "var(--green-dark)")}
-              onMouseLeave={(e) => ((e.target as HTMLButtonElement).style.background = "var(--green)")}
+              onMouseEnter={(e) => ((e.currentTarget as HTMLButtonElement).style.background = "#e6d400")}
+              onMouseLeave={(e) => ((e.currentTarget as HTMLButtonElement).style.background = "#F5E100")}
             >
-              Request a Demo →
+              <span
+                style={{
+                  width: 36,
+                  height: 36,
+                  borderRadius: "50%",
+                  background: "#0a1a18",
+                  color: "#F5E100",
+                  flexShrink: 0,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  fontSize: 16,
+                  fontWeight: 700,
+                }}
+              >
+                →
+              </span>
+              Request a Demo
             </button>
             <p
               style={{
