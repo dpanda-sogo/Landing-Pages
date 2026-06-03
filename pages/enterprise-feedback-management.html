@@ -1,0 +1,1623 @@
+<!--
+================================================================
+  SOGOLYTICS — Enterprise Feedback Management
+  WordPress-Ready Landing Page
+
+  HOW TO USE:
+  1. WordPress Admin → Pages → Add New
+  2. Click ⋯ top right → "Code Editor"
+  3. Select all and paste this entire file
+  4. Set Template to "Blank" (install "Blank Slate" plugin if needed)
+  5. Publish
+
+  WHAT TO EDIT — search for these markers:
+  • LOGO 1–6        → replace <div class="logo-slot"> with <img> tags
+  • [TESTIMONIAL]   → replace quote placeholder
+  • [AUTHOR]        → replace name, title, company
+  • [CO. LOGO]      → replace company logo placeholder
+
+  BRAND COLORS:
+  • Green   #0D6E65
+  • Teal    #02BECC
+  • Yellow  #F5E100 (buttons)
+================================================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enterprise Feedback Management Platform | Sogolytics</title>
+  <meta name="description" content="Sogolytics Enterprise Feedback Management — One platform for CX, EX, and Research teams. SOC 2 Type II, HIPAA-ready, GDPR compliant. Trusted by 500+ organizations." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    /* ===================== RESET & BASE ===================== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Epilogue', sans-serif;
+      color: #1a1a1a;
+      background: #fff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    /* ===================== FADE-IN ===================== */
+    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    /* ===================== YELLOW CTA BUTTON ===================== */
+    .btn-yellow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #F5E100;
+      color: #0a1a18;
+      font-family: 'Epilogue', sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+      border: none;
+      border-radius: 50px;
+      padding: 8px 24px 8px 8px;
+      cursor: pointer;
+      transition: background 0.2s ease;
+      white-space: nowrap;
+    }
+    .btn-yellow:hover { background: #e6d400; }
+    .btn-yellow .btn-circle {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #0a1a18;
+      color: #F5E100;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    /* ===================== STICKY NAV ===================== */
+    #stickyNav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #fff;
+      border-bottom: 1px solid #e2e6ea;
+      z-index: 1000;
+      transform: translateY(-100%);
+      transition: transform 0.35s ease;
+      padding: 12px 0;
+    }
+    #stickyNav.visible { transform: translateY(0); }
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo img { height: 28px; width: auto; }
+
+    /* ===================== HERO ===================== */
+    .hero {
+      background: linear-gradient(135deg, #061a17 0%, #0a2e29 60%, #0d3d37 100%);
+      padding: 100px 0 80px;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #fff;
+      color: #1a1a1a;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 50px;
+      margin-bottom: 24px;
+    }
+    .eyebrow-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #0D6E65;
+      flex-shrink: 0;
+    }
+    .hero h1 {
+      font-size: clamp(32px, 4vw, 52px);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+    .hero h1 .teal { color: #02BECC; }
+    .hero-subtitle {
+      font-size: 17px;
+      color: rgba(255,255,255,0.88);
+      margin-bottom: 36px;
+      line-height: 1.7;
+    }
+    .hero-trust {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 28px;
+      align-items: center;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: rgba(255,255,255,0.85);
+      font-size: 13px;
+      font-weight: 500;
+    }
+    .trust-item svg { flex-shrink: 0; }
+
+    /* Hero right column */
+    .hero-visual { position: relative; }
+    .hero-img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      border-radius: 16px;
+      display: block;
+    }
+    .hero-card {
+      position: absolute;
+      bottom: -20px;
+      left: -20px;
+      background: #fff;
+      border-radius: 14px;
+      padding: 20px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+      width: 260px;
+    }
+    .hero-card-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: #5a6472;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 14px;
+    }
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+    .hero-stat { text-align: center; }
+    .hero-stat-val {
+      font-size: 18px;
+      font-weight: 800;
+      color: #0D6E65;
+      display: block;
+    }
+    .hero-stat-lbl {
+      font-size: 10px;
+      color: #5a6472;
+      line-height: 1.3;
+    }
+    .nps-bars { display: flex; flex-direction: column; gap: 6px; }
+    .nps-bar-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+    }
+    .nps-bar-label { width: 72px; color: #5a6472; }
+    .nps-bar-track {
+      flex: 1;
+      height: 6px;
+      background: #f0f0f0;
+      border-radius: 3px;
+      overflow: hidden;
+    }
+    .nps-bar-fill { height: 100%; border-radius: 3px; }
+    .nps-bar-pct { width: 28px; text-align: right; color: #1a1a1a; font-weight: 600; }
+
+    /* ===================== LOGO BAR ===================== */
+    .logo-bar {
+      background: #fff;
+      border-top: 1px solid #e2e6ea;
+      border-bottom: 1px solid #e2e6ea;
+      padding: 48px 0;
+    }
+    .logo-bar-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      text-align: center;
+    }
+    .logo-bar-label {
+      font-size: 13px;
+      color: #5a6472;
+      font-weight: 500;
+      margin-bottom: 32px;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .logo-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+    }
+    .logo-slot {
+      width: 160px;
+      height: 64px;
+      border: 2px dashed #e2e6ea;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      color: #8a94a0;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    /* ===================== STAT ROW ===================== */
+    .stat-row {
+      background: #0D6E65;
+      padding: 60px 0;
+    }
+    .stat-row-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      text-align: center;
+    }
+    .stat-item-num {
+      font-size: 52px;
+      font-weight: 900;
+      color: #fff;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .stat-item-label {
+      font-size: 16px;
+      color: rgba(255,255,255,0.78);
+      font-weight: 500;
+    }
+
+    /* ===================== FEATURES GRID ===================== */
+    .features {
+      background: #f7f9fc;
+      padding: 96px 0;
+    }
+    .section-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .section-label {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #0D6E65;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+    .section-h2 {
+      font-size: clamp(28px, 3vw, 42px);
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+    .section-subtitle {
+      font-size: 17px;
+      color: #5a6472;
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 56px;
+      line-height: 1.7;
+    }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .feature-card {
+      background: #fff;
+      border: 1px solid #e2e6ea;
+      border-radius: 16px;
+      padding: 32px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(13,110,101,0.12);
+    }
+    .feature-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
+      background: #e8f4f3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .feature-icon svg { width: 26px; height: 26px; }
+    .feature-title {
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #1a1a1a;
+    }
+    .feature-desc { font-size: 14px; color: #5a6472; line-height: 1.6; }
+
+    /* ===================== ALTERNATING ROWS ===================== */
+    .alt-section { background: #fff; padding: 96px 0; }
+    .alt-row {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+      margin-bottom: 96px;
+    }
+    .alt-row:last-child { margin-bottom: 0; }
+    .alt-row.reverse { }
+    .alt-text-label {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #0D6E65;
+      margin-bottom: 12px;
+    }
+    .alt-text h3 {
+      font-size: clamp(24px, 2.5vw, 34px);
+      font-weight: 800;
+      margin-bottom: 16px;
+      line-height: 1.25;
+    }
+    .alt-text p { font-size: 15px; color: #5a6472; line-height: 1.7; margin-bottom: 24px; }
+    .checklist { display: flex; flex-direction: column; gap: 12px; }
+    .check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      color: #1a1a1a;
+    }
+    .check-item .check-icon {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #e8f4f3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .check-item .check-icon svg { width: 12px; height: 12px; }
+
+    /* Mock Dashboard UI */
+    .mock-ui {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+      border: 1px solid #e2e6ea;
+    }
+    .mock-topbar {
+      background: #0D6E65;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .mock-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.3);
+    }
+    .mock-title {
+      font-size: 12px;
+      color: #fff;
+      font-weight: 600;
+      margin-left: 4px;
+    }
+    .mock-body { background: #fff; padding: 20px; }
+    .mock-stats-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .mock-stat-box {
+      background: #f7f9fc;
+      border-radius: 10px;
+      padding: 14px;
+      text-align: center;
+    }
+    .mock-stat-box .val {
+      font-size: 22px;
+      font-weight: 800;
+      color: #0D6E65;
+      display: block;
+    }
+    .mock-stat-box .lbl { font-size: 10px; color: #8a94a0; }
+    .mock-chart { display: flex; flex-direction: column; gap: 8px; }
+    .mock-chart-row { display: flex; align-items: center; gap: 10px; }
+    .mock-chart-lbl { font-size: 11px; color: #5a6472; width: 80px; flex-shrink: 0; }
+    .mock-chart-bar-wrap { flex: 1; height: 8px; background: #f0f0f0; border-radius: 4px; overflow: hidden; }
+    .mock-chart-bar { height: 100%; border-radius: 4px; }
+    .mock-chart-val { font-size: 11px; font-weight: 700; color: #1a1a1a; width: 32px; text-align: right; }
+
+    /* Sentiment UI */
+    .mock-sentiment-body { background: #fff; padding: 20px; }
+    .sentiment-score-row {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .sentiment-badge {
+      flex: 1;
+      border-radius: 10px;
+      padding: 12px;
+      text-align: center;
+    }
+    .sentiment-badge .s-val {
+      font-size: 20px;
+      font-weight: 800;
+      display: block;
+    }
+    .sentiment-badge .s-lbl { font-size: 10px; }
+    .s-positive { background: #e8f4f3; color: #0D6E65; }
+    .s-neutral { background: #fff8e0; color: #b8860b; }
+    .s-negative { background: #fde8e8; color: #c0392b; }
+    .sentiment-phrases { display: flex; flex-direction: column; gap: 8px; }
+    .sentiment-phrase {
+      background: #f7f9fc;
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 12px;
+      color: #5a6472;
+      border-left: 3px solid #02BECC;
+    }
+
+    /* Security badges */
+    .security-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+    .security-badges img {
+      height: 60px;
+      width: auto;
+      border-radius: 8px;
+    }
+
+    /* Access control UI */
+    .mock-access-body { background: #fff; padding: 20px; }
+    .access-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px solid #f0f0f0;
+      font-size: 12px;
+    }
+    .access-row:last-child { border-bottom: none; }
+    .access-user { display: flex; align-items: center; gap: 8px; }
+    .access-avatar {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 700;
+      color: #fff;
+    }
+    .access-name { font-weight: 600; color: #1a1a1a; }
+    .access-role-badge {
+      font-size: 10px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 50px;
+    }
+    .role-admin { background: #e8f4f3; color: #0D6E65; }
+    .role-viewer { background: #f0f4ff; color: #3b5bdb; }
+    .role-editor { background: #fff3e0; color: #e65100; }
+
+    /* ===================== USE CASES ===================== */
+    .use-cases { background: #f7f9fc; padding: 96px 0; }
+    .usecase-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 56px;
+    }
+    .usecase-card {
+      background: #fff;
+      border: 1px solid #e2e6ea;
+      border-radius: 16px;
+      padding: 36px;
+    }
+    .usecase-num {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #0D6E65;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .usecase-card h4 { font-size: 19px; font-weight: 700; margin-bottom: 10px; }
+    .usecase-card p { font-size: 14px; color: #5a6472; line-height: 1.6; }
+
+    /* ===================== TESTIMONIAL ===================== */
+    .testimonial {
+      background: #0D6E65;
+      padding: 96px 24px;
+      text-align: center;
+    }
+    .testimonial-inner { max-width: 760px; margin: 0 auto; }
+    .testimonial-quote-mark {
+      font-size: 80px;
+      line-height: 0.7;
+      color: rgba(255,255,255,0.25);
+      font-weight: 900;
+      margin-bottom: 24px;
+    }
+    .testimonial-text {
+      font-size: clamp(18px, 2vw, 24px);
+      color: #fff;
+      font-weight: 500;
+      line-height: 1.6;
+      margin-bottom: 36px;
+      font-style: italic;
+    }
+    .testimonial-author { display: flex; align-items: center; justify-content: center; gap: 16px; }
+    .author-avatar {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      color: #fff;
+      font-weight: 700;
+    }
+    .author-info { text-align: left; }
+    .author-name { font-size: 15px; font-weight: 700; color: #fff; }
+    .author-title { font-size: 13px; color: rgba(255,255,255,0.7); }
+    .co-logo-placeholder {
+      width: 120px;
+      height: 40px;
+      border: 1px dashed rgba(255,255,255,0.3);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      color: rgba(255,255,255,0.5);
+      margin-top: 12px;
+    }
+
+    /* ===================== FAQ ===================== */
+    .faq { background: #fff; padding: 96px 0; }
+    .faq-list { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 0; }
+    .faq-item {
+      border-bottom: 1px solid #e2e6ea;
+    }
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      text-align: left;
+      padding: 22px 4px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      cursor: pointer;
+      font-family: 'Epilogue', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: #1a1a1a;
+      transition: color 0.2s;
+    }
+    .faq-question:hover { color: #0D6E65; }
+    .faq-chevron {
+      flex-shrink: 0;
+      transition: transform 0.3s ease;
+    }
+    .faq-item.open .faq-chevron { transform: rotate(180deg); }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease;
+    }
+    .faq-answer-inner {
+      padding: 0 4px 22px;
+      font-size: 14px;
+      color: #5a6472;
+      line-height: 1.7;
+    }
+
+    /* ===================== FINAL CTA ===================== */
+    .final-cta {
+      background: #f7f9fc;
+      padding: 96px 0;
+    }
+    .cta-inner {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 0 24px;
+      text-align: center;
+    }
+    .cta-inner h2 {
+      font-size: clamp(28px, 3vw, 40px);
+      font-weight: 800;
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+    .cta-inner .cta-sub {
+      font-size: 16px;
+      color: #5a6472;
+      margin-bottom: 40px;
+    }
+    .demo-form {
+      background: #fff;
+      border: 1px solid #e2e6ea;
+      border-radius: 20px;
+      padding: 40px;
+      text-align: left;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+    .form-group label { font-size: 13px; font-weight: 600; color: #1a1a1a; }
+    .form-group input,
+    .form-group select {
+      font-family: 'Epilogue', sans-serif;
+      font-size: 14px;
+      color: #1a1a1a;
+      background: #f7f9fc;
+      border: 1px solid #e2e6ea;
+      border-radius: 10px;
+      padding: 12px 14px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .form-group input:focus,
+    .form-group select:focus { border-color: #0D6E65; background: #fff; }
+    .form-full { margin-bottom: 16px; }
+    .form-submit-row { text-align: center; margin-top: 8px; }
+    .btn-yellow-lg {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #F5E100;
+      color: #0a1a18;
+      font-family: 'Epilogue', sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      border: none;
+      border-radius: 50px;
+      padding: 8px 28px 8px 8px;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .btn-yellow-lg:hover { background: #e6d400; }
+    .btn-yellow-lg .btn-circle {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #0a1a18;
+      color: #F5E100;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+    .form-note {
+      text-align: center;
+      font-size: 12px;
+      color: #8a94a0;
+      margin-top: 16px;
+    }
+
+    /* ===================== FOOTER ===================== */
+    .footer {
+      background: #0a2c28;
+      padding: 40px 24px;
+    }
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 24px;
+      justify-content: center;
+    }
+    .footer-links a {
+      font-size: 13px;
+      color: rgba(255,255,255,0.65);
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: #fff; }
+    .footer-copy { font-size: 13px; color: rgba(255,255,255,0.4); }
+
+    /* ===================== RESPONSIVE ===================== */
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+      .hero { padding: 80px 0 60px; min-height: auto; }
+      .hero-img { height: 340px; }
+      .hero-card { bottom: 10px; left: 10px; width: 220px; }
+      .feature-grid { grid-template-columns: repeat(2, 1fr); }
+      .alt-row { grid-template-columns: 1fr; gap: 40px; }
+      .alt-row.reverse .alt-text { order: -1; }
+      .stat-row-inner { grid-template-columns: repeat(3, 1fr); }
+      .usecase-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .feature-grid { grid-template-columns: 1fr; }
+      .stat-row-inner { grid-template-columns: 1fr; gap: 32px; }
+      .form-row { grid-template-columns: 1fr; }
+      .hero-trust { gap: 10px; }
+      .logo-grid { gap: 10px; }
+      .logo-slot { width: 130px; height: 54px; }
+      .demo-form { padding: 24px; }
+      .hero-card { position: static; width: 100%; margin-top: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===================== STICKY NAV ===================== -->
+<nav id="stickyNav" aria-label="Site navigation">
+  <div class="nav-inner">
+    <a href="https://www.sogolytics.com" class="nav-logo">
+      <img src="https://cdn.sogolytics.com/wp-content/uploads/2022/07/sogolytics-wbg.png" alt="Sogolytics" height="28" />
+    </a>
+    <button class="btn-yellow js-scroll-cta" aria-label="Request a Demo">
+      <span class="btn-circle" aria-hidden="true">→</span>
+      Request a Demo
+    </button>
+  </div>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" aria-labelledby="heroHeading">
+  <div class="hero-inner">
+    <!-- Left: text -->
+    <div class="hero-text fade-in">
+      <div class="hero-eyebrow">
+        <span class="eyebrow-dot" aria-hidden="true"></span>
+        For CX, EX &amp; Research Teams
+      </div>
+      <h1 id="heroHeading">
+        One Platform for <span class="teal">Every Feedback Signal</span> Across Your Enterprise
+      </h1>
+      <p class="hero-subtitle">
+        Sogolytics brings customer experience, employee engagement, and market research onto a single secure platform — so your teams spend less time wrangling data and more time acting on it.
+      </p>
+      <button class="btn-yellow js-scroll-cta" style="font-size:16px; padding:8px 28px 8px 8px;" aria-label="Request a Demo">
+        <span class="btn-circle" aria-hidden="true">→</span>
+        Request a Demo
+      </button>
+      <div class="hero-trust" role="list" aria-label="Trust indicators">
+        <div class="trust-item" role="listitem">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <circle cx="8" cy="8" r="8" fill="#02BECC"/>
+            <path d="M5 8l2 2 4-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          SOC 2 Type II
+        </div>
+        <div class="trust-item" role="listitem">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <circle cx="8" cy="8" r="8" fill="#02BECC"/>
+            <path d="M5 8l2 2 4-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          HIPAA-ready
+        </div>
+        <div class="trust-item" role="listitem">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <circle cx="8" cy="8" r="8" fill="#02BECC"/>
+            <path d="M5 8l2 2 4-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          GDPR
+        </div>
+        <div class="trust-item" role="listitem">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <circle cx="8" cy="8" r="8" fill="#02BECC"/>
+            <path d="M5 8l2 2 4-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          500+ Organizations
+        </div>
+      </div>
+    </div>
+    <!-- Right: visual -->
+    <div class="hero-visual fade-in" style="transition-delay:0.15s">
+      <img
+        class="hero-img"
+        src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=700&q=80"
+        alt="Enterprise feedback management platform in use"
+        width="700"
+        height="500"
+      />
+      <!-- Floating NPS Dashboard Card -->
+      <div class="hero-card" aria-label="Live NPS Dashboard preview">
+        <div class="hero-card-title">Live NPS Dashboard</div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="hero-stat-val">+47</span>
+            <span class="hero-stat-lbl">NPS Score</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-val">82%</span>
+            <span class="hero-stat-lbl">Response Rate</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-val" style="color:#02BECC;">↑8</span>
+            <span class="hero-stat-lbl">vs Last Qtr</span>
+          </div>
+        </div>
+        <div class="nps-bars" aria-label="NPS breakdown">
+          <div class="nps-bar-row">
+            <span class="nps-bar-label">Promoters</span>
+            <div class="nps-bar-track"><div class="nps-bar-fill" style="width:74%;background:#0D6E65;"></div></div>
+            <span class="nps-bar-pct">74%</span>
+          </div>
+          <div class="nps-bar-row">
+            <span class="nps-bar-label">Passives</span>
+            <div class="nps-bar-track"><div class="nps-bar-fill" style="width:18%;background:#f5a623;"></div></div>
+            <span class="nps-bar-pct">18%</span>
+          </div>
+          <div class="nps-bar-row">
+            <span class="nps-bar-label">Detractors</span>
+            <div class="nps-bar-track"><div class="nps-bar-fill" style="width:8%;background:#e74c3c;"></div></div>
+            <span class="nps-bar-pct">8%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== LOGO BAR ===================== -->
+<section class="logo-bar fade-in" aria-label="Client logos">
+  <div class="logo-bar-inner">
+    <p class="logo-bar-label">Enterprise and mid-market teams trust Sogolytics for mission-critical feedback</p>
+    <div class="logo-grid">
+      <!-- DEVELOPER: Replace with client logo <img> tag -->
+      <div class="logo-slot">LOGO 1</div>
+      <!-- DEVELOPER: Replace with client logo <img> tag -->
+      <div class="logo-slot">LOGO 2</div>
+      <!-- DEVELOPER: Replace with client logo <img> tag -->
+      <div class="logo-slot">LOGO 3</div>
+      <!-- DEVELOPER: Replace with client logo <img> tag -->
+      <div class="logo-slot">LOGO 4</div>
+      <!-- DEVELOPER: Replace with client logo <img> tag -->
+      <div class="logo-slot">LOGO 5</div>
+      <!-- DEVELOPER: Replace with client logo <img> tag -->
+      <div class="logo-slot">LOGO 6</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== STAT ROW ===================== -->
+<section class="stat-row" aria-label="Key statistics">
+  <div class="stat-row-inner">
+    <div class="fade-in">
+      <div class="stat-item-num">500+</div>
+      <div class="stat-item-label">Organizations worldwide</div>
+    </div>
+    <div class="fade-in" style="transition-delay:0.1s">
+      <div class="stat-item-num">96</div>
+      <div class="stat-item-label">Countries served</div>
+    </div>
+    <div class="fade-in" style="transition-delay:0.2s">
+      <div class="stat-item-num">10M+</div>
+      <div class="stat-item-label">Survey responses processed</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FEATURES GRID ===================== -->
+<section class="features" aria-labelledby="featuresHeading">
+  <div class="section-inner">
+    <div class="section-label">Platform Capabilities</div>
+    <h2 class="section-h2" id="featuresHeading">Everything Enterprise Feedback Requires</h2>
+    <p class="section-subtitle">Built for organizations that can't afford gaps in their feedback infrastructure.</p>
+    <div class="feature-grid">
+
+      <!-- Card 1 -->
+      <article class="feature-card fade-in">
+        <div class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="5" width="22" height="16" rx="3" stroke="#0D6E65" stroke-width="2"/>
+            <path d="M8 5V3M18 5V3" stroke="#0D6E65" stroke-width="2" stroke-linecap="round"/>
+            <path d="M2 10h22" stroke="#0D6E65" stroke-width="2"/>
+            <circle cx="9" cy="16" r="1.5" fill="#0D6E65"/>
+            <circle cx="13" cy="16" r="1.5" fill="#0D6E65"/>
+            <circle cx="17" cy="16" r="1.5" fill="#0D6E65"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Every feedback channel in one place</h3>
+        <p class="feature-desc">Email, SMS, web intercept, QR code, kiosk, and API — collect feedback wherever your customers and employees are, all feeding one unified platform.</p>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="feature-card fade-in" style="transition-delay:0.1s">
+        <div class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 3L5 7v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V7l-8-4z" stroke="#0D6E65" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M10 13l2 2 4-4" stroke="#0D6E65" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Security your IT team won't push back on</h3>
+        <p class="feature-desc">SOC 2 Type II certified, HIPAA-ready, GDPR compliant, and ISO 27001 aligned. Single sign-on, role-based access, and data residency options included.</p>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="feature-card fade-in" style="transition-delay:0.2s">
+        <div class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 20l5-7 4 3 4-5 5 4" stroke="#0D6E65" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="21" cy="7" r="2" fill="#0D6E65"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Insights that don't require a data team</h3>
+        <p class="feature-desc">Pre-built dashboards, AI-powered sentiment analysis, and automated reports deliver actionable intelligence straight to decision makers — no SQL required.</p>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="feature-card fade-in">
+        <div class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="3" y="3" width="9" height="9" rx="2" stroke="#0D6E65" stroke-width="2"/>
+            <rect x="14" y="3" width="9" height="9" rx="2" stroke="#0D6E65" stroke-width="2"/>
+            <rect x="3" y="14" width="9" height="9" rx="2" stroke="#0D6E65" stroke-width="2"/>
+            <rect x="14" y="14" width="9" height="9" rx="2" stroke="#0D6E65" stroke-width="2"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">50+ integrations out of the box</h3>
+        <p class="feature-desc">Connect to Salesforce, HubSpot, Slack, Microsoft Teams, ServiceNow, Workday, and more. Robust API and webhooks for custom workflows.</p>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="feature-card fade-in" style="transition-delay:0.1s">
+        <div class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="13" cy="13" r="10" stroke="#0D6E65" stroke-width="2"/>
+            <path d="M13 8v5l3 3" stroke="#0D6E65" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">White-label and full brand control</h3>
+        <p class="feature-desc">Custom domains, brand colors, fonts, and logos throughout every survey and report. Your respondents see your brand — not ours.</p>
+      </article>
+
+      <!-- Card 6 -->
+      <article class="feature-card fade-in" style="transition-delay:0.2s">
+        <div class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="13" cy="9" r="4" stroke="#0D6E65" stroke-width="2"/>
+            <path d="M5 22c0-4 3.6-7 8-7s8 3 8 7" stroke="#0D6E65" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Dedicated success team, not a ticket queue</h3>
+        <p class="feature-desc">Every enterprise account gets a named Customer Success Manager, onboarding support, and direct access to our implementation team from day one.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ALTERNATING FEATURE ROWS ===================== -->
+<section class="alt-section" aria-label="Feature details">
+
+  <!-- Row 1: Dashboard left, Text right -->
+  <div class="alt-row fade-in">
+    <!-- Mock Dashboard UI -->
+    <div class="mock-ui" aria-label="Unified dashboard preview" role="img">
+      <div class="mock-topbar">
+        <div class="mock-dot"></div>
+        <div class="mock-dot"></div>
+        <span class="mock-title">Sogolytics — Unified Feedback Hub</span>
+      </div>
+      <div class="mock-body">
+        <div class="mock-stats-row">
+          <div class="mock-stat-box">
+            <span class="val">+47</span>
+            <span class="lbl">NPS Score</span>
+          </div>
+          <div class="mock-stat-box">
+            <span class="val">82%</span>
+            <span class="lbl">Response Rate</span>
+          </div>
+          <div class="mock-stat-box">
+            <span class="val" style="color:#02BECC;">4.6</span>
+            <span class="lbl">Avg CSAT</span>
+          </div>
+        </div>
+        <div class="mock-chart">
+          <div class="mock-chart-row">
+            <span class="mock-chart-lbl">CX Surveys</span>
+            <div class="mock-chart-bar-wrap"><div class="mock-chart-bar" style="width:82%;background:#0D6E65;"></div></div>
+            <span class="mock-chart-val">82%</span>
+          </div>
+          <div class="mock-chart-row">
+            <span class="mock-chart-lbl">EX Pulse</span>
+            <div class="mock-chart-bar-wrap"><div class="mock-chart-bar" style="width:68%;background:#02BECC;"></div></div>
+            <span class="mock-chart-val">68%</span>
+          </div>
+          <div class="mock-chart-row">
+            <span class="mock-chart-lbl">Research</span>
+            <div class="mock-chart-bar-wrap"><div class="mock-chart-bar" style="width:55%;background:#F5E100;"></div></div>
+            <span class="mock-chart-val">55%</span>
+          </div>
+          <div class="mock-chart-row">
+            <span class="mock-chart-lbl">Product</span>
+            <div class="mock-chart-bar-wrap"><div class="mock-chart-bar" style="width:74%;background:#0a5a52;"></div></div>
+            <span class="mock-chart-val">74%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Text -->
+    <div class="alt-text">
+      <div class="alt-text-label">Unified Intelligence</div>
+      <h3>Stop managing five dashboards. Start managing one.</h3>
+      <p>When CX, EX, and research data live in separate tools, insights fall through the cracks. Sogolytics unifies every signal so leaders see the full picture — and act faster.</p>
+      <ul class="checklist" aria-label="Benefits">
+        <li class="check-item">
+          <span class="check-icon" aria-hidden="true">
+            <svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#0D6E65" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          Cross-program reporting in a single view
+        </li>
+        <li class="check-item">
+          <span class="check-icon" aria-hidden="true">
+            <svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#0D6E65" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          Automated alerts when scores drop below threshold
+        </li>
+        <li class="check-item">
+          <span class="check-icon" aria-hidden="true">
+            <svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#0D6E65" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          Executive-ready reports with one click
+        </li>
+        <li class="check-item">
+          <span class="check-icon" aria-hidden="true">
+            <svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#0D6E65" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          Segment by team, region, product, or persona
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Row 2: Text left, Sentiment UI right -->
+  <div class="alt-row reverse fade-in">
+    <!-- Text -->
+    <div class="alt-text">
+      <div class="alt-text-label">AI-Powered Analysis</div>
+      <h3>Know what your customers mean, not just what they said.</h3>
+      <p>Sogolytics AI reads every open-ended response and surfaces themes, emotions, and urgency — turning thousands of comments into clear priorities your team can act on immediately.</p>
+      <ul class="checklist" aria-label="AI capabilities">
+        <li class="check-item">
+          <span class="check-icon" aria-hidden="true">
+            <svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#0D6E65" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          Multi-language sentiment analysis
+        </li>
+        <li class="check-item">
+          <span class="check-icon" aria-hidden="true">
+            <svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#0D6E65" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          Auto-tagging by topic and intent
+        </li>
+        <li class="check-item">
+          <span class="check-icon" aria-hidden="true">
+            <svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#0D6E65" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          Trend detection across time periods
+        </li>
+        <li class="check-item">
+          <span class="check-icon" aria-hidden="true">
+            <svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#0D6E65" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          AI-generated action recommendations
+        </li>
+      </ul>
+    </div>
+    <!-- Sentiment Mock UI -->
+    <div class="mock-ui" aria-label="Sentiment analysis preview" role="img">
+      <div class="mock-topbar">
+        <div class="mock-dot"></div>
+        <div class="mock-dot"></div>
+        <span class="mock-title">AI Sentiment Analysis</span>
+      </div>
+      <div class="mock-sentiment-body">
+        <div class="sentiment-score-row">
+          <div class="sentiment-badge s-positive">
+            <span class="s-val">72%</span>
+            <span class="s-lbl">Positive</span>
+          </div>
+          <div class="sentiment-badge s-neutral">
+            <span class="s-val">19%</span>
+            <span class="s-lbl">Neutral</span>
+          </div>
+          <div class="sentiment-badge s-negative">
+            <span class="s-val">9%</span>
+            <span class="s-lbl">Negative</span>
+          </div>
+        </div>
+        <div class="sentiment-phrases">
+          <div class="sentiment-phrase">"The onboarding experience was smooth and the team was very responsive."</div>
+          <div class="sentiment-phrase">"Dashboard is powerful — took a bit to learn but worth it."</div>
+          <div class="sentiment-phrase">"Would love faster report export. Otherwise excellent platform."</div>
+          <div class="sentiment-phrase">"Support team answered within the hour. Impressed."</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Row 3: Security text left, Access control UI right -->
+  <div class="alt-row fade-in">
+    <!-- Text -->
+    <div class="alt-text">
+      <div class="alt-text-label">Enterprise Security</div>
+      <h3>Security certifications that satisfy even the strictest procurement teams.</h3>
+      <p>Sogolytics is built security-first. We hold the certifications your legal and IT teams require — not as an afterthought, but as a core part of our platform architecture.</p>
+      <ul class="checklist" aria-label="Security features">
+        <li class="check-item">
+          <span class="check-icon" aria-hidden="true">
+            <svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#0D6E65" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          SOC 2 Type II audited annually
+        </li>
+        <li class="check-item">
+          <span class="check-icon" aria-hidden="true">
+            <svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#0D6E65" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          HIPAA BAA available for healthcare orgs
+        </li>
+        <li class="check-item">
+          <span class="check-icon" aria-hidden="true">
+            <svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#0D6E65" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          GDPR & CCPA compliant data handling
+        </li>
+        <li class="check-item">
+          <span class="check-icon" aria-hidden="true">
+            <svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#0D6E65" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          SSO / SAML 2.0 and data residency options
+        </li>
+      </ul>
+      <div class="security-badges" aria-label="Security certification badges">
+        <img src="https://cdn.sogolytics.com/wp-content/uploads/2024/08/soc2-badge.png" alt="SOC 2 Type II Certified" height="60" onerror="this.style.display='none'" />
+        <img src="https://cdn.sogolytics.com/wp-content/uploads/2024/08/hipaa-badge.png" alt="HIPAA Compliant" height="60" onerror="this.style.display='none'" />
+        <img src="https://cdn.sogolytics.com/wp-content/uploads/2024/08/gdpr-badge.png" alt="GDPR Compliant" height="60" onerror="this.style.display='none'" />
+        <img src="https://cdn.sogolytics.com/wp-content/uploads/2024/08/iso-badge.png" alt="ISO 27001" height="60" onerror="this.style.display='none'" />
+      </div>
+    </div>
+    <!-- Access Control Mock UI -->
+    <div class="mock-ui" aria-label="Access control preview" role="img">
+      <div class="mock-topbar">
+        <div class="mock-dot"></div>
+        <div class="mock-dot"></div>
+        <span class="mock-title">Role-Based Access Control</span>
+      </div>
+      <div class="mock-access-body">
+        <div class="access-row">
+          <div class="access-user">
+            <div class="access-avatar" style="background:#0D6E65;">AK</div>
+            <span class="access-name">Alicia Kim</span>
+          </div>
+          <span class="access-role-badge role-admin">Admin</span>
+        </div>
+        <div class="access-row">
+          <div class="access-user">
+            <div class="access-avatar" style="background:#02BECC;">MR</div>
+            <span class="access-name">Marcus Reid</span>
+          </div>
+          <span class="access-role-badge role-editor">Editor</span>
+        </div>
+        <div class="access-row">
+          <div class="access-user">
+            <div class="access-avatar" style="background:#3b5bdb;">JL</div>
+            <span class="access-name">Jenna Lopez</span>
+          </div>
+          <span class="access-role-badge role-viewer">Viewer</span>
+        </div>
+        <div class="access-row">
+          <div class="access-user">
+            <div class="access-avatar" style="background:#e65100;">DP</div>
+            <span class="access-name">Dev Patel</span>
+          </div>
+          <span class="access-role-badge role-editor">Editor</span>
+        </div>
+        <div class="access-row">
+          <div class="access-user">
+            <div class="access-avatar" style="background:#6d28d9;">SR</div>
+            <span class="access-name">Sara Rowe</span>
+          </div>
+          <span class="access-role-badge role-viewer">Viewer</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ===================== USE CASES ===================== -->
+<section class="use-cases fade-in" aria-labelledby="useCasesHeading">
+  <div class="section-inner">
+    <div class="section-label">Use Cases</div>
+    <h2 class="section-h2" id="useCasesHeading">Built for Every Enterprise Feedback Program</h2>
+    <p class="section-subtitle">One platform, four powerful programs — running simultaneously without overlap.</p>
+    <div class="usecase-grid">
+
+      <article class="usecase-card fade-in">
+        <div class="usecase-num" aria-hidden="true">1</div>
+        <h4>Customer Experience (CX)</h4>
+        <p>Run NPS, CSAT, and CES programs across every touchpoint in the customer journey. Identify at-risk accounts before churn, close the loop automatically, and prove ROI to leadership.</p>
+      </article>
+
+      <article class="usecase-card fade-in" style="transition-delay:0.1s">
+        <div class="usecase-num" aria-hidden="true">2</div>
+        <h4>Employee Experience (EX)</h4>
+        <p>Annual engagement surveys, pulse checks, 360-degree feedback, and exit interviews — all in one place. Benchmark against industry standards and build a culture people want to stay in.</p>
+      </article>
+
+      <article class="usecase-card fade-in" style="transition-delay:0.15s">
+        <div class="usecase-num" aria-hidden="true">3</div>
+        <h4>Market Research</h4>
+        <p>Run concept tests, brand trackers, and audience panels with enterprise-grade methodology. Access a global respondent panel or survey your own list with advanced quotas and branching logic.</p>
+      </article>
+
+      <article class="usecase-card fade-in" style="transition-delay:0.2s">
+        <div class="usecase-num" aria-hidden="true">4</div>
+        <h4>Product &amp; UX Research</h4>
+        <p>Collect in-app feedback, prototype reactions, and usability scores to feed your product roadmap with real signal — not assumptions. Tie feedback to feature releases and measure impact over time.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TESTIMONIAL ===================== -->
+<section class="testimonial fade-in" aria-label="Customer testimonial">
+  <div class="testimonial-inner">
+    <div class="testimonial-quote-mark" aria-hidden="true">"</div>
+    <!-- DEVELOPER: Replace testimonial quote -->
+    <blockquote class="testimonial-text">
+      "Sogolytics gave us one platform to run our entire feedback operation — CX, EX, and research — without stitching together five different tools. The security certifications made our IT team sign off in record time, and our response rates went up 30% in the first quarter."
+    </blockquote>
+    <div class="testimonial-author">
+      <!-- DEVELOPER: Replace name, title, company -->
+      <div class="author-avatar" aria-hidden="true">S</div>
+      <div class="author-info">
+        <div class="author-name">[Author Name]</div>
+        <div class="author-title">[Title, Company Name]</div>
+        <!-- DEVELOPER: Replace company logo placeholder -->
+        <div class="co-logo-placeholder">[CO. LOGO]</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="faq fade-in" aria-labelledby="faqHeading">
+  <div class="section-inner">
+    <div class="section-label">FAQ</div>
+    <h2 class="section-h2" id="faqHeading">Common Questions</h2>
+    <p class="section-subtitle">Everything you need to know before your demo.</p>
+    <div class="faq-list" role="list">
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false">
+          How long does implementation typically take?
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M5 8l5 5 5-5" stroke="#0D6E65" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="faq-answer" role="region">
+          <div class="faq-answer-inner">
+            Most enterprise customers are fully live within 4–6 weeks. That includes SSO setup, brand customization, integrations with your CRM or HRIS, and team training. Our implementation team runs the process end-to-end — you don't need to assign internal engineering resources.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false">
+          Can we migrate our existing survey data into Sogolytics?
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M5 8l5 5 5-5" stroke="#0D6E65" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="faq-answer" role="region">
+          <div class="faq-answer-inner">
+            Yes. We support data migration from SurveyMonkey, Qualtrics, Medallia, and other major platforms. Historical response data, question libraries, and reports can all be brought in. Your Customer Success Manager will scope the migration during onboarding.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false">
+          Do you offer a HIPAA Business Associate Agreement (BAA)?
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M5 8l5 5 5-5" stroke="#0D6E65" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="faq-answer" role="region">
+          <div class="faq-answer-inner">
+            Yes. Sogolytics signs HIPAA BAAs with healthcare organizations on our enterprise plans. We are HIPAA-ready by design, with encrypted data storage, audit logs, and access controls that meet HHS requirements. Contact our sales team to add a BAA to your agreement.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false">
+          How does pricing work for enterprise accounts?
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M5 8l5 5 5-5" stroke="#0D6E65" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="faq-answer" role="region">
+          <div class="faq-answer-inner">
+            Enterprise pricing is customized based on the number of programs (CX, EX, Research), active users, response volume, and integrations required. We don't publish list prices because every enterprise deployment is different. Request a demo and we'll build a proposal specific to your scope within 48 hours.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false">
+          What ongoing support is included after launch?
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M5 8l5 5 5-5" stroke="#0D6E65" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="faq-answer" role="region">
+          <div class="faq-answer-inner">
+            Every enterprise account includes a named Customer Success Manager, quarterly business reviews, 24/7 technical support with SLA guarantees, and access to our professional services team for survey design and analysis projects. You'll never be directed to a self-service portal for critical issues.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FINAL CTA ===================== -->
+<section class="final-cta fade-in" id="finalCTA" aria-labelledby="ctaHeading">
+  <div class="cta-inner">
+    <div class="section-label">Get Started</div>
+    <h2 id="ctaHeading">See Sogolytics in Action</h2>
+    <p class="cta-sub">Request a personalized demo and we'll show you exactly how Sogolytics fits your CX, EX, and research programs.</p>
+    <div class="demo-form">
+      <form id="demoForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" placeholder="Jane" required autocomplete="given-name" />
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Smith" required autocomplete="family-name" />
+          </div>
+        </div>
+        <div class="form-group form-full">
+          <label for="workEmail">Work Email</label>
+          <input type="email" id="workEmail" name="workEmail" placeholder="jane@company.com" required autocomplete="email" />
+        </div>
+        <div class="form-group form-full">
+          <label for="company">Company</label>
+          <input type="text" id="company" name="company" placeholder="Acme Corporation" required autocomplete="organization" />
+        </div>
+        <div class="form-group form-full">
+          <label for="companySize">Company Size</label>
+          <select id="companySize" name="companySize" required>
+            <option value="" disabled selected>Select company size</option>
+            <option value="1-50">1–50 employees</option>
+            <option value="51-200">51–200 employees</option>
+            <option value="201-500">201–500 employees</option>
+            <option value="501-1000">501–1,000 employees</option>
+            <option value="1001-5000">1,001–5,000 employees</option>
+            <option value="5001+">5,001+ employees</option>
+          </select>
+        </div>
+        <!-- Hidden UTM fields — populated by JS from URL params -->
+        <input type="hidden" id="utm_source" name="utm_source" />
+        <input type="hidden" id="utm_medium" name="utm_medium" />
+        <input type="hidden" id="utm_campaign" name="utm_campaign" />
+        <input type="hidden" id="utm_content" name="utm_content" />
+        <input type="hidden" id="utm_term" name="utm_term" />
+        <div class="form-submit-row">
+          <button type="submit" class="btn-yellow-lg" aria-label="Submit demo request">
+            <span class="btn-circle" aria-hidden="true">→</span>
+            Request a Demo
+          </button>
+        </div>
+      </form>
+      <p class="form-note">No credit card required &middot; We respond within 1 business day</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer" aria-label="Site footer">
+  <div class="footer-inner">
+    <nav class="footer-links" aria-label="Footer links">
+      <a href="https://www.sogolytics.com/privacy-policy/">Privacy Policy</a>
+      <a href="https://www.sogolytics.com/terms-of-service/">Terms of Service</a>
+      <a href="https://www.sogolytics.com/anti-spam-policy/">Anti-Spam Policy</a>
+      <a href="https://www.sogolytics.com/security/">Data &amp; Security</a>
+    </nav>
+    <p class="footer-copy">&copy; 2026 Sogolytics, Inc. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- ===================== INLINE JAVASCRIPT ===================== -->
+<script>
+(function () {
+  'use strict';
+
+  /* ── 1. STICKY NAV: show after 400px scroll ── */
+  var stickyNav = document.getElementById('stickyNav');
+  function handleScroll() {
+    if (window.scrollY > 400) {
+      stickyNav.classList.add('visible');
+    } else {
+      stickyNav.classList.remove('visible');
+    }
+  }
+  window.addEventListener('scroll', handleScroll, { passive: true });
+
+  /* ── 2. FAQ ACCORDION ── */
+  var faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(function (item) {
+    var btn = item.querySelector('.faq-question');
+    var answer = item.querySelector('.faq-answer');
+    btn.addEventListener('click', function () {
+      var isOpen = item.classList.contains('open');
+      // Close all
+      faqItems.forEach(function (i) {
+        i.classList.remove('open');
+        i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        i.querySelector('.faq-answer').style.maxHeight = '0';
+      });
+      // Open clicked if it was closed
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  });
+
+  /* ── 3. UTM PASSTHROUGH: populate hidden form inputs from URL ── */
+  function getUrlParam(name) {
+    var urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(name) || '';
+  }
+  var utmFields = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
+  utmFields.forEach(function (field) {
+    var el = document.getElementById(field);
+    if (el) { el.value = getUrlParam(field); }
+  });
+
+  /* ── 4. SMOOTH SCROLL: all CTA buttons → #finalCTA ── */
+  var ctaBtns = document.querySelectorAll('.js-scroll-cta');
+  ctaBtns.forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      var target = document.getElementById('finalCTA');
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // Focus first field for accessibility
+        setTimeout(function () {
+          var firstInput = target.querySelector('input');
+          if (firstInput) { firstInput.focus(); }
+        }, 600);
+      }
+    });
+  });
+
+  /* ── 5. FADE-IN on scroll via IntersectionObserver ── */
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.fade-in').forEach(function (el) {
+      observer.observe(el);
+    });
+  } else {
+    // Fallback: make all visible immediately
+    document.querySelectorAll('.fade-in').forEach(function (el) {
+      el.classList.add('visible');
+    });
+  }
+
+  /* ── 6. FORM SUBMIT: basic handler (wire to your backend / HubSpot / etc.) ── */
+  var demoForm = document.getElementById('demoForm');
+  if (demoForm) {
+    demoForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      // DEVELOPER: Replace with your form submission logic (HubSpot, Pardot, fetch, etc.)
+      var btn = demoForm.querySelector('button[type="submit"]');
+      btn.disabled = true;
+      btn.innerHTML = '<span class="btn-circle">✓</span> Request Sent!';
+      setTimeout(function () {
+        btn.disabled = false;
+        btn.innerHTML = '<span class="btn-circle">→</span> Request a Demo';
+        demoForm.reset();
+        // Re-populate UTMs after reset
+        utmFields.forEach(function (field) {
+          var el = document.getElementById(field);
+          if (el) { el.value = getUrlParam(field); }
+        });
+      }, 3000);
+    });
+  }
+
+})();
+</script>
+</body>
+</html>
