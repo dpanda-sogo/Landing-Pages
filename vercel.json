@@ -1,6 +1,0 @@
-{
-  "buildCommand": "cd efm && npm install && npm run build",
-  "outputDirectory": "efm/.next",
-  "installCommand": "cd efm && npm install",
-  "framework": "nextjs"
-}
