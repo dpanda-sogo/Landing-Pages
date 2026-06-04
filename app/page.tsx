@@ -17,6 +17,16 @@ const pages: LandingPage[] = [
     htmlFile: "enterprise-feedback-management.html",
   },
   {
+    slug: "pages/lp-cx-platform-wp.html",
+    title: "CX Platform — WordPress / WPBakery Snippet",
+    description: "WordPress-ready snippet for WPBakery. No header/footer. Uses inline styles + theme CSS classes. Paste directly into Raw HTML block.",
+    date: "2026-06-04",
+    tag: "WP Snippet",
+    tagBg: "#e8e0ff",
+    tagColor: "#5b21b6",
+    htmlFile: "lp-cx-platform-wp.html",
+  },
+  {
     slug: "pages/lp-cx-platform.html",
     title: "CX Platform — Platform Variant",
     description: "One platform for every voice. Unified CX, EX, and market research with AI analytics built in. Competitor conquesting.",
