@@ -36,6 +36,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700;800&family=Crimson+Pro:ital@1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0&display=block" rel="stylesheet">
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -241,6 +242,16 @@
     .footer-logo { margin-bottom: 16px; }
     .footer-logo img { height: 20px; opacity: 0.5; }
 
+    .msr {
+      font-family: 'Material Symbols Rounded';
+      font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      font-size: 28px;
+      color: var(--green);
+      display: block;
+      margin-bottom: 12px;
+    }
+    .section-dark .msr { color: var(--blue); }
+
     @media (max-width: 768px) {
       .hero-inner { grid-template-columns: 1fr; gap: 40px; }
       .hero { padding: 56px 24px 48px; }
@@ -263,7 +274,7 @@
 <nav class="nav" role="navigation" aria-label="Main navigation">
   <div class="nav-inner">
     <a class="nav-logo" href="https://www.sogolytics.com" aria-label="Sogolytics home">
-      <img src="https://cdn.sogolytics.com/wp-content/uploads/2022/07/sogolytics-logo-white.png"
+      <img src="https://cdn.sogolytics.com/wp-content/uploads/2022/07/sogolytics-wbg.png"
            alt="Sogolytics"
            onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
       <span style="display:none;color:#fff;font-weight:800;font-size:18px;letter-spacing:-0.02em">Sogolytics</span>
@@ -286,7 +297,7 @@
       </p>
       <div class="guarantee-badge" aria-label="Migration guarantee">
         <span class="guarantee-badge-icon">🛡️</span>
-        <span class="guarantee-badge-text">Migration Guarantee: Live in 30 days or we extend your contract for free.</span>
+        <span class="guarantee-badge-text">Structured 30-day migration plan — with a dedicated implementation manager from day one.</span>
       </div>
       <div class="hero-trust">
         <span>✓ Full data migration included</span>
@@ -383,16 +394,16 @@
 <section class="stats-band">
   <div class="stats-grid fade-in">
     <div>
-      <div class="stat-num">14</div>
-      <div class="stat-label">Average days<br>to go live</div>
+      <div class="stat-num">100k+</div>
+      <div class="stat-label">Customers worldwide<br>across 96 countries</div>
     </div>
     <div>
-      <div class="stat-num">100%</div>
-      <div class="stat-label">Data migrated<br>with zero loss</div>
+      <div class="stat-num">2,500+</div>
+      <div class="stat-label">Enterprise teams<br>running active programs</div>
     </div>
     <div>
-      <div class="stat-num">96%</div>
-      <div class="stat-label">Retention rate<br>year-over-year</div>
+      <div class="stat-num">Weeks</div>
+      <div class="stat-label">Average time to live —<br>not quarters</div>
     </div>
   </div>
 </section>
@@ -478,7 +489,7 @@
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
         </div>
         <h3>CRM &amp; helpdesk integrations</h3>
-        <p>Salesforce, HubSpot, ServiceNow, Zendesk — all your CRM and ticketing integrations rebuilt and tested in your new environment.</p>
+        <p>Salesforce, Zapier, Google Drive, and OneDrive — plus REST API connections. All your integrations rebuilt and tested in your new environment.</p>
       </div>
       <div class="card">
         <div class="card-icon">
@@ -532,17 +543,17 @@
     </div>
     <div class="cards-grid fade-in" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr))">
       <div class="card" style="border-top: 3px solid var(--green)">
-        <div style="font-size:36px;margin-bottom:12px">🔗</div>
+        <span class="msr">hub</span>
         <h3>One platform, not five</h3>
         <p>VoC, EX, NPS, AI analytics, and case management — all in a single login. No more exporting CSVs between systems to see the full picture.</p>
       </div>
       <div class="card" style="border-top: 3px solid var(--blue)">
-        <div style="font-size:36px;margin-bottom:12px">📉</div>
+        <span class="msr">trending_down</span>
         <h3>Lower total cost</h3>
-        <p>Most customers consolidate 3–5 tools into Sogolytics and reduce their combined CX tool spend by 30–50% in year one.</p>
+        <p>Most customers consolidate 3–5 point solutions into Sogolytics, replacing fragmented tools with one transparent plan — and consistently reducing their combined CX tool spend.</p>
       </div>
       <div class="card" style="border-top: 3px solid var(--yellow)">
-        <div style="font-size:36px;margin-bottom:12px">🚀</div>
+        <span class="msr">rocket_launch</span>
         <h3>Faster, smarter insights</h3>
         <p>AI-powered analytics surface what matters automatically. Your team spends less time pulling reports and more time acting on insights.</p>
       </div>
@@ -587,7 +598,7 @@
         </button>
         <div class="faq-answer" role="region">
           <div class="faq-answer-inner">
-            We'll recreate all of your existing integrations — Salesforce, HubSpot, ServiceNow, Zendesk, Microsoft Teams, Slack, and any custom REST API connections. Our team handles the technical setup; your team just validates that the data is flowing correctly.
+            We'll recreate all of your existing integrations — including Salesforce, Zapier, Google Drive, OneDrive, and any custom REST API connections. Our team handles the technical setup; your team validates that the data is flowing correctly.
           </div>
         </div>
       </div>
@@ -598,7 +609,7 @@
         </button>
         <div class="faq-answer" role="region">
           <div class="faq-answer-inner">
-            If Sogolytics causes the delay, we extend your contract at no charge for the equivalent time. We've never missed a committed go-live date in over 500 enterprise implementations.
+            If Sogolytics causes the delay, we work with you to get the program back on track at no extra cost. Our structured migration process has been refined across hundreds of enterprise implementations.
           </div>
         </div>
       </div>
@@ -634,7 +645,7 @@
   <div class="footer-logo">
     <img src="https://cdn.sogolytics.com/wp-content/uploads/2022/07/sogolytics-wbg.png" alt="Sogolytics" onerror="this.style.display='none'">
   </div>
-  © 2025 Sogolytics, Inc. All rights reserved.<br>
+  © 2026 Sogolytics, Inc. All rights reserved.<br>
   <a href="https://www.sogolytics.com/privacy-policy/">Privacy Policy</a> ·
   <a href="https://www.sogolytics.com/terms-of-service/">Terms of Service</a>
 </footer>
