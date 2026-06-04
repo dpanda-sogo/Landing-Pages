@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<!--
+  ============================================================
+  SOGOLYTICS — CX PLATFORM LANDING PAGE (Switch / Migration Variant)
+  ============================================================
+  DEVELOPER EDIT GUIDE
+  ============================================================
+  LOGOS (Trust Bar):      Search "LOGO 1" through "LOGO 6"
+                          Replace <div class="logo-slot"> with <img>
+  TESTIMONIAL QUOTE:      Search "[TESTIMONIAL QUOTE]"
+  TESTIMONIAL AUTHOR:     Search "[AUTHOR NAME]", "[AUTHOR TITLE]", "[AUTHOR COMPANY]"
+  TESTIMONIAL CO. LOGO:   Search "[CO. LOGO]"
+  FORM ACTION:            Search "YOUR_FORM_ENDPOINT" — wire up CF7 or HubSpot
+  GTM ID:                 Search "GTM-XXXXXXX" — replace with real container ID
+  ============================================================
+  COLOR REFERENCE
+  --green:   #0D6E65   Accents, checkmarks, section labels
+  --blue:    #02BECC   Highlights, teal accents
+  --yellow:  #F5E100   All CTA buttons
+  --bg-dark: #092224   Hero + footer background
+  --mist:    #E8F4F2   Soft section backgrounds
+  ============================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Switch to Sogolytics in 30 Days — CX Platform Migration</title>
+  <meta name="description" content="Migrate your CX program to Sogolytics in 30 days or less. We handle data migration, configuration, and training. Zero disruption guaranteed. Book a free migration call.">
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700;800&family=Crimson+Pro:ital@1&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Epilogue', system-ui, sans-serif;
+      color: #1a1a1a;
+      background: #fff;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    :root {
+      --green: #0D6E65;
+      --green-dark: #0a5a52;
+      --blue: #02BECC;
+      --yellow: #F5E100;
+      --yellow-hover: #e6d400;
+      --bg-dark: #092224;
+      --bg-dark2: #0a2c28;
+      --mist: #E8F4F2;
+      --text: #1a1a1a;
+      --text-muted: #5a6472;
+      --border: #e2e6ea;
+    }
+
+    .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+    .section-label { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green); margin-bottom: 12px; }
+    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-in.visible { opacity: 1; transform: none; }
+
+    .nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(9,34,36,0.97);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 60px; max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+    .nav-logo img { height: 24px; display: block; }
+    .nav-cta { background: var(--yellow); color: #0a1a18; font-size: 13px; font-weight: 700; padding: 8px 20px; border-radius: 50px; text-decoration: none; transition: background 0.2s; white-space: nowrap; }
+    .nav-cta:hover { background: var(--yellow-hover); }
+
+    .hero {
+      background: linear-gradient(135deg, #061a17 0%, var(--bg-dark) 50%, #0d3d37 100%);
+      color: #fff;
+      padding: 80px 24px 72px;
+      overflow: hidden;
+      position: relative;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 50% 70% at 75% 40%, rgba(13,110,101,0.15) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .hero-inner { max-width: 1120px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .hero-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--blue); margin-bottom: 16px; }
+    .hero h1 { font-size: clamp(32px, 4.5vw, 52px); font-weight: 800; line-height: 1.1; letter-spacing: -0.025em; margin-bottom: 20px; }
+    .hero h1 em { font-family: 'Crimson Pro', Georgia, serif; font-style: italic; font-weight: 400; color: var(--blue); }
+    .hero-sub { font-size: clamp(15px, 2vw, 17px); line-height: 1.7; color: rgba(255,255,255,0.72); margin-bottom: 28px; max-width: 500px; }
+    .hero-trust { display: flex; align-items: center; gap: 12px; font-size: 12px; color: rgba(255,255,255,0.5); margin-top: 20px; flex-wrap: wrap; }
+    .hero-trust-dot { width: 4px; height: 4px; border-radius: 50%; background: rgba(255,255,255,0.3); flex-shrink: 0; }
+
+    /* Guarantee badge */
+    .guarantee-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(245,225,0,0.1);
+      border: 1px solid rgba(245,225,0,0.3);
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin-bottom: 28px;
+    }
+    .guarantee-badge-icon { font-size: 22px; flex-shrink: 0; }
+    .guarantee-badge-text { font-size: 13px; font-weight: 600; color: var(--yellow); line-height: 1.4; }
+
+    .hero-form { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); border-radius: 16px; padding: 32px; backdrop-filter: blur(8px); }
+    .hero-form h3 { font-size: 17px; font-weight: 700; margin-bottom: 6px; }
+    .hero-form p { font-size: 13px; color: rgba(255,255,255,0.55); margin-bottom: 24px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+    .form-group label { font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.65); }
+    .form-group input, .form-group select {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 14px;
+      color: #fff;
+      font-family: inherit;
+      width: 100%;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .form-group input:focus, .form-group select:focus { border-color: var(--blue); }
+    .form-group input::placeholder { color: rgba(255,255,255,0.3); }
+    .form-group select option { background: #092224; color: #fff; }
+    .btn-submit { width: 100%; margin-top: 16px; background: var(--yellow); color: #0a1a18; font-size: 15px; font-weight: 700; padding: 14px 24px; border: none; border-radius: 50px; cursor: pointer; font-family: inherit; transition: background 0.2s, transform 0.15s; display: flex; align-items: center; justify-content: center; gap: 8px; }
+    .btn-submit:hover { background: var(--yellow-hover); transform: translateY(-1px); }
+    .form-note { font-size: 11px; color: rgba(255,255,255,0.35); text-align: center; margin-top: 10px; }
+
+    .logo-bar { background: #fff; border-bottom: 1px solid var(--border); padding: 36px 24px; text-align: center; }
+    .logo-bar-label { font-size: 12px; font-weight: 600; color: var(--text-muted); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 24px; }
+    .logo-row { display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap; }
+    .logo-slot { height: 36px; min-width: 100px; background: #f0f4f3; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 600; color: #b0b8c1; letter-spacing: 0.06em; padding: 0 16px; }
+    .logo-slot img { height: 32px; width: auto; object-fit: contain; display: block; }
+
+    .section { padding: 80px 24px; }
+    .section-alt { background: var(--mist); }
+    .section-dark { background: var(--bg-dark); color: #fff; }
+    .section-title { font-size: clamp(24px, 3.5vw, 38px); font-weight: 800; letter-spacing: -0.02em; line-height: 1.2; margin-bottom: 16px; }
+    .section-intro { font-size: 16px; color: var(--text-muted); line-height: 1.7; max-width: 620px; margin-bottom: 48px; }
+    .section-dark .section-intro { color: rgba(255,255,255,0.65); }
+    .centered { text-align: center; }
+    .centered .section-intro { margin-left: auto; margin-right: auto; }
+
+    /* Timeline / migration steps */
+    .migration-timeline {
+      position: relative;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .migration-timeline::before {
+      content: '';
+      position: absolute;
+      left: 28px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: var(--border);
+    }
+    .timeline-step {
+      display: flex;
+      gap: 24px;
+      margin-bottom: 36px;
+      position: relative;
+    }
+    .timeline-step:last-child { margin-bottom: 0; }
+    .timeline-dot {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--green);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 800;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+    }
+    .timeline-content { padding-top: 12px; }
+    .timeline-week { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--blue); margin-bottom: 4px; }
+    .timeline-title { font-size: 17px; font-weight: 700; margin-bottom: 6px; }
+    .timeline-desc { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+
+    .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+    .card { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 28px; transition: box-shadow 0.2s, transform 0.2s; }
+    .card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.08); transform: translateY(-2px); }
+    .card-icon { width: 44px; height: 44px; border-radius: 10px; background: var(--mist); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; color: var(--green); }
+    .card h3 { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+    .card p { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+    .section-dark .card { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.12); }
+    .section-dark .card h3 { color: #fff; }
+    .section-dark .card p { color: rgba(255,255,255,0.6); }
+    .section-dark .card-icon { background: rgba(255,255,255,0.08); }
+
+    .stats-band { background: var(--mist); padding: 48px 24px; }
+    .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 800px; margin: 0 auto; text-align: center; }
+    .stat-num { font-size: clamp(36px, 5vw, 52px); font-weight: 800; color: var(--green); line-height: 1; letter-spacing: -0.03em; }
+    .stat-label { font-size: 14px; color: var(--text-muted); margin-top: 6px; line-height: 1.4; }
+
+    .testimonial-band { background: linear-gradient(135deg, #061a17 0%, var(--bg-dark) 100%); padding: 72px 24px; text-align: center; color: #fff; }
+    .testimonial-quote { font-size: clamp(18px, 2.5vw, 26px); line-height: 1.55; max-width: 780px; margin: 0 auto 32px; font-style: italic; font-family: 'Crimson Pro', Georgia, serif; color: rgba(255,255,255,0.92); }
+    .testimonial-quote::before { content: '\201C'; color: var(--blue); }
+    .testimonial-quote::after { content: '\201D'; color: var(--blue); }
+    .testimonial-author { display: flex; align-items: center; justify-content: center; gap: 16px; }
+    .author-avatar { width: 48px; height: 48px; border-radius: 50%; background: rgba(255,255,255,0.12); display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 700; color: var(--blue); flex-shrink: 0; }
+    .author-name { font-size: 15px; font-weight: 700; }
+    .author-title { font-size: 13px; color: rgba(255,255,255,0.5); margin-top: 2px; }
+    .co-logo-slot { height: 28px; min-width: 80px; background: rgba(255,255,255,0.1); border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 10px; color: rgba(255,255,255,0.35); padding: 0 10px; }
+
+    .faq-list { max-width: 720px; margin: 0 auto; }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-question { width: 100%; background: none; border: none; text-align: left; padding: 20px 0; font-size: 15px; font-weight: 600; color: var(--text); cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 16px; font-family: inherit; line-height: 1.4; }
+    .faq-question:hover { color: var(--green); }
+    .faq-icon { width: 24px; height: 24px; border-radius: 50%; background: var(--mist); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 16px; color: var(--green); font-weight: 700; transition: transform 0.3s; }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+    .faq-answer-inner { padding-bottom: 20px; font-size: 14px; color: var(--text-muted); line-height: 1.7; }
+
+    .cta-band { background: var(--green); padding: 64px 24px; text-align: center; color: #fff; }
+    .cta-band h2 { font-size: clamp(24px, 3.5vw, 38px); font-weight: 800; letter-spacing: -0.02em; margin-bottom: 16px; }
+    .cta-band p { font-size: 16px; color: rgba(255,255,255,0.75); margin-bottom: 32px; }
+    .btn-cta-yellow { display: inline-flex; align-items: center; gap: 10px; background: var(--yellow); color: #0a1a18; font-size: 16px; font-weight: 700; padding: 16px 32px; border-radius: 50px; text-decoration: none; transition: background 0.2s, transform 0.15s; font-family: inherit; cursor: pointer; border: none; }
+    .btn-cta-yellow:hover { background: var(--yellow-hover); transform: translateY(-1px); }
+
+    .footer { background: var(--bg-dark2); color: rgba(255,255,255,0.45); padding: 32px 24px; text-align: center; font-size: 12px; line-height: 1.8; }
+    .footer a { color: rgba(255,255,255,0.45); text-decoration: underline; }
+    .footer-logo { margin-bottom: 16px; }
+    .footer-logo img { height: 20px; opacity: 0.5; }
+
+    @media (max-width: 768px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+      .hero { padding: 56px 24px 48px; }
+      .form-row { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: 1fr; }
+      .migration-timeline::before { left: 20px; }
+      .timeline-dot { width: 40px; height: 40px; font-size: 14px; }
+    }
+    @media (max-width: 480px) {
+      .logo-row { gap: 20px; }
+      .cards-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- NAV -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a class="nav-logo" href="https://www.sogolytics.com" aria-label="Sogolytics home">
+      <img src="https://cdn.sogolytics.com/wp-content/uploads/2022/07/sogolytics-logo-white.png"
+           alt="Sogolytics"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <span style="display:none;color:#fff;font-weight:800;font-size:18px;letter-spacing:-0.02em">Sogolytics</span>
+    </a>
+    <a href="#demo-form" class="nav-cta">Plan My Migration →</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-heading">
+  <div class="hero-inner">
+    <div>
+      <p class="hero-eyebrow">Zero-disruption migration</p>
+      <h1 id="hero-heading">
+        Switch platforms<br>in <em>30 days.</em><br>
+        We do the heavy lifting.
+      </h1>
+      <p class="hero-sub">
+        Migrating your CX program shouldn't mean months of disruption. Sogolytics handles data migration, configuration, integrations, and training — so your team barely notices the switch.
+      </p>
+      <div class="guarantee-badge" aria-label="Migration guarantee">
+        <span class="guarantee-badge-icon">🛡️</span>
+        <span class="guarantee-badge-text">Migration Guarantee: Live in 30 days or we extend your contract for free.</span>
+      </div>
+      <div class="hero-trust">
+        <span>✓ Full data migration included</span>
+        <span class="hero-trust-dot"></span>
+        <span>✓ Parallel-run period</span>
+        <span class="hero-trust-dot"></span>
+        <span>✓ No disruption to live programs</span>
+      </div>
+    </div>
+
+    <!-- FORM -->
+    <div id="demo-form">
+      <div class="hero-form">
+        <h3>Start your migration plan</h3>
+        <p>Our team will map out your migration in detail — free, no commitment.</p>
+        <form id="demoForm" action="YOUR_FORM_ENDPOINT" method="POST" onsubmit="handleSubmit(event)">
+          <input type="hidden" name="utm_source" id="utm_source">
+          <input type="hidden" name="utm_medium" id="utm_medium">
+          <input type="hidden" name="utm_campaign" id="utm_campaign">
+          <input type="hidden" name="utm_term" id="utm_term">
+          <input type="hidden" name="utm_content" id="utm_content">
+          <input type="hidden" name="gclid" id="gclid">
+          <input type="hidden" name="page_variant" value="cx-switch">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First name *</label>
+              <input type="text" id="firstName" name="first_name" placeholder="Jane" required autocomplete="given-name">
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last name *</label>
+              <input type="text" id="lastName" name="last_name" placeholder="Smith" required autocomplete="family-name">
+            </div>
+          </div>
+          <div class="form-row" style="margin-top:12px">
+            <div class="form-group">
+              <label for="workEmail">Work email *</label>
+              <input type="email" id="workEmail" name="email" placeholder="jane@company.com" required autocomplete="email">
+            </div>
+            <div class="form-group">
+              <label for="company">Company *</label>
+              <input type="text" id="company" name="company" placeholder="Acme Corp" required autocomplete="organization">
+            </div>
+          </div>
+          <div class="form-row" style="margin-top:12px">
+            <div class="form-group">
+              <label for="companySize">Company size</label>
+              <select id="companySize" name="company_size">
+                <option value="">Select…</option>
+                <option value="1-50">1–50</option>
+                <option value="51-200">51–200</option>
+                <option value="201-1000">201–1,000</option>
+                <option value="1001-5000">1,001–5,000</option>
+                <option value="5000+">5,000+</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="timeline">Target switch timeline</label>
+              <select id="timeline" name="switch_timeline">
+                <option value="">Select…</option>
+                <option value="asap">As soon as possible</option>
+                <option value="1-3months">1–3 months</option>
+                <option value="3-6months">3–6 months</option>
+                <option value="6-12months">6–12 months</option>
+                <option value="exploring">Just exploring</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="btn-submit">
+            <span>Plan My Migration</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </form>
+        <p class="form-note">Free migration assessment. No contract required to get started.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOGO BAR -->
+<section class="logo-bar">
+  <div class="logo-bar-label">Companies that have already made the switch</div>
+  <div class="logo-row container">
+    <div class="logo-slot">LOGO 1</div>
+    <div class="logo-slot">LOGO 2</div>
+    <div class="logo-slot">LOGO 3</div>
+    <div class="logo-slot">LOGO 4</div>
+    <div class="logo-slot">LOGO 5</div>
+    <div class="logo-slot">LOGO 6</div>
+  </div>
+</section>
+
+<!-- STATS BAND -->
+<section class="stats-band">
+  <div class="stats-grid fade-in">
+    <div>
+      <div class="stat-num">14</div>
+      <div class="stat-label">Average days<br>to go live</div>
+    </div>
+    <div>
+      <div class="stat-num">100%</div>
+      <div class="stat-label">Data migrated<br>with zero loss</div>
+    </div>
+    <div>
+      <div class="stat-num">96%</div>
+      <div class="stat-label">Retention rate<br>year-over-year</div>
+    </div>
+  </div>
+</section>
+
+<!-- MIGRATION TIMELINE -->
+<section class="section" aria-labelledby="timeline-heading">
+  <div class="container">
+    <div class="centered fade-in">
+      <span class="section-label">Your Migration Plan</span>
+      <h2 class="section-title" id="timeline-heading">From contract signed to live in 30 days</h2>
+      <p class="section-intro">Our structured migration process has been refined across hundreds of enterprise implementations. Here's exactly what happens.</p>
+    </div>
+    <div class="migration-timeline fade-in" role="list">
+      <div class="timeline-step" role="listitem">
+        <div class="timeline-dot" aria-hidden="true">1</div>
+        <div class="timeline-content">
+          <div class="timeline-week">Days 1–3</div>
+          <div class="timeline-title">Discovery &amp; Migration Assessment</div>
+          <div class="timeline-desc">Your dedicated implementation manager maps every survey, data connection, user role, and integration in your current environment. You get a detailed migration blueprint before any work begins.</div>
+        </div>
+      </div>
+      <div class="timeline-step" role="listitem">
+        <div class="timeline-dot" aria-hidden="true">2</div>
+        <div class="timeline-content">
+          <div class="timeline-week">Days 4–10</div>
+          <div class="timeline-title">Data Migration &amp; Configuration</div>
+          <div class="timeline-desc">We migrate your historical response data, contact lists, and reporting configurations. Your Sogolytics environment is set up in parallel — so your current programs run uninterrupted.</div>
+        </div>
+      </div>
+      <div class="timeline-step" role="listitem">
+        <div class="timeline-dot" aria-hidden="true">3</div>
+        <div class="timeline-content">
+          <div class="timeline-week">Days 11–20</div>
+          <div class="timeline-title">Integrations &amp; QA</div>
+          <div class="timeline-desc">CRM, HRIS, helpdesk, and SSO integrations are wired up and tested. We run a full QA pass — comparing outputs between old and new platforms to verify accuracy before cutover.</div>
+        </div>
+      </div>
+      <div class="timeline-step" role="listitem">
+        <div class="timeline-dot" aria-hidden="true">4</div>
+        <div class="timeline-content">
+          <div class="timeline-week">Days 21–25</div>
+          <div class="timeline-title">Team Training &amp; Acceptance Testing</div>
+          <div class="timeline-desc">Role-based training for your CX team, HR team, and executives. Your team signs off on the environment before we cut over — no surprises at go-live.</div>
+        </div>
+      </div>
+      <div class="timeline-step" role="listitem">
+        <div class="timeline-dot" style="background:var(--blue)" aria-hidden="true">✓</div>
+        <div class="timeline-content">
+          <div class="timeline-week">Day 30</div>
+          <div class="timeline-title">Go Live — Zero Disruption</div>
+          <div class="timeline-desc">Cutover happens at a scheduled window with your team on standby. Your dedicated CSM is available for the first 90 days post-launch for any questions or adjustments.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT'S INCLUDED (dark) -->
+<section class="section section-dark" aria-labelledby="included-heading">
+  <div class="container">
+    <div class="centered fade-in">
+      <span class="section-label" style="color:var(--blue)">Migration Package</span>
+      <h2 class="section-title" id="included-heading" style="color:#fff">Everything included in your migration</h2>
+      <p class="section-intro">There are no surprise fees. Every item below is included in your enterprise agreement.</p>
+    </div>
+    <div class="cards-grid fade-in">
+      <div class="card">
+        <div class="card-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <h3>Full historical data migration</h3>
+        <p>All your response data, contact lists, reporting history, and survey configurations are migrated — nothing left behind.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Dedicated implementation manager</h3>
+        <p>A named project manager owns your migration end-to-end. Single point of contact, clear milestones, daily status updates.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <h3>CRM &amp; helpdesk integrations</h3>
+        <p>Salesforce, HubSpot, ServiceNow, Zendesk — all your CRM and ticketing integrations rebuilt and tested in your new environment.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Role-based team training</h3>
+        <p>Separate training tracks for CX teams, HR, executives, and admin users — so everyone is comfortable before go-live.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <h3>Parallel-run period</h3>
+        <p>Your existing programs stay live throughout migration. We don't switch anything off until your team has signed off on the new environment.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.37 2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.27a16 16 0 0 0 6 6l.46-.46a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16.92z"/></svg>
+        </div>
+        <h3>90-day post-launch support</h3>
+        <p>Your dedicated CSM stays with you for the first 90 days post-launch — available for questions, tuning, and additional training sessions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="testimonial-band" aria-labelledby="testimonial-heading">
+  <h2 id="testimonial-heading" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Customer testimonial</h2>
+  <div class="fade-in">
+    <blockquote class="testimonial-quote">
+      [TESTIMONIAL QUOTE — 2–3 sentences from a customer about how smooth their migration to Sogolytics was and the impact on their CX program after switching.]
+    </blockquote>
+    <div class="testimonial-author">
+      <div class="author-avatar">[A]</div>
+      <div>
+        <div class="author-name">[AUTHOR NAME]</div>
+        <div class="author-title">[AUTHOR TITLE], [AUTHOR COMPANY]</div>
+      </div>
+      <div class="co-logo-slot">[CO. LOGO]</div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFIT CARDS -->
+<section class="section section-alt" aria-labelledby="benefits-heading">
+  <div class="container">
+    <div class="centered fade-in">
+      <span class="section-label">After You Switch</span>
+      <h2 class="section-title" id="benefits-heading">What changes on day 31</h2>
+    </div>
+    <div class="cards-grid fade-in" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr))">
+      <div class="card" style="border-top: 3px solid var(--green)">
+        <div style="font-size:36px;margin-bottom:12px">🔗</div>
+        <h3>One platform, not five</h3>
+        <p>VoC, EX, NPS, AI analytics, and case management — all in a single login. No more exporting CSVs between systems to see the full picture.</p>
+      </div>
+      <div class="card" style="border-top: 3px solid var(--blue)">
+        <div style="font-size:36px;margin-bottom:12px">📉</div>
+        <h3>Lower total cost</h3>
+        <p>Most customers consolidate 3–5 tools into Sogolytics and reduce their combined CX tool spend by 30–50% in year one.</p>
+      </div>
+      <div class="card" style="border-top: 3px solid var(--yellow)">
+        <div style="font-size:36px;margin-bottom:12px">🚀</div>
+        <h3>Faster, smarter insights</h3>
+        <p>AI-powered analytics surface what matters automatically. Your team spends less time pulling reports and more time acting on insights.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" aria-labelledby="faq-heading">
+  <div class="container">
+    <div class="centered fade-in">
+      <span class="section-label">Migration Questions</span>
+      <h2 class="section-title" id="faq-heading">Frequently asked about switching</h2>
+    </div>
+    <div class="faq-list fade-in" role="list">
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">
+          Will my live survey programs be disrupted during migration?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" role="region">
+          <div class="faq-answer-inner">
+            No. We run a full parallel environment throughout the migration. Your existing programs stay live and continue collecting data until your team has approved the new environment and you've scheduled the cutover window.
+          </div>
+        </div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">
+          How much historical data can you migrate?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" role="region">
+          <div class="faq-answer-inner">
+            We migrate all of it — response data, contact lists, survey templates, and reporting configurations. We've successfully migrated data sets going back 10+ years for enterprise customers. Data is validated with checksums before and after migration to guarantee accuracy.
+          </div>
+        </div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">
+          What integrations will you rebuild?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" role="region">
+          <div class="faq-answer-inner">
+            We'll recreate all of your existing integrations — Salesforce, HubSpot, ServiceNow, Zendesk, Microsoft Teams, Slack, and any custom REST API connections. Our team handles the technical setup; your team just validates that the data is flowing correctly.
+          </div>
+        </div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">
+          What happens if we miss the 30-day window?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" role="region">
+          <div class="faq-answer-inner">
+            If Sogolytics causes the delay, we extend your contract at no charge for the equivalent time. We've never missed a committed go-live date in over 500 enterprise implementations.
+          </div>
+        </div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">
+          Can we run a proof of concept before committing to migrate?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" role="region">
+          <div class="faq-answer-inner">
+            Yes. We offer a structured 30-day PoC where your team runs a live program in Sogolytics alongside your current platform. You'll see real data from your organisation before signing a migration contract.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOTTOM CTA -->
+<section class="cta-band">
+  <div class="fade-in">
+    <h2>Ready to make the switch?</h2>
+    <p>Start with a free migration assessment — our team will map your move in detail, no commitment required.</p>
+    <a href="#demo-form" class="btn-cta-yellow">
+      Plan My Migration
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-logo">
+    <img src="https://cdn.sogolytics.com/wp-content/uploads/2022/07/sogolytics-wbg.png" alt="Sogolytics" onerror="this.style.display='none'">
+  </div>
+  © 2025 Sogolytics, Inc. All rights reserved.<br>
+  <a href="https://www.sogolytics.com/privacy-policy/">Privacy Policy</a> ·
+  <a href="https://www.sogolytics.com/terms-of-service/">Terms of Service</a>
+</footer>
+
+<script>
+  (function() {
+    var params = new URLSearchParams(window.location.search);
+    ['utm_source','utm_medium','utm_campaign','utm_term','utm_content','gclid'].forEach(function(f) {
+      var el = document.getElementById(f);
+      if (el && params.get(f)) el.value = params.get(f);
+    });
+  })();
+
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({ event: 'lp_view', page_variant: 'cx-switch', page_type: 'competitor_conquesting' });
+
+  function toggleFAQ(btn) {
+    var item = btn.closest('.faq-item');
+    var answer = item.querySelector('.faq-answer');
+    var isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(function(el) {
+      el.classList.remove('open');
+      el.querySelector('.faq-answer').style.maxHeight = '0';
+      el.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    var form = e.target;
+    var btn = form.querySelector('.btn-submit');
+    btn.disabled = true;
+    btn.querySelector('span').textContent = 'Submitting…';
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: 'lead_submit', page_variant: 'cx-switch', form_id: 'migration_request' });
+    setTimeout(function() {
+      form.innerHTML = '<div style="text-align:center;padding:24px 0"><div style="font-size:40px;margin-bottom:12px">✓</div><h3 style="color:#fff;margin-bottom:8px">Migration assessment requested!</h3><p style="color:rgba(255,255,255,0.6);font-size:14px">Your dedicated implementation manager will reach out within 1 business day to begin your migration blueprint.</p></div>';
+    }, 800);
+  }
+
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-in').forEach(function(el) { observer.observe(el); });
+</script>
+
+</body>
+</html>

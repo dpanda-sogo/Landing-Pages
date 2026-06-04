@@ -9,6 +9,7 @@ export interface LandingPage {
   tag: string;
   tagColor?: string;
   tagBg?: string;
+  htmlFile?: string;
 }
 
 function formatDate(iso: string) {
@@ -181,7 +182,7 @@ function PageCard({ page }: { page: LandingPage }) {
         padding: "0 24px",
       }}>
         <span style={{ fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.5)", letterSpacing: "0.08em", textTransform: "uppercase" }}>
-          /{page.slug}
+          /{page.htmlFile ?? page.slug}
         </span>
       </div>
 
@@ -220,7 +221,7 @@ function PageCard({ page }: { page: LandingPage }) {
       </div>
 
       {/* CTA */}
-      <div style={{ padding: "0 24px 20px" }}>
+      <div style={{ padding: "0 24px 20px", display: "flex", flexDirection: "column", gap: 8 }}>
         <Link
           href={`/${page.slug}`}
           target="_blank"
@@ -259,6 +260,37 @@ function PageCard({ page }: { page: LandingPage }) {
           </span>
           View Landing Page
         </Link>
+        {page.htmlFile && (
+          <a
+            href={`/pages/${page.htmlFile}`}
+            download={page.htmlFile}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 8,
+              width: "100%",
+              padding: "9px 20px",
+              background: "#f0f4f3",
+              color: "#0D6E65",
+              fontWeight: 600,
+              fontSize: 13,
+              borderRadius: 50,
+              textDecoration: "none",
+              transition: "background 0.2s",
+              border: "1px solid #c8dcd9",
+            }}
+            onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.background = "#dcecea")}
+            onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.background = "#f0f4f3")}
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            Download HTML
+          </a>
+        )}
       </div>
     </div>
   );
