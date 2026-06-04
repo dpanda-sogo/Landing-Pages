@@ -68,10 +68,12 @@
     .fade-in.visible { opacity: 1; transform: none; }
 
     .nav {
-      position: sticky; top: 0; z-index: 100;
-      background: rgba(9,34,36,0.97);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #ffffff;
+      border-bottom: 1px solid #e2e6ea;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.06);
     }
     .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 60px; max-width: 1120px; margin: 0 auto; padding: 0 24px; }
     .nav-logo img { height: 24px; display: block; }
@@ -277,9 +279,9 @@
       <img src="https://cdn.sogolytics.com/wp-content/uploads/2022/07/sogolytics-wbg.png"
            alt="Sogolytics"
            onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-      <span style="display:none;color:#fff;font-weight:800;font-size:18px;letter-spacing:-0.02em">Sogolytics</span>
+      <span style="display:none;color:#0D6E65;font-weight:800;font-size:18px;letter-spacing:-0.02em">Sogolytics</span>
     </a>
-    <a href="#demo-form" class="nav-cta">Plan My Migration →</a>
+    <a href="https://www.sogolytics.com/request-a-demo/" class="nav-cta">Plan My Migration →</a>
   </div>
 </nav>
 
@@ -308,70 +310,17 @@
       </div>
     </div>
 
-    <!-- FORM -->
-    <div id="demo-form">
-      <div class="hero-form">
-        <h3>Start your migration plan</h3>
-        <p>Our team will map out your migration in detail — free, no commitment.</p>
-        <form id="demoForm" action="YOUR_FORM_ENDPOINT" method="POST" onsubmit="handleSubmit(event)">
-          <input type="hidden" name="utm_source" id="utm_source">
-          <input type="hidden" name="utm_medium" id="utm_medium">
-          <input type="hidden" name="utm_campaign" id="utm_campaign">
-          <input type="hidden" name="utm_term" id="utm_term">
-          <input type="hidden" name="utm_content" id="utm_content">
-          <input type="hidden" name="gclid" id="gclid">
-          <input type="hidden" name="page_variant" value="cx-switch">
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="firstName">First name *</label>
-              <input type="text" id="firstName" name="first_name" placeholder="Jane" required autocomplete="given-name">
-            </div>
-            <div class="form-group">
-              <label for="lastName">Last name *</label>
-              <input type="text" id="lastName" name="last_name" placeholder="Smith" required autocomplete="family-name">
-            </div>
-          </div>
-          <div class="form-row" style="margin-top:12px">
-            <div class="form-group">
-              <label for="workEmail">Work email *</label>
-              <input type="email" id="workEmail" name="email" placeholder="jane@company.com" required autocomplete="email">
-            </div>
-            <div class="form-group">
-              <label for="company">Company *</label>
-              <input type="text" id="company" name="company" placeholder="Acme Corp" required autocomplete="organization">
-            </div>
-          </div>
-          <div class="form-row" style="margin-top:12px">
-            <div class="form-group">
-              <label for="companySize">Company size</label>
-              <select id="companySize" name="company_size">
-                <option value="">Select…</option>
-                <option value="1-50">1–50</option>
-                <option value="51-200">51–200</option>
-                <option value="201-1000">201–1,000</option>
-                <option value="1001-5000">1,001–5,000</option>
-                <option value="5000+">5,000+</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="timeline">Target switch timeline</label>
-              <select id="timeline" name="switch_timeline">
-                <option value="">Select…</option>
-                <option value="asap">As soon as possible</option>
-                <option value="1-3months">1–3 months</option>
-                <option value="3-6months">3–6 months</option>
-                <option value="6-12months">6–12 months</option>
-                <option value="exploring">Just exploring</option>
-              </select>
-            </div>
-          </div>
-          <button type="submit" class="btn-submit">
-            <span>Plan My Migration</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </button>
-        </form>
-        <p class="form-note">Free migration assessment. No contract required to get started.</p>
+    <!-- CTA visual -->
+    <div style="display:flex;flex-direction:column;justify-content:center;gap:24px">
+      <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);border-radius:16px;padding:36px;text-align:center">
+        <p style="font-size:13px;color:rgba(255,255,255,0.55);margin-bottom:8px;letter-spacing:0.06em;text-transform:uppercase;font-weight:600">Free migration assessment</p>
+        <h3 style="font-size:20px;font-weight:700;margin-bottom:12px">Start your 30-day migration plan</h3>
+        <p style="font-size:14px;color:rgba(255,255,255,0.55);margin-bottom:28px;line-height:1.6">Our team maps your migration in detail — data, integrations, and timeline — before you sign anything.</p>
+        <a href="https://www.sogolytics.com/request-a-demo/" style="display:inline-flex;align-items:center;gap:10px;background:var(--yellow);color:#0a1a18;font-size:16px;font-weight:700;padding:16px 32px;border-radius:50px;text-decoration:none;width:100%;justify-content:center;box-sizing:border-box">
+          Plan My Migration
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <p style="font-size:11px;color:rgba(255,255,255,0.3);margin-top:12px">No contract required to get started</p>
       </div>
     </div>
   </div>
@@ -633,7 +582,7 @@
   <div class="fade-in">
     <h2>Ready to make the switch?</h2>
     <p>Start with a free migration assessment — our team will map your move in detail, no commitment required.</p>
-    <a href="#demo-form" class="btn-cta-yellow">
+    <a href="https://www.sogolytics.com/request-a-demo/" class="btn-cta-yellow">
       Plan My Migration
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>

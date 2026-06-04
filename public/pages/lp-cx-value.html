@@ -79,9 +79,9 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(9,34,36,0.97);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
+      background: #ffffff;
+      border-bottom: 1px solid #e2e6ea;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.06);
     }
     .nav-inner {
       display: flex;
@@ -424,9 +424,9 @@
       <img src="https://cdn.sogolytics.com/wp-content/uploads/2022/07/sogolytics-wbg.png"
            alt="Sogolytics"
            onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-      <span style="display:none;color:#fff;font-weight:800;font-size:18px;letter-spacing:-0.02em">Sogolytics</span>
+      <span style="display:none;color:#0D6E65;font-weight:800;font-size:18px;letter-spacing:-0.02em">Sogolytics</span>
     </a>
-    <a href="#demo-form" class="nav-cta">Get Pricing &amp; Demo →</a>
+    <a href="https://www.sogolytics.com/request-a-demo/" class="nav-cta">Get Pricing &amp; Demo →</a>
   </div>
 </nav>
 
@@ -470,71 +470,17 @@
       </div>
     </div>
 
-    <!-- FORM -->
-    <div id="demo-form">
-      <div class="hero-form">
-        <h3>Get a personalized ROI estimate</h3>
-        <p>Tell us about your team and we'll show you the numbers before you commit to anything.</p>
-        <form id="demoForm" action="YOUR_FORM_ENDPOINT" method="POST" onsubmit="handleSubmit(event)">
-          <input type="hidden" name="utm_source" id="utm_source">
-          <input type="hidden" name="utm_medium" id="utm_medium">
-          <input type="hidden" name="utm_campaign" id="utm_campaign">
-          <input type="hidden" name="utm_term" id="utm_term">
-          <input type="hidden" name="utm_content" id="utm_content">
-          <input type="hidden" name="gclid" id="gclid">
-          <input type="hidden" name="page_variant" value="cx-value">
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="firstName">First name *</label>
-              <input type="text" id="firstName" name="first_name" placeholder="Jane" required autocomplete="given-name">
-            </div>
-            <div class="form-group">
-              <label for="lastName">Last name *</label>
-              <input type="text" id="lastName" name="last_name" placeholder="Smith" required autocomplete="family-name">
-            </div>
-          </div>
-          <div class="form-row" style="margin-top:12px">
-            <div class="form-group">
-              <label for="workEmail">Work email *</label>
-              <input type="email" id="workEmail" name="email" placeholder="jane@company.com" required autocomplete="email">
-            </div>
-            <div class="form-group">
-              <label for="company">Company *</label>
-              <input type="text" id="company" name="company" placeholder="Acme Corp" required autocomplete="organization">
-            </div>
-          </div>
-          <div class="form-row" style="margin-top:12px">
-            <div class="form-group">
-              <label for="companySize">Company size</label>
-              <select id="companySize" name="company_size">
-                <option value="">Select…</option>
-                <option value="1-50">1–50</option>
-                <option value="51-200">51–200</option>
-                <option value="201-1000">201–1,000</option>
-                <option value="1001-5000">1,001–5,000</option>
-                <option value="5000+">5,000+</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="role">Your role</label>
-              <select id="role" name="role">
-                <option value="">Select…</option>
-                <option value="cx-leader">CX Leader</option>
-                <option value="vp-marketing">VP / Director Marketing</option>
-                <option value="hr-people">HR / People Ops</option>
-                <option value="procurement">Procurement / Finance</option>
-                <option value="c-suite">C-Suite</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-          </div>
-          <button type="submit" class="btn-submit">
-            <span>See My ROI Estimate</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </button>
-        </form>
-        <p class="form-note">No commitment. We'll send a customised estimate within 1 business day.</p>
+    <!-- CTA visual -->
+    <div style="display:flex;flex-direction:column;justify-content:center;gap:24px">
+      <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);border-radius:16px;padding:36px;text-align:center">
+        <p style="font-size:13px;color:rgba(255,255,255,0.55);margin-bottom:8px;letter-spacing:0.06em;text-transform:uppercase;font-weight:600">Ready to see the platform?</p>
+        <h3 style="font-size:20px;font-weight:700;margin-bottom:12px">Get a personalised demo &amp; pricing</h3>
+        <p style="font-size:14px;color:rgba(255,255,255,0.55);margin-bottom:28px;line-height:1.6">No commitment. A Sogolytics expert will walk you through the platform and put together a custom ROI estimate.</p>
+        <a href="https://www.sogolytics.com/request-a-demo/" style="display:inline-flex;align-items:center;gap:10px;background:var(--yellow);color:#0a1a18;font-size:16px;font-weight:700;padding:16px 32px;border-radius:50px;text-decoration:none;width:100%;justify-content:center;box-sizing:border-box">
+          Request a Demo
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <p style="font-size:11px;color:rgba(255,255,255,0.3);margin-top:12px">No credit card required</p>
       </div>
     </div>
   </div>
@@ -786,7 +732,7 @@
   <div class="fade-in">
     <h2>See how much you could save</h2>
     <p>Get a personalised ROI estimate from a Sogolytics solutions consultant — no cost, no commitment.</p>
-    <a href="#demo-form" class="btn-cta-yellow">
+    <a href="https://www.sogolytics.com/request-a-demo/" class="btn-cta-yellow">
       Get My ROI Estimate
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>

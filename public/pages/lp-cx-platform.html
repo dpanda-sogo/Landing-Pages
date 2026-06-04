@@ -84,9 +84,9 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(9,34,36,0.97);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
+      background: #ffffff;
+      border-bottom: 1px solid #e2e6ea;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.06);
     }
     .nav-inner {
       display: flex;
@@ -591,9 +591,9 @@
       <img src="https://cdn.sogolytics.com/wp-content/uploads/2022/07/sogolytics-wbg.png"
            alt="Sogolytics"
            onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-      <span style="display:none;color:#fff;font-weight:800;font-size:18px;letter-spacing:-0.02em">Sogolytics</span>
+      <span style="display:none;color:#0D6E65;font-weight:800;font-size:18px;letter-spacing:-0.02em">Sogolytics</span>
     </a>
-    <a href="#demo-form" class="nav-cta">Request a Demo →</a>
+    <a href="https://www.sogolytics.com/request-a-demo/" class="nav-cta">Request a Demo →</a>
   </div>
 </nav>
 
@@ -615,9 +615,13 @@
       <div class="hero-trust">
         <span>✓ SOC 2 · ISO 27001 · HIPAA · GDPR</span>
         <span class="hero-trust-dot"></span>
-        <span>✓ 500+ enterprise clients</span>
-        <span class="hero-trust-dot"></span>
         <span>✓ 2,500+ enterprise teams</span>
+      </div>
+      <div style="margin-top:28px">
+        <a href="https://www.sogolytics.com/request-a-demo/" class="btn-cta-yellow" style="display:inline-flex;align-items:center;gap:10px;background:var(--yellow);color:#0a1a18;font-size:16px;font-weight:700;padding:16px 32px;border-radius:50px;text-decoration:none;transition:background 0.2s">
+          Request a Demo
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
       </div>
     </div>
 
@@ -658,78 +662,6 @@
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════
-     DEMO FORM (below hero on mobile)
-════════════════════════════════════════ -->
-<section id="demo-form" style="background: var(--bg-dark); padding: 0 24px 64px;">
-  <div style="max-width:520px; margin:0 auto;">
-    <div class="hero-form">
-      <h3>See it live — book your demo</h3>
-      <p>No commitment. A Sogolytics expert will walk you through the platform in 30 minutes.</p>
-      <form id="demoForm" action="YOUR_FORM_ENDPOINT" method="POST" onsubmit="handleSubmit(event)">
-        <!-- Hidden UTM fields — populated by JS -->
-        <input type="hidden" name="utm_source" id="utm_source">
-        <input type="hidden" name="utm_medium" id="utm_medium">
-        <input type="hidden" name="utm_campaign" id="utm_campaign">
-        <input type="hidden" name="utm_term" id="utm_term">
-        <input type="hidden" name="utm_content" id="utm_content">
-        <input type="hidden" name="gclid" id="gclid">
-        <input type="hidden" name="page_variant" value="cx-platform">
-
-        <div class="form-row">
-          <div class="form-group">
-            <label for="firstName">First name *</label>
-            <input type="text" id="firstName" name="first_name" placeholder="Jane" required autocomplete="given-name">
-          </div>
-          <div class="form-group">
-            <label for="lastName">Last name *</label>
-            <input type="text" id="lastName" name="last_name" placeholder="Smith" required autocomplete="family-name">
-          </div>
-        </div>
-        <div class="form-row" style="margin-top:12px">
-          <div class="form-group">
-            <label for="workEmail">Work email *</label>
-            <input type="email" id="workEmail" name="email" placeholder="jane@company.com" required autocomplete="email">
-          </div>
-          <div class="form-group">
-            <label for="company">Company *</label>
-            <input type="text" id="company" name="company" placeholder="Acme Corp" required autocomplete="organization">
-          </div>
-        </div>
-        <div class="form-row" style="margin-top:12px">
-          <div class="form-group">
-            <label for="companySize">Company size</label>
-            <select id="companySize" name="company_size">
-              <option value="">Select…</option>
-              <option value="1-50">1–50</option>
-              <option value="51-200">51–200</option>
-              <option value="201-1000">201–1,000</option>
-              <option value="1001-5000">1,001–5,000</option>
-              <option value="5000+">5,000+</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="role">Your role</label>
-            <select id="role" name="role">
-              <option value="">Select…</option>
-              <option value="cx-leader">CX Leader</option>
-              <option value="vp-marketing">VP / Director Marketing</option>
-              <option value="hr-people">HR / People Ops</option>
-              <option value="it-ops">IT / Operations</option>
-              <option value="c-suite">C-Suite</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
-        </div>
-        <button type="submit" class="btn-submit">
-          <span>Book My Demo</span>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </button>
-      </form>
-      <p class="form-note">By submitting you agree to our Privacy Policy. We never sell your data.</p>
-    </div>
-  </div>
-</section>
 
 <!-- ═══════════════════════════════════════
      LOGO / TRUST BAR
@@ -1041,7 +973,7 @@
   <div class="fade-in">
     <h2>Ready to unify your CX program?</h2>
     <p>Join 500+ enterprises using Sogolytics to turn feedback into revenue.</p>
-    <a href="#demo-form" class="btn-cta-yellow">
+    <a href="https://www.sogolytics.com/request-a-demo/" class="btn-cta-yellow">
       Book a Free Demo
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
