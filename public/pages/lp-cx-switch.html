@@ -36,6 +36,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700;800&family=Crimson+Pro:ital@1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0&display=block" rel="stylesheet">
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -67,10 +68,12 @@
     .fade-in.visible { opacity: 1; transform: none; }
 
     .nav {
-      position: sticky; top: 0; z-index: 100;
-      background: rgba(9,34,36,0.97);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #ffffff;
+      border-bottom: 1px solid #e2e6ea;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.06);
     }
     .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 60px; max-width: 1120px; margin: 0 auto; padding: 0 24px; }
     .nav-logo img { height: 24px; display: block; }
@@ -241,6 +244,16 @@
     .footer-logo { margin-bottom: 16px; }
     .footer-logo img { height: 20px; opacity: 0.5; }
 
+    .msr {
+      font-family: 'Material Symbols Rounded';
+      font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      font-size: 28px;
+      color: var(--green);
+      display: block;
+      margin-bottom: 12px;
+    }
+    .section-dark .msr { color: var(--blue); }
+
     @media (max-width: 768px) {
       .hero-inner { grid-template-columns: 1fr; gap: 40px; }
       .hero { padding: 56px 24px 48px; }
@@ -263,12 +276,12 @@
 <nav class="nav" role="navigation" aria-label="Main navigation">
   <div class="nav-inner">
     <a class="nav-logo" href="https://www.sogolytics.com" aria-label="Sogolytics home">
-      <img src="https://cdn.sogolytics.com/wp-content/uploads/2022/07/sogolytics-logo-white.png"
+      <img src="https://cdn.sogolytics.com/wp-content/uploads/2022/07/sogolytics-wbg.png"
            alt="Sogolytics"
            onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-      <span style="display:none;color:#fff;font-weight:800;font-size:18px;letter-spacing:-0.02em">Sogolytics</span>
+      <span style="display:none;color:#0D6E65;font-weight:800;font-size:18px;letter-spacing:-0.02em">Sogolytics</span>
     </a>
-    <a href="#demo-form" class="nav-cta">Plan My Migration →</a>
+    <a href="https://www.sogolytics.com/request-a-demo/" class="nav-cta">Plan My Migration →</a>
   </div>
 </nav>
 
@@ -286,7 +299,7 @@
       </p>
       <div class="guarantee-badge" aria-label="Migration guarantee">
         <span class="guarantee-badge-icon">🛡️</span>
-        <span class="guarantee-badge-text">Migration Guarantee: Live in 30 days or we extend your contract for free.</span>
+        <span class="guarantee-badge-text">Structured 30-day migration plan — with a dedicated implementation manager from day one.</span>
       </div>
       <div class="hero-trust">
         <span>✓ Full data migration included</span>
@@ -297,70 +310,17 @@
       </div>
     </div>
 
-    <!-- FORM -->
-    <div id="demo-form">
-      <div class="hero-form">
-        <h3>Start your migration plan</h3>
-        <p>Our team will map out your migration in detail — free, no commitment.</p>
-        <form id="demoForm" action="YOUR_FORM_ENDPOINT" method="POST" onsubmit="handleSubmit(event)">
-          <input type="hidden" name="utm_source" id="utm_source">
-          <input type="hidden" name="utm_medium" id="utm_medium">
-          <input type="hidden" name="utm_campaign" id="utm_campaign">
-          <input type="hidden" name="utm_term" id="utm_term">
-          <input type="hidden" name="utm_content" id="utm_content">
-          <input type="hidden" name="gclid" id="gclid">
-          <input type="hidden" name="page_variant" value="cx-switch">
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="firstName">First name *</label>
-              <input type="text" id="firstName" name="first_name" placeholder="Jane" required autocomplete="given-name">
-            </div>
-            <div class="form-group">
-              <label for="lastName">Last name *</label>
-              <input type="text" id="lastName" name="last_name" placeholder="Smith" required autocomplete="family-name">
-            </div>
-          </div>
-          <div class="form-row" style="margin-top:12px">
-            <div class="form-group">
-              <label for="workEmail">Work email *</label>
-              <input type="email" id="workEmail" name="email" placeholder="jane@company.com" required autocomplete="email">
-            </div>
-            <div class="form-group">
-              <label for="company">Company *</label>
-              <input type="text" id="company" name="company" placeholder="Acme Corp" required autocomplete="organization">
-            </div>
-          </div>
-          <div class="form-row" style="margin-top:12px">
-            <div class="form-group">
-              <label for="companySize">Company size</label>
-              <select id="companySize" name="company_size">
-                <option value="">Select…</option>
-                <option value="1-50">1–50</option>
-                <option value="51-200">51–200</option>
-                <option value="201-1000">201–1,000</option>
-                <option value="1001-5000">1,001–5,000</option>
-                <option value="5000+">5,000+</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="timeline">Target switch timeline</label>
-              <select id="timeline" name="switch_timeline">
-                <option value="">Select…</option>
-                <option value="asap">As soon as possible</option>
-                <option value="1-3months">1–3 months</option>
-                <option value="3-6months">3–6 months</option>
-                <option value="6-12months">6–12 months</option>
-                <option value="exploring">Just exploring</option>
-              </select>
-            </div>
-          </div>
-          <button type="submit" class="btn-submit">
-            <span>Plan My Migration</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </button>
-        </form>
-        <p class="form-note">Free migration assessment. No contract required to get started.</p>
+    <!-- CTA visual -->
+    <div style="display:flex;flex-direction:column;justify-content:center;gap:24px">
+      <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);border-radius:16px;padding:36px;text-align:center">
+        <p style="font-size:13px;color:rgba(255,255,255,0.55);margin-bottom:8px;letter-spacing:0.06em;text-transform:uppercase;font-weight:600">Free migration assessment</p>
+        <h3 style="font-size:20px;font-weight:700;margin-bottom:12px">Start your 30-day migration plan</h3>
+        <p style="font-size:14px;color:rgba(255,255,255,0.55);margin-bottom:28px;line-height:1.6">Our team maps your migration in detail — data, integrations, and timeline — before you sign anything.</p>
+        <a href="https://www.sogolytics.com/request-a-demo/" style="display:inline-flex;align-items:center;gap:10px;background:var(--yellow);color:#0a1a18;font-size:16px;font-weight:700;padding:16px 32px;border-radius:50px;text-decoration:none;width:100%;justify-content:center;box-sizing:border-box">
+          Plan My Migration
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <p style="font-size:11px;color:rgba(255,255,255,0.3);margin-top:12px">No contract required to get started</p>
       </div>
     </div>
   </div>
@@ -383,16 +343,16 @@
 <section class="stats-band">
   <div class="stats-grid fade-in">
     <div>
-      <div class="stat-num">14</div>
-      <div class="stat-label">Average days<br>to go live</div>
+      <div class="stat-num">100k+</div>
+      <div class="stat-label">Customers worldwide<br>across 96 countries</div>
     </div>
     <div>
-      <div class="stat-num">100%</div>
-      <div class="stat-label">Data migrated<br>with zero loss</div>
+      <div class="stat-num">2,500+</div>
+      <div class="stat-label">Enterprise teams<br>running active programs</div>
     </div>
     <div>
-      <div class="stat-num">96%</div>
-      <div class="stat-label">Retention rate<br>year-over-year</div>
+      <div class="stat-num">Weeks</div>
+      <div class="stat-label">Average time to live —<br>not quarters</div>
     </div>
   </div>
 </section>
@@ -478,7 +438,7 @@
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
         </div>
         <h3>CRM &amp; helpdesk integrations</h3>
-        <p>Salesforce, HubSpot, ServiceNow, Zendesk — all your CRM and ticketing integrations rebuilt and tested in your new environment.</p>
+        <p>Salesforce, Zapier, Google Drive, and OneDrive — plus REST API connections. All your integrations rebuilt and tested in your new environment.</p>
       </div>
       <div class="card">
         <div class="card-icon">
@@ -532,17 +492,17 @@
     </div>
     <div class="cards-grid fade-in" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr))">
       <div class="card" style="border-top: 3px solid var(--green)">
-        <div style="font-size:36px;margin-bottom:12px">🔗</div>
+        <span class="msr">hub</span>
         <h3>One platform, not five</h3>
         <p>VoC, EX, NPS, AI analytics, and case management — all in a single login. No more exporting CSVs between systems to see the full picture.</p>
       </div>
       <div class="card" style="border-top: 3px solid var(--blue)">
-        <div style="font-size:36px;margin-bottom:12px">📉</div>
+        <span class="msr">trending_down</span>
         <h3>Lower total cost</h3>
-        <p>Most customers consolidate 3–5 tools into Sogolytics and reduce their combined CX tool spend by 30–50% in year one.</p>
+        <p>Most customers consolidate 3–5 point solutions into Sogolytics, replacing fragmented tools with one transparent plan — and consistently reducing their combined CX tool spend.</p>
       </div>
       <div class="card" style="border-top: 3px solid var(--yellow)">
-        <div style="font-size:36px;margin-bottom:12px">🚀</div>
+        <span class="msr">rocket_launch</span>
         <h3>Faster, smarter insights</h3>
         <p>AI-powered analytics surface what matters automatically. Your team spends less time pulling reports and more time acting on insights.</p>
       </div>
@@ -587,7 +547,7 @@
         </button>
         <div class="faq-answer" role="region">
           <div class="faq-answer-inner">
-            We'll recreate all of your existing integrations — Salesforce, HubSpot, ServiceNow, Zendesk, Microsoft Teams, Slack, and any custom REST API connections. Our team handles the technical setup; your team just validates that the data is flowing correctly.
+            We'll recreate all of your existing integrations — including Salesforce, Zapier, Google Drive, OneDrive, and any custom REST API connections. Our team handles the technical setup; your team validates that the data is flowing correctly.
           </div>
         </div>
       </div>
@@ -598,7 +558,7 @@
         </button>
         <div class="faq-answer" role="region">
           <div class="faq-answer-inner">
-            If Sogolytics causes the delay, we extend your contract at no charge for the equivalent time. We've never missed a committed go-live date in over 500 enterprise implementations.
+            If Sogolytics causes the delay, we work with you to get the program back on track at no extra cost. Our structured migration process has been refined across hundreds of enterprise implementations.
           </div>
         </div>
       </div>
@@ -622,7 +582,7 @@
   <div class="fade-in">
     <h2>Ready to make the switch?</h2>
     <p>Start with a free migration assessment — our team will map your move in detail, no commitment required.</p>
-    <a href="#demo-form" class="btn-cta-yellow">
+    <a href="https://www.sogolytics.com/request-a-demo/" class="btn-cta-yellow">
       Plan My Migration
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
@@ -634,7 +594,7 @@
   <div class="footer-logo">
     <img src="https://cdn.sogolytics.com/wp-content/uploads/2022/07/sogolytics-wbg.png" alt="Sogolytics" onerror="this.style.display='none'">
   </div>
-  © 2025 Sogolytics, Inc. All rights reserved.<br>
+  © 2026 Sogolytics, Inc. All rights reserved.<br>
   <a href="https://www.sogolytics.com/privacy-policy/">Privacy Policy</a> ·
   <a href="https://www.sogolytics.com/terms-of-service/">Terms of Service</a>
 </footer>
