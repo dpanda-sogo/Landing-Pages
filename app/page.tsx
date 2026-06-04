@@ -24,7 +24,7 @@ const pages: LandingPage[] = [
     tag: "Conquesting",
     tagBg: "#fff3cd",
     tagColor: "#856404",
-    htmlFile: "lp-cx-platform.html",
+    htmlFile: "lp-cx-platform-wp.html",
   },
   {
     slug: "pages/lp-cx-value.html",
@@ -34,7 +34,7 @@ const pages: LandingPage[] = [
     tag: "Conquesting",
     tagBg: "#fff3cd",
     tagColor: "#856404",
-    htmlFile: "lp-cx-value.html",
+    htmlFile: "lp-cx-value-wp.html",
   },
   {
     slug: "pages/lp-cx-switch.html",
@@ -44,7 +44,7 @@ const pages: LandingPage[] = [
     tag: "Conquesting",
     tagBg: "#fff3cd",
     tagColor: "#856404",
-    htmlFile: "lp-cx-switch.html",
+    htmlFile: "lp-cx-switch-wp.html",
   },
 ];
 

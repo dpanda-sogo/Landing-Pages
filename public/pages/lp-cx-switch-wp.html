@@ -1,0 +1,470 @@
+<!--
+  ============================================================
+  SOGOLYTICS — CX PLATFORM SWITCH / MIGRATION (WordPress / WPBakery snippet)
+  ============================================================
+  PASTE THIS into WPBakery → Add Element → Raw HTML
+  ============================================================
+  DEVELOPER EDIT GUIDE
+  LOGOS:           Search "LOGO 1" through "LOGO 6"
+                   Replace the placeholder <div> with:
+                   <img src="URL" alt="Company" style="height:36px;width:auto;">
+  TESTIMONIAL:     Search [TESTIMONIAL QUOTE], [AUTHOR NAME],
+                   [AUTHOR TITLE], [AUTHOR COMPANY], [CO. LOGO]
+  GTM ID:          Search GTM-XXXXXXX → replace with real ID
+  ============================================================
+  DO NOT add <html> <head> <body> <nav> <footer> — WordPress
+  provides those. No @font-face or :root CSS vars needed either.
+  ============================================================
+-->
+
+<!-- ── Responsive layout overrides only ── -->
+<style>
+.lp-two-col { display:flex; gap:64px; align-items:center; }
+.lp-grid-3  { display:flex; gap:20px; }
+.lp-fade    { opacity:0; transform:translateY(24px); transition:opacity .6s,transform .6s; }
+.lp-fade.on { opacity:1; transform:none; }
+.lp-faq-answer { max-height:0; overflow:hidden; transition:max-height .35s ease; }
+.lp-faq-item.open .lp-faq-icon { transform:rotate(45deg); }
+@media (max-width:768px) {
+  .lp-two-col { flex-direction:column !important; gap:40px !important; }
+  .lp-grid-3  { flex-direction:column !important; }
+}
+</style>
+
+<!-- GTM dataLayer -->
+<script>
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({ event: 'lp_view', page_variant: 'cx-switch', page_type: 'conquesting' });
+</script>
+
+<!-- ═══════════════════════════════════════════════════
+     SECTION 1 — HERO
+════════════════════════════════════════════════════ -->
+<div class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:linear-gradient(135deg,#061a17 0%,#092224 50%,#0d3d37 100%);padding:80px 24px 72px;">
+  <div class="col span_12 color-dark left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding color-dark" data-animation="" data-delay="">
+      <div class="wpb_wrapper">
+        <div class="lp-two-col" style="max-width:1120px;margin:0 auto;">
+
+          <!-- Left: headline + trust -->
+          <div style="flex:1;min-width:0;">
+            <p style="font-size:1.1rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--color-secondary-v2);margin-bottom:16px;font-family:var(--font-Epilogue-Bold);">Zero-disruption migration</p>
+            <h1 class="fs-epilogue-h1 white-text" style="margin-bottom:20px;">
+              Switch platforms<br>
+              in <span class="fs-italic" style="font-size:inherit;">30 days.</span><br>
+              We do the heavy lifting.
+            </h1>
+            <p class="fs-pm white-text" style="opacity:.72;margin-bottom:28px;max-width:520px;">
+              Migrating your CX program shouldn't mean months of disruption. Sogolytics handles data migration, configuration, integrations, and training — so your team barely notices the switch.
+            </p>
+            <!-- Migration plan badge -->
+            <div style="display:inline-flex;align-items:center;gap:10px;background:rgba(2,190,204,.1);border:1px solid rgba(2,190,204,.3);border-radius:8px;padding:12px 16px;margin-bottom:28px;">
+              <span style="font-size:22px;line-height:1;flex-shrink:0;">🛡️</span>
+              <span style="font-size:1.35rem;color:var(--color-secondary-v2);font-weight:700;font-family:var(--font-Epilogue-Bold);">Structured 30-day migration plan — with a dedicated implementation manager from day one.</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:1.2rem;color:rgba(255,255,255,.55);font-family:var(--font-Epilogue-Regular);">
+              <span>✓ Full data migration included</span>
+              <span style="width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.3);flex-shrink:0;"></span>
+              <span>✓ Parallel-run period</span>
+              <span style="width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.3);flex-shrink:0;"></span>
+              <span>✓ No disruption to live programs</span>
+            </div>
+          </div>
+
+          <!-- Right: CTA card -->
+          <div style="flex:1;min-width:0;">
+            <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:36px;text-align:center;">
+              <p style="font-size:1.1rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--color-secondary-v2);margin-bottom:12px;font-family:var(--font-Epilogue-Bold);">Free migration assessment</p>
+              <h3 class="font-Epilogue-Bold white-text" style="font-size:2rem;margin-bottom:12px;">Start your 30-day migration plan</h3>
+              <p style="font-size:1.4rem;color:rgba(255,255,255,.55);margin-bottom:28px;line-height:1.6;">Our team maps your migration in detail — data, integrations, and timeline — before you sign anything.</p>
+              <a href="https://www.sogolytics.com/request-a-demo/" class="slide-btn-wrapper slide-button fill-bg" style="text-decoration:none;display:inline-flex;width:100%;justify-content:center;">
+                <i class="fa fa-arrow-right"></i>
+                <span>Plan My Migration</span>
+              </a>
+              <p style="font-size:1.1rem;color:rgba(255,255,255,.3);margin-top:12px;margin-bottom:0;">No contract required to get started</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     SECTION 2 — LOGO BAR
+════════════════════════════════════════════════════ -->
+<div class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:#fff;border-bottom:1px solid #e2e6ea;padding:36px 24px;">
+  <div class="col span_12 left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding" data-animation="" data-delay="">
+      <div class="wpb_wrapper">
+        <p style="font-size:1.2rem;font-weight:600;color:#5a6472;letter-spacing:.06em;text-transform:uppercase;text-align:center;margin-bottom:24px;font-family:var(--font-Epilogue-SemiBold);">Companies that have already made the switch</p>
+        <div style="display:flex;align-items:center;justify-content:center;gap:40px;flex-wrap:wrap;max-width:1120px;margin:0 auto;">
+          <!-- LOGO 1: Replace with <img src="URL" alt="Company" style="height:36px;width:auto;"> -->
+          <div style="height:36px;min-width:100px;background:#f0f4f3;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:600;color:#b0b8c1;padding:0 16px;">LOGO 1</div>
+          <!-- LOGO 2 -->
+          <div style="height:36px;min-width:100px;background:#f0f4f3;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:600;color:#b0b8c1;padding:0 16px;">LOGO 2</div>
+          <!-- LOGO 3 -->
+          <div style="height:36px;min-width:100px;background:#f0f4f3;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:600;color:#b0b8c1;padding:0 16px;">LOGO 3</div>
+          <!-- LOGO 4 -->
+          <div style="height:36px;min-width:100px;background:#f0f4f3;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:600;color:#b0b8c1;padding:0 16px;">LOGO 4</div>
+          <!-- LOGO 5 -->
+          <div style="height:36px;min-width:100px;background:#f0f4f3;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:600;color:#b0b8c1;padding:0 16px;">LOGO 5</div>
+          <!-- LOGO 6 -->
+          <div style="height:36px;min-width:100px;background:#f0f4f3;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:600;color:#b0b8c1;padding:0 16px;">LOGO 6</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     SECTION 3 — STATS BAND
+════════════════════════════════════════════════════ -->
+<div class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:#E8F4F2;padding:48px 24px;">
+  <div class="col span_12 left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding" data-animation="" data-delay="">
+      <div class="wpb_wrapper lp-fade">
+        <div class="lp-grid-3" style="max-width:800px;margin:0 auto;text-align:center;justify-content:center;">
+          <div style="flex:1;">
+            <div class="fs-epilogue-h2" style="color:var(--color-primary-v2);line-height:1;margin-bottom:8px;">100k+</div>
+            <p style="font-size:1.4rem;color:#5a6472;line-height:1.4;margin:0;font-family:var(--font-Epilogue-Regular);">Customers worldwide<br>across 96 countries</p>
+          </div>
+          <div style="flex:1;">
+            <div class="fs-epilogue-h2" style="color:var(--color-primary-v2);line-height:1;margin-bottom:8px;">2,500+</div>
+            <p style="font-size:1.4rem;color:#5a6472;line-height:1.4;margin:0;font-family:var(--font-Epilogue-Regular);">Enterprise teams<br>running active programs</p>
+          </div>
+          <div style="flex:1;">
+            <div class="fs-epilogue-h2" style="color:var(--color-primary-v2);line-height:1;margin-bottom:8px;">Weeks</div>
+            <p style="font-size:1.4rem;color:#5a6472;line-height:1.4;margin:0;font-family:var(--font-Epilogue-Regular);">Average time to go live —<br>not quarters</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     SECTION 4 — MIGRATION TIMELINE
+════════════════════════════════════════════════════ -->
+<div class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:#fff;padding:80px 24px;">
+  <div class="col span_12 left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding" data-animation="" data-delay="">
+      <div class="wpb_wrapper" style="max-width:1120px;margin:0 auto;">
+
+        <div class="lp-fade" style="text-align:center;margin-bottom:56px;">
+          <p style="font-size:1.1rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--color-primary-v2);margin-bottom:12px;font-family:var(--font-Epilogue-Bold);">Your Migration Plan</p>
+          <h2 class="fs-epilogue-h2" style="margin-bottom:16px;">From contract signed to live in 30 days</h2>
+          <p class="fs-pm" style="color:#5a6472;max-width:620px;margin:0 auto;">Our structured migration process has been refined across hundreds of enterprise implementations.</p>
+        </div>
+
+        <div class="lp-fade" style="max-width:760px;margin:0 auto;position:relative;">
+          <!-- Vertical connecting line -->
+          <div style="position:absolute;left:27px;top:56px;bottom:56px;width:2px;background:#e2e6ea;z-index:0;"></div>
+
+          <!-- Step 1 -->
+          <div style="display:flex;gap:24px;margin-bottom:40px;position:relative;z-index:1;">
+            <div style="width:56px;height:56px;border-radius:50%;background:var(--color-primary-v2);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.8rem;font-weight:700;color:#fff;font-family:var(--font-Epilogue-Bold);">1</div>
+            <div style="padding-top:8px;">
+              <p style="font-size:1.05rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--color-secondary-v2);margin-bottom:4px;font-family:var(--font-Epilogue-Bold);">Days 1–3</p>
+              <h3 class="font-Epilogue-Bold" style="font-size:1.7rem;margin-bottom:8px;">Discovery &amp; Migration Assessment</h3>
+              <p style="font-size:1.4rem;color:#5a6472;line-height:1.6;margin:0;font-family:var(--font-Epilogue-Regular);">Your dedicated implementation manager maps every survey, data connection, user role, and integration in your current environment.</p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div style="display:flex;gap:24px;margin-bottom:40px;position:relative;z-index:1;">
+            <div style="width:56px;height:56px;border-radius:50%;background:var(--color-primary-v2);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.8rem;font-weight:700;color:#fff;font-family:var(--font-Epilogue-Bold);">2</div>
+            <div style="padding-top:8px;">
+              <p style="font-size:1.05rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--color-secondary-v2);margin-bottom:4px;font-family:var(--font-Epilogue-Bold);">Days 4–10</p>
+              <h3 class="font-Epilogue-Bold" style="font-size:1.7rem;margin-bottom:8px;">Data Migration &amp; Configuration</h3>
+              <p style="font-size:1.4rem;color:#5a6472;line-height:1.6;margin:0;font-family:var(--font-Epilogue-Regular);">We migrate your historical response data, contact lists, and reporting configurations. Your Sogolytics environment is built in parallel — your current programs run uninterrupted.</p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div style="display:flex;gap:24px;margin-bottom:40px;position:relative;z-index:1;">
+            <div style="width:56px;height:56px;border-radius:50%;background:var(--color-primary-v2);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.8rem;font-weight:700;color:#fff;font-family:var(--font-Epilogue-Bold);">3</div>
+            <div style="padding-top:8px;">
+              <p style="font-size:1.05rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--color-secondary-v2);margin-bottom:4px;font-family:var(--font-Epilogue-Bold);">Days 11–20</p>
+              <h3 class="font-Epilogue-Bold" style="font-size:1.7rem;margin-bottom:8px;">Integrations &amp; QA</h3>
+              <p style="font-size:1.4rem;color:#5a6472;line-height:1.6;margin:0;font-family:var(--font-Epilogue-Regular);">CRM, HRIS, and SSO integrations are connected and tested. We run a full QA pass comparing outputs between platforms before cutover.</p>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div style="display:flex;gap:24px;margin-bottom:40px;position:relative;z-index:1;">
+            <div style="width:56px;height:56px;border-radius:50%;background:var(--color-primary-v2);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.8rem;font-weight:700;color:#fff;font-family:var(--font-Epilogue-Bold);">4</div>
+            <div style="padding-top:8px;">
+              <p style="font-size:1.05rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--color-secondary-v2);margin-bottom:4px;font-family:var(--font-Epilogue-Bold);">Days 21–25</p>
+              <h3 class="font-Epilogue-Bold" style="font-size:1.7rem;margin-bottom:8px;">Team Training &amp; Acceptance Testing</h3>
+              <p style="font-size:1.4rem;color:#5a6472;line-height:1.6;margin:0;font-family:var(--font-Epilogue-Regular);">Role-based training for your CX team, HR, and executives. Your team signs off before go-live — no surprises.</p>
+            </div>
+          </div>
+
+          <!-- Step 5 — Go Live -->
+          <div style="display:flex;gap:24px;position:relative;z-index:1;">
+            <div style="width:56px;height:56px;border-radius:50%;background:var(--color-secondary-v2);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:2rem;font-weight:700;color:#fff;font-family:var(--font-Epilogue-Bold);">✓</div>
+            <div style="padding-top:8px;">
+              <p style="font-size:1.05rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--color-secondary-v2);margin-bottom:4px;font-family:var(--font-Epilogue-Bold);">Day 30</p>
+              <h3 class="font-Epilogue-Bold" style="font-size:1.7rem;margin-bottom:8px;">Go Live</h3>
+              <p style="font-size:1.4rem;color:#5a6472;line-height:1.6;margin:0;font-family:var(--font-Epilogue-Regular);">Cutover happens at a scheduled window. Your dedicated CSM is available for the first 90 days post-launch for any questions.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     SECTION 5 — WHAT'S INCLUDED (dark bg, 6 cards)
+════════════════════════════════════════════════════ -->
+<div class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:var(--color-deepOcean);padding:80px 24px;">
+  <div class="col span_12 color-dark left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding color-dark" data-animation="" data-delay="">
+      <div class="wpb_wrapper" style="max-width:1120px;margin:0 auto;">
+
+        <div class="lp-fade" style="text-align:center;margin-bottom:48px;">
+          <p style="font-size:1.1rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--color-secondary-v2);margin-bottom:12px;font-family:var(--font-Epilogue-Bold);">Migration Package</p>
+          <h2 class="fs-epilogue-h2 white-text" style="margin-bottom:16px;">Everything included in your migration</h2>
+          <p class="fs-pm" style="color:rgba(255,255,255,.65);max-width:620px;margin:0 auto;">There are no surprise fees. Every item below is included in your enterprise agreement.</p>
+        </div>
+
+        <div class="lp-fade lp-grid-3" style="flex-wrap:wrap;gap:20px;">
+          <!-- Card 1 -->
+          <div style="flex:1;min-width:280px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:28px;">
+            <div style="width:44px;height:44px;border-radius:10px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;margin-bottom:16px;color:var(--color-secondary-v2);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+            </div>
+            <h3 class="font-Epilogue-Bold white-text" style="font-size:1.6rem;margin-bottom:8px;">Full historical data migration</h3>
+            <p style="font-size:1.4rem;color:rgba(255,255,255,.6);line-height:1.6;margin:0;font-family:var(--font-Epilogue-Regular);">All your response data, contact lists, reporting history, and survey configurations are migrated — nothing left behind.</p>
+          </div>
+          <!-- Card 2 -->
+          <div style="flex:1;min-width:280px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:28px;">
+            <div style="width:44px;height:44px;border-radius:10px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;margin-bottom:16px;color:var(--color-secondary-v2);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <h3 class="font-Epilogue-Bold white-text" style="font-size:1.6rem;margin-bottom:8px;">Dedicated implementation manager</h3>
+            <p style="font-size:1.4rem;color:rgba(255,255,255,.6);line-height:1.6;margin:0;font-family:var(--font-Epilogue-Regular);">A named project manager owns your migration end-to-end. Single point of contact, clear milestones.</p>
+          </div>
+          <!-- Card 3 -->
+          <div style="flex:1;min-width:280px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:28px;">
+            <div style="width:44px;height:44px;border-radius:10px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;margin-bottom:16px;color:var(--color-secondary-v2);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+            </div>
+            <h3 class="font-Epilogue-Bold white-text" style="font-size:1.6rem;margin-bottom:8px;">Salesforce, Zapier &amp; key integrations</h3>
+            <p style="font-size:1.4rem;color:rgba(255,255,255,.6);line-height:1.6;margin:0;font-family:var(--font-Epilogue-Regular);">Salesforce, Zapier, Google Drive, and OneDrive — plus REST API connections. All rebuilt and tested in your new environment.</p>
+          </div>
+          <!-- Card 4 -->
+          <div style="flex:1;min-width:280px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:28px;">
+            <div style="width:44px;height:44px;border-radius:10px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;margin-bottom:16px;color:var(--color-secondary-v2);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            </div>
+            <h3 class="font-Epilogue-Bold white-text" style="font-size:1.6rem;margin-bottom:8px;">Role-based team training</h3>
+            <p style="font-size:1.4rem;color:rgba(255,255,255,.6);line-height:1.6;margin:0;font-family:var(--font-Epilogue-Regular);">Separate training tracks for CX teams, HR, executives, and admin users — so everyone is comfortable before go-live.</p>
+          </div>
+          <!-- Card 5 -->
+          <div style="flex:1;min-width:280px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:28px;">
+            <div style="width:44px;height:44px;border-radius:10px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;margin-bottom:16px;color:var(--color-secondary-v2);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/></svg>
+            </div>
+            <h3 class="font-Epilogue-Bold white-text" style="font-size:1.6rem;margin-bottom:8px;">Parallel-run period</h3>
+            <p style="font-size:1.4rem;color:rgba(255,255,255,.6);line-height:1.6;margin:0;font-family:var(--font-Epilogue-Regular);">Your existing programs stay live throughout migration. Nothing is switched off until your team has approved the new environment.</p>
+          </div>
+          <!-- Card 6 -->
+          <div style="flex:1;min-width:280px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:28px;">
+            <div style="width:44px;height:44px;border-radius:10px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;margin-bottom:16px;color:var(--color-secondary-v2);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.37 2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.27a16 16 0 0 0 6 6l.46-.46a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16.92z"/></svg>
+            </div>
+            <h3 class="font-Epilogue-Bold white-text" style="font-size:1.6rem;margin-bottom:8px;">90-day post-launch support</h3>
+            <p style="font-size:1.4rem;color:rgba(255,255,255,.6);line-height:1.6;margin:0;font-family:var(--font-Epilogue-Regular);">Your dedicated CSM stays with you for the first 90 days post-launch — available for questions, tuning, and additional training.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     SECTION 6 — TESTIMONIAL
+════════════════════════════════════════════════════ -->
+<div class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:linear-gradient(135deg,#061a17 0%,#092224 100%);padding:72px 24px;text-align:center;">
+  <div class="col span_12 color-dark left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding color-dark" data-animation="" data-delay="">
+      <div class="wpb_wrapper lp-fade" style="max-width:900px;margin:0 auto;">
+
+        <!--
+          TESTIMONIAL QUOTE: Replace the placeholder below with the real quote (migration/switch focus).
+          AUTHOR NAME / TITLE / COMPANY: Replace [AUTHOR NAME] etc.
+          CO. LOGO: Replace [CO. LOGO] div with <img src="URL" alt="Company" style="height:28px;opacity:.7">
+        -->
+        <blockquote style="font-family:var(--font-CrimsonPro-Italic),Georgia,serif;font-style:italic;font-size:2.6rem;line-height:1.55;color:rgba(255,255,255,.92);margin:0 0 32px;padding:0;">
+          <span style="color:var(--color-secondary-v2);">"</span>[TESTIMONIAL QUOTE — migration/switch focus. 2–3 sentences about how the switch to Sogolytics was seamless and what changed for the team afterward.]<span style="color:var(--color-secondary-v2);">"</span>
+        </blockquote>
+
+        <div style="display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;">
+          <div style="width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;font-size:1.8rem;font-weight:700;color:var(--color-secondary-v2);flex-shrink:0;">[A]</div>
+          <div style="text-align:left;">
+            <div class="font-Epilogue-Bold white-text" style="font-size:1.5rem;">[AUTHOR NAME]</div>
+            <div style="font-size:1.3rem;color:rgba(255,255,255,.5);font-family:var(--font-Epilogue-Regular);">[AUTHOR TITLE], [AUTHOR COMPANY]</div>
+          </div>
+          <!-- CO. LOGO placeholder -->
+          <div style="height:28px;min-width:80px;background:rgba(255,255,255,.1);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:1rem;color:rgba(255,255,255,.35);padding:0 10px;">[CO. LOGO]</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     SECTION 7 — BENEFIT CARDS (After You Switch)
+════════════════════════════════════════════════════ -->
+<div class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:#E8F4F2;padding:80px 24px;">
+  <div class="col span_12 left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding" data-animation="" data-delay="">
+      <div class="wpb_wrapper" style="max-width:1120px;margin:0 auto;">
+
+        <div class="lp-fade" style="text-align:center;margin-bottom:48px;">
+          <p style="font-size:1.1rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--color-primary-v2);margin-bottom:12px;font-family:var(--font-Epilogue-Bold);">After You Switch</p>
+          <h2 class="fs-epilogue-h2" style="margin-bottom:0;">What changes on day 31</h2>
+        </div>
+
+        <div class="lp-fade lp-grid-3" style="gap:20px;">
+          <div style="flex:1;min-width:260px;background:#fff;border:1px solid #e2e6ea;border-top:3px solid var(--color-primary-v2);border-radius:12px;padding:28px;">
+            <div style="font-size:3.6rem;margin-bottom:12px;">🔗</div>
+            <h3 class="font-Epilogue-Bold" style="font-size:1.6rem;margin-bottom:8px;">One platform, not five</h3>
+            <p style="font-size:1.4rem;color:#5a6472;line-height:1.6;margin:0;font-family:var(--font-Epilogue-Regular);">VoC, EX, NPS, AI analytics, and case management — all in a single login. No more exporting CSVs between systems to see the full picture.</p>
+          </div>
+          <div style="flex:1;min-width:260px;background:#fff;border:1px solid #e2e6ea;border-top:3px solid var(--color-secondary-v2);border-radius:12px;padding:28px;">
+            <div style="font-size:3.6rem;margin-bottom:12px;">📉</div>
+            <h3 class="font-Epilogue-Bold" style="font-size:1.6rem;margin-bottom:8px;">Lower total cost</h3>
+            <p style="font-size:1.4rem;color:#5a6472;line-height:1.6;margin:0;font-family:var(--font-Epilogue-Regular);">Most customers consolidate 3–5 point solutions into Sogolytics, replacing fragmented tools with one transparent plan — and consistently reducing their combined CX tool spend.</p>
+          </div>
+          <div style="flex:1;min-width:260px;background:#fff;border:1px solid #e2e6ea;border-top:3px solid var(--color-neonYellow);border-radius:12px;padding:28px;">
+            <div style="font-size:3.6rem;margin-bottom:12px;">🚀</div>
+            <h3 class="font-Epilogue-Bold" style="font-size:1.6rem;margin-bottom:8px;">Faster, smarter insights</h3>
+            <p style="font-size:1.4rem;color:#5a6472;line-height:1.6;margin:0;font-family:var(--font-Epilogue-Regular);">AI-powered analytics surface what matters automatically. Your team spends less time pulling reports and more time acting on insights.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     SECTION 8 — FAQ
+════════════════════════════════════════════════════ -->
+<div class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:#fff;padding:80px 24px;">
+  <div class="col span_12 left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding" data-animation="" data-delay="">
+      <div class="wpb_wrapper" style="max-width:1120px;margin:0 auto;">
+
+        <div class="lp-fade" style="text-align:center;margin-bottom:48px;">
+          <p style="font-size:1.1rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--color-primary-v2);margin-bottom:12px;font-family:var(--font-Epilogue-Bold);">Migration Questions</p>
+          <h2 class="fs-epilogue-h2" style="margin-bottom:0;">Frequently asked about switching</h2>
+        </div>
+
+        <div class="lp-fade" style="max-width:720px;margin:0 auto;">
+
+          <div class="lp-faq-item" style="border-bottom:1px solid #e2e6ea;">
+            <button class="lp-faq-question" style="width:100%;background:none;border:none;text-align:left;padding:20px 0;font-size:1.5rem;font-weight:600;color:#1a1a1a;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:var(--font-Epilogue-Bold);">
+              Will my live survey programs be disrupted?
+              <span class="lp-faq-icon" style="width:24px;height:24px;border-radius:50%;background:#E8F4F2;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.6rem;color:var(--color-primary-v2);font-weight:700;transition:transform .3s;">+</span>
+            </button>
+            <div class="lp-faq-answer">
+              <p style="padding-bottom:20px;font-size:1.4rem;color:#5a6472;line-height:1.7;margin:0;font-family:var(--font-Epilogue-Regular);">No. We build your full Sogolytics environment in parallel with your existing platform. Your programs stay live and collecting responses until your team reviews and approves the new environment — nothing is switched off until you say so.</p>
+            </div>
+          </div>
+
+          <div class="lp-faq-item" style="border-bottom:1px solid #e2e6ea;">
+            <button class="lp-faq-question" style="width:100%;background:none;border:none;text-align:left;padding:20px 0;font-size:1.5rem;font-weight:600;color:#1a1a1a;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:var(--font-Epilogue-Bold);">
+              How much historical data can you migrate?
+              <span class="lp-faq-icon" style="width:24px;height:24px;border-radius:50%;background:#E8F4F2;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.6rem;color:var(--color-primary-v2);font-weight:700;transition:transform .3s;">+</span>
+            </button>
+            <div class="lp-faq-answer">
+              <p style="padding-bottom:20px;font-size:1.4rem;color:#5a6472;line-height:1.7;margin:0;font-family:var(--font-Epilogue-Regular);">All of it. Response data, contact lists, survey templates, and reporting configurations. We validate the migration with checksums before and after transfer — so you have full confidence in data integrity before going live.</p>
+            </div>
+          </div>
+
+          <div class="lp-faq-item" style="border-bottom:1px solid #e2e6ea;">
+            <button class="lp-faq-question" style="width:100%;background:none;border:none;text-align:left;padding:20px 0;font-size:1.5rem;font-weight:600;color:#1a1a1a;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:var(--font-Epilogue-Bold);">
+              What integrations will you rebuild?
+              <span class="lp-faq-icon" style="width:24px;height:24px;border-radius:50%;background:#E8F4F2;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.6rem;color:var(--color-primary-v2);font-weight:700;transition:transform .3s;">+</span>
+            </button>
+            <div class="lp-faq-answer">
+              <p style="padding-bottom:20px;font-size:1.4rem;color:#5a6472;line-height:1.7;margin:0;font-family:var(--font-Epilogue-Regular);">Salesforce, Zapier, Google Drive, OneDrive, and any custom REST API connections your team has in place today. All integrations are rebuilt and QA-tested in the new environment before cutover.</p>
+            </div>
+          </div>
+
+          <div class="lp-faq-item" style="border-bottom:1px solid #e2e6ea;">
+            <button class="lp-faq-question" style="width:100%;background:none;border:none;text-align:left;padding:20px 0;font-size:1.5rem;font-weight:600;color:#1a1a1a;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:var(--font-Epilogue-Bold);">
+              What if we miss the 30-day window?
+              <span class="lp-faq-icon" style="width:24px;height:24px;border-radius:50%;background:#E8F4F2;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.6rem;color:var(--color-primary-v2);font-weight:700;transition:transform .3s;">+</span>
+            </button>
+            <div class="lp-faq-answer">
+              <p style="padding-bottom:20px;font-size:1.4rem;color:#5a6472;line-height:1.7;margin:0;font-family:var(--font-Epilogue-Regular);">If Sogolytics causes the delay, we work with you to get back on track at no extra cost. Our structured process has been refined across hundreds of enterprise implementations — delays are rare, and our team owns the timeline.</p>
+            </div>
+          </div>
+
+          <div class="lp-faq-item" style="border-bottom:1px solid #e2e6ea;">
+            <button class="lp-faq-question" style="width:100%;background:none;border:none;text-align:left;padding:20px 0;font-size:1.5rem;font-weight:600;color:#1a1a1a;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:var(--font-Epilogue-Bold);">
+              Can we run a proof of concept before committing?
+              <span class="lp-faq-icon" style="width:24px;height:24px;border-radius:50%;background:#E8F4F2;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.6rem;color:var(--color-primary-v2);font-weight:700;transition:transform .3s;">+</span>
+            </button>
+            <div class="lp-faq-answer">
+              <p style="padding-bottom:20px;font-size:1.4rem;color:#5a6472;line-height:1.7;margin:0;font-family:var(--font-Epilogue-Regular);">Yes. We offer a 30-day PoC where your team runs a live program alongside your current platform before signing a migration contract. Your team gets real experience with the product — before you commit to a full switch.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     SECTION 9 — BOTTOM CTA BAND
+════════════════════════════════════════════════════ -->
+<div class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:var(--color-primary-v2);padding:64px 24px;text-align:center;">
+  <div class="col span_12 color-dark left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding color-dark" data-animation="" data-delay="">
+      <div class="wpb_wrapper lp-fade" style="max-width:700px;margin:0 auto;">
+        <h2 class="fs-epilogue-h2 white-text" style="margin-bottom:16px;">Ready to make the switch?</h2>
+        <p class="fs-pm" style="color:rgba(255,255,255,.75);margin-bottom:32px;">Start with a free migration assessment — our team maps your move in detail, no commitment required.</p>
+        <a href="https://www.sogolytics.com/request-a-demo/" class="slide-btn-wrapper slide-button fill-bg" style="text-decoration:none;">
+          <i class="fa fa-arrow-right"></i>
+          <span>Plan My Migration</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     JAVASCRIPT — FAQ accordion + fade-in
+════════════════════════════════════════════════════ -->
+<script>
+(function(){
+  document.querySelectorAll('.lp-faq-question').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var item = btn.closest('.lp-faq-item');
+      var answer = item.querySelector('.lp-faq-answer');
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.lp-faq-item.open').forEach(function(el){
+        el.classList.remove('open');
+        el.querySelector('.lp-faq-answer').style.maxHeight='0';
+      });
+      if(!isOpen){ item.classList.add('open'); answer.style.maxHeight=answer.scrollHeight+'px'; }
+    });
+  });
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('on'); obs.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.lp-fade').forEach(function(el){ obs.observe(el); });
+})();
+</script>
