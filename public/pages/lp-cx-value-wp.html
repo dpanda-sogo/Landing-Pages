@@ -1,0 +1,497 @@
+<!--
+  ============================================================
+  SOGOLYTICS — CX PLATFORM VALUE / ROI (WordPress / WPBakery snippet)
+  ============================================================
+  PASTE THIS into WPBakery → Add Element → Raw HTML
+  ============================================================
+  DEVELOPER EDIT GUIDE
+  LOGOS:           Search "LOGO 1" through "LOGO 6"
+                   Replace the placeholder <div> with:
+                   <img src="URL" alt="Company" style="height:36px;width:auto;">
+  TESTIMONIAL:     Search [TESTIMONIAL QUOTE — ROI/cost savings focus],
+                   [AUTHOR NAME], [AUTHOR TITLE], [AUTHOR COMPANY], [CO. LOGO]
+  GTM ID:          Search GTM-XXXXXXX → replace with real ID
+  STAT BOXES:      Hero stat numbers are hardcoded. Update as needed.
+  ============================================================
+  DO NOT add <html> <head> <body> <nav> <footer> — WordPress
+  provides those. No @font-face or :root CSS vars needed either.
+  ============================================================
+-->
+
+<!-- ── Responsive layout overrides only ── -->
+<style>
+.lp-two-col { display:flex; gap:64px; align-items:center; }
+.lp-grid-3  { display:flex; gap:20px; }
+.lp-grid-2  { display:flex; gap:20px; }
+.lp-fade    { opacity:0; transform:translateY(24px); transition:opacity .6s,transform .6s; }
+.lp-fade.on { opacity:1; transform:none; }
+.lp-faq-answer { max-height:0; overflow:hidden; transition:max-height .35s ease; }
+.lp-faq-item.open .lp-faq-icon { transform:rotate(45deg); }
+@media (max-width:768px) {
+  .lp-two-col { flex-direction:column !important; gap:40px !important; }
+  .lp-grid-3  { flex-direction:column !important; }
+  .lp-grid-2  { flex-direction:column !important; }
+}
+</style>
+
+<!-- GTM dataLayer -->
+<script>
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({ event: 'lp_view', page_variant: 'cx-value', page_type: 'conquesting' });
+</script>
+
+<!-- ═══════════════════════════════════════════════════
+     SECTION 1 — HERO
+════════════════════════════════════════════════════ -->
+<div class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:linear-gradient(135deg,#061a17 0%,#092224 50%,#0d3d37 100%);padding:80px 24px 72px;">
+  <div class="col span_12 color-dark left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding color-dark" data-animation="" data-delay="">
+      <div class="wpb_wrapper">
+        <div class="lp-two-col" style="max-width:1120px;margin:0 auto;align-items:flex-start;">
+
+          <!-- Left: headline + stats + trust -->
+          <div style="flex:1.1;min-width:0;">
+            <!-- Eyebrow -->
+            <p style="font-size:1.1rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--color-neonYellow);margin-bottom:16px;font-family:var(--font-Epilogue-Bold);">Better value · Proven ROI</p>
+
+            <!-- H1 -->
+            <h1 class="fs-epilogue-h1 white-text" style="margin-bottom:20px;">
+              More capability.<br>
+              <span class="fs-italic" style="font-size:inherit;">Lower cost.</span><br>
+              Zero compromises.
+            </h1>
+
+            <!-- Subhead -->
+            <p class="fs-pm white-text" style="opacity:.72;margin-bottom:36px;max-width:520px;">
+              Stop paying for a legacy CX suite that charges extra for every module. Sogolytics delivers unified VoC, EX, NPS, and AI analytics in one transparent plan.
+            </p>
+
+            <!-- 2×2 stat grid -->
+            <div style="display:flex;flex-wrap:wrap;gap:16px;margin-bottom:32px;max-width:520px;">
+              <!-- Stat 1 -->
+              <div style="flex:1;min-width:200px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:16px;text-align:center;">
+                <div style="font-size:3rem;font-weight:700;color:var(--color-neonYellow);font-family:var(--font-Epilogue-Bold);line-height:1.1;margin-bottom:4px;">Weeks</div>
+                <div style="font-size:1.2rem;color:rgba(255,255,255,.5);font-family:var(--font-Epilogue-Regular);">Average time to go live</div>
+              </div>
+              <!-- Stat 2 -->
+              <div style="flex:1;min-width:200px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:16px;text-align:center;">
+                <div style="font-size:3rem;font-weight:700;color:var(--color-neonYellow);font-family:var(--font-Epilogue-Bold);line-height:1.1;margin-bottom:4px;">Lower</div>
+                <div style="font-size:1.2rem;color:rgba(255,255,255,.5);font-family:var(--font-Epilogue-Regular);">Total cost of ownership vs. legacy suites</div>
+              </div>
+              <!-- Stat 3 -->
+              <div style="flex:1;min-width:200px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:16px;text-align:center;">
+                <div style="font-size:3rem;font-weight:700;color:var(--color-neonYellow);font-family:var(--font-Epilogue-Bold);line-height:1.1;margin-bottom:4px;">100k+</div>
+                <div style="font-size:1.2rem;color:rgba(255,255,255,.5);font-family:var(--font-Epilogue-Regular);">Customers worldwide</div>
+              </div>
+              <!-- Stat 4 -->
+              <div style="flex:1;min-width:200px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:16px;text-align:center;">
+                <div style="font-size:3rem;font-weight:700;color:var(--color-neonYellow);font-family:var(--font-Epilogue-Bold);line-height:1.1;margin-bottom:4px;">2,500+</div>
+                <div style="font-size:1.2rem;color:rgba(255,255,255,.5);font-family:var(--font-Epilogue-Regular);">Enterprise teams</div>
+              </div>
+            </div>
+
+            <!-- Trust signals -->
+            <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:1.2rem;color:rgba(255,255,255,.5);font-family:var(--font-Epilogue-Regular);">
+              <span>✓ SOC 2 · ISO 27001 · HIPAA · GDPR</span>
+              <span style="width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.3);flex-shrink:0;display:inline-block;"></span>
+              <span>✓ Transparent pricing</span>
+              <span style="width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.3);flex-shrink:0;display:inline-block;"></span>
+              <span>✓ No per-module fees</span>
+            </div>
+          </div>
+
+          <!-- Right: CTA card -->
+          <div style="flex:.9;min-width:0;min-width:300px;">
+            <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:36px;text-align:center;">
+              <p style="font-size:1.1rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--color-secondary-v2);margin-bottom:12px;font-family:var(--font-Epilogue-Bold);">Ready to see the numbers?</p>
+              <h3 class="font-Epilogue-Bold white-text" style="font-size:2rem;margin-bottom:12px;">Get a personalised demo &amp; pricing</h3>
+              <p style="font-size:1.4rem;color:rgba(255,255,255,.55);margin-bottom:28px;line-height:1.6;">No commitment. A Sogolytics expert will walk you through the platform and put together a custom cost overview.</p>
+              <a href="https://www.sogolytics.com/request-a-demo/" class="slide-btn-wrapper slide-button fill-bg" style="text-decoration:none;display:inline-flex;width:100%;justify-content:center;">
+                <i class="fa fa-arrow-right"></i>
+                <span>Request a Demo</span>
+              </a>
+              <p style="font-size:1.1rem;color:rgba(255,255,255,.3);margin-top:12px;margin-bottom:0;">No credit card required</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     SECTION 2 — LOGO / TRUST BAR
+════════════════════════════════════════════════════ -->
+<div class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:#fff;border-bottom:1px solid #e2e6ea;padding:36px 24px;">
+  <div class="col span_12 left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding" data-animation="" data-delay="">
+      <div class="wpb_wrapper">
+        <p style="font-size:1.2rem;font-weight:600;color:#5a6472;letter-spacing:.06em;text-transform:uppercase;text-align:center;margin-bottom:24px;font-family:var(--font-Epilogue-SemiBold);">Trusted by enterprises worldwide</p>
+        <div style="display:flex;align-items:center;justify-content:center;gap:40px;flex-wrap:wrap;max-width:1120px;margin:0 auto;">
+          <!-- LOGO 1: Replace with <img src="URL" alt="Company" style="height:36px;width:auto;"> -->
+          <div style="height:36px;min-width:100px;background:#f0f4f3;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:600;color:#b0b8c1;padding:0 16px;">LOGO 1</div>
+          <!-- LOGO 2 -->
+          <div style="height:36px;min-width:100px;background:#f0f4f3;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:600;color:#b0b8c1;padding:0 16px;">LOGO 2</div>
+          <!-- LOGO 3 -->
+          <div style="height:36px;min-width:100px;background:#f0f4f3;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:600;color:#b0b8c1;padding:0 16px;">LOGO 3</div>
+          <!-- LOGO 4 -->
+          <div style="height:36px;min-width:100px;background:#f0f4f3;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:600;color:#b0b8c1;padding:0 16px;">LOGO 4</div>
+          <!-- LOGO 5 -->
+          <div style="height:36px;min-width:100px;background:#f0f4f3;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:600;color:#b0b8c1;padding:0 16px;">LOGO 5</div>
+          <!-- LOGO 6 -->
+          <div style="height:36px;min-width:100px;background:#f0f4f3;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:600;color:#b0b8c1;padding:0 16px;">LOGO 6</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     SECTION 3 — VALUE COMPARISON
+════════════════════════════════════════════════════ -->
+<div class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:#fff;padding:80px 24px;">
+  <div class="col span_12 left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding" data-animation="" data-delay="">
+      <div class="wpb_wrapper" style="max-width:1120px;margin:0 auto;">
+
+        <div class="lp-fade" style="text-align:center;margin-bottom:48px;">
+          <p style="font-size:1.1rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--color-primary-v2);margin-bottom:12px;font-family:var(--font-Epilogue-Bold);">Value Comparison</p>
+          <h2 class="fs-epilogue-h2" style="margin-bottom:16px;">More for less — here's how</h2>
+          <p class="fs-pm" style="color:#5a6472;max-width:620px;margin:0 auto;">Legacy enterprise suites charge extra for every module and lock you into multi-year contracts. Sogolytics gives you everything in one plan.</p>
+        </div>
+
+        <!-- 3-column comparison grid -->
+        <div class="lp-fade" style="display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap;">
+
+          <!-- Col 1: Sogolytics -->
+          <div style="flex:1;min-width:260px;background:rgba(0,97,89,.05);border:1px solid rgba(0,97,89,.15);border-radius:12px;padding:28px;">
+            <p style="font-size:1.6rem;font-weight:700;color:var(--color-primary-v2);margin-bottom:4px;font-family:var(--font-Epilogue-Bold);">Sogolytics</p>
+            <p style="font-size:1.2rem;color:rgba(0,97,89,.65);margin-bottom:20px;font-family:var(--font-Epilogue-Regular);">Full platform · Transparent pricing</p>
+            <div style="display:flex;align-items:flex-start;gap:8px;margin-bottom:12px;font-size:1.4rem;line-height:1.5;font-family:var(--font-Epilogue-Regular);color:#2a3a38;"><span style="flex-shrink:0;">✅</span><span>All modules included — VoC, EX, NPS, AI analytics, case management</span></div>
+            <div style="display:flex;align-items:flex-start;gap:8px;margin-bottom:12px;font-size:1.4rem;line-height:1.5;font-family:var(--font-Epilogue-Regular);color:#2a3a38;"><span style="flex-shrink:0;">✅</span><span>Flat, predictable annual pricing</span></div>
+            <div style="display:flex;align-items:flex-start;gap:8px;margin-bottom:12px;font-size:1.4rem;line-height:1.5;font-family:var(--font-Epilogue-Regular);color:#2a3a38;"><span style="flex-shrink:0;">✅</span><span>Dedicated CSM included in every plan</span></div>
+            <div style="display:flex;align-items:flex-start;gap:8px;margin-bottom:12px;font-size:1.4rem;line-height:1.5;font-family:var(--font-Epilogue-Regular);color:#2a3a38;"><span style="flex-shrink:0;">✅</span><span>Live in weeks, not quarters — implementation included</span></div>
+            <div style="display:flex;align-items:flex-start;gap:8px;margin-bottom:12px;font-size:1.4rem;line-height:1.5;font-family:var(--font-Epilogue-Regular);color:#2a3a38;"><span style="flex-shrink:0;">✅</span><span>SOC 2 · ISO 27001 · HIPAA · GDPR · PCI DSS · CCPA</span></div>
+            <div style="display:flex;align-items:flex-start;gap:8px;margin-bottom:0;font-size:1.4rem;line-height:1.5;font-family:var(--font-Epilogue-Regular);color:#2a3a38;"><span style="flex-shrink:0;">✅</span><span>No exit fees; data portability guaranteed</span></div>
+          </div>
+
+          <!-- Col 2: Legacy Enterprise CX Suites -->
+          <div style="flex:1;min-width:260px;background:#fff;border:1px solid #e2e6ea;border-radius:12px;padding:28px;">
+            <p style="font-size:1.6rem;font-weight:700;color:#8a94a0;margin-bottom:4px;font-family:var(--font-Epilogue-Bold);">Legacy Enterprise CX Suites</p>
+            <p style="font-size:1.2rem;color:#b0b8c1;margin-bottom:20px;font-family:var(--font-Epilogue-Regular);">Modular · Add-on pricing</p>
+            <div style="display:flex;align-items:flex-start;gap:8px;margin-bottom:12px;font-size:1.4rem;line-height:1.5;font-family:var(--font-Epilogue-Regular);color:#5a6472;"><span style="flex-shrink:0;">⚠️</span><span>Separate licences per module; costs stack up</span></div>
+            <div style="display:flex;align-items:flex-start;gap:8px;margin-bottom:12px;font-size:1.4rem;line-height:1.5;font-family:var(--font-Epilogue-Regular);color:#5a6472;"><span style="flex-shrink:0;">⚠️</span><span>Custom quotes; price increases at renewal</span></div>
+            <div style="display:flex;align-items:flex-start;gap:8px;margin-bottom:12px;font-size:1.4rem;line-height:1.5;font-family:var(--font-Epilogue-Regular);color:#5a6472;"><span style="flex-shrink:0;">⚠️</span><span>CSM support often a premium add-on</span></div>
+            <div style="display:flex;align-items:flex-start;gap:8px;margin-bottom:12px;font-size:1.4rem;line-height:1.5;font-family:var(--font-Epilogue-Regular);color:#5a6472;"><span style="flex-shrink:0;">❌</span><span>Typical implementation: 6–18 months</span></div>
+            <div style="display:flex;align-items:flex-start;gap:8px;margin-bottom:12px;font-size:1.4rem;line-height:1.5;font-family:var(--font-Epilogue-Regular);color:#5a6472;"><span style="flex-shrink:0;">⚠️</span><span>HIPAA · GDPR certified</span></div>
+            <div style="display:flex;align-items:flex-start;gap:8px;margin-bottom:0;font-size:1.4rem;line-height:1.5;font-family:var(--font-Epilogue-Regular);color:#5a6472;"><span style="flex-shrink:0;">❌</span><span>Lock-in clauses common</span></div>
+          </div>
+
+          <!-- Col 3: Basic Survey Tools -->
+          <div style="flex:1;min-width:260px;background:#fff;border:1px solid #e2e6ea;border-radius:12px;padding:28px;">
+            <p style="font-size:1.6rem;font-weight:700;color:#8a94a0;margin-bottom:4px;font-family:var(--font-Epilogue-Bold);">Basic Survey Tools</p>
+            <p style="font-size:1.2rem;color:#b0b8c1;margin-bottom:20px;font-family:var(--font-Epilogue-Regular);">Low cost · Limited capability</p>
+            <div style="display:flex;align-items:flex-start;gap:8px;margin-bottom:12px;font-size:1.4rem;line-height:1.5;font-family:var(--font-Epilogue-Regular);color:#5a6472;"><span style="flex-shrink:0;">❌</span><span>Survey-only; no CX or EX platform features</span></div>
+            <div style="display:flex;align-items:flex-start;gap:8px;margin-bottom:12px;font-size:1.4rem;line-height:1.5;font-family:var(--font-Epilogue-Regular);color:#5a6472;"><span style="flex-shrink:0;">✅</span><span>Low monthly cost</span></div>
+            <div style="display:flex;align-items:flex-start;gap:8px;margin-bottom:12px;font-size:1.4rem;line-height:1.5;font-family:var(--font-Epilogue-Regular);color:#5a6472;"><span style="flex-shrink:0;">❌</span><span>Self-serve only; no dedicated support</span></div>
+            <div style="display:flex;align-items:flex-start;gap:8px;margin-bottom:12px;font-size:1.4rem;line-height:1.5;font-family:var(--font-Epilogue-Regular);color:#5a6472;"><span style="flex-shrink:0;">✅</span><span>Fast setup</span></div>
+            <div style="display:flex;align-items:flex-start;gap:8px;margin-bottom:12px;font-size:1.4rem;line-height:1.5;font-family:var(--font-Epilogue-Regular);color:#5a6472;"><span style="flex-shrink:0;">❌</span><span>Not enterprise-grade compliance</span></div>
+            <div style="display:flex;align-items:flex-start;gap:8px;margin-bottom:0;font-size:1.4rem;line-height:1.5;font-family:var(--font-Epilogue-Regular);color:#5a6472;"><span style="flex-shrink:0;">✅</span><span>Easy to cancel</span></div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     SECTION 4 — STATS BAND
+════════════════════════════════════════════════════ -->
+<div class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:#E8F4F2;padding:48px 24px;">
+  <div class="col span_12 left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding" data-animation="" data-delay="">
+      <div class="wpb_wrapper lp-fade">
+        <div class="lp-grid-3" style="max-width:800px;margin:0 auto;text-align:center;justify-content:center;">
+          <div style="flex:1;">
+            <div class="fs-epilogue-h2" style="color:var(--color-primary-v2);line-height:1;margin-bottom:8px;">100k+</div>
+            <p style="font-size:1.4rem;color:#5a6472;line-height:1.4;margin:0;font-family:var(--font-Epilogue-Regular);">Customers worldwide<br>across 96 countries</p>
+          </div>
+          <div style="flex:1;">
+            <div class="fs-epilogue-h2" style="color:var(--color-primary-v2);line-height:1;margin-bottom:8px;">2,500+</div>
+            <p style="font-size:1.4rem;color:#5a6472;line-height:1.4;margin:0;font-family:var(--font-Epilogue-Regular);">Enterprise teams<br>running active programs</p>
+          </div>
+          <div style="flex:1;">
+            <div class="fs-epilogue-h2" style="color:var(--color-primary-v2);line-height:1;margin-bottom:8px;">Weeks</div>
+            <p style="font-size:1.4rem;color:#5a6472;line-height:1.4;margin:0;font-family:var(--font-Epilogue-Regular);">Average time to value —<br>not quarters</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     SECTION 5 — PLATFORM MODULES (dark bg, 6 cards)
+════════════════════════════════════════════════════ -->
+<div class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:var(--color-deepOcean);padding:80px 24px;">
+  <div class="col span_12 color-dark left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding color-dark" data-animation="" data-delay="">
+      <div class="wpb_wrapper" style="max-width:1120px;margin:0 auto;">
+
+        <div class="lp-fade" style="text-align:center;margin-bottom:48px;">
+          <p style="font-size:1.1rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--color-secondary-v2);margin-bottom:12px;font-family:var(--font-Epilogue-Bold);">What's Included</p>
+          <h2 class="fs-epilogue-h2 white-text" style="margin-bottom:16px;">Everything in one plan — no surprises</h2>
+          <p class="fs-pm" style="color:rgba(255,255,255,.65);max-width:620px;margin:0 auto;">Every Sogolytics enterprise plan includes all six platform modules at no extra charge.</p>
+        </div>
+
+        <div class="lp-fade lp-grid-3" style="flex-wrap:wrap;gap:20px;">
+          <!-- Card 1 -->
+          <div style="flex:1;min-width:280px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:28px;">
+            <div style="width:44px;height:44px;border-radius:10px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;margin-bottom:16px;color:var(--color-secondary-v2);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <h3 class="font-Epilogue-Bold white-text" style="font-size:1.6rem;margin-bottom:8px;">Voice of Customer (VoC) · Included.</h3>
+            <p style="font-size:1.4rem;color:rgba(255,255,255,.6);line-height:1.6;margin:0;font-family:var(--font-Epilogue-Regular);">Capture real-time customer signals at every touchpoint — web, mobile, email, SMS, and kiosk.</p>
+          </div>
+          <!-- Card 2 -->
+          <div style="flex:1;min-width:280px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:28px;">
+            <div style="width:44px;height:44px;border-radius:10px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;margin-bottom:16px;color:var(--color-secondary-v2);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3 class="font-Epilogue-Bold white-text" style="font-size:1.6rem;margin-bottom:8px;">Employee Experience (EX) · Included.</h3>
+            <p style="font-size:1.4rem;color:rgba(255,255,255,.6);line-height:1.6;margin:0;font-family:var(--font-Epilogue-Regular);">Pulse surveys, engagement studies, and 360° feedback connecting employee sentiment to CX outcomes.</p>
+          </div>
+          <!-- Card 3 -->
+          <div style="flex:1;min-width:280px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:28px;">
+            <div style="width:44px;height:44px;border-radius:10px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;margin-bottom:16px;color:var(--color-secondary-v2);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <h3 class="font-Epilogue-Bold white-text" style="font-size:1.6rem;margin-bottom:8px;">NPS &amp; Satisfaction Tracking · Included.</h3>
+            <p style="font-size:1.4rem;color:rgba(255,255,255,.6);line-height:1.6;margin:0;font-family:var(--font-Epilogue-Regular);">Automated NPS, CSAT, and CES programs with trending, segmentation, and driver analysis.</p>
+          </div>
+          <!-- Card 4 -->
+          <div style="flex:1;min-width:280px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:28px;">
+            <div style="width:44px;height:44px;border-radius:10px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;margin-bottom:16px;color:var(--color-secondary-v2);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            </div>
+            <h3 class="font-Epilogue-Bold white-text" style="font-size:1.6rem;margin-bottom:8px;">AI Sentiment &amp; Text Analytics · Included.</h3>
+            <p style="font-size:1.4rem;color:rgba(255,255,255,.6);line-height:1.6;margin:0;font-family:var(--font-Epilogue-Regular);">Surface themes, emotions, and intent from open-text responses at scale — no data science team required.</p>
+          </div>
+          <!-- Card 5 -->
+          <div style="flex:1;min-width:280px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:28px;">
+            <div style="width:44px;height:44px;border-radius:10px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;margin-bottom:16px;color:var(--color-secondary-v2);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.37 2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.27a16 16 0 0 0 6 6l.46-.46a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16.92z"/></svg>
+            </div>
+            <h3 class="font-Epilogue-Bold white-text" style="font-size:1.6rem;margin-bottom:8px;">Close-the-Loop Case Management · Included.</h3>
+            <p style="font-size:1.4rem;color:rgba(255,255,255,.6);line-height:1.6;margin:0;font-family:var(--font-Epilogue-Regular);">Route detractors to your CX team, track resolution time, and measure the impact of every closed loop.</p>
+          </div>
+          <!-- Card 6 -->
+          <div style="flex:1;min-width:280px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:28px;">
+            <div style="width:44px;height:44px;border-radius:10px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;margin-bottom:16px;color:var(--color-secondary-v2);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            </div>
+            <h3 class="font-Epilogue-Bold white-text" style="font-size:1.6rem;margin-bottom:8px;">Executive Dashboards &amp; Reporting · Included.</h3>
+            <p style="font-size:1.4rem;color:rgba(255,255,255,.6);line-height:1.6;margin:0;font-family:var(--font-Epilogue-Regular);">Real-time, role-based dashboards for CX leaders, HR, and the C-suite — with scheduled reports.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     SECTION 6 — ROI BENEFIT CARDS (3-up, mist bg)
+════════════════════════════════════════════════════ -->
+<div class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:#E8F4F2;padding:80px 24px;">
+  <div class="col span_12 left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding" data-animation="" data-delay="">
+      <div class="wpb_wrapper" style="max-width:1120px;margin:0 auto;">
+
+        <div class="lp-fade" style="text-align:center;margin-bottom:48px;">
+          <p style="font-size:1.1rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--color-primary-v2);margin-bottom:12px;font-family:var(--font-Epilogue-Bold);">The ROI Case</p>
+          <h2 class="fs-epilogue-h2" style="margin-bottom:0;">Three ways Sogolytics pays for itself</h2>
+        </div>
+
+        <div class="lp-fade lp-grid-3" style="gap:20px;">
+
+          <!-- Card 1: Consolidate tool stack -->
+          <div style="flex:1;min-width:260px;background:#fff;border:1px solid #e2e6ea;border-top:3px solid var(--color-primary-v2);border-radius:12px;padding:28px;">
+            <div style="font-size:3.6rem;margin-bottom:12px;">💸</div>
+            <h3 class="font-Epilogue-Bold" style="font-size:1.6rem;margin-bottom:8px;">Consolidate your tool stack</h3>
+            <p style="font-size:1.4rem;color:#5a6472;line-height:1.6;margin:0;font-family:var(--font-Epilogue-Regular);">Replace 3–5 point solutions with a single platform. Customers consolidating into Sogolytics consistently reduce their combined CX tool spend — with transparent pricing and no renewal surprises.</p>
+          </div>
+
+          <!-- Card 2: Faster insights -->
+          <div style="flex:1;min-width:260px;background:#fff;border:1px solid #e2e6ea;border-top:3px solid var(--color-secondary-v2);border-radius:12px;padding:28px;">
+            <div style="font-size:3.6rem;margin-bottom:12px;">⚡</div>
+            <h3 class="font-Epilogue-Bold" style="font-size:1.6rem;margin-bottom:8px;">Faster insights, faster action</h3>
+            <p style="font-size:1.4rem;color:#5a6472;line-height:1.6;margin:0;font-family:var(--font-Epilogue-Regular);">Real-time AI analytics mean your team spots and resolves issues in days — not the weeks it takes to export and process data from legacy platforms.</p>
+          </div>
+
+          <!-- Card 3: Retention drives revenue -->
+          <div style="flex:1;min-width:260px;background:#fff;border:1px solid #e2e6ea;border-top:3px solid var(--color-neonYellow);border-radius:12px;padding:28px;">
+            <div style="font-size:3.6rem;margin-bottom:12px;">📈</div>
+            <h3 class="font-Epilogue-Bold" style="font-size:1.6rem;margin-bottom:8px;">Retention drives revenue</h3>
+            <p style="font-size:1.4rem;color:#5a6472;line-height:1.6;margin:0;font-family:var(--font-Epilogue-Regular);">Closing the loop on detractors reduces churn. Sogolytics gives you the case management and AI analytics to act on feedback faster — so improvement shows up in your NPS within months, not years.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     SECTION 7 — TESTIMONIAL
+════════════════════════════════════════════════════ -->
+<div class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:linear-gradient(135deg,#061a17 0%,#092224 100%);padding:72px 24px;text-align:center;">
+  <div class="col span_12 color-dark left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding color-dark" data-animation="" data-delay="">
+      <div class="wpb_wrapper lp-fade" style="max-width:900px;margin:0 auto;">
+
+        <!--
+          TESTIMONIAL QUOTE: Replace the placeholder below with the real quote (ROI/cost savings focus).
+          AUTHOR NAME / TITLE / COMPANY: Replace [AUTHOR NAME] etc.
+          CO. LOGO: Replace [CO. LOGO] div with <img src="URL" alt="Company" style="height:28px;opacity:.7">
+        -->
+        <blockquote style="font-family:var(--font-CrimsonPro-Italic),Georgia,serif;font-style:italic;font-size:2.6rem;line-height:1.55;color:rgba(255,255,255,.92);margin:0 0 32px;padding:0;">
+          <span style="color:var(--color-secondary-v2);">"</span>[TESTIMONIAL QUOTE — ROI/cost savings focus. 2–3 sentences from a customer about consolidating their tool stack, reducing TCO, or seeing measurable ROI from the platform.]<span style="color:var(--color-secondary-v2);">"</span>
+        </blockquote>
+
+        <div style="display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;">
+          <div style="width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;font-size:1.8rem;font-weight:700;color:var(--color-secondary-v2);flex-shrink:0;">[A]</div>
+          <div style="text-align:left;">
+            <div class="font-Epilogue-Bold white-text" style="font-size:1.5rem;">[AUTHOR NAME]</div>
+            <div style="font-size:1.3rem;color:rgba(255,255,255,.5);font-family:var(--font-Epilogue-Regular);">[AUTHOR TITLE], [AUTHOR COMPANY]</div>
+          </div>
+          <!-- CO. LOGO placeholder -->
+          <div style="height:28px;min-width:80px;background:rgba(255,255,255,.1);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:1rem;color:rgba(255,255,255,.35);padding:0 10px;">[CO. LOGO]</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     SECTION 8 — FAQ
+════════════════════════════════════════════════════ -->
+<div class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:#fff;padding:80px 24px;">
+  <div class="col span_12 left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding" data-animation="" data-delay="">
+      <div class="wpb_wrapper" style="max-width:1120px;margin:0 auto;">
+
+        <div class="lp-fade" style="text-align:center;margin-bottom:48px;">
+          <p style="font-size:1.1rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--color-primary-v2);margin-bottom:12px;font-family:var(--font-Epilogue-Bold);">Questions</p>
+          <h2 class="fs-epilogue-h2" style="margin-bottom:0;">Frequently asked</h2>
+        </div>
+
+        <div class="lp-fade" style="max-width:720px;margin:0 auto;">
+
+          <!-- FAQ 1 -->
+          <div class="lp-faq-item" style="border-bottom:1px solid #e2e6ea;">
+            <button class="lp-faq-question" style="width:100%;background:none;border:none;text-align:left;padding:20px 0;font-size:1.5rem;font-weight:600;color:#1a1a1a;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:var(--font-Epilogue-Bold);">
+              How does your pricing compare to legacy enterprise CX suites?
+              <span class="lp-faq-icon" style="width:24px;height:24px;border-radius:50%;background:#E8F4F2;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.6rem;color:var(--color-primary-v2);font-weight:700;transition:transform .3s;">+</span>
+            </button>
+            <div class="lp-faq-answer">
+              <p style="padding-bottom:20px;font-size:1.4rem;color:#5a6472;line-height:1.7;margin:0;font-family:var(--font-Epilogue-Regular);">Sogolytics offers all-inclusive flat-rate enterprise plans. There are no per-module add-ons, no hidden fees for analytics, and no surprise charges at renewal. Customers switching from legacy suites consistently reduce their total cost of ownership while gaining more capability — all six platform modules included from day one.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="lp-faq-item" style="border-bottom:1px solid #e2e6ea;">
+            <button class="lp-faq-question" style="width:100%;background:none;border:none;text-align:left;padding:20px 0;font-size:1.5rem;font-weight:600;color:#1a1a1a;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:var(--font-Epilogue-Bold);">
+              Is there a minimum contract length?
+              <span class="lp-faq-icon" style="width:24px;height:24px;border-radius:50%;background:#E8F4F2;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.6rem;color:var(--color-primary-v2);font-weight:700;transition:transform .3s;">+</span>
+            </button>
+            <div class="lp-faq-answer">
+              <p style="padding-bottom:20px;font-size:1.4rem;color:#5a6472;line-height:1.7;margin:0;font-family:var(--font-Epilogue-Regular);">Enterprise plans are on annual agreements — there is no default 3-year lock-in. Full data portability is guaranteed, so you're never held hostage to a contract. If your needs change, we work with you, not against you.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="lp-faq-item" style="border-bottom:1px solid #e2e6ea;">
+            <button class="lp-faq-question" style="width:100%;background:none;border:none;text-align:left;padding:20px 0;font-size:1.5rem;font-weight:600;color:#1a1a1a;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:var(--font-Epilogue-Bold);">
+              How long does implementation actually take?
+              <span class="lp-faq-icon" style="width:24px;height:24px;border-radius:50%;background:#E8F4F2;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.6rem;color:var(--color-primary-v2);font-weight:700;transition:transform .3s;">+</span>
+            </button>
+            <div class="lp-faq-answer">
+              <p style="padding-bottom:20px;font-size:1.4rem;color:#5a6472;line-height:1.7;margin:0;font-family:var(--font-Epilogue-Regular);">Implementation is a matter of weeks, not the 6–18 months common with legacy enterprise platforms. Our team handles SSO configuration, CRM and data integrations, survey setup, and team training — so there's no extended IT project before you start seeing value.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="lp-faq-item" style="border-bottom:1px solid #e2e6ea;">
+            <button class="lp-faq-question" style="width:100%;background:none;border:none;text-align:left;padding:20px 0;font-size:1.5rem;font-weight:600;color:#1a1a1a;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:var(--font-Epilogue-Bold);">
+              Does Sogolytics offer a trial or proof of concept?
+              <span class="lp-faq-icon" style="width:24px;height:24px;border-radius:50%;background:#E8F4F2;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.6rem;color:var(--color-primary-v2);font-weight:700;transition:transform .3s;">+</span>
+            </button>
+            <div class="lp-faq-answer">
+              <p style="padding-bottom:20px;font-size:1.4rem;color:#5a6472;line-height:1.7;margin:0;font-family:var(--font-Epilogue-Regular);">Yes. We offer a 30-day proof of concept with a live program built on your real data — no contract required. You'll have a fully configured environment, a dedicated implementation contact, and the ability to validate the platform against your actual use case before committing.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="lp-faq-item" style="border-bottom:1px solid #e2e6ea;">
+            <button class="lp-faq-question" style="width:100%;background:none;border:none;text-align:left;padding:20px 0;font-size:1.5rem;font-weight:600;color:#1a1a1a;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:var(--font-Epilogue-Bold);">
+              What integrations are available?
+              <span class="lp-faq-icon" style="width:24px;height:24px;border-radius:50%;background:#E8F4F2;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.6rem;color:var(--color-primary-v2);font-weight:700;transition:transform .3s;">+</span>
+            </button>
+            <div class="lp-faq-answer">
+              <p style="padding-bottom:20px;font-size:1.4rem;color:#5a6472;line-height:1.7;margin:0;font-family:var(--font-Epilogue-Regular);">Sogolytics integrates natively with Salesforce, Zapier, Google Drive, and OneDrive. For custom enterprise connections, a full REST API is available. All integrations are included in your plan — there's no additional cost to connect your existing tech stack.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     SECTION 9 — BOTTOM CTA BAND
+════════════════════════════════════════════════════ -->
+<div class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:var(--color-primary-v2);padding:64px 24px;text-align:center;">
+  <div class="col span_12 color-dark left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding color-dark" data-animation="" data-delay="">
+      <div class="wpb_wrapper lp-fade" style="max-width:700px;margin:0 auto;">
+        <h2 class="fs-epilogue-h2 white-text" style="margin-bottom:16px;">See how much you could save</h2>
+        <p class="fs-pm" style="color:rgba(255,255,255,.75);margin-bottom:32px;">Get a personalised overview from a Sogolytics solutions consultant — no cost, no commitment.</p>
+        <a href="https://www.sogolytics.com/request-a-demo/" class="slide-btn-wrapper slide-button fill-bg" style="text-decoration:none;">
+          <i class="fa fa-arrow-right"></i>
+          <span>Request a Demo</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     JAVASCRIPT — FAQ accordion + fade-in
+════════════════════════════════════════════════════ -->
+<script>
+(function(){
+  document.querySelectorAll('.lp-faq-question').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var item = btn.closest('.lp-faq-item');
+      var answer = item.querySelector('.lp-faq-answer');
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.lp-faq-item.open').forEach(function(el){
+        el.classList.remove('open');
+        el.querySelector('.lp-faq-answer').style.maxHeight='0';
+      });
+      if(!isOpen){ item.classList.add('open'); answer.style.maxHeight=answer.scrollHeight+'px'; }
+    });
+  });
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('on'); obs.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.lp-fade').forEach(function(el){ obs.observe(el); });
+})();
+</script>
