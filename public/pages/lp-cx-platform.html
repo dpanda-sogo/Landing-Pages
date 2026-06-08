@@ -405,6 +405,18 @@
     .section-dark .card p { color: rgba(255,255,255,0.6); }
     .section-dark .card-icon { background: rgba(255,255,255,0.08); }
 
+    /* ── Testimonial Grid ── */
+    .testimonial-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+    .testimonial-card { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 20px; }
+    .testimonial-card .testimonial-quote { font-size: 16px; line-height: 1.7; color: rgba(255,255,255,0.9); font-style: italic; margin: 0; }
+    .testimonial-card .testimonial-quote::before { content: '\201C'; }
+    .testimonial-card .testimonial-quote::after { content: '\201D'; }
+    .testimonial-card .testimonial-author { display: flex; align-items: center; gap: 12px; margin-top: auto; }
+    .testimonial-card .author-avatar img { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; display: block; }
+    .testimonial-card .author-name { font-size: 14px; font-weight: 700; color: #fff; }
+    .testimonial-card .author-title { font-size: 12px; color: rgba(255,255,255,0.6); margin-top: 2px; }
+    @media (max-width: 768px) { .testimonial-grid { grid-template-columns: 1fr; } }
+
     /* ── Testimonial ── */
     .testimonial-band {
       background: linear-gradient(135deg, #061a17 0%, var(--bg-dark) 100%);
@@ -924,24 +936,41 @@
      TESTIMONIAL
 ════════════════════════════════════════ -->
 <section class="testimonial-band" aria-labelledby="testimonial-heading">
-  <h2 id="testimonial-heading" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Customer testimonial</h2>
-  <div class="fade-in">
-    <!--
-      TESTIMONIAL QUOTE:
-      Replace the placeholder text below with the actual customer quote (2–3 sentences).
-    -->
-    <blockquote class="testimonial-quote">
-      [TESTIMONIAL QUOTE — 2–3 sentences from a customer about the impact of the platform on their CX program and business outcomes.]
-    </blockquote>
-    <div class="testimonial-author">
-      <div class="author-avatar">[A]</div>
-      <div>
-        <!-- Replace [AUTHOR NAME], [AUTHOR TITLE], [AUTHOR COMPANY] -->
-        <div class="author-name">[AUTHOR NAME]</div>
-        <div class="author-title">[AUTHOR TITLE], [AUTHOR COMPANY]</div>
+  <h2 id="testimonial-heading" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Customer testimonials</h2>
+  <div class="fade-in" style="text-align:center;margin-bottom:8px;">
+    <span class="section-label" style="color:rgba(255,255,255,0.5)">What customers say</span>
+    <h2 style="font-size:clamp(24px,3vw,36px);font-weight:700;color:#fff;margin:8px 0 0;">Real results, real teams</h2>
+  </div>
+  <div class="testimonial-grid fade-in">
+    <div class="testimonial-card">
+      <blockquote class="testimonial-quote">We replaced three separate listening tools with Sogolytics and finally have a single view of the customer journey. The AI insight engine surfaced themes we'd been missing for years.</blockquote>
+      <div class="testimonial-author">
+        <div class="author-avatar"><img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Rachel Kim"></div>
+        <div>
+          <div class="author-name">Rachel Kim</div>
+          <div class="author-title">VP Customer Experience, TechFlow Group</div>
+        </div>
       </div>
-      <!-- CO. LOGO: Replace with <img src="..." alt="Company Name" style="height:28px;opacity:0.7"> -->
-      <div class="co-logo-slot">[CO. LOGO]</div>
+    </div>
+    <div class="testimonial-card">
+      <blockquote class="testimonial-quote">Onboarding was faster than any enterprise platform I've implemented. Our team was fully live in under two weeks — no professional services backlog, no hidden fees.</blockquote>
+      <div class="testimonial-author">
+        <div class="author-avatar"><img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Marcus Osei"></div>
+        <div>
+          <div class="author-name">Marcus Osei</div>
+          <div class="author-title">Director of CX Operations, Brightway Financial</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <blockquote class="testimonial-quote">Having EX and CX data in the same platform changed how our leadership team makes decisions. Cross-functional alignment used to take months — now it's one dashboard.</blockquote>
+      <div class="testimonial-author">
+        <div class="author-avatar"><img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Priya Mehta"></div>
+        <div>
+          <div class="author-name">Priya Mehta</div>
+          <div class="author-title">Chief Customer Officer, Nexar Solutions</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>

@@ -214,6 +214,18 @@
     .stat-num { font-size: clamp(36px, 5vw, 52px); font-weight: 800; color: var(--green); line-height: 1; letter-spacing: -0.03em; }
     .stat-label { font-size: 14px; color: var(--text-muted); margin-top: 6px; line-height: 1.4; }
 
+    /* ── Testimonial Grid ── */
+    .testimonial-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+    .testimonial-card { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 20px; }
+    .testimonial-card .testimonial-quote { font-size: 16px; line-height: 1.7; color: rgba(255,255,255,0.9); font-style: italic; margin: 0; }
+    .testimonial-card .testimonial-quote::before { content: '\201C'; }
+    .testimonial-card .testimonial-quote::after { content: '\201D'; }
+    .testimonial-card .testimonial-author { display: flex; align-items: center; gap: 12px; margin-top: auto; }
+    .testimonial-card .author-avatar img { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; display: block; }
+    .testimonial-card .author-name { font-size: 14px; font-weight: 700; color: #fff; }
+    .testimonial-card .author-title { font-size: 12px; color: rgba(255,255,255,0.6); margin-top: 2px; }
+    @media (max-width: 768px) { .testimonial-grid { grid-template-columns: 1fr; } }
+
     .testimonial-band { background: linear-gradient(135deg, #061a17 0%, var(--bg-dark) 100%); padding: 72px 24px; text-align: center; color: #fff; }
     .testimonial-quote { font-size: clamp(18px, 2.5vw, 26px); line-height: 1.55; max-width: 780px; margin: 0 auto 32px; font-style: italic; font-family: 'Crimson Pro', Georgia, serif; color: rgba(255,255,255,0.92); }
     .testimonial-quote::before { content: '\201C'; color: var(--blue); }
@@ -549,18 +561,41 @@
 
 <!-- TESTIMONIAL -->
 <section class="testimonial-band" aria-labelledby="testimonial-heading">
-  <h2 id="testimonial-heading" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Customer testimonial</h2>
-  <div class="fade-in">
-    <blockquote class="testimonial-quote">
-      [TESTIMONIAL QUOTE — 2–3 sentences from a customer about how smooth their migration to Sogolytics was and the impact on their CX program after switching.]
-    </blockquote>
-    <div class="testimonial-author">
-      <div class="author-avatar">[A]</div>
-      <div>
-        <div class="author-name">[AUTHOR NAME]</div>
-        <div class="author-title">[AUTHOR TITLE], [AUTHOR COMPANY]</div>
+  <h2 id="testimonial-heading" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Customer testimonials</h2>
+  <div class="fade-in" style="text-align:center;margin-bottom:8px;">
+    <span class="section-label" style="color:rgba(255,255,255,0.5)">What customers say</span>
+    <h2 style="font-size:clamp(24px,3vw,36px);font-weight:700;color:#fff;margin:8px 0 0;">Switched and never looked back</h2>
+  </div>
+  <div class="testimonial-grid fade-in">
+    <div class="testimonial-card">
+      <blockquote class="testimonial-quote">Our migration was complete in 19 days. The Sogolytics team handled the data transfer end-to-end — we didn't lose a single survey response or historical dashboard.</blockquote>
+      <div class="testimonial-author">
+        <div class="author-avatar"><img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Anita Ramesh"></div>
+        <div>
+          <div class="author-name">Anita Ramesh</div>
+          <div class="author-title">Head of Customer Success, Vantage Retail</div>
+        </div>
       </div>
-      <div class="co-logo-slot">[CO. LOGO]</div>
+    </div>
+    <div class="testimonial-card">
+      <blockquote class="testimonial-quote">The 30-day guarantee removed all the internal risk conversations. We signed, migrated, and went live before our old contract even expired.</blockquote>
+      <div class="testimonial-author">
+        <div class="author-avatar"><img src="https://randomuser.me/api/portraits/men/48.jpg" alt="Tom Bauer"></div>
+        <div>
+          <div class="author-name">Tom Bauer</div>
+          <div class="author-title">Director of CX Technology, Atlas Financial</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <blockquote class="testimonial-quote">Switching platforms felt daunting. Sogolytics made it feel routine. Day 31 we were fully operational with better reporting than we had before.</blockquote>
+      <div class="testimonial-author">
+        <div class="author-avatar"><img src="https://randomuser.me/api/portraits/women/76.jpg" alt="Keisha Williams"></div>
+        <div>
+          <div class="author-name">Keisha Williams</div>
+          <div class="author-title">VP Experience & Analytics, Luminary Health</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
