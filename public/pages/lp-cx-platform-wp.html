@@ -26,12 +26,17 @@
 .lp-fade.on { opacity:1; transform:none; }
 .lp-faq-answer { max-height:0; overflow:hidden; transition:max-height .35s ease; }
 .lp-faq-item.open .lp-faq-icon { transform:rotate(45deg); }
+.lp-form-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
 @media (max-width:768px) {
-  .lp-two-col { flex-direction:column !important; gap:40px !important; }
+  .lp-two-col { flex-direction:column !important; gap:32px !important; }
   .lp-grid-3  { flex-direction:column !important; }
   .lp-grid-2  { flex-direction:column !important; }
   .lp-hero-visual { display:none !important; }
   .lp-comparison { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+  .lp-form-row { grid-template-columns:1fr !important; }
+}
+@media (max-width:480px) {
+  .lp-form-row { grid-template-columns:1fr !important; }
 }
 </style>
 
@@ -72,36 +77,73 @@ window.dataLayer.push({ event: 'lp_view', page_variant: 'cx-platform', page_type
             </div>
           </div>
 
-          <!-- Right: dashboard mock -->
-          <div class="lp-hero-visual" style="flex:1;min-width:0;display:flex;align-items:center;justify-content:center;">
-            <svg viewBox="0 0 480 340" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:480px;">
-              <rect width="480" height="340" rx="16" fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.1)" stroke-width="1"/>
-              <rect x="24" y="24" width="432" height="32" rx="6" fill="rgba(255,255,255,.06)"/>
-              <circle cx="44" cy="40" r="8" fill="#0D6E65"/>
-              <rect x="62" y="33" width="80" height="14" rx="3" fill="rgba(255,255,255,.15)"/>
-              <rect x="380" y="33" width="60" height="14" rx="3" fill="#F5E100"/>
-              <rect x="24" y="72" width="128" height="72" rx="8" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.08)"/>
-              <rect x="36" y="84" width="40" height="10" rx="2" fill="rgba(255,255,255,.2)"/>
-              <rect x="36" y="100" width="64" height="22" rx="3" fill="#02BECC" opacity=".7"/>
-              <rect x="168" y="72" width="128" height="72" rx="8" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.08)"/>
-              <rect x="180" y="84" width="40" height="10" rx="2" fill="rgba(255,255,255,.2)"/>
-              <rect x="180" y="100" width="64" height="22" rx="3" fill="#0D6E65" opacity=".7"/>
-              <rect x="312" y="72" width="144" height="72" rx="8" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.08)"/>
-              <rect x="324" y="84" width="40" height="10" rx="2" fill="rgba(255,255,255,.2)"/>
-              <rect x="324" y="100" width="64" height="22" rx="3" fill="#F5E100" opacity=".7"/>
-              <rect x="24" y="160" width="280" height="148" rx="8" fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.08)"/>
-              <polyline points="48,272 88,240 128,252 168,220 208,232 248,196 280,204" stroke="#02BECC" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-              <polyline points="48,280 88,268 128,276 168,256 208,264 248,244 280,248" stroke="#0D6E65" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-              <rect x="320" y="160" width="136" height="148" rx="8" fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.08)"/>
-              <rect x="336" y="178" width="100" height="10" rx="2" fill="rgba(255,255,255,.2)"/>
-              <rect x="336" y="198" width="80" height="8" rx="2" fill="rgba(255,255,255,.1)"/>
-              <rect x="336" y="216" width="90" height="8" rx="2" fill="rgba(255,255,255,.1)"/>
-              <rect x="336" y="234" width="70" height="8" rx="2" fill="rgba(255,255,255,.1)"/>
-              <rect x="336" y="252" width="100" height="8" rx="2" fill="rgba(255,255,255,.1)"/>
-              <rect x="336" y="270" width="60" height="8" rx="2" fill="rgba(255,255,255,.1)"/>
-              <rect x="336" y="288" width="80" height="8" rx="2" fill="rgba(255,255,255,.1)"/>
-            </svg>
+          <!-- Hero inline form -->
+    <div>
+      <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);border-radius:16px;padding:32px;backdrop-filter:blur(8px);">
+        <h3 class="font-Epilogue-Bold white-text" style="font-size:1.7rem;margin-bottom:6px;">See it live — book your demo</h3>
+        <p style="font-size:1.3rem;color:rgba(255,255,255,0.55);margin-bottom:24px;font-family:var(--font-Epilogue-Regular);">No commitment. A Sogolytics expert will walk you through the platform in 30 minutes.</p>
+        <form id="lpHeroForm" action="YOUR_FORM_ENDPOINT" method="POST" onsubmit="lpHandleSubmit(event)">
+          <input type="hidden" name="utm_source" id="lp_utm_source">
+          <input type="hidden" name="utm_medium" id="lp_utm_medium">
+          <input type="hidden" name="utm_campaign" id="lp_utm_campaign">
+          <input type="hidden" name="utm_term" id="lp_utm_term">
+          <input type="hidden" name="utm_content" id="lp_utm_content">
+          <input type="hidden" name="gclid" id="lp_gclid">
+          <input type="hidden" name="page_variant" value="cx-platform">
+
+          <div class="lp-form-row" style="margin-bottom:12px;">
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <label style="font-size:1.2rem;font-weight:600;color:rgba(255,255,255,0.65);font-family:var(--font-Epilogue-SemiBold);">First name *</label>
+              <input type="text" name="first_name" placeholder="Jane" required autocomplete="given-name"
+                style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:8px;padding:1rem 1.4rem;font-size:1.4rem;color:#fff;font-family:var(--font-Epilogue-Regular);outline:none;width:100%;box-sizing:border-box;">
+            </div>
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <label style="font-size:1.2rem;font-weight:600;color:rgba(255,255,255,0.65);font-family:var(--font-Epilogue-SemiBold);">Last name *</label>
+              <input type="text" name="last_name" placeholder="Smith" required autocomplete="family-name"
+                style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:8px;padding:1rem 1.4rem;font-size:1.4rem;color:#fff;font-family:var(--font-Epilogue-Regular);outline:none;width:100%;box-sizing:border-box;">
+            </div>
           </div>
+          <div class="lp-form-row" style="margin-bottom:12px;">
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <label style="font-size:1.2rem;font-weight:600;color:rgba(255,255,255,0.65);font-family:var(--font-Epilogue-SemiBold);">Work email *</label>
+              <input type="email" name="email" placeholder="jane@company.com" required autocomplete="email"
+                style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:8px;padding:1rem 1.4rem;font-size:1.4rem;color:#fff;font-family:var(--font-Epilogue-Regular);outline:none;width:100%;box-sizing:border-box;">
+            </div>
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <label style="font-size:1.2rem;font-weight:600;color:rgba(255,255,255,0.65);font-family:var(--font-Epilogue-SemiBold);">Company *</label>
+              <input type="text" name="company" placeholder="Acme Corp" required autocomplete="organization"
+                style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:8px;padding:1rem 1.4rem;font-size:1.4rem;color:#fff;font-family:var(--font-Epilogue-Regular);outline:none;width:100%;box-sizing:border-box;">
+            </div>
+          </div>
+          <div class="lp-form-row" style="margin-bottom:16px;">
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <label style="font-size:1.2rem;font-weight:600;color:rgba(255,255,255,0.65);font-family:var(--font-Epilogue-SemiBold);">Company size</label>
+              <select name="company_size"
+                style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:8px;padding:1rem 1.4rem;font-size:1.4rem;color:#fff;font-family:var(--font-Epilogue-Regular);outline:none;width:100%;box-sizing:border-box;">
+                <option value="">Select…</option>
+                <option value="1-50">1–50</option>
+                <option value="51-200">51–200</option>
+                <option value="201-1000">201–1,000</option>
+                <option value="1001-5000">1,001–5,000</option>
+                <option value="5000+">5,000+</option>
+              </select>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <label style="font-size:1.2rem;font-weight:600;color:rgba(255,255,255,0.65);font-family:var(--font-Epilogue-SemiBold);">Your role</label>
+              <select name="role"
+                style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:8px;padding:1rem 1.4rem;font-size:1.4rem;color:#fff;font-family:var(--font-Epilogue-Regular);outline:none;width:100%;box-sizing:border-box;">
+                <option value="">Select…</option><option value="cx-leader">CX Leader</option><option value="vp-marketing">VP / Director Marketing</option><option value="hr-people">HR / People Ops</option><option value="c-suite">C-Suite</option><option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+          <a class="slide-btn-wrapper slide-button fill-bg" onclick="lpHandleSubmit(event, this)" href="#" style="text-decoration:none;display:flex;width:100%;justify-content:center;box-sizing:border-box;" role="button">
+            <i class="fa fa-arrow-right"></i>
+            <span>Book My Demo</span>
+          </a>
+        </form>
+        <p style="font-size:1.1rem;color:rgba(255,255,255,0.35);text-align:center;margin-top:12px;font-family:var(--font-Epilogue-Regular);">By submitting you agree to our Privacy Policy.</p>
+      </div>
+    </div>
 
         </div>
       </div>
@@ -492,4 +534,29 @@ window.dataLayer.push({ event: 'lp_view', page_variant: 'cx-platform', page_type
   }, { threshold: 0.1 });
   document.querySelectorAll('.lp-fade').forEach(function(el){ obs.observe(el); });
 })();
+
+  // UTM passthrough for hero form
+  (function(){
+    var params = new URLSearchParams(window.location.search);
+    ['utm_source','utm_medium','utm_campaign','utm_term','utm_content','gclid'].forEach(function(f){
+      var el = document.getElementById('lp_' + f);
+      if(el && params.get(f)) el.value = params.get(f);
+    });
+  })();
+
+  // Hero form submit handler
+  function lpHandleSubmit(e, btn) {
+    e.preventDefault();
+    var form = document.getElementById('lpHeroForm');
+    if(!form) return;
+    var submitBtn = btn || form.querySelector('[role="button"]');
+    if(submitBtn) { submitBtn.style.pointerEvents = 'none'; submitBtn.querySelector('span').textContent = 'Submitting…'; }
+    window.dataLayer = window.dataLayer || [];
+    var variantInput = form.querySelector('[name="page_variant"]');
+    window.dataLayer.push({ event: 'lead_submit', form_id: 'hero_form', page_variant: variantInput ? variantInput.value : '' });
+    setTimeout(function(){
+      var card = form.closest('div[style*="border-radius:16px"]');
+      if(card) card.innerHTML = '<div style="text-align:center;padding:24px 0"><div style="font-size:4rem;margin-bottom:12px">✓</div><h3 class="font-Epilogue-Bold white-text" style="font-size:2rem;margin-bottom:8px;">You\'re on the calendar!</h3><p style="color:rgba(255,255,255,0.6);font-size:1.4rem;font-family:var(--font-Epilogue-Regular)">A Sogolytics expert will reach out within 1 business day.</p></div>';
+    }, 800);
+  }
 </script>

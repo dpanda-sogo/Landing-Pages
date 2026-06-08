@@ -555,15 +555,45 @@
     /* ── Responsive ── */
     @media (max-width: 768px) {
       .hero-inner { grid-template-columns: 1fr; gap: 40px; }
-      .hero { padding: 56px 24px 48px; }
+      .hero { padding: 48px 20px 40px; }
+      .hero h1 { font-size: clamp(28px, 8vw, 38px); }
+      .hero-sub { font-size: 15px; }
       .form-row { grid-template-columns: 1fr; }
-      .stats-grid { grid-template-columns: 1fr; }
-      .hero-visual { display: none; }
-      .comparison-table thead th, .comparison-table tbody td { padding: 12px 14px; }
+      .stats-band { padding: 36px 20px; }
+      .stats-grid { grid-template-columns: 1fr; gap: 20px; }
+      .stat-num { font-size: 40px; }
+      .section { padding: 56px 20px; }
+      .section-title { font-size: clamp(22px, 6vw, 30px); }
+      .section-intro { font-size: 14px; margin-bottom: 32px; }
+      .cards-grid { grid-template-columns: 1fr; }
+      .logo-bar { padding: 28px 20px; }
+      .logo-row { gap: 16px; }
+      .logo-slot { min-width: 80px; height: 32px; font-size: 10px; }
+      .comparison-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+      .comparison-table { font-size: 12px; }
+      .comparison-table thead th,
+      .comparison-table tbody td { padding: 10px 12px; }
+      .testimonial-quote { font-size: 18px; }
+      .testimonial-author { flex-direction: column; text-align: center; }
+      .cta-band { padding: 48px 20px; }
+      .btn-cta-yellow { width: 100%; justify-content: center; }
+      .nav-inner { padding: 0 16px; }
+      .hero-trust { font-size: 11px; gap: 8px; }
+      .migration-timeline::before { left: 20px; }
+      .timeline-dot { width: 40px; height: 40px; font-size: 14px; }
+      .value-grid { grid-template-columns: 1fr; }
+      .roi-boxes { grid-template-columns: 1fr 1fr; gap: 10px; }
+      .roi-box-num { font-size: 22px; }
+      .guarantee-badge { flex-direction: column; text-align: center; }
+      .hero-form { padding: 24px 20px; }
+      .hero-form div[style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr !important; }
     }
     @media (max-width: 480px) {
-      .logo-row { gap: 20px; }
+      .hero h1 { font-size: clamp(26px, 7vw, 32px); }
+      .logo-row { gap: 12px; }
       .cards-grid { grid-template-columns: 1fr; }
+      .roi-boxes { grid-template-columns: 1fr; }
+      .btn-cta-yellow { font-size: 14px; padding: 13px 20px; }
     }
     .msr {
       font-family: 'Material Symbols Rounded';
@@ -617,47 +647,72 @@
         <span class="hero-trust-dot"></span>
         <span>✓ 2,500+ enterprise teams</span>
       </div>
-      <div style="margin-top:28px">
-        <a href="https://www.sogolytics.com/request-a-demo/" class="btn-cta-yellow" style="display:inline-flex;align-items:center;gap:10px;background:var(--yellow);color:#0a1a18;font-size:16px;font-weight:700;padding:16px 32px;border-radius:50px;text-decoration:none;transition:background 0.2s">
-          Request a Demo
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-      </div>
     </div>
 
-    <!-- Hero visual: replace SVG with your own screenshot / illustration -->
-    <div class="hero-visual" aria-hidden="true">
-      <svg viewBox="0 0 480 340" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect width="480" height="340" rx="16" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
-        <!-- Dashboard mock -->
-        <rect x="24" y="24" width="432" height="32" rx="6" fill="rgba(255,255,255,0.06)"/>
-        <circle cx="44" cy="40" r="8" fill="#0D6E65"/>
-        <rect x="62" y="33" width="80" height="14" rx="3" fill="rgba(255,255,255,0.15)"/>
-        <rect x="380" y="33" width="60" height="14" rx="3" fill="#F5E100"/>
-        <!-- Stats row -->
-        <rect x="24" y="72" width="128" height="72" rx="8" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.08)"/>
-        <rect x="36" y="84" width="40" height="10" rx="2" fill="rgba(255,255,255,0.2)"/>
-        <rect x="36" y="100" width="64" height="22" rx="3" fill="#02BECC" opacity="0.7"/>
-        <rect x="168" y="72" width="128" height="72" rx="8" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.08)"/>
-        <rect x="180" y="84" width="40" height="10" rx="2" fill="rgba(255,255,255,0.2)"/>
-        <rect x="180" y="100" width="64" height="22" rx="3" fill="#0D6E65" opacity="0.7"/>
-        <rect x="312" y="72" width="144" height="72" rx="8" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.08)"/>
-        <rect x="324" y="84" width="40" height="10" rx="2" fill="rgba(255,255,255,0.2)"/>
-        <rect x="324" y="100" width="64" height="22" rx="3" fill="#F5E100" opacity="0.7"/>
-        <!-- Chart area -->
-        <rect x="24" y="160" width="280" height="148" rx="8" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)"/>
-        <polyline points="48,272 88,240 128,252 168,220 208,232 248,196 280,204" stroke="#02BECC" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-        <polyline points="48,280 88,268 128,276 168,256 208,264 248,244 280,248" stroke="#0D6E65" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-        <!-- List -->
-        <rect x="320" y="160" width="136" height="148" rx="8" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)"/>
-        <rect x="336" y="178" width="100" height="10" rx="2" fill="rgba(255,255,255,0.2)"/>
-        <rect x="336" y="198" width="80" height="8" rx="2" fill="rgba(255,255,255,0.1)"/>
-        <rect x="336" y="216" width="90" height="8" rx="2" fill="rgba(255,255,255,0.1)"/>
-        <rect x="336" y="234" width="70" height="8" rx="2" fill="rgba(255,255,255,0.1)"/>
-        <rect x="336" y="252" width="100" height="8" rx="2" fill="rgba(255,255,255,0.1)"/>
-        <rect x="336" y="270" width="60" height="8" rx="2" fill="rgba(255,255,255,0.1)"/>
-        <rect x="336" y="288" width="80" height="8" rx="2" fill="rgba(255,255,255,0.1)"/>
-      </svg>
+    <!-- Hero form -->
+    <div>
+      <div class="hero-form" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);border-radius:16px;padding:32px;backdrop-filter:blur(8px);">
+        <h3 style="font-size:17px;font-weight:700;margin-bottom:6px;">See it live — book your demo</h3>
+        <p style="font-size:13px;color:rgba(255,255,255,0.55);margin-bottom:24px;">No commitment. A Sogolytics expert will walk you through the platform in 30 minutes.</p>
+        <form id="heroForm" action="YOUR_FORM_ENDPOINT" method="POST" onsubmit="handleHeroSubmit(event)">
+          <input type="hidden" name="utm_source" id="f_utm_source">
+          <input type="hidden" name="utm_medium" id="f_utm_medium">
+          <input type="hidden" name="utm_campaign" id="f_utm_campaign">
+          <input type="hidden" name="utm_term" id="f_utm_term">
+          <input type="hidden" name="utm_content" id="f_utm_content">
+          <input type="hidden" name="gclid" id="f_gclid">
+          <input type="hidden" name="page_variant" value="cx-platform">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <label style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.65);">First name *</label>
+              <input type="text" name="first_name" placeholder="Jane" required autocomplete="given-name" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:8px;padding:10px 14px;font-size:14px;color:#fff;font-family:inherit;outline:none;width:100%;">
+            </div>
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <label style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.65);">Last name *</label>
+              <input type="text" name="last_name" placeholder="Smith" required autocomplete="family-name" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:8px;padding:10px 14px;font-size:14px;color:#fff;font-family:inherit;outline:none;width:100%;">
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <label style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.65);">Work email *</label>
+              <input type="email" name="email" placeholder="jane@company.com" required autocomplete="email" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:8px;padding:10px 14px;font-size:14px;color:#fff;font-family:inherit;outline:none;width:100%;">
+            </div>
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <label style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.65);">Company *</label>
+              <input type="text" name="company" placeholder="Acme Corp" required autocomplete="organization" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:8px;padding:10px 14px;font-size:14px;color:#fff;font-family:inherit;outline:none;width:100%;">
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <label style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.65);">Company size</label>
+              <select name="company_size" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:8px;padding:10px 14px;font-size:14px;color:#fff;font-family:inherit;outline:none;width:100%;">
+                <option value="">Select…</option>
+                <option value="1-50">1–50</option>
+                <option value="51-200">51–200</option>
+                <option value="201-1000">201–1,000</option>
+                <option value="1001-5000">1,001–5,000</option>
+                <option value="5000+">5,000+</option>
+              </select>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <label style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.65);">Your role</label>
+              <select name="role" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:8px;padding:10px 14px;font-size:14px;color:#fff;font-family:inherit;outline:none;width:100%;">
+                <option value="">Select…</option>
+                <option value="cx-leader">CX Leader</option>
+                <option value="vp-marketing">VP / Director Marketing</option>
+                <option value="hr-people">HR / People Ops</option>
+                <option value="c-suite">C-Suite</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" style="width:100%;margin-top:16px;background:#F5E100;color:#0a1a18;font-size:15px;font-weight:700;padding:14px 24px;border:none;border-radius:50px;cursor:pointer;font-family:inherit;display:flex;align-items:center;justify-content:center;gap:8px;">
+            <span>Book My Demo</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </form>
+        <p style="font-size:11px;color:rgba(255,255,255,0.35);text-align:center;margin-top:10px;">By submitting you agree to our Privacy Policy. We never sell your data.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -1001,10 +1056,27 @@
     var params = new URLSearchParams(window.location.search);
     var fields = ['utm_source','utm_medium','utm_campaign','utm_term','utm_content','gclid'];
     fields.forEach(function(f) {
-      var el = document.getElementById(f);
-      if (el && params.get(f)) el.value = params.get(f);
+      // populate both any old form fields and new hero form fields
+      ['', 'f_'].forEach(function(prefix) {
+        var el = document.getElementById(prefix + f);
+        if (el && params.get(f)) el.value = params.get(f);
+      });
     });
   })();
+
+  function handleHeroSubmit(e) {
+    e.preventDefault();
+    var form = e.target;
+    var btn = form.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    btn.querySelector('span').textContent = 'Submitting…';
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: 'lead_submit', form_id: 'hero_form', page_variant: form.querySelector('[name="page_variant"]').value });
+    // TODO: replace with real submission — CF7 shortcode, HubSpot embed, or fetch POST
+    setTimeout(function() {
+      form.innerHTML = '<div style="text-align:center;padding:24px 0"><div style="font-size:40px;margin-bottom:12px">✓</div><h3 style="color:#fff;margin-bottom:8px">You\'re on the calendar!</h3><p style="color:rgba(255,255,255,0.6);font-size:14px">A Sogolytics expert will reach out within 1 business day.</p></div>';
+    }, 800);
+  }
 
   // ── GTM dataLayer: page view ──
   window.dataLayer = window.dataLayer || [];
