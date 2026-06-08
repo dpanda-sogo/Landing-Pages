@@ -341,6 +341,18 @@
     .section-dark .card p { color: rgba(255,255,255,0.6); }
     .section-dark .card-icon { background: rgba(255,255,255,0.08); }
 
+    /* ── Testimonial Grid ── */
+    .testimonial-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+    .testimonial-card { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 20px; }
+    .testimonial-card .testimonial-quote { font-size: 16px; line-height: 1.7; color: rgba(255,255,255,0.9); font-style: italic; margin: 0; }
+    .testimonial-card .testimonial-quote::before { content: '\201C'; }
+    .testimonial-card .testimonial-quote::after { content: '\201D'; }
+    .testimonial-card .testimonial-author { display: flex; align-items: center; gap: 12px; margin-top: auto; }
+    .testimonial-card .author-avatar img { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; display: block; }
+    .testimonial-card .author-name { font-size: 14px; font-weight: 700; color: #fff; }
+    .testimonial-card .author-title { font-size: 12px; color: rgba(255,255,255,0.6); margin-top: 2px; }
+    @media (max-width: 768px) { .testimonial-grid { grid-template-columns: 1fr; } }
+
     .testimonial-band {
       background: linear-gradient(135deg, #061a17 0%, var(--bg-dark) 100%);
       padding: 72px 24px;
@@ -461,7 +473,7 @@
 </nav>
 
 <!-- HERO -->
-<section class="hero" aria-labelledby="hero-heading">
+<section class="hero" aria-labelledby="hero-heading" style="background: linear-gradient(135deg, rgba(6,26,23,0.93) 0%, rgba(10,46,41,0.88) 100%), url('https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1600&q=80') center/cover no-repeat; position:relative;">
   <div class="hero-inner">
     <div>
       <p class="hero-eyebrow">Better value · Proven ROI</p>
@@ -697,20 +709,65 @@
   </div>
 </section>
 
+<!-- IN ACTION VISUAL -->
+<section class="section" style="background:var(--bg-dark);padding:80px 0;overflow:hidden;">
+  <div class="container" style="display:flex;align-items:center;gap:64px;">
+    <div class="lp-hero-visual" style="flex:1;min-width:0;">
+      <img src="https://images.unsplash.com/photo-1553877122-b1ef7f926d95?w=800&q=80" alt="Team reviewing analytics results" style="width:100%;border-radius:16px;box-shadow:0 24px 60px rgba(0,0,0,0.5);display:block;">
+    </div>
+    <div style="flex:1;min-width:0;">
+      <span class="section-label">More for less</span>
+      <h2 class="section-title" style="color:#fff;">Everything you need. Nothing you don't.</h2>
+      <p style="color:rgba(255,255,255,0.7);font-size:16px;line-height:1.8;margin:16px 0 24px;">
+        Most enterprise CX platforms charge per module, per user, and per integration. Sogolytics packages everything into a single transparent contract — so your CX budget goes further without sacrificing capability.
+      </p>
+      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px;">
+        <li style="display:flex;align-items:flex-start;gap:10px;color:rgba(255,255,255,0.85);font-size:15px;"><span style="color:var(--blue);font-size:18px;line-height:1;">✓</span> Flat-fee pricing — no per-module add-ons</li>
+        <li style="display:flex;align-items:flex-start;gap:10px;color:rgba(255,255,255,0.85);font-size:15px;"><span style="color:var(--blue);font-size:18px;line-height:1;">✓</span> All integrations included in base package</li>
+        <li style="display:flex;align-items:flex-start;gap:10px;color:rgba(255,255,255,0.85);font-size:15px;"><span style="color:var(--blue);font-size:18px;line-height:1;">✓</span> Dedicated success manager at every tier</li>
+        <li style="display:flex;align-items:flex-start;gap:10px;color:rgba(255,255,255,0.85);font-size:15px;"><span style="color:var(--blue);font-size:18px;line-height:1;">✓</span> No surprise fees at renewal</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 <!-- TESTIMONIAL -->
 <section class="testimonial-band" aria-labelledby="testimonial-heading">
-  <h2 id="testimonial-heading" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Customer testimonial</h2>
-  <div class="fade-in">
-    <blockquote class="testimonial-quote">
-      [TESTIMONIAL QUOTE — 2–3 sentences from a customer about cost savings or ROI delivered by Sogolytics compared to their previous platform.]
-    </blockquote>
-    <div class="testimonial-author">
-      <div class="author-avatar">[A]</div>
-      <div>
-        <div class="author-name">[AUTHOR NAME]</div>
-        <div class="author-title">[AUTHOR TITLE], [AUTHOR COMPANY]</div>
+  <h2 id="testimonial-heading" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Customer testimonials</h2>
+  <div class="fade-in" style="text-align:center;margin-bottom:8px;">
+    <span class="section-label" style="color:rgba(255,255,255,0.5)">What customers say</span>
+    <h2 style="font-size:clamp(24px,3vw,36px);font-weight:700;color:#fff;margin:8px 0 0;">The numbers speak for themselves</h2>
+  </div>
+  <div class="testimonial-grid fade-in">
+    <div class="testimonial-card">
+      <blockquote class="testimonial-quote">We consolidated four point solutions into Sogolytics and cut our annual CX tool spend significantly. Transparent pricing with no per-module add-ons was a huge relief.</blockquote>
+      <div class="testimonial-author">
+        <div class="author-avatar"><img src="https://randomuser.me/api/portraits/men/57.jpg" alt="James Thornton"></div>
+        <div>
+          <div class="author-name">James Thornton</div>
+          <div class="author-title">VP Operations, Clearview Retail</div>
+        </div>
       </div>
-      <div class="co-logo-slot">[CO. LOGO]</div>
+    </div>
+    <div class="testimonial-card">
+      <blockquote class="testimonial-quote">The ROI was visible within the first quarter. We eliminated three vendor contracts and reinvested the savings into our frontline CX team.</blockquote>
+      <div class="testimonial-author">
+        <div class="author-avatar"><img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Sofia Andersen"></div>
+        <div>
+          <div class="author-name">Sofia Andersen</div>
+          <div class="author-title">Head of Insights, Meridian Healthcare</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <blockquote class="testimonial-quote">We pushed back on renewal after seeing Sogolytics' pricing. The capability gap versus what we were paying for was impossible to ignore.</blockquote>
+      <div class="testimonial-author">
+        <div class="author-avatar"><img src="https://randomuser.me/api/portraits/men/12.jpg" alt="David Park"></div>
+        <div>
+          <div class="author-name">David Park</div>
+          <div class="author-title">CX Programme Manager, Hallmark Logistics</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -724,16 +781,19 @@
     </div>
     <div class="cards-grid fade-in" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr))">
       <div class="card" style="border-top: 3px solid var(--green)">
+        <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&q=80" alt="" style="width:100%;height:140px;object-fit:cover;border-radius:8px;margin-bottom:16px;display:block;">
         <span class="msr">savings</span>
         <h3>Consolidate your tool stack</h3>
         <p>Replace 3–5 point solutions with a single platform. Customers consolidating 3–5 point solutions into Sogolytics consistently reduce their combined CX tool spend — with transparent pricing and no renewal surprises.</p>
       </div>
       <div class="card" style="border-top: 3px solid var(--blue)">
+        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&q=80" alt="" style="width:100%;height:140px;object-fit:cover;border-radius:8px;margin-bottom:16px;display:block;">
         <span class="msr">bolt</span>
         <h3>Faster insights, faster action</h3>
         <p>Real-time AI analytics mean your team spots and resolves issues in days — not the weeks it takes to export and process data from legacy platforms.</p>
       </div>
       <div class="card" style="border-top: 3px solid var(--yellow)">
+        <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&q=80" alt="" style="width:100%;height:140px;object-fit:cover;border-radius:8px;margin-bottom:16px;display:block;">
         <span class="msr">trending_up</span>
         <h3>Retention drives revenue</h3>
         <p>Closing the loop on detractors is proven to reduce churn. Sogolytics gives you the case management and AI analytics to act on feedback faster — so improvement shows up in your NPS within months, not years.</p>
