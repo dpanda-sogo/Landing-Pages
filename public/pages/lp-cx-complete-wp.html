@@ -1,0 +1,621 @@
+<!-- ═══════════════════════════════════════════════════════════════
+     SOGOLYTICS CX COMPLETE (Combined Variant) WPBakery Snippet
+     Paste this entire file into a WPBakery "Raw HTML" block.
+     Variant: cx-complete  |  Date: 2026-06-11
+═══════════════════════════════════════════════════════════════ -->
+
+<!-- Material Symbols (theme may not load this; link in body works in WPBakery raw HTML) -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0">
+
+<!-- RESPONSIVE LAYOUT OVERRIDES ONLY (allowed by WPBakery) -->
+<style>
+@media (max-width: 768px) {
+  .lp-two-col { flex-direction: column !important; }
+  .lp-hero-visual { display: none !important; }
+  .lp-grid-3 { flex-direction: column !important; }
+  .lp-grid-2 { flex-direction: column !important; }
+  .lp-timeline { padding-left: 0 !important; }
+  .lp-news-grid { flex-direction: column !important; }
+  .lp-stats-grid { flex-direction: column !important; }
+  .lp-value-grid { flex-direction: column !important; }
+}
+</style>
+
+<!-- ═══════════════════════════════════════
+     HERO
+════════════════════════════════════════ -->
+<div class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:linear-gradient(135deg,rgba(6,26,23,0.93) 0%,rgba(10,46,41,0.88) 100%),url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1600&q=80') center/cover no-repeat;padding:80px 0 72px;">
+  <div class="col span_12 color-dark left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding color-dark" style="" data-animation="" data-delay="">
+      <div class="wpb_wrapper" style="max-width:1120px;margin:0 auto;padding:0 24px;">
+        <div class="lp-two-col" style="display:flex;gap:64px;align-items:center;">
+
+          <!-- Left: Headline + trust badges -->
+          <div style="flex:1;min-width:0;">
+            <p style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#F5E100;margin-bottom:16px;">Better Value · Proven ROI</p>
+            <h1 style="font-size:clamp(32px,4.5vw,52px);font-weight:800;line-height:1.1;letter-spacing:-0.025em;margin-bottom:20px;color:#fff;">
+              More CX capability.<br>
+              <em style="font-family:'Crimson Pro',Georgia,serif;font-style:italic;font-weight:400;color:#02BECC;">Half the cost.</em><br>
+              Zero compromises.
+            </h1>
+            <p style="font-size:clamp(15px,2vw,17px);line-height:1.7;color:rgba(255,255,255,0.72);margin-bottom:32px;max-width:500px;">Full CX, EX, and AI analytics in one contract. No per-module fees, no hidden costs, and a 30-day migration guarantee.</p>
+            <div style="display:flex;align-items:center;gap:12px;font-size:12px;color:rgba(255,255,255,0.5);flex-wrap:wrap;">
+              <span>✓ 3,200+ customers</span>
+              <span style="width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,0.3);flex-shrink:0;display:inline-block;"></span>
+              <span>✓ No per-module fees</span>
+              <span style="width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,0.3);flex-shrink:0;display:inline-block;"></span>
+              <span>✓ 30-day migration</span>
+            </div>
+          </div>
+
+          <!-- Right: Demo form -->
+          <div style="flex:1;min-width:0;">
+            <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);border-radius:16px;padding:32px;backdrop-filter:blur(8px);">
+              <h3 style="font-size:17px;font-weight:700;margin-bottom:6px;color:#fff;">Book your personalised demo</h3>
+              <p style="font-size:13px;color:rgba(255,255,255,0.55);margin-bottom:24px;">No commitment. A Sogolytics expert will walk you through the platform in 30 minutes.</p>
+              <form id="lpHeroForm" action="YOUR_FORM_ENDPOINT" method="POST" onsubmit="lpHandleSubmit(event)">
+                <input type="hidden" name="lp_utm_source" id="lp_utm_source">
+                <input type="hidden" name="lp_utm_medium" id="lp_utm_medium">
+                <input type="hidden" name="lp_utm_campaign" id="lp_utm_campaign">
+                <input type="hidden" name="lp_utm_term" id="lp_utm_term">
+                <input type="hidden" name="lp_utm_content" id="lp_utm_content">
+                <input type="hidden" name="lp_gclid" id="lp_gclid">
+                <input type="hidden" name="page_variant" value="cx-complete">
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+                  <div style="display:flex;flex-direction:column;gap:6px;">
+                    <label style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.65);">First name *</label>
+                    <input type="text" name="first_name" placeholder="Jane" required autocomplete="given-name" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:8px;padding:10px 14px;font-size:14px;color:#fff;font-family:inherit;outline:none;width:100%;">
+                  </div>
+                  <div style="display:flex;flex-direction:column;gap:6px;">
+                    <label style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.65);">Last name *</label>
+                    <input type="text" name="last_name" placeholder="Smith" required autocomplete="family-name" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:8px;padding:10px 14px;font-size:14px;color:#fff;font-family:inherit;outline:none;width:100%;">
+                  </div>
+                </div>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
+                  <div style="display:flex;flex-direction:column;gap:6px;">
+                    <label style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.65);">Work email *</label>
+                    <input type="email" name="email" placeholder="jane@company.com" required autocomplete="email" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:8px;padding:10px 14px;font-size:14px;color:#fff;font-family:inherit;outline:none;width:100%;">
+                  </div>
+                  <div style="display:flex;flex-direction:column;gap:6px;">
+                    <label style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.65);">Company *</label>
+                    <input type="text" name="company" placeholder="Acme Corp" required autocomplete="organization" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:8px;padding:10px 14px;font-size:14px;color:#fff;font-family:inherit;outline:none;width:100%;">
+                  </div>
+                </div>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
+                  <div style="display:flex;flex-direction:column;gap:6px;">
+                    <label style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.65);">Company size</label>
+                    <select name="company_size" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:8px;padding:10px 14px;font-size:14px;color:#fff;font-family:inherit;outline:none;width:100%;">
+                      <option value="">Select…</option>
+                      <option value="1-50">1-50</option>
+                      <option value="51-200">51-200</option>
+                      <option value="201-1000">201-1,000</option>
+                      <option value="1001-5000">1,001-5,000</option>
+                      <option value="5000+">5,000+</option>
+                    </select>
+                  </div>
+                  <div style="display:flex;flex-direction:column;gap:6px;">
+                    <label style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.65);">Your role</label>
+                    <select name="role" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:8px;padding:10px 14px;font-size:14px;color:#fff;font-family:inherit;outline:none;width:100%;">
+                      <option value="">Select…</option>
+                      <option value="cx-leader">CX Leader</option>
+                      <option value="vp-marketing">VP / Director Marketing</option>
+                      <option value="hr-people">HR / People Ops</option>
+                      <option value="c-suite">C-Suite</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                </div>
+                <button type="submit" style="width:100%;margin-top:16px;background:#F5E100;color:#0a1a18;font-size:15px;font-weight:700;padding:14px 24px;border:none;border-radius:50px;cursor:pointer;font-family:inherit;display:flex;align-items:center;justify-content:center;gap:8px;">
+                  <span>Request My Demo</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+              </form>
+              <p style="font-size:11px;color:rgba(255,255,255,0.35);text-align:center;margin-top:10px;">By submitting you agree to our Privacy Policy. We never sell your data.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     LOGO BAR
+════════════════════════════════════════ -->
+<div class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:#fff;border-bottom:1px solid #e2e6ea;padding:36px 0;text-align:center;">
+  <div class="col span_12 color-dark left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding" style="" data-animation="" data-delay="">
+      <div class="wpb_wrapper" style="max-width:1120px;margin:0 auto;padding:0 24px;">
+        <p style="font-size:12px;font-weight:600;color:#5a6472;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:24px;">Trusted by experience-driven organisations worldwide</p>
+        <div style="display:flex;align-items:center;justify-content:center;gap:40px;flex-wrap:wrap;">
+          <!-- LOGO 1: Replace div with <img src="URL" alt="Company" style="height:36px;width:auto;filter:grayscale(1);opacity:0.6"> -->
+          <div style="height:36px;min-width:100px;background:#f0f4f3;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:#b0b8c1;padding:0 16px;">LOGO 1</div>
+          <div style="height:36px;min-width:100px;background:#f0f4f3;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:#b0b8c1;padding:0 16px;">LOGO 2</div>
+          <div style="height:36px;min-width:100px;background:#f0f4f3;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:#b0b8c1;padding:0 16px;">LOGO 3</div>
+          <div style="height:36px;min-width:100px;background:#f0f4f3;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:#b0b8c1;padding:0 16px;">LOGO 4</div>
+          <div style="height:36px;min-width:100px;background:#f0f4f3;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:#b0b8c1;padding:0 16px;">LOGO 5</div>
+          <div style="height:36px;min-width:100px;background:#f0f4f3;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:#b0b8c1;padding:0 16px;">LOGO 6</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     STATS BAND
+════════════════════════════════════════ -->
+<div class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:#0D6E65;padding:48px 0;">
+  <div class="col span_12 color-dark left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding" style="" data-animation="" data-delay="">
+      <div class="wpb_wrapper" style="max-width:800px;margin:0 auto;padding:0 24px;">
+        <div class="lp-stats-grid" style="display:flex;gap:24px;text-align:center;">
+          <div style="flex:1;">
+            <div style="font-size:clamp(36px,5vw,52px);font-weight:800;color:#fff;line-height:1;letter-spacing:-0.03em;">3,200+</div>
+            <div style="font-size:14px;color:rgba(255,255,255,0.75);margin-top:6px;">Enterprise customers</div>
+          </div>
+          <div style="flex:1;">
+            <div style="font-size:clamp(36px,5vw,52px);font-weight:800;color:#fff;line-height:1;letter-spacing:-0.03em;">95%</div>
+            <div style="font-size:14px;color:rgba(255,255,255,0.75);margin-top:6px;">Average renewal rate</div>
+          </div>
+          <div style="flex:1;">
+            <div style="font-size:clamp(36px,5vw,52px);font-weight:800;color:#fff;line-height:1;letter-spacing:-0.03em;">30 days</div>
+            <div style="font-size:14px;color:rgba(255,255,255,0.75);margin-top:6px;">Average migration time</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     INDUSTRY NEWS FOLD
+════════════════════════════════════════ -->
+<div class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:#0a2e29;border-top:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08);padding:80px 0;">
+  <div class="col span_12 color-dark left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding" style="" data-animation="" data-delay="">
+      <div class="wpb_wrapper" style="max-width:1120px;margin:0 auto;padding:0 24px;">
+        <div style="text-align:center;margin-bottom:40px;">
+          <span style="display:inline-block;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(2,190,204,0.9);margin-bottom:12px;">Industry Context</span>
+          <h2 style="font-size:clamp(24px,3.5vw,38px);font-weight:800;letter-spacing:-0.02em;color:#fff;margin-bottom:16px;">The platform landscape is shifting</h2>
+          <p style="color:rgba(255,255,255,0.65);font-size:16px;max-width:600px;margin:12px auto 0;">Recent reporting from major financial and business publications highlights growing instability among legacy enterprise CX vendors.</p>
+        </div>
+        <div class="lp-news-grid" style="display:flex;gap:24px;flex-wrap:wrap;">
+          <!-- News card 1 -->
+          <div style="flex:1;min-width:280px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:16px;padding:28px 28px 24px;display:flex;flex-direction:column;gap:16px;">
+            <div><span style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;background:rgba(2,190,204,0.15);color:#02becc;padding:4px 10px;border-radius:20px;">Reuters · April 2026</span></div>
+            <p style="font-size:16px;line-height:1.7;color:rgba(255,255,255,0.9);font-style:italic;margin:0;">"A private equity-backed enterprise feedback management platform is nearing an agreement to hand ownership to its creditors, following a reported $5.1 billion equity wipeout, as part of a broader software industry reckoning with leveraged buyouts."</p>
+            <a href="https://www.reuters.com/markets/deals/thoma-bravo-nears-agreement-turn-software-firm-medallia-over-creditors-source-2026-04-22/" target="_blank" rel="noopener noreferrer" style="font-size:12px;color:#02becc;text-decoration:none;font-weight:600;">Read the Reuters report →</a>
+          </div>
+          <!-- News card 2 -->
+          <div style="flex:1;min-width:280px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:16px;padding:28px 28px 24px;display:flex;flex-direction:column;gap:16px;">
+            <div><span style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;background:rgba(2,190,204,0.15);color:#02becc;padding:4px 10px;border-radius:20px;">Bloomberg · January 2023</span></div>
+            <p style="font-size:16px;line-height:1.7;color:rgba(255,255,255,0.9);font-style:italic;margin:0;">"A major enterprise software parent announced plans to divest its stake in a leading CX survey platform and cut 3,000 jobs as part of a restructuring to boost profitability, signalling a strategic retreat from the CX software category."</p>
+            <a href="https://www.bloomberg.com/news/articles/2023-01-26/sap-plans-to-sell-qualtrics-stake-cut-jobs-in-profit-push" target="_blank" rel="noopener noreferrer" style="font-size:12px;color:#02becc;text-decoration:none;font-weight:600;">Read the Bloomberg report →</a>
+          </div>
+        </div>
+        <!-- Disclaimer -->
+        <p style="font-size:10px;color:rgba(255,255,255,0.35);line-height:1.6;margin-top:24px;max-width:900px;margin-left:auto;margin-right:auto;text-align:center;border-top:1px solid rgba(255,255,255,0.08);padding-top:16px;">
+          <strong style="color:rgba(255,255,255,0.45);">Media Attribution Disclaimer:</strong> The news summaries above are paraphrased from independent third-party publications for informational context only. Sogolytics, Inc. has not independently verified the accuracy, completeness, or timeliness of the underlying reporting and makes no representation or warranty, express or implied, in connection therewith. These references do not constitute an endorsement by Sogolytics of any publication or its editorial positions. This content does not constitute legal, financial, investment, or professional advice. Sogolytics, Inc. expressly disclaims all liability for any loss, damage, or harm arising from reliance on third-party news content. For the most current information, readers should consult the original source publications directly. Third-party trademarks and company names referenced in source headlines remain the property of their respective owners.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     VALUE COMPARISON
+════════════════════════════════════════ -->
+<div class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:#fff;padding:80px 0;">
+  <div class="col span_12 color-dark left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding" style="" data-animation="" data-delay="">
+      <div class="wpb_wrapper" style="max-width:1120px;margin:0 auto;padding:0 24px;">
+        <div style="text-align:center;margin-bottom:48px;">
+          <span style="display:inline-block;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#0D6E65;margin-bottom:12px;">Compare your options</span>
+          <h2 style="font-size:clamp(24px,3.5vw,38px);font-weight:800;letter-spacing:-0.02em;margin-bottom:16px;">Why teams are moving to Sogolytics</h2>
+          <p style="font-size:16px;color:#5a6472;line-height:1.7;max-width:620px;margin:0 auto;">See how Sogolytics compares to the legacy enterprise suites and basic survey tools you may be evaluating.</p>
+        </div>
+        <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:12px;border:1px solid #e2e6ea;">
+          <table style="width:100%;border-collapse:collapse;font-size:14px;min-width:600px;">
+            <thead>
+              <tr>
+                <th style="width:24%;padding:20px 24px;background:#fff;border-right:1px solid #e2e6ea;text-align:left;"></th>
+                <th style="width:26%;padding:20px 24px;background:#0D6E65;text-align:center;vertical-align:middle;">
+                  <img src="https://cdn.sogolytics.com/wp-content/uploads/2022/07/sogolytics-wbg.png" alt="Sogolytics" style="height:38px;display:block;margin:0 auto;">
+                </th>
+                <th style="padding:20px 24px;background:#F1F6F6;font-weight:700;color:#1a1a1a;font-size:14px;text-align:left;border-left:1px solid #e2e6ea;">Sogolytics Alternative 1</th>
+                <th style="padding:20px 24px;background:#F1F6F6;font-weight:700;color:#1a1a1a;font-size:14px;text-align:left;border-left:1px solid #e2e6ea;">Sogolytics Alternative 2</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-top:1px solid #e2e6ea;background:#F9FBFB;">
+                <td style="font-weight:700;color:#1a1a1a;padding:16px 24px;border-right:1px solid #e2e6ea;font-size:14px;line-height:1.4;">Platform Scope</td>
+                <td style="background:#EAF4F2;color:#0D4E48;padding:16px 20px;font-size:13px;line-height:1.5;border-left:3px solid #0D6E65;">All modules included: VoC, EX, NPS, AI analytics, case management</td>
+                <td style="color:#5a6472;padding:16px 20px;font-size:13px;line-height:1.5;border-left:1px solid #e2e6ea;">Separate licences per module; costs stack up fast</td>
+                <td style="color:#5a6472;padding:16px 20px;font-size:13px;line-height:1.5;border-left:1px solid #e2e6ea;">Survey-only; no CX or EX platform features</td>
+              </tr>
+              <tr style="border-top:1px solid #e2e6ea;background:#ffffff;">
+                <td style="font-weight:700;color:#1a1a1a;padding:16px 24px;border-right:1px solid #e2e6ea;font-size:14px;line-height:1.4;">Pricing Model</td>
+                <td style="background:#EAF4F2;color:#0D4E48;padding:16px 20px;font-size:13px;line-height:1.5;border-left:3px solid #0D6E65;">Flat, predictable annual pricing. No surprises at renewal</td>
+                <td style="color:#5a6472;padding:16px 20px;font-size:13px;line-height:1.5;border-left:1px solid #e2e6ea;">Custom quotes; price increases at renewal</td>
+                <td style="color:#5a6472;padding:16px 20px;font-size:13px;line-height:1.5;border-left:1px solid #e2e6ea;">Low monthly cost</td>
+              </tr>
+              <tr style="border-top:1px solid #e2e6ea;background:#F9FBFB;">
+                <td style="font-weight:700;color:#1a1a1a;padding:16px 24px;border-right:1px solid #e2e6ea;font-size:14px;line-height:1.4;">Customer Success</td>
+                <td style="background:#EAF4F2;color:#0D4E48;padding:16px 20px;font-size:13px;line-height:1.5;border-left:3px solid #0D6E65;">Dedicated CSM included in every plan</td>
+                <td style="color:#5a6472;padding:16px 20px;font-size:13px;line-height:1.5;border-left:1px solid #e2e6ea;">CSM support often a premium add-on</td>
+                <td style="color:#5a6472;padding:16px 20px;font-size:13px;line-height:1.5;border-left:1px solid #e2e6ea;">Self-serve only; no dedicated support</td>
+              </tr>
+              <tr style="border-top:1px solid #e2e6ea;background:#ffffff;">
+                <td style="font-weight:700;color:#1a1a1a;padding:16px 24px;border-right:1px solid #e2e6ea;font-size:14px;line-height:1.4;">Time to Live</td>
+                <td style="background:#EAF4F2;color:#0D4E48;padding:16px 20px;font-size:13px;line-height:1.5;border-left:3px solid #0D6E65;">Live in weeks, not quarters. Implementation included</td>
+                <td style="color:#5a6472;padding:16px 20px;font-size:13px;line-height:1.5;border-left:1px solid #e2e6ea;">Typical implementation: 6-18 months</td>
+                <td style="color:#5a6472;padding:16px 20px;font-size:13px;line-height:1.5;border-left:1px solid #e2e6ea;">Fast setup</td>
+              </tr>
+              <tr style="border-top:1px solid #e2e6ea;background:#F9FBFB;">
+                <td style="font-weight:700;color:#1a1a1a;padding:16px 24px;border-right:1px solid #e2e6ea;font-size:14px;line-height:1.4;">Compliance</td>
+                <td style="background:#EAF4F2;color:#0D4E48;padding:16px 20px;font-size:13px;line-height:1.5;border-left:3px solid #0D6E65;">HIPAA, GDPR, SOC 2 Type II, ISO 27001</td>
+                <td style="color:#5a6472;padding:16px 20px;font-size:13px;line-height:1.5;border-left:1px solid #e2e6ea;">HIPAA, GDPR certified</td>
+                <td style="color:#5a6472;padding:16px 20px;font-size:13px;line-height:1.5;border-left:1px solid #e2e6ea;">Not enterprise-grade; HIPAA/SOC 2 not standard</td>
+              </tr>
+              <tr style="border-top:1px solid #e2e6ea;background:#ffffff;">
+                <td style="font-weight:700;color:#1a1a1a;padding:16px 24px;border-right:1px solid #e2e6ea;font-size:14px;line-height:1.4;">Contract Terms</td>
+                <td style="background:#EAF4F2;color:#0D4E48;padding:16px 20px;font-size:13px;line-height:1.5;border-left:3px solid #0D6E65;">No exit fees; data portability guaranteed</td>
+                <td style="color:#5a6472;padding:16px 20px;font-size:13px;line-height:1.5;border-left:1px solid #e2e6ea;">Lock-in clauses common</td>
+                <td style="color:#5a6472;padding:16px 20px;font-size:13px;line-height:1.5;border-left:1px solid #e2e6ea;">Easy to cancel</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     PLATFORM CAPABILITIES
+════════════════════════════════════════ -->
+<div class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:#092224;padding:80px 0;">
+  <div class="col span_12 color-dark left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding" style="" data-animation="" data-delay="">
+      <div class="wpb_wrapper" style="max-width:1120px;margin:0 auto;padding:0 24px;">
+        <div style="text-align:center;margin-bottom:48px;">
+          <span style="display:inline-block;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#02BECC;margin-bottom:12px;">Platform Capabilities</span>
+          <h2 style="font-size:clamp(24px,3.5vw,38px);font-weight:800;letter-spacing:-0.02em;color:#fff;margin-bottom:16px;">Built for every feedback channel</h2>
+          <p style="font-size:16px;color:rgba(255,255,255,0.65);line-height:1.7;max-width:620px;margin:0 auto;">Six fully integrated modules. One login. One source of truth.</p>
+        </div>
+        <div class="lp-grid-3" style="display:flex;flex-wrap:wrap;gap:20px;">
+          <div style="flex:1;min-width:280px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:28px;">
+            <span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:12px;background:#02BECC;color:#092224;font-size:24px;margin-bottom:16px;font-family:'Material Symbols Rounded';font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">record_voice_over</span>
+            <h3 style="font-size:16px;font-weight:700;color:#fff;margin-bottom:8px;">Voice of Customer (VoC)</h3>
+            <p style="font-size:14px;color:rgba(255,255,255,0.6);line-height:1.6;">Capture real-time customer signals at every touchpoint: web, mobile, email, SMS, and kiosk, all in one unified platform.</p>
+          </div>
+          <div style="flex:1;min-width:280px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:28px;">
+            <span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:12px;background:#02BECC;color:#092224;font-size:24px;margin-bottom:16px;font-family:'Material Symbols Rounded';font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">groups</span>
+            <h3 style="font-size:16px;font-weight:700;color:#fff;margin-bottom:8px;">Employee Experience (EX)</h3>
+            <p style="font-size:14px;color:rgba(255,255,255,0.6);line-height:1.6;">Run pulse surveys, engagement studies, and 360° feedback to connect employee sentiment with customer outcomes.</p>
+          </div>
+          <div style="flex:1;min-width:280px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:28px;">
+            <span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:12px;background:#02BECC;color:#092224;font-size:24px;margin-bottom:16px;font-family:'Material Symbols Rounded';font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">monitoring</span>
+            <h3 style="font-size:16px;font-weight:700;color:#fff;margin-bottom:8px;">NPS &amp; Satisfaction Tracking</h3>
+            <p style="font-size:14px;color:rgba(255,255,255,0.6);line-height:1.6;">Automated NPS, CSAT, and CES programs with trending, segmentation, and driver analysis baked in from day one.</p>
+          </div>
+          <div style="flex:1;min-width:280px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:28px;">
+            <span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:12px;background:#02BECC;color:#092224;font-size:24px;margin-bottom:16px;font-family:'Material Symbols Rounded';font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">psychology</span>
+            <h3 style="font-size:16px;font-weight:700;color:#fff;margin-bottom:8px;">AI Sentiment &amp; Text Analytics</h3>
+            <p style="font-size:14px;color:rgba(255,255,255,0.6);line-height:1.6;">Surface themes, emotions, and intent from open-text responses at scale. No data science team required.</p>
+          </div>
+          <div style="flex:1;min-width:280px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:28px;">
+            <span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:12px;background:#02BECC;color:#092224;font-size:24px;margin-bottom:16px;font-family:'Material Symbols Rounded';font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">task_alt</span>
+            <h3 style="font-size:16px;font-weight:700;color:#fff;margin-bottom:8px;">Close-the-Loop Case Management</h3>
+            <p style="font-size:14px;color:rgba(255,255,255,0.6);line-height:1.6;">Automatically route detractors to your CX team, track resolution time, and measure the revenue impact of every closed loop.</p>
+          </div>
+          <div style="flex:1;min-width:280px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:28px;">
+            <span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:12px;background:#02BECC;color:#092224;font-size:24px;margin-bottom:16px;font-family:'Material Symbols Rounded';font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">dashboard</span>
+            <h3 style="font-size:16px;font-weight:700;color:#fff;margin-bottom:8px;">Executive Dashboards &amp; Reporting</h3>
+            <p style="font-size:14px;color:rgba(255,255,255,0.6);line-height:1.6;">Real-time, role-based dashboards for CX leaders, HR teams, and the C-suite, with scheduled reports that deliver insights automatically.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     MIGRATION TIMELINE (4 steps)
+════════════════════════════════════════ -->
+<div class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:#fff;padding:80px 0;">
+  <div class="col span_12 color-dark left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding" style="" data-animation="" data-delay="">
+      <div class="wpb_wrapper" style="max-width:1120px;margin:0 auto;padding:0 24px;">
+        <div style="text-align:center;margin-bottom:48px;">
+          <span style="display:inline-block;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#0D6E65;margin-bottom:12px;">Switching is easier than you think</span>
+          <h2 style="font-size:clamp(24px,3.5vw,38px);font-weight:800;letter-spacing:-0.02em;margin-bottom:16px;">From signed to live in 30 days</h2>
+          <p style="font-size:16px;color:#5a6472;line-height:1.7;max-width:620px;margin:0 auto;">Our structured migration process has been refined across hundreds of enterprise implementations.</p>
+        </div>
+        <div style="position:relative;max-width:720px;margin:0 auto;">
+          <div style="position:absolute;left:28px;top:0;bottom:0;width:2px;background:#e2e6ea;"></div>
+          <!-- Step 1 -->
+          <div style="display:flex;gap:24px;margin-bottom:36px;position:relative;">
+            <div style="width:56px;height:56px;border-radius:50%;background:#0D6E65;color:#fff;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;flex-shrink:0;position:relative;z-index:1;">1</div>
+            <div style="padding-top:12px;">
+              <div style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#02BECC;margin-bottom:4px;">Days 1-5</div>
+              <div style="font-size:17px;font-weight:700;margin-bottom:6px;">Kickoff &amp; audit</div>
+              <div style="font-size:14px;color:#5a6472;line-height:1.6;">We map your current surveys, dashboards, integrations, and data structure. Nothing is missed before the build begins.</div>
+            </div>
+          </div>
+          <!-- Step 2 -->
+          <div style="display:flex;gap:24px;margin-bottom:36px;position:relative;">
+            <div style="width:56px;height:56px;border-radius:50%;background:#0D6E65;color:#fff;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;flex-shrink:0;position:relative;z-index:1;">2</div>
+            <div style="padding-top:12px;">
+              <div style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#02BECC;margin-bottom:4px;">Days 6-15</div>
+              <div style="font-size:17px;font-weight:700;margin-bottom:6px;">Build &amp; migrate</div>
+              <div style="font-size:14px;color:#5a6472;line-height:1.6;">Our team rebuilds everything in Sogolytics, and nothing falls through the cracks. Your old platform stays live in parallel throughout.</div>
+            </div>
+          </div>
+          <!-- Step 3 -->
+          <div style="display:flex;gap:24px;margin-bottom:36px;position:relative;">
+            <div style="width:56px;height:56px;border-radius:50%;background:#0D6E65;color:#fff;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;flex-shrink:0;position:relative;z-index:1;">3</div>
+            <div style="padding-top:12px;">
+              <div style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#02BECC;margin-bottom:4px;">Days 16-25</div>
+              <div style="font-size:17px;font-weight:700;margin-bottom:6px;">Test &amp; train</div>
+              <div style="font-size:14px;color:#5a6472;line-height:1.6;">UAT with your team; role-based training for all user groups. Your team signs off before we flip the switch.</div>
+            </div>
+          </div>
+          <!-- Step 4 -->
+          <div style="display:flex;gap:24px;position:relative;">
+            <div style="width:56px;height:56px;border-radius:50%;background:#02BECC;color:#fff;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;flex-shrink:0;position:relative;z-index:1;">✓</div>
+            <div style="padding-top:12px;">
+              <div style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#02BECC;margin-bottom:4px;">Days 26-30</div>
+              <div style="font-size:17px;font-weight:700;margin-bottom:6px;">Go live</div>
+              <div style="font-size:14px;color:#5a6472;line-height:1.6;">Flip the switch. Your old platform stays live in parallel for the full 30-day guarantee period, so there is zero risk to your running programs.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     IN ACTION VISUAL
+════════════════════════════════════════ -->
+<div class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:#092224;padding:80px 0;overflow:hidden;">
+  <div class="col span_12 color-dark left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding" style="" data-animation="" data-delay="">
+      <div class="wpb_wrapper lp-two-col" style="max-width:1120px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:64px;">
+        <div style="flex:1;min-width:0;">
+          <span style="display:inline-block;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#02BECC;margin-bottom:12px;">Inside the platform</span>
+          <h2 style="font-size:clamp(24px,3.5vw,38px);font-weight:800;letter-spacing:-0.02em;color:#fff;margin-bottom:16px;">See the full picture, in real time</h2>
+          <p style="color:rgba(255,255,255,0.7);font-size:16px;line-height:1.8;margin-bottom:24px;">Your CX team shouldn't have to chase data across five tools. Sogolytics surfaces customer signals, employee sentiment, and market context in a single unified view, with AI-driven recommendations that tell you what to do next, not just what happened.</p>
+          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px;">
+            <li style="display:flex;align-items:flex-start;gap:10px;color:rgba(255,255,255,0.85);font-size:15px;"><span style="flex-shrink:0;font-family:'Material Symbols Rounded';font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;font-size:18px;line-height:1.2;color:#02BECC;">check</span> Spot score drops the moment they happen, not at quarter end</li>
+            <li style="display:flex;align-items:flex-start;gap:10px;color:rgba(255,255,255,0.85);font-size:15px;"><span style="flex-shrink:0;font-family:'Material Symbols Rounded';font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;font-size:18px;line-height:1.2;color:#02BECC;">check</span> Turn thousands of open-text comments into clear themes</li>
+            <li style="display:flex;align-items:flex-start;gap:10px;color:rgba(255,255,255,0.85);font-size:15px;"><span style="flex-shrink:0;font-family:'Material Symbols Rounded';font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;font-size:18px;line-height:1.2;color:#02BECC;">check</span> Give every team the view they need, from frontline to boardroom</li>
+            <li style="display:flex;align-items:flex-start;gap:10px;color:rgba(255,255,255,0.85);font-size:15px;"><span style="flex-shrink:0;font-family:'Material Symbols Rounded';font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;font-size:18px;line-height:1.2;color:#02BECC;">check</span> Reach unhappy customers before they become lost accounts</li>
+          </ul>
+        </div>
+        <div class="lp-hero-visual" style="flex:1;min-width:0;">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" alt="Analytics dashboard in use" style="width:100%;border-radius:16px;box-shadow:0 24px 60px rgba(0,0,0,0.5);display:block;">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     TESTIMONIALS
+════════════════════════════════════════ -->
+<div class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:linear-gradient(135deg,#061a17 0%,#092224 100%);padding:72px 0;text-align:center;">
+  <div class="col span_12 color-dark left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding" style="" data-animation="" data-delay="">
+      <div class="wpb_wrapper" style="max-width:1120px;margin:0 auto;padding:0 24px;">
+        <div style="text-align:center;margin-bottom:8px;">
+          <span style="display:inline-block;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:12px;">What customers say</span>
+          <h2 style="font-size:clamp(24px,3vw,36px);font-weight:700;color:#fff;margin:8px 0 0;">Real results, real teams</h2>
+        </div>
+        <div class="lp-grid-3" style="display:flex;gap:24px;margin-top:40px;flex-wrap:wrap;">
+          <div style="flex:1;min-width:260px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:20px;">
+            <blockquote style="font-size:16px;line-height:1.7;color:rgba(255,255,255,0.9);font-style:italic;margin:0;">"We replaced three separate listening tools with Sogolytics and finally have a single view of the customer journey. The AI insight engine surfaced themes we'd been missing for years."</blockquote>
+            <div style="display:flex;align-items:center;gap:12px;margin-top:auto;">
+              <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Rachel Kim" style="width:48px;height:48px;border-radius:50%;object-fit:cover;display:block;flex-shrink:0;">
+              <div>
+                <div style="font-size:14px;font-weight:700;color:#fff;">Rachel Kim</div>
+                <div style="font-size:12px;color:rgba(255,255,255,0.6);margin-top:2px;">VP Customer Experience, TechFlow Group</div>
+              </div>
+            </div>
+          </div>
+          <div style="flex:1;min-width:260px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:20px;">
+            <blockquote style="font-size:16px;line-height:1.7;color:rgba(255,255,255,0.9);font-style:italic;margin:0;">"Onboarding was faster than any enterprise platform I've implemented. Our team was fully live in under two weeks. No professional services backlog, no hidden fees."</blockquote>
+            <div style="display:flex;align-items:center;gap:12px;margin-top:auto;">
+              <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Marcus Osei" style="width:48px;height:48px;border-radius:50%;object-fit:cover;display:block;flex-shrink:0;">
+              <div>
+                <div style="font-size:14px;font-weight:700;color:#fff;">Marcus Osei</div>
+                <div style="font-size:12px;color:rgba(255,255,255,0.6);margin-top:2px;">Director of CX Operations, Brightway Financial</div>
+              </div>
+            </div>
+          </div>
+          <div style="flex:1;min-width:260px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:20px;">
+            <blockquote style="font-size:16px;line-height:1.7;color:rgba(255,255,255,0.9);font-style:italic;margin:0;">"Having EX and CX data in the same platform changed how our leadership team makes decisions. Cross-functional alignment used to take months. Now it's one dashboard."</blockquote>
+            <div style="display:flex;align-items:center;gap:12px;margin-top:auto;">
+              <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Priya Mehta" style="width:48px;height:48px;border-radius:50%;object-fit:cover;display:block;flex-shrink:0;">
+              <div>
+                <div style="font-size:14px;font-weight:700;color:#fff;">Priya Mehta</div>
+                <div style="font-size:12px;color:rgba(255,255,255,0.6);margin-top:2px;">Chief Customer Officer, Nexar Solutions</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     FAQ
+════════════════════════════════════════ -->
+<div class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:#fff;padding:80px 0;">
+  <div class="col span_12 color-dark left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding" style="" data-animation="" data-delay="">
+      <div class="wpb_wrapper" style="max-width:1120px;margin:0 auto;padding:0 24px;">
+        <div style="text-align:center;margin-bottom:48px;">
+          <span style="display:inline-block;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#0D6E65;margin-bottom:12px;">Questions</span>
+          <h2 style="font-size:clamp(24px,3.5vw,38px);font-weight:800;letter-spacing:-0.02em;">Frequently asked</h2>
+        </div>
+        <div style="max-width:720px;margin:0 auto;">
+
+          <div class="lp-faq-item" style="border-bottom:1px solid #e2e6ea;">
+            <button class="lp-faq-question" style="width:100%;background:none;border:none;text-align:left;padding:20px 0;font-size:15px;font-weight:600;color:#1a1a1a;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:inherit;line-height:1.4;">
+              How does Sogolytics handle the migration from my current platform?
+              <span style="width:24px;height:24px;border-radius:50%;background:#E8F4F2;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:16px;color:#0D6E65;font-weight:700;">+</span>
+            </button>
+            <div class="lp-faq-answer" style="max-height:0;overflow:hidden;transition:max-height 0.35s ease;">
+              <div style="padding-bottom:20px;font-size:14px;color:#5a6472;line-height:1.7;">Our migration team manages the full process: survey rebuild, logic transfer, historical data migration, dashboard recreation, and integrations. Most migrations complete within 30 days.</div>
+            </div>
+          </div>
+
+          <div class="lp-faq-item" style="border-bottom:1px solid #e2e6ea;">
+            <button class="lp-faq-question" style="width:100%;background:none;border:none;text-align:left;padding:20px 0;font-size:15px;font-weight:600;color:#1a1a1a;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:inherit;line-height:1.4;">
+              What happens to my historical data?
+              <span style="width:24px;height:24px;border-radius:50%;background:#E8F4F2;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:16px;color:#0D6E65;font-weight:700;">+</span>
+            </button>
+            <div class="lp-faq-answer" style="max-height:0;overflow:hidden;transition:max-height 0.35s ease;">
+              <div style="padding-bottom:20px;font-size:14px;color:#5a6472;line-height:1.7;">All historical survey responses, NPS trends, and dashboard data are transferred and preserved. You'll have continuous access to your full data history from day one on Sogolytics.</div>
+            </div>
+          </div>
+
+          <div class="lp-faq-item" style="border-bottom:1px solid #e2e6ea;">
+            <button class="lp-faq-question" style="width:100%;background:none;border:none;text-align:left;padding:20px 0;font-size:15px;font-weight:600;color:#1a1a1a;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:inherit;line-height:1.4;">
+              How is Sogolytics priced compared to legacy enterprise suites?
+              <span style="width:24px;height:24px;border-radius:50%;background:#E8F4F2;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:16px;color:#0D6E65;font-weight:700;">+</span>
+            </button>
+            <div class="lp-faq-answer" style="max-height:0;overflow:hidden;transition:max-height 0.35s ease;">
+              <div style="padding-bottom:20px;font-size:14px;color:#5a6472;line-height:1.7;">Sogolytics uses transparent, flat-fee pricing with no per-module charges. All core capabilities, including VoC, EX, NPS, AI analytics, and integrations, are included in a single contract.</div>
+            </div>
+          </div>
+
+          <div class="lp-faq-item" style="border-bottom:1px solid #e2e6ea;">
+            <button class="lp-faq-question" style="width:100%;background:none;border:none;text-align:left;padding:20px 0;font-size:15px;font-weight:600;color:#1a1a1a;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:inherit;line-height:1.4;">
+              Does Sogolytics support both CX and EX programmes?
+              <span style="width:24px;height:24px;border-radius:50%;background:#E8F4F2;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:16px;color:#0D6E65;font-weight:700;">+</span>
+            </button>
+            <div class="lp-faq-answer" style="max-height:0;overflow:hidden;transition:max-height 0.35s ease;">
+              <div style="padding-bottom:20px;font-size:14px;color:#5a6472;line-height:1.7;">Yes. Our unified platform handles customer experience, employee experience, and market research in a single environment, with shared analytics and cross-programme dashboards.</div>
+            </div>
+          </div>
+
+          <div class="lp-faq-item" style="border-bottom:1px solid #e2e6ea;">
+            <button class="lp-faq-question" style="width:100%;background:none;border:none;text-align:left;padding:20px 0;font-size:15px;font-weight:600;color:#1a1a1a;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:inherit;line-height:1.4;">
+              What compliance certifications does Sogolytics hold?
+              <span style="width:24px;height:24px;border-radius:50%;background:#E8F4F2;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:16px;color:#0D6E65;font-weight:700;">+</span>
+            </button>
+            <div class="lp-faq-answer" style="max-height:0;overflow:hidden;transition:max-height 0.35s ease;">
+              <div style="padding-bottom:20px;font-size:14px;color:#5a6472;line-height:1.7;">SOC 2 Type II, ISO 27001, GDPR compliance, and HIPAA-ready configurations. Full details are available in our security documentation.</div>
+            </div>
+          </div>
+
+          <div class="lp-faq-item" style="border-bottom:1px solid #e2e6ea;">
+            <button class="lp-faq-question" style="width:100%;background:none;border:none;text-align:left;padding:20px 0;font-size:15px;font-weight:600;color:#1a1a1a;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:inherit;line-height:1.4;">
+              How long does onboarding take?
+              <span style="width:24px;height:24px;border-radius:50%;background:#E8F4F2;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:16px;color:#0D6E65;font-weight:700;">+</span>
+            </button>
+            <div class="lp-faq-answer" style="max-height:0;overflow:hidden;transition:max-height 0.35s ease;">
+              <div style="padding-bottom:20px;font-size:14px;color:#5a6472;line-height:1.7;">Most teams are fully onboarded and live within 2-4 weeks. Enterprise migrations with complex integrations typically complete within 30 days under our migration guarantee.</div>
+            </div>
+          </div>
+
+          <div class="lp-faq-item" style="border-bottom:1px solid #e2e6ea;">
+            <button class="lp-faq-question" style="width:100%;background:none;border:none;text-align:left;padding:20px 0;font-size:15px;font-weight:600;color:#1a1a1a;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:inherit;line-height:1.4;">
+              Can I run a proof of concept before committing?
+              <span style="width:24px;height:24px;border-radius:50%;background:#E8F4F2;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:16px;color:#0D6E65;font-weight:700;">+</span>
+            </button>
+            <div class="lp-faq-answer" style="max-height:0;overflow:hidden;transition:max-height 0.35s ease;">
+              <div style="padding-bottom:20px;font-size:14px;color:#5a6472;line-height:1.7;">Yes. We offer a structured pilot programme where your team can run live surveys and explore the full platform before signing a contract.</div>
+            </div>
+          </div>
+
+          <div class="lp-faq-item" style="border-bottom:1px solid #e2e6ea;">
+            <button class="lp-faq-question" style="width:100%;background:none;border:none;text-align:left;padding:20px 0;font-size:15px;font-weight:600;color:#1a1a1a;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:inherit;line-height:1.4;">
+              What support do I get after go-live?
+              <span style="width:24px;height:24px;border-radius:50%;background:#E8F4F2;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:16px;color:#0D6E65;font-weight:700;">+</span>
+            </button>
+            <div class="lp-faq-answer" style="max-height:0;overflow:hidden;transition:max-height 0.35s ease;">
+              <div style="padding-bottom:20px;font-size:14px;color:#5a6472;line-height:1.7;">Every Sogolytics customer gets a dedicated Customer Success Manager. Enterprise tiers include 24/7 technical support and a named implementation specialist.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     BOTTOM CTA BAND
+════════════════════════════════════════ -->
+<div class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:#0D6E65;padding:64px 0;text-align:center;">
+  <div class="col span_12 color-dark left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding" style="" data-animation="" data-delay="">
+      <div class="wpb_wrapper" style="max-width:1120px;margin:0 auto;padding:0 24px;">
+        <h2 style="font-size:clamp(24px,3.5vw,38px);font-weight:800;letter-spacing:-0.02em;color:#fff;margin-bottom:16px;">Ready to make the switch?</h2>
+        <p style="font-size:16px;color:rgba(255,255,255,0.75);margin-bottom:32px;">Join 3,200+ organisations that chose a better CX platform. Migration support included.</p>
+        <a href="https://www.sogolytics.com/request-a-demo/" style="text-decoration:none;display:inline-flex;align-items:center;gap:10px;background:#F5E100;color:#0a1a18;font-size:16px;font-weight:700;padding:16px 32px;border-radius:50px;">
+          <span>Request a Demo</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     SCRIPTS
+════════════════════════════════════════ -->
+<script>
+// GTM dataLayer push
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({ event: 'lp_view', page_variant: 'cx-complete', page_type: 'competitor_conquesting' });
+
+// UTM passthrough IIFE
+(function(){
+  var params = new URLSearchParams(window.location.search);
+  var fields = ['utm_source','utm_medium','utm_campaign','utm_term','utm_content','gclid'];
+  fields.forEach(function(f){
+    var el = document.getElementById('lp_' + f);
+    if(el && params.get(f)) el.value = params.get(f);
+  });
+})();
+
+// Form submit handler
+function lpHandleSubmit(e){
+  e.preventDefault();
+  var form = e.target;
+  var btn = form.querySelector('button[type="submit"]');
+  btn.disabled = true;
+  btn.querySelector('span').textContent = 'Submitting…';
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({ event: 'lead_submit', form_id: 'lp_hero_form', page_variant: 'cx-complete' });
+  setTimeout(function(){
+    form.innerHTML = '<div style="text-align:center;padding:24px 0"><div style="font-size:40px;margin-bottom:12px">✓</div><h3 style="color:#fff;margin-bottom:8px">You\'re on the calendar!</h3><p style="color:rgba(255,255,255,0.6);font-size:14px">A Sogolytics expert will reach out within 1 business day.</p></div>';
+  }, 800);
+}
+
+// FAQ accordion
+(function(){
+  document.querySelectorAll('.lp-faq-question').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var item = btn.closest('.lp-faq-item');
+      var answer = item.querySelector('.lp-faq-answer');
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.lp-faq-item.open').forEach(function(el){
+        el.classList.remove('open');
+        el.querySelector('.lp-faq-answer').style.maxHeight = '0';
+      });
+      if(!isOpen){
+        item.classList.add('open');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  });
+})();
+</script>
