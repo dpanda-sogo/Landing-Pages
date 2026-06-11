@@ -255,30 +255,20 @@
     .centered { text-align: center; }
     .centered .section-intro { margin-left: auto; margin-right: auto; }
 
-    /* ── Value comparison ── */
-    .value-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2px;
-      background: var(--border);
-      border-radius: 12px;
-      overflow: hidden;
-    }
-    .value-col { background: #fff; padding: 0; display: flex; flex-direction: column; }
-    .value-col.highlight { background: var(--mist); }
-    .value-col-head { padding: 20px 24px; background: #F1F6F6; }
-    .value-col.highlight .value-col-head { background: var(--green); }
-    .value-col-header { font-size: 15px; font-weight: 700; margin-bottom: 2px; color: #1a1a1a; }
-    .value-col.highlight .value-col-header { color: #fff; }
-    .value-col-sub { font-size: 11px; color: var(--text-muted); }
-    .value-col.highlight .value-col-sub { color: rgba(255,255,255,0.8); }
-    .value-col-body { padding: 24px; }
-    .value-row { display: flex; align-items: flex-start; gap: 8px; margin-bottom: 12px; font-size: 13px; line-height: 1.5; }
-    .value-row:last-child { margin-bottom: 0; }
-    .value-icon { flex-shrink: 0; font-family: 'Material Symbols Rounded'; font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24; font-size: 17px; line-height: 1.2; }
-    .value-icon.ok { color: #0D6E65; }
-    .value-icon.warn { color: #F6A522; }
-    .value-icon.no { color: #EA5C2E; }
+    /* ── Value comparison table ── */
+    .compare-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 12px; border: 1px solid var(--border); }
+    .compare-table { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 600px; }
+    .compare-table thead th { padding: 20px 24px; vertical-align: middle; text-align: left; }
+    .compare-th-blank { width: 24%; background: #fff; border-right: 1px solid var(--border); }
+    .compare-th-sogo { background: #0D6E65; text-align: center; width: 26%; }
+    .compare-th-sogo img { height: 38px; display: block; margin: 0 auto; }
+    .compare-th-alt { font-weight: 700; color: #1a1a1a; font-size: 14px; background: #F1F6F6; border-left: 1px solid var(--border); }
+    .compare-table tbody tr { border-top: 1px solid var(--border); }
+    .compare-table tbody tr:nth-child(odd) { background: #F9FBFB; }
+    .compare-table tbody tr:nth-child(even) { background: #ffffff; }
+    .compare-td-feature { font-weight: 700; color: #1a1a1a; padding: 16px 24px; border-right: 1px solid var(--border); font-size: 14px; line-height: 1.4; }
+    .compare-td-sogo { background: #EAF4F2; color: #0D4E48; padding: 16px 20px; font-size: 13px; line-height: 1.5; border-left: 3px solid #0D6E65; }
+    .compare-td-alt { color: #5a6472; padding: 16px 20px; font-size: 13px; line-height: 1.5; border-left: 1px solid var(--border); }
 
     /* ── Feature / Module Cards ── */
     .cards-grid {
@@ -716,49 +706,57 @@
       <h2 class="section-title" id="complete-value-heading">Why teams are moving to Sogolytics</h2>
       <p class="section-intro">See how Sogolytics compares to the legacy enterprise suites and basic survey tools you may be evaluating.</p>
     </div>
-    <div class="value-grid fade-in" role="list">
-      <div class="value-col highlight" role="listitem">
-        <div class="value-col-head">
-          <div class="value-col-header">Sogolytics</div>
-          <div class="value-col-sub">Full platform · Transparent pricing</div>
-        </div>
-        <div class="value-col-body">
-          <div class="value-row"><span class="value-icon ok">check_circle</span><span>All modules included: VoC, EX, NPS, AI analytics, case management</span></div>
-          <div class="value-row"><span class="value-icon ok">check_circle</span><span>Flat, predictable annual pricing</span></div>
-          <div class="value-row"><span class="value-icon ok">check_circle</span><span>Dedicated CSM included in every plan</span></div>
-          <div class="value-row"><span class="value-icon ok">check_circle</span><span>Live in weeks, not quarters. Implementation included</span></div>
-          <div class="value-row"><span class="value-icon ok">check_circle</span><span>HIPAA · GDPR · SOC 2 Type II</span></div>
-          <div class="value-row"><span class="value-icon ok">check_circle</span><span>No exit fees; data portability guaranteed</span></div>
-        </div>
-      </div>
-      <div class="value-col" role="listitem">
-        <div class="value-col-head">
-          <div class="value-col-header">Legacy Enterprise Suite</div>
-          <div class="value-col-sub">Modular · Add-on pricing</div>
-        </div>
-        <div class="value-col-body">
-          <div class="value-row"><span class="value-icon warn">warning</span><span>Separate licences per module; costs stack up fast</span></div>
-          <div class="value-row"><span class="value-icon warn">warning</span><span>Custom quotes; price increases at renewal</span></div>
-          <div class="value-row"><span class="value-icon warn">warning</span><span>CSM support often a premium add-on</span></div>
-          <div class="value-row"><span class="value-icon no">cancel</span><span>Typical implementation: 6-18 months</span></div>
-          <div class="value-row"><span class="value-icon ok">check_circle</span><span>HIPAA · GDPR certified</span></div>
-          <div class="value-row"><span class="value-icon warn">warning</span><span>Lock-in clauses common</span></div>
-        </div>
-      </div>
-      <div class="value-col" role="listitem">
-        <div class="value-col-head">
-          <div class="value-col-header">Basic Survey Tool</div>
-          <div class="value-col-sub">Low cost · Limited capability</div>
-        </div>
-        <div class="value-col-body">
-          <div class="value-row"><span class="value-icon no">cancel</span><span>Survey-only; no CX or EX platform features</span></div>
-          <div class="value-row"><span class="value-icon ok">check_circle</span><span>Low monthly cost</span></div>
-          <div class="value-row"><span class="value-icon no">cancel</span><span>Self-serve only; no dedicated support</span></div>
-          <div class="value-row"><span class="value-icon ok">check_circle</span><span>Fast setup</span></div>
-          <div class="value-row"><span class="value-icon no">cancel</span><span>Not enterprise-grade; HIPAA/SOC 2 not standard</span></div>
-          <div class="value-row"><span class="value-icon ok">check_circle</span><span>Easy to cancel</span></div>
-        </div>
-      </div>
+    <div class="compare-wrap fade-in">
+      <table class="compare-table" aria-label="Platform comparison">
+        <thead>
+          <tr>
+            <th class="compare-th-blank"></th>
+            <th class="compare-th-sogo">
+              <img src="https://cdn.sogolytics.com/wp-content/uploads/2022/07/sogolytics-wbg.png" alt="Sogolytics">
+            </th>
+            <th class="compare-th-alt">Sogolytics Alternative 1</th>
+            <th class="compare-th-alt">Sogolytics Alternative 2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="compare-td-feature">Platform Scope</td>
+            <td class="compare-td-sogo">All modules included: VoC, EX, NPS, AI analytics, case management</td>
+            <td class="compare-td-alt">Separate licences per module; costs stack up fast</td>
+            <td class="compare-td-alt">Survey-only; no CX or EX platform features</td>
+          </tr>
+          <tr>
+            <td class="compare-td-feature">Pricing Model</td>
+            <td class="compare-td-sogo">Flat, predictable annual pricing. No surprises at renewal</td>
+            <td class="compare-td-alt">Custom quotes; price increases at renewal</td>
+            <td class="compare-td-alt">Low monthly cost</td>
+          </tr>
+          <tr>
+            <td class="compare-td-feature">Customer Success</td>
+            <td class="compare-td-sogo">Dedicated CSM included in every plan</td>
+            <td class="compare-td-alt">CSM support often a premium add-on</td>
+            <td class="compare-td-alt">Self-serve only; no dedicated support</td>
+          </tr>
+          <tr>
+            <td class="compare-td-feature">Time to Live</td>
+            <td class="compare-td-sogo">Live in weeks, not quarters. Implementation included</td>
+            <td class="compare-td-alt">Typical implementation: 6-18 months</td>
+            <td class="compare-td-alt">Fast setup</td>
+          </tr>
+          <tr>
+            <td class="compare-td-feature">Compliance</td>
+            <td class="compare-td-sogo">HIPAA, GDPR, SOC 2 Type II, ISO 27001</td>
+            <td class="compare-td-alt">HIPAA, GDPR certified</td>
+            <td class="compare-td-alt">Not enterprise-grade; HIPAA/SOC 2 not standard</td>
+          </tr>
+          <tr>
+            <td class="compare-td-feature">Contract Terms</td>
+            <td class="compare-td-sogo">No exit fees; data portability guaranteed</td>
+            <td class="compare-td-alt">Lock-in clauses common</td>
+            <td class="compare-td-alt">Easy to cancel</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </section>
