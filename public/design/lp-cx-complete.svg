@@ -36,10 +36,12 @@
   <!-- HERO -->
   <g id="hero">
     <rect x="0" y="144" width="1440" height="520" fill="#092224"/>
-    <text x="80" y="184" fill="#02becc" font-size="11" font-weight="700" letter-spacing="0.1em">HERO SECTION</text>
-    <text x="80" y="220" fill="#ffffff" font-size="28" font-weight="800">One platform. Every voice.</text>
-    <text x="80" y="258" fill="rgba(255,255,255,0.7)" font-size="14">Unify CX, EX, and market research in a single AI-powered platform — and switch in 30 days or less.</text>
-    <text x="80" y="290" fill="rgba(255,255,255,0.5)" font-size="12">Trust badges: ✓ 3,200+ customers  ·  ✓ 30-day migration  ·  ✓ SOC 2 Type II</text>
+    <text x="80" y="184" fill="#F5E100" font-size="11" font-weight="700" letter-spacing="0.1em">BETTER VALUE · PROVEN ROI</text>
+    <text x="80" y="228" fill="#ffffff" font-size="36" font-weight="800">More CX capability.</text>
+    <text x="80" y="272" fill="#02BECC" font-size="34" font-style="italic" font-family="Georgia, serif">Half the cost.</text>
+    <text x="80" y="316" fill="#ffffff" font-size="36" font-weight="800">Zero compromises.</text>
+    <text x="80" y="352" fill="rgba(255,255,255,0.7)" font-size="14">Full CX, EX, and AI analytics in one contract. No per-module fees, no hidden costs, 30-day migration guarantee.</text>
+    <text x="80" y="380" fill="rgba(255,255,255,0.5)" font-size="12">Trust badges: ✓ 3,200+ customers  ·  ✓ No per-module fees  ·  ✓ 30-day migration</text>
     <!-- Form card placeholder -->
     <rect x="760" y="164" width="600" height="480" rx="16" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.14)" stroke-width="1"/>
     <text x="1060" y="210" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="700">Book your personalised demo</text>
@@ -104,7 +106,7 @@
   <g id="value-comparison">
     <rect x="0" y="1244" width="1440" height="400" fill="#ffffff"/>
     <text x="720" y="1290" text-anchor="middle" fill="#0D6E65" font-size="11" font-weight="700" letter-spacing="0.1em">VALUE COMPARISON</text>
-    <text x="720" y="1322" text-anchor="middle" fill="#1a1a1a" font-size="24" font-weight="800">More for less — here's how</text>
+    <text x="720" y="1322" text-anchor="middle" fill="#1a1a1a" font-size="24" font-weight="800">Why teams are moving to Sogolytics</text>
     <!-- Column headers -->
     <rect x="80" y="1360" width="400" height="260" fill="#E8F4F2" stroke="#e2e6ea" stroke-width="1"/>
     <text x="280" y="1390" text-anchor="middle" fill="#0D6E65" font-size="14" font-weight="700">Sogolytics</text>
