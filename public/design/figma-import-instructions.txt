@@ -1,0 +1,34 @@
+SOGOLYTICS LANDING PAGE — DESIGNER HANDOFF
+===========================================
+
+FILES IN THIS PACKAGE
+---------------------
+lp-cx-complete.svg     — Figma-ready wireframe SVG (direct import)
+                         Import: File → Open → select this SVG
+                         All sections are labeled groups you can expand and edit.
+
+HIGHER-FIDELITY IMPORT (Recommended for full editing)
+------------------------------------------------------
+Use the free "html.to.design" Figma plugin to import the live HTML file:
+1. Install "html.to.design" from the Figma Community (figma.com/community)
+2. In Figma, open Plugins → html.to.design
+3. Paste the URL of the Vercel preview page (or open the .html file locally in Chrome first)
+4. The plugin converts every HTML element to native Figma layers, text styles, and fills
+
+BRAND ASSETS
+------------
+Primary font:    Epilogue (Google Fonts — https://fonts.google.com/specimen/Epilogue)
+Accent font:     Crimson Pro Italic (Google Fonts)
+Primary green:   #0D6E65
+Teal accent:     #02BECC
+CTA yellow:      #F5E100 / #FFF000
+Dark bg:         #092224
+Logo (on white): https://cdn.sogolytics.com/wp-content/uploads/2022/07/sogolytics-wbg.png
+
+NOTES
+-----
+- All Unsplash photos are free to use (Unsplash License)
+- Replace placeholder logos in the logo bar with actual client logos
+- Replace randomuser.me portrait photos with approved customer photos before production
+- Form endpoint (action="YOUR_FORM_ENDPOINT") must be updated before going live
+- This file was last updated: 2026-06-11

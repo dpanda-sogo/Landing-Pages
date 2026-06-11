@@ -9,6 +9,17 @@ export const metadata: Metadata = {
 
 const pages: LandingPage[] = [
   {
+    slug: "pages/lp-cx-complete.html",
+    title: "CX Platform — Complete / Combined Variant",
+    description: "Broad conquesting page combining platform capabilities, ROI value, and 30-day migration. Targets wide keyword groups. Includes live industry news fold.",
+    date: "2026-06-11",
+    tag: "Conquesting",
+    tagBg: "#fff3cd",
+    tagColor: "#856404",
+    htmlFile: "lp-cx-complete-wp.html",
+    designFile: "lp-cx-complete.svg",
+  },
+  {
     slug: "enterprise-feedback-management",
     title: "Enterprise Feedback Management",
     description: "Unify CX and EX feedback in one enterprise platform. NPS, VoC, sentiment analysis, and real-time dashboards.",
