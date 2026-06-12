@@ -10,6 +10,7 @@ export interface LandingPage {
   tagColor?: string;
   tagBg?: string;
   htmlFile?: string;
+  designFile?: string;
 }
 
 function formatDate(iso: string) {
@@ -289,6 +290,37 @@ function PageCard({ page }: { page: LandingPage }) {
               <line x1="12" y1="15" x2="12" y2="3"/>
             </svg>
             Download HTML
+          </a>
+        )}
+        {page.designFile && (
+          <a
+            href={`/design/${page.designFile}`}
+            download={page.designFile}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 8,
+              width: "100%",
+              padding: "9px 20px",
+              background: "#f3f0fa",
+              color: "#6d28d9",
+              fontWeight: 600,
+              fontSize: 13,
+              borderRadius: 50,
+              textDecoration: "none",
+              transition: "background 0.2s",
+              border: "1px solid #d8b4fe",
+            }}
+            onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.background = "#ede9fc")}
+            onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.background = "#f3f0fa")}
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            Design File (Figma-ready SVG)
           </a>
         )}
       </div>

@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<!--
+  ============================================================
+  SOGOLYTICS CX PLATFORM LANDING PAGE (Complete / Combined Variant)
+  ============================================================
+  DEVELOPER EDIT GUIDE
+  ============================================================
+  LOGOS (Trust Bar):      Search "LOGO 1" through "LOGO 6"
+                          Replace <div class="logo-slot"> with <img>
+  FORM ACTION:            Search "YOUR_FORM_ENDPOINT" and wire up CF7 or HubSpot
+  GTM ID:                 Search "GTM-XXXXXXX" and replace with real container ID
+  ============================================================
+  COLOR REFERENCE
+  --green:   #0D6E65   Accents, checkmarks, section labels
+  --blue:    #02BECC   Highlights, teal accents
+  --yellow:  #F5E100   All CTA buttons
+  --bg-dark: #092224   Hero + footer background
+  --mist:    #E8F4F2   Soft section backgrounds
+  ============================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Enterprise CX Platform | Sogolytics</title>
+  <meta name="description" content="More platform, half the cost. Full CX, EX, and AI analytics in one contract with no per-module fees. Switch in 30 days. Request a personalised demo.">
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700;800&family=Crimson+Pro:ital@1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0&display=block" rel="stylesheet">
+
+  <style>
+    /* ── Reset & base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Epilogue', system-ui, sans-serif;
+      color: #1a1a1a;
+      background: #fff;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── CSS Variables ── */
+    :root {
+      --green: #0D6E65;
+      --green-dark: #0a5a52;
+      --blue: #02BECC;
+      --yellow: #F5E100;
+      --yellow-hover: #e6d400;
+      --bg-dark: #092224;
+      --bg-dark2: #0a2c28;
+      --mist: #E8F4F2;
+      --text: #1a1a1a;
+      --text-muted: #5a6472;
+      --border: #e2e6ea;
+    }
+
+    /* ── Utility ── */
+    .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+    .section-label {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 12px;
+    }
+    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-in.visible { opacity: 1; transform: none; }
+
+    /* ── Sticky Nav ── */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #ffffff;
+      border-bottom: 1px solid #e2e6ea;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .nav-logo img { height: 24px; display: block; }
+    .nav-cta {
+      background: var(--yellow);
+      color: #0a1a18;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 8px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+    .nav-cta:hover { background: var(--yellow-hover); }
+
+    /* ── Hero ── */
+    .hero {
+      color: #fff;
+      padding: 80px 24px 72px;
+      overflow: hidden;
+      position: relative;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 80% at 80% 50%, rgba(2,190,204,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .hero-eyebrow {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 16px;
+    }
+    .hero h1 {
+      font-size: clamp(32px, 4.5vw, 52px);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.025em;
+      margin-bottom: 20px;
+    }
+    .hero h1 em {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-style: italic;
+      font-weight: 400;
+      color: var(--blue);
+    }
+    .hero-sub {
+      font-size: clamp(15px, 2vw, 17px);
+      line-height: 1.7;
+      color: rgba(255,255,255,0.72);
+      margin-bottom: 32px;
+      max-width: 500px;
+    }
+    .hero-trust {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.5);
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+    .hero-trust-dot { width: 4px; height: 4px; border-radius: 50%; background: rgba(255,255,255,0.3); flex-shrink: 0; }
+
+    /* ── Logo / Trust Bar ── */
+    .logo-bar {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      padding: 36px 24px;
+      text-align: center;
+    }
+    .logo-bar-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-muted);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+    .logo-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .logo-slot {
+      height: 36px;
+      min-width: 100px;
+      background: #f0f4f3;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 600;
+      color: #b0b8c1;
+      letter-spacing: 0.06em;
+      padding: 0 16px;
+    }
+    .logo-slot img { height: 32px; width: auto; object-fit: contain; display: block; }
+
+    /* ── Stats Band ── */
+    .stats-band {
+      background: var(--green);
+      padding: 48px 24px;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .stat-num {
+      font-size: clamp(36px, 5vw, 52px);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1;
+      letter-spacing: -0.03em;
+    }
+    .stat-label {
+      font-size: 14px;
+      color: rgba(255,255,255,0.75);
+      margin-top: 6px;
+      line-height: 1.4;
+    }
+
+    /* ── Section common ── */
+    .section { padding: 80px 24px; }
+    .section-alt { background: var(--mist); }
+    .section-dark { background: var(--bg-dark); color: #fff; }
+    .section-title {
+      font-size: clamp(24px, 3.5vw, 38px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    .section-intro {
+      font-size: 16px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      max-width: 620px;
+      margin-bottom: 48px;
+    }
+    .section-dark .section-intro { color: rgba(255,255,255,0.65); }
+    .centered { text-align: center; }
+    .centered .section-intro { margin-left: auto; margin-right: auto; }
+
+    /* ── Value comparison table ── */
+    .compare-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 12px; border: 1px solid var(--border); }
+    .compare-table { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 600px; }
+    .compare-table thead th { padding: 20px 24px; vertical-align: middle; text-align: left; }
+    .compare-th-blank { width: 24%; background: #fff; border-right: 1px solid var(--border); }
+    .compare-th-sogo { background: #0D6E65; text-align: center; width: 26%; }
+    .compare-th-sogo img { height: 38px; display: block; margin: 0 auto; }
+    .compare-th-alt { font-weight: 700; color: #1a1a1a; font-size: 14px; background: #F1F6F6; border-left: 1px solid var(--border); }
+    .compare-table tbody tr { border-top: 1px solid var(--border); }
+    .compare-table tbody tr:nth-child(odd) { background: #F9FBFB; }
+    .compare-table tbody tr:nth-child(even) { background: #ffffff; }
+    .compare-td-feature { font-weight: 700; color: #1a1a1a; padding: 16px 24px; border-right: 1px solid var(--border); font-size: 14px; line-height: 1.4; }
+    .compare-td-sogo { background: #EAF4F2; color: #0D4E48; padding: 16px 20px; font-size: 13px; line-height: 1.5; border-left: 3px solid #0D6E65; }
+    .compare-td-alt { color: #5a6472; padding: 16px 20px; font-size: 13px; line-height: 1.5; border-left: 1px solid var(--border); }
+
+    /* ── Feature / Module Cards ── */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.08); transform: translateY(-2px); }
+    .card-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: var(--mist);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      color: var(--green);
+    }
+    .card h3 { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+    .card p { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+    .section-dark .card {
+      background: rgba(255,255,255,0.06);
+      border-color: rgba(255,255,255,0.12);
+    }
+    .section-dark .card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.3); }
+    .section-dark .card h3 { color: #fff; }
+    .section-dark .card p { color: rgba(255,255,255,0.6); }
+    .section-dark .card-icon { background: rgba(255,255,255,0.08); }
+
+    /* ── Timeline ── */
+    .migration-timeline {
+      position: relative;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .migration-timeline::before {
+      content: '';
+      position: absolute;
+      left: 28px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: var(--border);
+    }
+    .timeline-step { display: flex; gap: 24px; margin-bottom: 36px; position: relative; }
+    .timeline-step:last-child { margin-bottom: 0; }
+    .timeline-dot {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--green);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 800;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+    }
+    .timeline-content { padding-top: 12px; }
+    .timeline-week { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--blue); margin-bottom: 4px; }
+    .timeline-title { font-size: 17px; font-weight: 700; margin-bottom: 6px; }
+    .timeline-desc { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+
+    /* ── Testimonial Grid ── */
+    .testimonial-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+    .testimonial-card { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 20px; }
+    .testimonial-card .testimonial-quote { font-size: 16px; line-height: 1.7; color: rgba(255,255,255,0.9); font-style: italic; margin: 0; }
+    .testimonial-card .testimonial-quote::before { content: '\201C'; }
+    .testimonial-card .testimonial-quote::after { content: '\201D'; }
+    .testimonial-card .testimonial-author { display: flex; align-items: center; gap: 12px; margin-top: auto; }
+    .testimonial-card .author-avatar img { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; display: block; }
+    .testimonial-card .author-name { font-size: 14px; font-weight: 700; color: #fff; }
+    .testimonial-card .author-title { font-size: 12px; color: rgba(255,255,255,0.6); margin-top: 2px; }
+    @media (max-width: 768px) { .testimonial-grid { grid-template-columns: 1fr; } }
+
+    /* ── Testimonial band ── */
+    .testimonial-band {
+      background: linear-gradient(135deg, #061a17 0%, var(--bg-dark) 100%);
+      padding: 72px 24px;
+      text-align: center;
+      color: #fff;
+    }
+
+    /* ── FAQ ── */
+    .faq-list { max-width: 720px; margin: 0 auto; }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      text-align: left;
+      padding: 20px 0;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      font-family: inherit;
+      line-height: 1.4;
+    }
+    .faq-question:hover { color: var(--green); }
+    .faq-icon {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--mist);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 16px;
+      color: var(--green);
+      font-weight: 700;
+      transition: transform 0.3s;
+    }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+    .faq-answer-inner { padding-bottom: 20px; font-size: 14px; color: var(--text-muted); line-height: 1.7; }
+
+    /* ── Bottom CTA Band ── */
+    .cta-band {
+      background: var(--green);
+      padding: 64px 24px;
+      text-align: center;
+      color: #fff;
+    }
+    .cta-band h2 {
+      font-size: clamp(24px, 3.5vw, 38px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+    .cta-band p { font-size: 16px; color: rgba(255,255,255,0.75); margin-bottom: 32px; }
+    .btn-cta-yellow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--yellow);
+      color: #0a1a18;
+      font-size: 16px;
+      font-weight: 700;
+      padding: 16px 32px;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+    }
+    .btn-cta-yellow:hover { background: var(--yellow-hover); transform: translateY(-1px); }
+
+    /* ── Footer ── */
+    .footer {
+      background: #ffffff;
+      border-top: 1px solid #E3E7EA;
+      color: #5a6472;
+      padding: 32px 24px;
+      text-align: center;
+      font-size: 12px;
+      line-height: 1.8;
+    }
+    .footer a { color: #0D6E65; text-decoration: underline; }
+    .footer-logo { margin-bottom: 16px; }
+    .footer-logo img { height: 20px; }
+
+    /* ── Material Symbols ── */
+    .msr {
+      font-family: 'Material Symbols Rounded';
+      font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      font-size: 28px;
+      color: var(--green);
+      display: block;
+      margin-bottom: 12px;
+    }
+    .section-dark .msr { color: var(--blue); }
+    .card-icon-tile {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: #0D6E65;
+      color: #fff;
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+    .section-dark .card-icon-tile { background: #02BECC; color: #092224; }
+    .msr-check {
+      font-family: 'Material Symbols Rounded';
+      font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      font-size: 18px;
+      line-height: 1.2;
+      color: var(--blue);
+      flex-shrink: 0;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+      .hero { padding: 48px 20px 40px; }
+      .hero h1 { font-size: clamp(28px, 8vw, 38px); }
+      .hero-sub { font-size: 15px; }
+      .stats-band { padding: 36px 20px; }
+      .stats-grid { grid-template-columns: 1fr; gap: 20px; }
+      .stat-num { font-size: 40px; }
+      .section { padding: 56px 20px; }
+      .section-title { font-size: clamp(22px, 6vw, 30px); }
+      .section-intro { font-size: 14px; margin-bottom: 32px; }
+      .cards-grid { grid-template-columns: 1fr; }
+      .logo-bar { padding: 28px 20px; }
+      .logo-row { gap: 16px; }
+      .logo-slot { min-width: 80px; height: 32px; font-size: 10px; }
+      .testimonial-quote { font-size: 18px; }
+      .cta-band { padding: 48px 20px; }
+      .btn-cta-yellow { width: 100%; justify-content: center; }
+      .nav-inner { padding: 0 16px; }
+      .hero-trust { font-size: 11px; gap: 8px; }
+      .migration-timeline::before { left: 20px; }
+      .timeline-dot { width: 40px; height: 40px; font-size: 14px; }
+      .value-grid { grid-template-columns: 1fr; }
+      .hero-form { padding: 24px 20px; }
+      .news-grid { flex-direction: column !important; }
+    }
+    @media (max-width: 480px) {
+      .hero h1 { font-size: clamp(26px, 7vw, 32px); }
+      .logo-row { gap: 12px; }
+      .cards-grid { grid-template-columns: 1fr; }
+      .btn-cta-yellow { font-size: 14px; padding: 13px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- ═══════════════════════════════════════
+     STICKY NAV
+════════════════════════════════════════ -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a class="nav-logo" href="https://www.sogolytics.com" aria-label="Sogolytics home">
+      <img src="https://cdn.sogolytics.com/wp-content/uploads/2022/07/sogolytics-wbg.png"
+           alt="Sogolytics"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <span style="display:none;color:#0D6E65;font-weight:800;font-size:18px;letter-spacing:-0.02em">Sogolytics</span>
+    </a>
+    <a href="https://www.sogolytics.com/request-a-demo/" class="nav-cta">Request a Demo →</a>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════
+     HERO
+════════════════════════════════════════ -->
+<section class="hero" aria-labelledby="hero-heading" style="background: linear-gradient(135deg, rgba(6,26,23,0.93) 0%, rgba(10,46,41,0.88) 100%), url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1600&q=80') center/cover no-repeat; position:relative;">
+  <div class="hero-inner">
+    <div>
+      <p class="hero-eyebrow" style="color:#F5E100;">Better Value · Proven ROI</p>
+      <h1 id="hero-heading">
+        More CX capability.<br>
+        <em>Half the cost.</em><br>
+        Zero compromises.
+      </h1>
+      <p class="hero-sub">
+        Full CX, EX, and AI analytics in one platform. Customers see an average 11-point NPS lift and 36% CSAT boost within 12 months. No per-module fees, no hidden costs.
+      </p>
+      <div class="hero-trust">
+        <span>✓ 100,000+ customers</span>
+        <span class="hero-trust-dot"></span>
+        <span>✓ No per-module fees</span>
+        <span class="hero-trust-dot"></span>
+        <span>✓ Live in 6 weeks avg.</span>
+      </div>
+    </div>
+
+    <!-- Hero form -->
+    <div>
+      <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);border-radius:16px;padding:32px;backdrop-filter:blur(8px);">
+        <h3 style="font-size:17px;font-weight:700;margin-bottom:6px;">Book your personalised demo</h3>
+        <p style="font-size:13px;color:rgba(255,255,255,0.55);margin-bottom:24px;">No commitment. A Sogolytics expert will walk you through the platform in 30 minutes.</p>
+        <form id="heroForm" action="YOUR_FORM_ENDPOINT" method="POST" onsubmit="handleHeroSubmit(event)">
+          <input type="hidden" name="utm_source" id="f_utm_source">
+          <input type="hidden" name="utm_medium" id="f_utm_medium">
+          <input type="hidden" name="utm_campaign" id="f_utm_campaign">
+          <input type="hidden" name="utm_term" id="f_utm_term">
+          <input type="hidden" name="utm_content" id="f_utm_content">
+          <input type="hidden" name="gclid" id="f_gclid">
+          <input type="hidden" name="page_variant" value="cx-complete">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <label style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.65);">First name *</label>
+              <input type="text" name="first_name" placeholder="Jane" required autocomplete="given-name" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:8px;padding:10px 14px;font-size:14px;color:#fff;font-family:inherit;outline:none;width:100%;">
+            </div>
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <label style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.65);">Last name *</label>
+              <input type="text" name="last_name" placeholder="Smith" required autocomplete="family-name" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:8px;padding:10px 14px;font-size:14px;color:#fff;font-family:inherit;outline:none;width:100%;">
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <label style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.65);">Work email *</label>
+              <input type="email" name="email" placeholder="jane@company.com" required autocomplete="email" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:8px;padding:10px 14px;font-size:14px;color:#fff;font-family:inherit;outline:none;width:100%;">
+            </div>
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <label style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.65);">Company *</label>
+              <input type="text" name="company" placeholder="Acme Corp" required autocomplete="organization" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:8px;padding:10px 14px;font-size:14px;color:#fff;font-family:inherit;outline:none;width:100%;">
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <label style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.65);">Company size</label>
+              <select name="company_size" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:8px;padding:10px 14px;font-size:14px;color:#fff;font-family:inherit;outline:none;width:100%;">
+                <option value="">Select…</option>
+                <option value="1-50">1-50</option>
+                <option value="51-200">51-200</option>
+                <option value="201-1000">201-1,000</option>
+                <option value="1001-5000">1,001-5,000</option>
+                <option value="5000+">5,000+</option>
+              </select>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <label style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.65);">Your role</label>
+              <select name="role" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:8px;padding:10px 14px;font-size:14px;color:#fff;font-family:inherit;outline:none;width:100%;">
+                <option value="">Select…</option>
+                <option value="cx-leader">CX Leader</option>
+                <option value="vp-marketing">VP / Director Marketing</option>
+                <option value="hr-people">HR / People Ops</option>
+                <option value="c-suite">C-Suite</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" style="width:100%;margin-top:16px;background:#F5E100;color:#0a1a18;font-size:15px;font-weight:700;padding:14px 24px;border:none;border-radius:50px;cursor:pointer;font-family:inherit;display:flex;align-items:center;justify-content:center;gap:8px;">
+            <span>Request My Demo</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </form>
+        <p style="font-size:11px;color:rgba(255,255,255,0.35);text-align:center;margin-top:10px;">By submitting you agree to our Privacy Policy. We never sell your data.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     LOGO BAR
+════════════════════════════════════════ -->
+<section class="logo-bar">
+  <div class="logo-bar-label">Recognised in the Forrester Landscape for Customer Feedback Management &amp; Analytics, Q1 2026 &nbsp;·&nbsp; Trusted by 100,000+ organisations across 96 countries</div>
+  <div class="logo-row container">
+    <div class="logo-slot">LOGO 1</div>
+    <div class="logo-slot">LOGO 2</div>
+    <div class="logo-slot">LOGO 3</div>
+    <div class="logo-slot">LOGO 4</div>
+    <div class="logo-slot">LOGO 5</div>
+    <div class="logo-slot">LOGO 6</div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     STATS BAND
+════════════════════════════════════════ -->
+<section class="stats-band">
+  <div class="stats-grid fade-in">
+    <div>
+      <div class="stat-num">100,000+</div>
+      <div class="stat-label">Customers across 96 countries</div>
+    </div>
+    <div>
+      <div class="stat-num">6 weeks</div>
+      <div class="stat-label">Average time to go-live (vs. 4–5 months industry avg.)</div>
+    </div>
+    <div>
+      <div class="stat-num">11 pts</div>
+      <div class="stat-label">Average NPS lift in the first 12 months</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     INDUSTRY NEWS
+════════════════════════════════════════ -->
+<section class="section" style="background:#0a2e29;border-top:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08);">
+  <div class="container">
+    <div class="centered fade-in" style="margin-bottom:40px;">
+      <span class="section-label" style="color:rgba(2,190,204,0.9);">Industry Context</span>
+      <h2 class="section-title" style="color:#fff;">The platform landscape is shifting</h2>
+      <p style="color:rgba(255,255,255,0.65);font-size:16px;max-width:600px;margin:12px auto 0;">Recent reporting from major financial and business publications highlights growing instability among legacy enterprise CX vendors.</p>
+    </div>
+    <div class="fade-in news-grid" style="display:flex;gap:24px;flex-wrap:wrap;">
+      <!-- News card 1 -->
+      <div style="flex:1;min-width:280px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:16px;padding:28px 28px 24px;display:flex;flex-direction:column;gap:16px;">
+        <div style="display:flex;align-items:center;gap:10px;">
+          <span style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;background:rgba(2,190,204,0.15);color:#02becc;padding:4px 10px;border-radius:20px;">Reuters · April 2026</span>
+        </div>
+        <p style="font-size:16px;line-height:1.7;color:rgba(255,255,255,0.9);font-style:italic;margin:0;">"A private equity-backed enterprise feedback management platform is nearing an agreement to hand ownership to its creditors, following a reported $5.1 billion equity wipeout, as part of a broader software industry reckoning with leveraged buyouts."</p>
+        <a href="https://www.reuters.com/markets/deals/thoma-bravo-nears-agreement-turn-software-firm-medallia-over-creditors-source-2026-04-22/" target="_blank" rel="noopener noreferrer" style="font-size:12px;color:#02becc;text-decoration:none;font-weight:600;">Read the Reuters report →</a>
+      </div>
+      <!-- News card 2 -->
+      <div style="flex:1;min-width:280px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:16px;padding:28px 28px 24px;display:flex;flex-direction:column;gap:16px;">
+        <div style="display:flex;align-items:center;gap:10px;">
+          <span style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;background:rgba(2,190,204,0.15);color:#02becc;padding:4px 10px;border-radius:20px;">Bloomberg · January 2023</span>
+        </div>
+        <p style="font-size:16px;line-height:1.7;color:rgba(255,255,255,0.9);font-style:italic;margin:0;">"A major enterprise software parent announced plans to divest its stake in a leading CX survey platform and cut 3,000 jobs as part of a restructuring to boost profitability, signalling a strategic retreat from the CX software category."</p>
+        <a href="https://www.bloomberg.com/news/articles/2023-01-26/sap-plans-to-sell-qualtrics-stake-cut-jobs-in-profit-push" target="_blank" rel="noopener noreferrer" style="font-size:12px;color:#02becc;text-decoration:none;font-weight:600;">Read the Bloomberg report →</a>
+      </div>
+    </div>
+    <!-- Fine-print disclaimer (US legal standard) -->
+    <p class="fade-in" style="font-size:10px;color:rgba(255,255,255,0.35);line-height:1.6;margin-top:24px;max-width:900px;margin-left:auto;margin-right:auto;text-align:center;border-top:1px solid rgba(255,255,255,0.08);padding-top:16px;">
+      <strong style="color:rgba(255,255,255,0.45);">Media Attribution Disclaimer:</strong> The news summaries above are paraphrased from independent third-party publications for informational context only. Sogolytics, Inc. has not independently verified the accuracy, completeness, or timeliness of the underlying reporting and makes no representation or warranty, express or implied, in connection therewith. These references do not constitute an endorsement by Sogolytics of any publication or its editorial positions. This content does not constitute legal, financial, investment, or professional advice. Sogolytics, Inc. expressly disclaims all liability for any loss, damage, or harm arising from reliance on third-party news content. For the most current information, readers should consult the original source publications directly. Third-party trademarks and company names referenced in source headlines remain the property of their respective owners.
+    </p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     VALUE COMPARISON
+════════════════════════════════════════ -->
+<section class="section" aria-labelledby="complete-value-heading">
+  <div class="container">
+    <div class="centered fade-in">
+      <span class="section-label">Compare your options</span>
+      <h2 class="section-title" id="complete-value-heading">Why teams are moving to Sogolytics</h2>
+      <p class="section-intro">See how Sogolytics compares to the legacy enterprise suites and basic survey tools you may be evaluating.</p>
+    </div>
+    <div class="compare-wrap fade-in">
+      <table class="compare-table" aria-label="Platform comparison">
+        <thead>
+          <tr>
+            <th class="compare-th-blank"></th>
+            <th class="compare-th-sogo">
+              <img src="https://cdn.sogolytics.com/wp-content/uploads/2022/07/sogolytics-wbg.png" alt="Sogolytics">
+            </th>
+            <th class="compare-th-alt">Sogolytics Alternative 1</th>
+            <th class="compare-th-alt">Sogolytics Alternative 2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="compare-td-feature">Platform Scope</td>
+            <td class="compare-td-sogo">SogoCX, SogoEX, and SogoCore activate on one platform. Shared AI analytics, dashboards, and reporting across all programs</td>
+            <td class="compare-td-alt">Separate licences per module; costs stack up fast</td>
+            <td class="compare-td-alt">Survey-only; no CX or EX platform features</td>
+          </tr>
+          <tr>
+            <td class="compare-td-feature">Pricing Model</td>
+            <td class="compare-td-sogo">Flat, predictable annual pricing. No surprises at renewal</td>
+            <td class="compare-td-alt">Custom quotes; price increases at renewal</td>
+            <td class="compare-td-alt">Low monthly cost</td>
+          </tr>
+          <tr>
+            <td class="compare-td-feature">Customer Success</td>
+            <td class="compare-td-sogo">Dedicated CSM included in every plan</td>
+            <td class="compare-td-alt">CSM support often a premium add-on</td>
+            <td class="compare-td-alt">Self-serve only; no dedicated support</td>
+          </tr>
+          <tr>
+            <td class="compare-td-feature">Time to Live</td>
+            <td class="compare-td-sogo">Average 6 weeks to go-live. Full implementation included, no professional services upsell</td>
+            <td class="compare-td-alt">Average 4–5 months industry implementation. Services-heavy onboarding adds cost</td>
+            <td class="compare-td-alt">Quick setup, but limited to basic surveys only</td>
+          </tr>
+          <tr>
+            <td class="compare-td-feature">Compliance</td>
+            <td class="compare-td-sogo">SOC 2, GDPR, ISO 27001, PCI DSS — enterprise-grade security built in, not bolted on</td>
+            <td class="compare-td-alt">Compliance certified, but often tied to specific modules and contract tiers</td>
+            <td class="compare-td-alt">Not enterprise-grade; SOC 2 and ISO 27001 not standard</td>
+          </tr>
+          <tr>
+            <td class="compare-td-feature">Contract Terms</td>
+            <td class="compare-td-sogo">Transparent, flat-fee pricing. No hidden service fees or surprise charges at renewal</td>
+            <td class="compare-td-alt">Custom quotes; pricing complexity increases with module add-ons</td>
+            <td class="compare-td-alt">Easy to cancel</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     PLATFORM CAPABILITIES
+════════════════════════════════════════ -->
+<section class="section section-dark" aria-labelledby="complete-modules-heading">
+  <div class="container">
+    <div class="centered fade-in">
+      <span class="section-label" style="color:var(--blue)">Platform Capabilities</span>
+      <h2 class="section-title" id="complete-modules-heading" style="color:#fff">Built for every feedback channel</h2>
+      <p class="section-intro">Six fully integrated modules. One login. One source of truth.</p>
+    </div>
+    <div class="cards-grid fade-in">
+      <div class="card">
+        <span class="msr card-icon-tile">record_voice_over</span>
+        <h3>SogoCX — Customer Experience</h3>
+        <p>Omnichannel VoC collection across email, SMS, web, app, and QR. Journey mapping, touchpoint tracking, and predictive churn analytics. Average 11-point NPS lift in 12 months.</p>
+      </div>
+      <div class="card">
+        <span class="msr card-icon-tile">groups</span>
+        <h3>SogoEX — Employee Experience</h3>
+        <p>Pulse surveys, 360° feedback, lifecycle automation, and eNPS/ESAT dashboards. HRIS-triggered surveys for onboarding, stay, and exit moments. Built to reduce turnover and build culture.</p>
+      </div>
+      <div class="card">
+        <span class="msr card-icon-tile">monitoring</span>
+        <h3>NPS, CSAT &amp; CES Tracking</h3>
+        <p>Dedicated metric dashboards with Key Driver Analysis baked in from day one. Automated programmes with trending, segmentation, and AI-generated recommendations.</p>
+      </div>
+      <div class="card">
+        <span class="msr card-icon-tile">psychology</span>
+        <h3>AI Reports &amp; Action Plans</h3>
+        <p>Experience Navigator, Create with AI, and AI Reports surface themes, sentiment, and prioritised action plans from open-text responses. No data science team required.</p>
+      </div>
+      <div class="card">
+        <span class="msr card-icon-tile">task_alt</span>
+        <h3>Closed-Loop Case Management</h3>
+        <p>SogoConnect ticketing automatically routes detractors to your CX team. Track resolution time and measure the impact of every closed loop on retention and revenue.</p>
+      </div>
+      <div class="card">
+        <span class="msr card-icon-tile">dashboard</span>
+        <h3>SogoCore — Unified Dashboards</h3>
+        <p>Centralised feedback command centre with drag-and-drop BI-level dashboards. Role-based access, secure sharing, and automated reporting across all programmes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     MIGRATION TIMELINE (4 steps)
+════════════════════════════════════════ -->
+<section class="section" aria-labelledby="migration-heading">
+  <div class="container">
+    <div class="centered fade-in">
+      <span class="section-label">Switching is easier than you think</span>
+      <h2 class="section-title" id="migration-heading">From signed to live in 6 weeks</h2>
+      <p class="section-intro">Our structured implementation process averages 6 weeks — versus the 4–5 month industry standard. Here is exactly what happens.</p>
+    </div>
+    <div class="migration-timeline fade-in" role="list">
+      <div class="timeline-step" role="listitem">
+        <div class="timeline-dot" aria-hidden="true">1</div>
+        <div class="timeline-content">
+          <div class="timeline-week">Week 1</div>
+          <div class="timeline-title">Kickoff &amp; audit</div>
+          <div class="timeline-desc">We map your current surveys, dashboards, integrations, and data structure. Nothing is missed before the build begins.</div>
+        </div>
+      </div>
+      <div class="timeline-step" role="listitem">
+        <div class="timeline-dot" aria-hidden="true">2</div>
+        <div class="timeline-content">
+          <div class="timeline-week">Weeks 2–3</div>
+          <div class="timeline-title">Build &amp; configure</div>
+          <div class="timeline-desc">Our team builds everything in Sogolytics — surveys, logic, dashboards, integrations. Your existing platform stays live in parallel throughout.</div>
+        </div>
+      </div>
+      <div class="timeline-step" role="listitem">
+        <div class="timeline-dot" aria-hidden="true">3</div>
+        <div class="timeline-content">
+          <div class="timeline-week">Weeks 4–5</div>
+          <div class="timeline-title">Test &amp; train</div>
+          <div class="timeline-desc">UAT with your team, plus role-based training for all user groups. Your team signs off before we flip the switch.</div>
+        </div>
+      </div>
+      <div class="timeline-step" role="listitem">
+        <div class="timeline-dot" style="background:var(--blue)" aria-hidden="true">✓</div>
+        <div class="timeline-content">
+          <div class="timeline-week">Week 6</div>
+          <div class="timeline-title">Go live</div>
+          <div class="timeline-desc">Flip the switch. Your old platform stays live in parallel during the transition period, so there is zero risk to your running programmes.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     IN ACTION VISUAL
+════════════════════════════════════════ -->
+<section class="section" style="background:var(--bg-dark);padding:80px 0;overflow:hidden;">
+  <div class="container" style="display:flex;align-items:center;gap:64px;">
+    <div style="flex:1;min-width:0;">
+      <span class="section-label" style="color:var(--blue)">Inside the platform</span>
+      <h2 class="section-title" style="color:#fff;">See the full picture, in real time</h2>
+      <p style="color:rgba(255,255,255,0.7);font-size:16px;line-height:1.8;margin:16px 0 24px;">
+        Your CX team shouldn't have to chase data across five tools. Sogolytics surfaces customer signals, employee sentiment, and market context in a single unified view, with AI-driven recommendations that tell you what to do next, not just what happened.
+      </p>
+      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px;">
+        <li style="display:flex;align-items:flex-start;gap:10px;color:rgba(255,255,255,0.85);font-size:15px;"><span class="msr-check">check</span> Experience Navigator surfaces AI-driven action plans, not just data</li>
+        <li style="display:flex;align-items:flex-start;gap:10px;color:rgba(255,255,255,0.85);font-size:15px;"><span class="msr-check">check</span> AI Reports turn open-text responses into prioritised themes in minutes</li>
+        <li style="display:flex;align-items:flex-start;gap:10px;color:rgba(255,255,255,0.85);font-size:15px;"><span class="msr-check">check</span> SogoConnect ticketing closes the loop automatically, before detractors churn</li>
+        <li style="display:flex;align-items:flex-start;gap:10px;color:rgba(255,255,255,0.85);font-size:15px;"><span class="msr-check">check</span> Role-based dashboards give every team the view they need, from frontline to boardroom</li>
+      </ul>
+    </div>
+    <div class="lp-hero-visual" style="flex:1;min-width:0;">
+      <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" alt="Analytics dashboard in use" style="width:100%;border-radius:16px;box-shadow:0 24px 60px rgba(0,0,0,0.5);display:block;">
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     TESTIMONIALS
+════════════════════════════════════════ -->
+<section class="testimonial-band" aria-labelledby="testimonial-heading">
+  <h2 id="testimonial-heading" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Customer testimonials</h2>
+  <div class="fade-in" style="text-align:center;margin-bottom:8px;">
+    <span class="section-label" style="color:rgba(255,255,255,0.5)">Verified outcomes</span>
+    <h2 style="font-size:clamp(24px,3vw,36px);font-weight:700;color:#fff;margin:8px 0 0;">Outcomes that move the needle</h2>
+  </div>
+  <div class="testimonial-grid fade-in">
+  <div class="testimonial-card" style="text-align:center;justify-content:center;align-items:center;">
+    <div style="font-size:clamp(40px,6vw,64px);font-weight:800;color:#02BECC;line-height:1;letter-spacing:-0.03em;">11 pts</div>
+    <div style="font-size:15px;font-weight:700;color:#fff;margin-top:10px;">Average NPS lift</div>
+    <div style="font-size:13px;color:rgba(255,255,255,0.6);margin-top:6px;line-height:1.5;">Achieved by SogoCX customers within 12 months of go-live</div>
+  </div>
+  <div class="testimonial-card" style="text-align:center;justify-content:center;align-items:center;">
+    <div style="font-size:clamp(40px,6vw,64px);font-weight:800;color:#02BECC;line-height:1;letter-spacing:-0.03em;">36%</div>
+    <div style="font-size:15px;font-weight:700;color:#fff;margin-top:10px;">Average CSAT boost</div>
+    <div style="font-size:13px;color:rgba(255,255,255,0.6);margin-top:6px;line-height:1.5;">Reported across SogoCX enterprise deployments in the first year</div>
+  </div>
+  <div class="testimonial-card" style="text-align:center;justify-content:center;align-items:center;">
+    <div style="font-size:clamp(40px,6vw,64px);font-weight:800;color:#02BECC;line-height:1;letter-spacing:-0.03em;">3×</div>
+    <div style="font-size:15px;font-weight:700;color:#fff;margin-top:10px;">Higher response rates</div>
+    <div style="font-size:13px;color:rgba(255,255,255,0.6);margin-top:6px;line-height:1.5;">Customers triple survey response rates within 12 months on the platform</div>
+  </div>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     FAQ
+════════════════════════════════════════ -->
+<section class="section" aria-labelledby="faq-heading">
+  <div class="container">
+    <div class="centered fade-in">
+      <span class="section-label">Questions</span>
+      <h2 class="section-title" id="faq-heading">Frequently asked</h2>
+    </div>
+    <div class="faq-list fade-in" role="list">
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">
+          How does Sogolytics handle the migration from my current platform?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" role="region">
+          <div class="faq-answer-inner">Our migration team manages the full process: survey rebuild, logic transfer, historical data migration, dashboard recreation, and integrations. Most implementations complete within 6 weeks.</div>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">
+          What happens to my historical data?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" role="region">
+          <div class="faq-answer-inner">All historical survey responses, NPS trends, and dashboard data are transferred and preserved. You'll have continuous access to your full data history from day one on Sogolytics.</div>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">
+          How is Sogolytics priced compared to legacy enterprise suites?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" role="region">
+          <div class="faq-answer-inner">Sogolytics uses transparent, flat-fee pricing with no per-module charges. All core capabilities, including VoC, EX, NPS, AI analytics, and integrations, are included in a single contract.</div>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">
+          Does Sogolytics support both CX and EX programmes?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" role="region">
+          <div class="faq-answer-inner">Yes. Our unified platform handles customer experience, employee experience, and market research in a single environment, with shared analytics and cross-programme dashboards.</div>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">
+          What compliance certifications does Sogolytics hold?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" role="region">
+          <div class="faq-answer-inner">SOC 2, ISO 27001, GDPR, and PCI DSS. Enterprise-grade security built into the platform, not charged as an add-on. Full security documentation available on request.</div>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">
+          How long does onboarding take?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" role="region">
+          <div class="faq-answer-inner">SogoCX customers average 6 weeks from contract signing to go-live — versus the 4–5 month industry average. Complex enterprise integrations are included in the implementation scope.</div>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">
+          Can I run a proof of concept before committing?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" role="region">
+          <div class="faq-answer-inner">Yes. We offer a structured pilot programme where your team can run live surveys and explore the full platform before signing a contract.</div>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">
+          What support do I get after go-live?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" role="region">
+          <div class="faq-answer-inner">Every Sogolytics customer gets a dedicated Customer Success Manager. Enterprise tiers include 24/7 technical support and a named implementation specialist.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     BOTTOM CTA BAND
+════════════════════════════════════════ -->
+<section class="cta-band">
+  <div class="fade-in">
+    <h2>Ready to make the switch?</h2>
+    <p>Join 100,000+ organisations across 96 countries on Sogolytics. Full implementation included, average 6 weeks to go-live.</p>
+    <a href="https://www.sogolytics.com/request-a-demo/" class="btn-cta-yellow">
+      Request a Demo
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="footer-logo">
+    <img src="https://cdn.sogolytics.com/wp-content/uploads/2022/07/sogolytics-wbg.png" alt="Sogolytics" onerror="this.style.display='none'">
+  </div>
+  © 2026 Sogolytics, Inc. All rights reserved.<br>
+  <a href="https://www.sogolytics.com/privacy-policy/">Privacy Policy</a> ·
+  <a href="https://www.sogolytics.com/terms-of-service/">Terms of Service</a>
+</footer>
+
+<!-- ═══════════════════════════════════════
+     JAVASCRIPT
+════════════════════════════════════════ -->
+<script>
+  // ── UTM + gclid passthrough ──
+  (function() {
+    var params = new URLSearchParams(window.location.search);
+    var fields = ['utm_source','utm_medium','utm_campaign','utm_term','utm_content','gclid'];
+    fields.forEach(function(f) {
+      ['', 'f_'].forEach(function(prefix) {
+        var el = document.getElementById(prefix + f);
+        if (el && params.get(f)) el.value = params.get(f);
+      });
+    });
+  })();
+
+  function handleHeroSubmit(e) {
+    e.preventDefault();
+    var form = e.target;
+    var btn = form.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    btn.querySelector('span').textContent = 'Submitting…';
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: 'lead_submit', form_id: 'hero_form', page_variant: 'cx-complete' });
+    setTimeout(function() {
+      form.innerHTML = '<div style="text-align:center;padding:24px 0"><div style="font-size:40px;margin-bottom:12px">✓</div><h3 style="color:#fff;margin-bottom:8px">You\'re on the calendar!</h3><p style="color:rgba(255,255,255,0.6);font-size:14px">A Sogolytics expert will reach out within 1 business day.</p></div>';
+    }, 800);
+  }
+
+  // ── GTM dataLayer: page view ──
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    event: 'lp_view',
+    page_variant: 'cx-complete',
+    page_type: 'competitor_conquesting'
+  });
+
+  // ── FAQ accordion ──
+  function toggleFAQ(btn) {
+    var item = btn.closest('.faq-item');
+    var answer = item.querySelector('.faq-answer');
+    var isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(function(el) {
+      el.classList.remove('open');
+      el.querySelector('.faq-answer').style.maxHeight = '0';
+      el.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  }
+
+  // ── IntersectionObserver fade-in ──
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-in').forEach(function(el) { observer.observe(el); });
+</script>
+
+</body>
+</html>
