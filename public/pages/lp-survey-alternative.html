@@ -622,6 +622,12 @@
     .testimonial-quote::after  { content: '\201D'; }
     .testimonial-link { font-size: 13px; color: var(--blue); text-decoration: none; font-weight: 600; }
     .testimonial-link:hover { text-decoration: underline; }
+    .testimonial-headline { font-size: 17px; font-weight: 700; color: var(--navy); }
+    /* Section CTA (Sign Up Free + note) */
+    .section-cta { text-align: center; margin-top: 44px; }
+    .section-cta .hero-note { margin: 10px 0 0; }
+    /* Why choose us */
+    .why-choose { max-width: 760px; margin: 0 auto; text-align: center; }
 
     /* ── Outcomes ── */
     .outcomes-grid {
@@ -801,63 +807,12 @@
 </section>
 
 <!-- ═══════════════════════════════════════
-     SECTION 2 — TRUST / LOGO STRIP
-════════════════════════════════════════ -->
-<section class="trust-bar">
-  <div class="trust-bar-label">Trusted by 32,000+ organisations in 96 countries</div>
-  <div class="trust-logo-strip fade-in">
-    <img src="https://cdn.sogolytics.com/wp-content/uploads/2024/10/home-logo-band.svg"
-         alt="Organisations using SogoSurvey" loading="lazy">
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════
-     STAT COUNTERS
-════════════════════════════════════════ -->
-<section class="stats-section">
-  <div class="stats-grid fade-in">
-    <div>
-      <div class="stat-num">32,000+</div>
-      <div class="stat-label">Organisations worldwide</div>
-    </div>
-    <div>
-      <div class="stat-num">4.7/5</div>
-      <div class="stat-label">Average rating on G2 &amp; Capterra</div>
-    </div>
-    <div>
-      <div class="stat-num">100+</div>
-      <div class="stat-label">Survey templates ready to use</div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════
-     SECTION 3 — INDUSTRY CONTEXT
-════════════════════════════════════════ -->
-<section class="section section-white" aria-labelledby="context-heading">
-  <div class="container">
-    <div class="fade-in" style="max-width:740px;">
-      <span class="section-label">Why people are switching</span>
-      <h2 class="section-title" id="context-heading">Basic survey tools were built for basic questions.</h2>
-      <p class="section-sub">
-        As organisations collect more feedback across more channels, the limits of entry-level tools are showing. Response caps, locked features, and weak analytics aren't just frustrating — they're costing you insight.
-      </p>
-    </div>
-    <div class="callout-quote-block fade-in">
-      <p>The gap between what teams need and what basic survey tools offer has never been wider.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════
-     SECTION 4 — COMPARISON TABLE (Battle Card)
+     SECTION 2 — COMPARISON TABLE (Battle Card)
 ════════════════════════════════════════ -->
 <section class="section section-alt" aria-labelledby="compare-heading">
   <div class="container">
     <div class="centered fade-in">
-      <span class="section-label">Compare your options</span>
-      <h2 class="section-title" id="compare-heading">Why teams are switching to SogoSurvey</h2>
-      <p class="section-sub">See exactly how SogoSurvey stacks up across the features that matter most.</p>
+      <h2 class="section-title" id="compare-heading">We don&rsquo;t need to name names, but our features say it all&hellip;</h2>
     </div>
     <div class="comparison-wrap fade-in">
       <table class="comparison-table" aria-label="Feature comparison battle card">
@@ -926,345 +881,250 @@
 </section>
 
 <!-- ═══════════════════════════════════════
-     SECTION 5 — FEATURE CARDS (Build / Deploy / Report style)
+     SECTION 3 — WHY CHOOSE US
 ════════════════════════════════════════ -->
-<section class="section section-white" aria-labelledby="features-heading">
+<section class="section section-white" aria-labelledby="why-heading">
+  <div class="container">
+    <div class="why-choose fade-in">
+      <h2 class="section-title" id="why-heading">Why choose us?</h2>
+      <p class="section-sub">Sogolytics offers a wide range of options to serve just about every use case you can think of! From individual researchers to big businesses, our users appreciate the power and flexibility of our platform, the support we provide, and the ability to scale up as needed.</p>
+      <div class="section-cta">
+        <!-- TODO: Insert free signup URL — confirm with Imroz -->
+        <a href="#INSERT_SIGNUP_URL" class="btn-primary">Sign Up Free</a>
+        <p class="hero-note">No credit card required!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 4 — BEYOND FEATURES (6 cards)
+════════════════════════════════════════ -->
+<section class="section section-alt" aria-labelledby="beyond-heading">
   <div class="container">
     <div class="centered fade-in">
-      <span class="section-label">Platform Capabilities</span>
-      <h2 class="section-title" id="features-heading">Built for surveys that actually get results</h2>
-      <p class="section-sub">Every feature you need — on every plan, including free.</p>
+      <span class="section-label">Beyond features,</span>
+      <h2 class="section-title" id="beyond-heading">Solving the bigger problems</h2>
     </div>
-    <div class="three-panel fade-in">
-      <div class="panel-card">
-        <div class="panel-label">First,</div>
-        <div style="display:flex;align-items:flex-start;justify-content:space-between;">
-          <div class="panel-title">Design.</div>
-          <span class="panel-icon">edit</span>
-        </div>
-        <hr>
-        <p class="panel-body">Build better surveys faster with AI-assisted design. Suggests questions, optimises flow, and flags issues — before you publish.</p>
-      </div>
-      <div class="panel-card active">
-        <div class="panel-label">Then,</div>
-        <div style="display:flex;align-items:flex-start;justify-content:space-between;">
-          <div class="panel-title">Distribute.</div>
-          <span class="panel-icon">share</span>
-        </div>
-        <hr>
-        <p class="panel-body">Email, SMS, web embed, QR code, and social — one survey, every channel. Advanced logic ensures the right questions reach the right people.</p>
-      </div>
-      <div class="panel-card">
-        <div class="panel-label">Finally,</div>
-        <div style="display:flex;align-items:flex-start;justify-content:space-between;">
-          <div class="panel-title">Report.</div>
-          <span class="panel-icon">analytics</span>
-        </div>
-        <hr>
-        <p class="panel-body">Live results, trend tracking, and exportable reports in CSV, Excel, PDF, and SPSS. Not just a spreadsheet of raw data.</p>
-      </div>
-    </div>
-
-    <!-- 6 feature cards below -->
-    <div class="cards-grid fade-in" style="margin-top:32px;">
+    <div class="cards-grid fade-in">
       <div class="feat-card">
-        <div class="feat-card-icon"><span class="msr">edit</span></div>
-        <h3>AI-Assisted Survey Design</h3>
-        <p>Build better surveys faster. AI suggests questions, optimises flow, and flags issues before you publish.</p>
+        <div class="feat-card-icon"><span class="msr">insights</span></div>
+        <h3>Predictive analytics that drive impactful decisions</h3>
+        <p>Numbers aren&rsquo;t the complete story. Understand the reasons behind your metrics to realign priorities and devise powerful business strategies.</p>
       </div>
       <div class="feat-card">
-        <div class="feat-card-icon"><span class="msr">analytics</span></div>
-        <h3>Real-Time Analytics Dashboard</h3>
-        <p>Live results, trend tracking, and exportable reports — not just a spreadsheet of raw responses.</p>
+        <div class="feat-card-icon"><span class="msr">hub</span></div>
+        <h3>Seamless integrations for all ecosystems</h3>
+        <p>Nothing works in isolation. Unify critical platforms to create streamlined and impactful business processes, leveraging the possibilities of technology and automation.</p>
       </div>
       <div class="feat-card">
-        <div class="feat-card-icon"><span class="msr">account_tree</span></div>
-        <h3>Advanced Logic &amp; Branching</h3>
-        <p>Skip logic, display logic, and page branching on every plan. Ask the right question to the right person.</p>
+        <div class="feat-card-icon"><span class="msr">touch_app</span></div>
+        <h3>Intuitively designed to unlock power</h3>
+        <p>Experience management software designed for everyone. Make the most of Sogolytics with the shortest learning curve, and get the results you need &ndash; rapidly.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-card-icon"><span class="msr">support_agent</span></div>
+        <h3>Support that has your back</h3>
+        <p>Got questions? We&rsquo;ve got the answers! Boasting the best support team in the industry, Sogolytics offers user guides, training, 24/7 assistance, and much more to help you keep the data flowing.</p>
       </div>
       <div class="feat-card">
         <div class="feat-card-icon"><span class="msr">palette</span></div>
-        <h3>Custom Branding</h3>
-        <p>Your logo, your colours, your domain. Every survey looks like it came from your team.</p>
+        <h3>Customization to showcase your brand</h3>
+        <p>Build a stronger brand and grow trust with your audience by highlighting your logo, colors, and style.</p>
       </div>
       <div class="feat-card">
-        <div class="feat-card-icon"><span class="msr">lock</span></div>
-        <h3>Guaranteed Anonymous Responses</h3>
-        <p>When anonymity matters, respondents can trust it. No IP logging, no tracking, guaranteed.</p>
-      </div>
-      <div class="feat-card">
-        <div class="feat-card-icon"><span class="msr">share</span></div>
-        <h3>Multi-Channel Distribution</h3>
-        <p>Email, SMS, web embed, QR code, and social. One survey, every channel.</p>
+        <div class="feat-card-icon"><span class="msr">ads_click</span></div>
+        <h3>Engaging design to boost participation</h3>
+        <p>From smart question types and logic to mobile-responsive design and data population, keep participants engaged!</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ═══════════════════════════════════════
-     SECTION 6 — HOW IT WORKS
+     SECTION 5 — TESTIMONIALS
 ════════════════════════════════════════ -->
-<section class="section section-alt" aria-labelledby="steps-heading">
-  <div class="container">
-    <div class="centered fade-in">
-      <span class="section-label">Get started in minutes</span>
-      <h2 class="section-title" id="steps-heading">From zero to live survey in under 5 minutes</h2>
-    </div>
-    <div class="timeline fade-in">
-      <div class="timeline-step">
-        <div class="timeline-num">1</div>
-        <div class="timeline-content">
-          <div class="step-label">Step 1</div>
-          <h3>Create your free account</h3>
-          <p>Sign up in 30 seconds. No credit card. No sales call.</p>
-        </div>
-      </div>
-      <div class="timeline-step">
-        <div class="timeline-num">2</div>
-        <div class="timeline-content">
-          <div class="step-label">Step 2</div>
-          <h3>Pick a template or start from scratch</h3>
-          <p>100+ expert templates across every use case, or build your own with AI assistance.</p>
-        </div>
-      </div>
-      <div class="timeline-step">
-        <div class="timeline-num">3</div>
-        <div class="timeline-content">
-          <div class="step-label">Step 3</div>
-          <h3>Customise and launch</h3>
-          <p>Add your branding, set your logic, and publish. Your survey is live immediately.</p>
-        </div>
-      </div>
-      <div class="timeline-step">
-        <div class="timeline-num">4</div>
-        <div class="timeline-content">
-          <div class="step-label">Step 4</div>
-          <h3>Watch results come in</h3>
-          <p>Real-time dashboard updates as responses arrive. Export, share, or act — your call.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════
-     SECTION 7 — PRODUCT SCREENSHOT
-════════════════════════════════════════ -->
-<!-- TODO: Replace product screenshot with SogoSurvey analytics view — confirm with Imroz -->
-<section class="product-section" aria-labelledby="product-heading">
-  <div class="product-inner">
-    <div class="fade-in">
-      <span class="section-label">Platform in action</span>
-      <h2 class="section-title" id="product-heading">See the full picture, in real time</h2>
-      <ul class="product-bullets">
-        <li><span class="bcheck">✓</span> AI Reports surface themes, sentiment, and key drivers automatically</li>
-        <li><span class="bcheck">✓</span> Real-time dashboards update as responses arrive — no manual refresh</li>
-        <li><span class="bcheck">✓</span> Advanced logic ensures every respondent sees only relevant questions</li>
-        <li><span class="bcheck">✓</span> Role-based sharing gives stakeholders the right view instantly</li>
-      </ul>
-    </div>
-    <div class="product-img fade-in">
-      <!-- TODO: Swap for branded SogoSurvey analytics + team photo — confirm with Imroz -->
-      <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=900&q=80"
-           alt="Team reviewing survey results together" loading="lazy"
-           onerror="this.style.display='none'">
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════
-     SECTION 8 — TESTIMONIALS
-════════════════════════════════════════ -->
-<!-- TODO: Replace placeholder testimonial names with real customers — confirm with Deb -->
+<!-- TODO: Replace initials avatars with real customer photos if available — confirm with Deb -->
 <section class="testimonial-section" aria-labelledby="testimonials-heading">
   <div class="container">
     <div class="centered fade-in">
-      <span class="section-label">Our happy customers</span>
-      <h2 class="section-title" id="testimonials-heading">Critics and customers love SogoSurvey.</h2>
-      <p class="section-sub">with their happy customers</p>
+      <h2 class="section-title" id="testimonials-heading">Whoa, look at these happy customers</h2>
     </div>
     <div class="testimonial-grid fade-in">
       <div class="testimonial-card">
+        <div class="testimonial-headline">Transforming how we communicate</div>
+        <p class="testimonial-quote">Sogo understood how important this project was to me. They didn&rsquo;t just sell me a member experience software, they helped me transform how we communicate with our members. My credit union started to see the high response rate and an overall satisfaction score of 9.45 [out of 10].</p>
         <div class="testimonial-head">
-          <!-- TODO: Replace placeholder avatar with real customer photo — confirm with Deb -->
-          <div class="testimonial-avatar"><img src="https://randomuser.me/api/portraits/women/44.jpg" alt=""></div>
+          <div class="testimonial-avatar">GD</div>
           <div>
-            <!-- TODO: Replace with real customer name — confirm with Deb -->
-            <div class="testimonial-name">CUSTOMER_NAME</div>
-            <div class="testimonial-title-text">CUSTOMER_TITLE</div>
+            <div class="testimonial-name">GENICE DECORTE</div>
+            <div class="testimonial-title-text">CEO, HealthShare Credit Union</div>
           </div>
         </div>
-        <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
-        <p class="testimonial-quote">The reporting alone made it worth switching. I can pull a full breakdown in minutes and share it with my team — something I couldn't do with our old tool.</p>
-        <a href="#" class="testimonial-link">Read success story →</a>
       </div>
       <div class="testimonial-card">
+        <div class="testimonial-headline">Powerful analytics</div>
+        <p class="testimonial-quote">Thanks to the powerful analytics of SogoCX, we have saved hours of work sifting through data and created visibility to actionable nuggets, so we can easily act on the feedback and make a difference for our members. As if this wasn&rsquo;t enough, the support we have received along the way.</p>
         <div class="testimonial-head">
-          <!-- TODO: Replace placeholder avatar with real customer photo — confirm with Deb -->
-          <div class="testimonial-avatar"><img src="https://randomuser.me/api/portraits/men/32.jpg" alt=""></div>
+          <div class="testimonial-avatar">LF</div>
           <div>
-            <!-- TODO: Replace with real customer name — confirm with Deb -->
-            <div class="testimonial-name">CUSTOMER_NAME</div>
-            <div class="testimonial-title-text">CUSTOMER_TITLE</div>
+            <div class="testimonial-name">LAURIE FLANDERS</div>
+            <div class="testimonial-title-text">Sales and Accountability Leader, All In Federal Credit Union</div>
           </div>
         </div>
-        <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
-        <p class="testimonial-quote">Setup took less than an hour. The branching logic is intuitive and the response rate on our first survey was higher than anything we'd seen before.</p>
-        <a href="#" class="testimonial-link">Read success story →</a>
       </div>
       <div class="testimonial-card">
+        <div class="testimonial-headline">Amazing, quick, and easy reports</div>
+        <p class="testimonial-quote">The kind of reports that I am able to pull for our exec team is impressive. They look at those and say things like, &lsquo;This is amazing, it&rsquo;s quick, it&rsquo;s easy.&rsquo; I couldn&rsquo;t get that with the last survey company we were utilizing. We&rsquo;re able to do things I couldn&rsquo;t have even imagined.</p>
         <div class="testimonial-head">
-          <!-- TODO: Replace placeholder avatar with real customer photo — confirm with Deb -->
-          <div class="testimonial-avatar"><img src="https://randomuser.me/api/portraits/women/68.jpg" alt=""></div>
+          <div class="testimonial-avatar">AC</div>
           <div>
-            <!-- TODO: Replace with real customer name — confirm with Deb -->
-            <div class="testimonial-name">CUSTOMER_NAME</div>
-            <div class="testimonial-title-text">CUSTOMER_TITLE</div>
+            <div class="testimonial-name">ANTHONY CARBONARI</div>
+            <div class="testimonial-title-text">Transition of Care Manager, Legacy Healthcare LLC</div>
           </div>
         </div>
-        <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
-        <p class="testimonial-quote">We needed anonymous surveys our team could actually trust. SogoSurvey was the only free tool that genuinely guaranteed it.</p>
-        <a href="#" class="testimonial-link">Read success story →</a>
       </div>
+      <div class="testimonial-card">
+        <div class="testimonial-headline">Easy to learn</div>
+        <p class="testimonial-quote">The whole program is logical in functionality and easy to learn, even for those of us who are not overly tech savvy.</p>
+        <div class="testimonial-head">
+          <div class="testimonial-avatar">LC</div>
+          <div>
+            <div class="testimonial-name">LEAH CAMPBELL</div>
+            <div class="testimonial-title-text">HR &amp; Marketing Manager, Alliance Accounting Group</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-headline">Only scratched the surface</div>
+        <p class="testimonial-quote">The tool is easy to work with, and there&rsquo;s a lot of opportunity to leverage it for other uses. We&rsquo;ve only scratched the surface with what we can do with it.</p>
+        <div class="testimonial-head">
+          <div class="testimonial-avatar">RS</div>
+          <div>
+            <div class="testimonial-name">RON SHORY</div>
+            <div class="testimonial-title-text">Global Chief People Officer, BGIS</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section-cta fade-in">
+      <!-- TODO: Insert free signup URL — confirm with Imroz -->
+      <a href="#INSERT_SIGNUP_URL" class="btn-primary">Sign Up Free</a>
+      <p class="hero-note">No credit card required!</p>
     </div>
   </div>
 </section>
 
 <!-- ═══════════════════════════════════════
-     SECTION 9 — OUTCOME STATS
+     SECTION 6 — STATS BAND
 ════════════════════════════════════════ -->
-<section class="section section-alt" aria-labelledby="outcomes-heading">
-  <div class="container centered">
-    <h2 class="section-title" id="outcomes-heading">Outcomes that move the needle</h2>
-    <div class="outcomes-grid fade-in">
-      <div>
-        <div class="outcome-num">3x</div>
-        <div class="outcome-label">Higher response rates</div>
-        <div class="outcome-sub">vs basic form tools</div>
-      </div>
-      <div>
-        <div class="outcome-num">4.7/5</div>
-        <div class="outcome-label">Average rating</div>
-        <div class="outcome-sub">Based on 500+ verified reviews</div>
-      </div>
-      <div>
-        <div class="outcome-num">100+</div>
-        <div class="outcome-label">Templates</div>
-        <div class="outcome-sub">Ready to launch immediately</div>
-      </div>
+<section class="stats-section">
+  <div class="stats-grid fade-in" style="grid-template-columns:repeat(4,1fr);max-width:920px;">
+    <div>
+      <div class="stat-num">100,000+</div>
+      <div class="stat-label">customers in 96 countries</div>
+    </div>
+    <div>
+      <div class="stat-num">A+</div>
+      <div class="stat-label">BBB ratings</div>
+    </div>
+    <div>
+      <div class="stat-num">79%</div>
+      <div class="stat-label">left a competitor for us</div>
+    </div>
+    <div>
+      <div class="stat-num">100%</div>
+      <div class="stat-label">EU Safe Harbor Compliant</div>
     </div>
   </div>
 </section>
 
 <!-- ═══════════════════════════════════════
-     SECTION 10 — FAQ
+     SECTION 7 — FAQ
 ════════════════════════════════════════ -->
 <section class="section section-white" aria-labelledby="faq-heading">
   <div class="container">
     <div class="centered fade-in">
-      <span class="section-label">Frequently Asked Questions</span>
-      <h2 class="section-title" id="faq-heading">Everything you need to know</h2>
+      <h2 class="section-title" id="faq-heading">Frequently Asked Questions</h2>
     </div>
     <div class="faq-list fade-in" role="list">
 
       <div class="faq-item" role="listitem">
         <button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">
-          Is the free plan really free forever?
+          What is the purpose of a Trial account?
           <span class="faq-icon" aria-hidden="true">+</span>
         </button>
         <div class="faq-answer" role="region">
-          <div class="faq-answer-inner">Yes. The SogoSurvey free plan has no time limit. You can create surveys, collect responses, and view analytics forever at no cost. Paid plans unlock higher response volumes and advanced features when you need them.</div>
+          <div class="faq-answer-inner">Each Trial account offers free, short-term access to all features in its corresponding package. For example, a Trial-Premium account includes all Premium features. Trial accounts are used to help users explore all of the options available in each package.</div>
         </div>
       </div>
 
       <div class="faq-item" role="listitem">
         <button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">
-          Are there response limits on the free plan?
+          How many surveys can I create in a Trial account?
           <span class="faq-icon" aria-hidden="true">+</span>
         </button>
         <div class="faq-answer" role="region">
-          <div class="faq-answer-inner">No. Unlike many survey tools, SogoSurvey does not cap responses on the free plan. Collect as many responses as you need.</div>
+          <div class="faq-answer-inner">There are no limits on the number of surveys you can create in a Trial account.</div>
         </div>
       </div>
 
       <div class="faq-item" role="listitem">
         <button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">
-          Do I need a credit card to sign up?
+          Do I need to provide credit card details when I sign up for a Trial account?
           <span class="faq-icon" aria-hidden="true">+</span>
         </button>
         <div class="faq-answer" role="region">
-          <div class="faq-answer-inner">No credit card required. Sign up with your email and you're in.</div>
+          <div class="faq-answer-inner">No credit card is required when signing up for Trial versions of any paid packages. Credit card details are required only when subscribing to a Sogolytics paid plan.</div>
         </div>
       </div>
 
       <div class="faq-item" role="listitem">
         <button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">
-          Can I use branching logic and skip logic on the free plan?
+          Does a Trial account have any limitations?
           <span class="faq-icon" aria-hidden="true">+</span>
         </button>
         <div class="faq-answer" role="region">
-          <div class="faq-answer-inner">Yes. Advanced logic including skip logic, display logic, and page branching are available on all plans including free.</div>
+          <div class="faq-answer-inner">All Trial accounts include all of the features and functionality of the packages they represent, providing users with hands-on experience before they make their purchasing decision. Trial accounts are limited only in quantity: launch up to 100 invitations, send 1 email reminder, and receive up to 100 responses. Following a trial, the account can be upgraded to the features and higher limits of a paid package and all surveys and data will remain intact.</div>
         </div>
       </div>
 
       <div class="faq-item" role="listitem">
         <button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">
-          How does SogoSurvey handle anonymous surveys?
+          Will my data be saved when I upgrade my account from a Trial to a paid version?
           <span class="faq-icon" aria-hidden="true">+</span>
         </button>
         <div class="faq-answer" role="region">
-          <div class="faq-answer-inner">Anonymity is guaranteed — not just promised. SogoSurvey does not log IP addresses or any identifying information when anonymous mode is enabled. Respondents can trust it.</div>
+          <div class="faq-answer-inner">Data collected in a Trial account will be preserved when the account is upgraded.</div>
         </div>
       </div>
 
       <div class="faq-item" role="listitem">
         <button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">
-          Can I add my own branding to surveys?
+          Can I downgrade a higher Trial package to a lower paid plan?
           <span class="faq-icon" aria-hidden="true">+</span>
         </button>
         <div class="faq-answer" role="region">
-          <div class="faq-answer-inner">Yes. Custom branding including your logo, colours, and custom thank-you page is available on the free plan.</div>
+          <div class="faq-answer-inner">If you choose a lower paid plan, you will need to create a new account. You may copy any surveys from your Trial account, but all advanced features used in the surveys will be lost.</div>
         </div>
       </div>
 
       <div class="faq-item" role="listitem">
         <button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">
-          What analytics do I get on the free plan?
+          What happens when my Trial ends?
           <span class="faq-icon" aria-hidden="true">+</span>
         </button>
         <div class="faq-answer" role="region">
-          <div class="faq-answer-inner">Real-time response dashboard, basic reporting, and data export to CSV and Excel. Advanced analytics and AI reports are available on paid plans.</div>
-        </div>
-      </div>
-
-      <div class="faq-item" role="listitem">
-        <button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">
-          How is SogoSurvey different from basic form builders?
-          <span class="faq-icon" aria-hidden="true">+</span>
-        </button>
-        <div class="faq-answer" role="region">
-          <div class="faq-answer-inner">SogoSurvey is a purpose-built survey platform — not a form builder. That means 20+ question types, advanced logic, anonymous response guarantees, real analytics dashboards, and AI-assisted design. All on the free plan.</div>
+          <div class="faq-answer-inner">At the end of your trial period, you will be prompted to choose a paid package. Once you make your selection and upgrade, your account and chosen features will be fully functional with your surveys and data intact.</div>
         </div>
       </div>
 
     </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════
-     SECTION 11 — FINAL CTA
-════════════════════════════════════════ -->
-<section class="cta-band" aria-labelledby="cta-heading">
-  <div class="fade-in">
-    <div class="cta-band-label">Ready to make the switch?</div>
-    <h2 id="cta-heading">Join 32,000+ organisations already using SogoSurvey.</h2>
-    <p>Free plan. No credit card. No sales call. Live in minutes.</p>
-    <!-- TODO: Insert free signup URL — confirm with Imroz -->
-    <a href="#INSERT_SIGNUP_URL" class="btn-primary" style="display:inline-flex;font-size:17px;padding:16px 36px;">
-      Start Free Today
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </a>
-    <p class="cta-trust">No response caps · Custom branding included · Cancel anytime</p>
+    <div class="section-cta fade-in">
+      <!-- TODO: Insert free signup URL — confirm with Imroz -->
+      <a href="#INSERT_SIGNUP_URL" class="btn-primary">Sign Up Free</a>
+      <p class="hero-note">No credit card required!</p>
+    </div>
   </div>
 </section>
 
