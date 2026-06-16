@@ -119,8 +119,14 @@
       margin: 0 auto;
       padding: 0 24px;
     }
-    .nav-logo img { height: 28px; display: block; }
-    .nav-logo-fallback { display: none; font-size: 18px; font-weight: 800; color: var(--navy); }
+    .nav-logo { text-decoration: none; display: inline-flex; align-items: center; }
+    .nav-logo-text {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--navy);
+    }
+    .nav-logo-text span { color: var(--blue); }
     .nav-login {
       color: var(--navy);
       font-size: 14px;
@@ -661,10 +667,7 @@
 <nav class="nav" role="navigation" aria-label="Site navigation">
   <div class="nav-inner">
     <a class="nav-logo" href="https://www.sogolytics.com" aria-label="SogoSurvey home">
-      <img src="https://cdn.sogolytics.com/wp-content/uploads/2024/10/sogosurvey-logo.svg"
-           alt="SogoSurvey by Sogolytics"
-           onerror="this.style.display='none';document.querySelector('.nav-logo-fallback').style.display='block'">
-      <span class="nav-logo-fallback">SogoSurvey</span>
+      <span class="nav-logo-text">Sogo<span>Survey</span></span>
     </a>
     <!-- TODO: Insert free signup URL — confirm with Imroz -->
     <a href="#INSERT_SIGNUP_URL" class="nav-login">Log In</a>
