@@ -57,6 +57,16 @@ const pages: LandingPage[] = [
     tagColor: "#856404",
     htmlFile: "lp-cx-switch-wp.html",
   },
+  {
+    slug: "pages/lp-survey-alternative.html",
+    title: "SogoSurvey — Survey Tool Alternative",
+    description: "Advanced logic, AI-assisted design, and real analytics — all on a free plan with no response limits. PLG conquesting page targeting users switching from basic survey tools.",
+    date: "2026-06-16",
+    tag: "PLG",
+    tagBg: "#e8f0ff",
+    tagColor: "#0A2463",
+    htmlFile: "lp-survey-alternative.html",
+  },
 ];
 
 export default function IndexPage() {
