@@ -135,75 +135,56 @@
 
     /* ── Hero ── */
     .hero {
-      background: var(--bg-page);
-      padding: 72px 24px 64px;
+      background: #fff;
+      padding: 72px 24px 0;
+      overflow: hidden;
     }
     .hero-inner {
       max-width: 1160px;
       margin: 0 auto;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 56px;
-      align-items: center;
+      gap: 48px;
+      align-items: flex-end;
     }
+    .hero-left { padding-bottom: 72px; }
     .hero-badge {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      background: rgba(0,194,203,0.12);
-      border: 1px solid rgba(0,194,203,0.3);
-      color: #008a92;
+      background: rgba(0,194,203,0.1);
+      border: 1px solid rgba(0,194,203,0.25);
+      color: #007a82;
       font-size: 12px;
       font-weight: 700;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
       padding: 5px 14px;
       border-radius: 50px;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
     }
     .hero h1 {
-      font-size: clamp(32px, 4.5vw, 54px);
+      font-size: clamp(36px, 5vw, 60px);
       font-weight: 800;
-      line-height: 1.1;
-      letter-spacing: -0.025em;
+      line-height: 1.08;
+      letter-spacing: -0.03em;
       color: var(--navy);
       margin-bottom: 20px;
     }
     .hero-sub {
-      font-size: 18px;
+      font-size: 17px;
       line-height: 1.65;
       color: var(--text-body);
       margin-bottom: 32px;
-      max-width: 480px;
+      max-width: 460px;
     }
-    .hero-bullets {
-      list-style: none;
-      padding: 0;
-      margin: 0 0 32px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .hero-bullets li {
-      font-size: 15px;
-      color: var(--text-body);
+    /* CTA row: button inline */
+    .hero-cta-row {
       display: flex;
       align-items: center;
-      gap: 10px;
-      font-weight: 500;
-    }
-    .hero-bullets li .check {
-      width: 20px;
-      height: 20px;
-      background: var(--blue);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      color: #fff;
-      font-size: 11px;
-      font-weight: 700;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
     }
     .btn-primary {
       display: inline-flex;
@@ -226,7 +207,20 @@
     .hero-note {
       font-size: 13px;
       color: var(--text-muted);
-      margin-top: 12px;
+    }
+    /* Right: image bleeds to bottom */
+    .hero-image-wrap {
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+    .hero-image-wrap img {
+      width: 100%;
+      max-width: 600px;
+      display: block;
+      border-radius: 12px 12px 0 0;
+      box-shadow: 0 -8px 40px rgba(13,27,75,0.1);
     }
 
 
@@ -630,9 +624,11 @@
       .panel-card.active { order: -1; }
     }
     @media (max-width: 768px) {
-      .hero-inner { grid-template-columns: 1fr; gap: 40px; }
-      .hero { padding: 56px 20px 48px; }
-      .hero h1 { font-size: clamp(28px, 8vw, 40px); }
+      .hero-inner { grid-template-columns: 1fr; gap: 32px; }
+      .hero { padding: 48px 20px 0; }
+      .hero-left { padding-bottom: 0; }
+      .hero-image-wrap img { border-radius: 12px; }
+      .hero h1 { font-size: clamp(30px, 8vw, 42px); }
       .hero-sub { font-size: 16px; }
       .stats-grid { grid-template-columns: 1fr; gap: 20px; }
       .section { padding: 60px 20px; }
@@ -680,35 +676,27 @@
 ════════════════════════════════════════ -->
 <section class="hero" aria-labelledby="hero-heading">
   <div class="hero-inner">
-    <div class="fade-in">
+
+    <!-- LEFT: copy -->
+    <div class="hero-left fade-in">
       <div class="hero-badge">✦ More Features · Same Free Price</div>
       <h1 id="hero-heading">Your survey tool has limits.<br>SogoSurvey doesn't.</h1>
       <p class="hero-sub">Advanced logic, AI-assisted design, and real analytics — all on a free plan with no response limits.</p>
-      <ul class="hero-bullets">
-        <li><span class="check">✓</span> No response caps</li>
-        <li><span class="check">✓</span> Free plan, always</li>
-        <li><span class="check">✓</span> Live in minutes</li>
-      </ul>
       <!-- TODO: Insert free signup URL — confirm with Imroz -->
-      <a href="#INSERT_SIGNUP_URL" class="btn-primary">
-        Start Free — No Credit Card
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
-      <p class="hero-note">Free forever plan available. Upgrade when you need to.</p>
+      <div class="hero-cta-row">
+        <a href="#INSERT_SIGNUP_URL" class="btn-primary">Start Free — No Credit Card</a>
+      </div>
+      <p class="hero-note">Plans differ only by usage limits. No credit card required!</p>
     </div>
 
-    <!-- TODO: Replace with SogoSurvey product screenshot — confirm with Imroz -->
-    <div class="fade-in" style="position:relative;">
+    <!-- RIGHT: product screenshot, bleeds to bottom edge -->
+    <!-- TODO: Replace with SogoSurvey product/UI screenshot — confirm with Imroz -->
+    <div class="hero-image-wrap fade-in">
       <img src="https://cdn.sogolytics.com/wp-content/uploads/2023/07/sogocx-product-hub-top-banner-img.png"
-           alt="SogoSurvey platform"
-           style="width:100%;border-radius:16px;box-shadow:0 16px 56px rgba(13,27,75,0.14);display:block;"
-           onerror="this.style.display='none'">
-      <!-- Floating stat chips over image -->
-      <div style="position:absolute;bottom:20px;left:16px;display:flex;gap:10px;flex-wrap:wrap;">
-        <span style="background:#fff;border-radius:50px;padding:6px 14px;font-size:12px;font-weight:700;color:var(--navy);box-shadow:0 2px 12px rgba(13,27,75,0.12);">✓ No response caps</span>
-        <span style="background:#fff;border-radius:50px;padding:6px 14px;font-size:12px;font-weight:700;color:var(--navy);box-shadow:0 2px 12px rgba(13,27,75,0.12);">✓ Free forever</span>
-      </div>
+           alt="SogoSurvey platform in use"
+           onerror="this.style.background='var(--bg-page)'">
     </div>
+
   </div>
 </section>
 
