@@ -365,7 +365,7 @@
     .callout-quote-block p::before { content: '\201C'; color: var(--teal); }
     .callout-quote-block p::after  { content: '\201D'; color: var(--teal); }
 
-    /* ── Comparison table ── */
+    /* ── Battle card comparison table ── */
     .comparison-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin-top: 40px; }
     .comparison-table {
       width: 100%;
@@ -377,39 +377,60 @@
       overflow: hidden;
       box-shadow: 0 4px 24px rgba(13,27,75,0.07);
     }
-    .comparison-table thead th {
-      padding: 18px 22px;
+    /* Header row */
+    .comparison-table thead tr th {
+      padding: 28px 24px 20px;
       text-align: left;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      border-bottom: 2px solid var(--border);
-      background: var(--bg-card);
-      color: var(--text-muted);
+      border-bottom: 1px solid var(--border);
+      vertical-align: bottom;
+    }
+    .comparison-table thead th:first-child {
+      background: #fff;
+      width: 22%;
     }
     .comparison-table thead th.col-sogo {
-      background: var(--blue);
-      color: #fff;
+      background: #0D6E65;
+      padding-top: 32px;
+      text-align: center;
     }
+    .col-sogo-logo {
+      background: #0D1B4B;
+      border-radius: 8px;
+      padding: 10px 16px;
+      display: inline-block;
+    }
+    .col-sogo-logo img { height: 28px; display: block; }
+    .col-sogo-logo-text { color: #fff; font-size: 16px; font-weight: 800; }
+    .comparison-table thead th.col-alt {
+      background: #fff;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--navy);
+    }
+    /* Body rows */
     .comparison-table tbody tr { border-bottom: 1px solid var(--border); }
     .comparison-table tbody tr:last-child { border-bottom: none; }
+    .comparison-table tbody tr:nth-child(even) td:not(.td-sogo) { background: #f7f8fa; }
+    .comparison-table tbody tr:nth-child(even) td.td-sogo { background: #0b5e56; }
     .comparison-table tbody td {
-      padding: 15px 22px;
+      padding: 20px 24px;
       vertical-align: middle;
-      color: var(--text-body);
-    }
-    .comparison-table tbody td:nth-child(2) {
-      background: rgba(0,94,238,0.04);
+      font-size: 14px;
+      line-height: 1.5;
     }
     .comparison-table tbody td:first-child {
-      font-weight: 600;
+      font-weight: 700;
       color: var(--navy);
-      font-size: 13px;
+      font-size: 14px;
+      background: #fff !important;
     }
-    .check-icon { color: #16a34a; font-weight: 700; }
-    .cross-icon { color: #c4c9d4; }
-    .partial-text { color: var(--text-muted); font-size: 13px; }
+    .comparison-table tbody tr:nth-child(even) td:first-child { background: #f7f8fa !important; }
+    .td-sogo {
+      background: #0D6E65;
+      color: #fff !important;
+      font-weight: 500;
+    }
+    .td-alt { color: var(--text-muted); }
 
     /* ── Feature cards: 3-panel style (Build / Deploy / Report) ── */
     .three-panel {
@@ -801,7 +822,7 @@
 </section>
 
 <!-- ═══════════════════════════════════════
-     SECTION 4 — COMPARISON TABLE
+     SECTION 4 — COMPARISON TABLE (Battle Card)
 ════════════════════════════════════════ -->
 <section class="section section-alt" aria-labelledby="compare-heading">
   <div class="container">
@@ -811,69 +832,64 @@
       <p class="section-sub">See exactly how SogoSurvey stacks up across the features that matter most.</p>
     </div>
     <div class="comparison-wrap fade-in">
-      <table class="comparison-table" aria-label="Feature comparison">
+      <table class="comparison-table" aria-label="Feature comparison battle card">
         <thead>
           <tr>
-            <th scope="col">Feature</th>
-            <th scope="col" class="col-sogo">SogoSurvey</th>
-            <th scope="col">Basic survey tools</th>
-            <th scope="col">Entry-level form builders</th>
+            <th scope="col"></th>
+            <th scope="col" class="col-sogo">
+              <div class="col-sogo-logo">
+                <img src="https://cdn.sogolytics.com/wp-content/uploads/2022/07/sogolytics-wbg.png"
+                     alt="Sogolytics"
+                     onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+                <span class="col-sogo-logo-text" style="display:none">Sogolytics</span>
+              </div>
+            </th>
+            <th scope="col" class="col-alt">Sogolytics Alternative 1</th>
+            <th scope="col" class="col-alt">Sogolytics Alternative 2</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Response limits</td>
-            <td><span class="check-icon">✓</span> No caps, all plans</td>
-            <td><span class="partial-text">Capped on free tier</span></td>
-            <td><span class="partial-text">Capped or paid only</span></td>
+            <td>Multilingual Surveys</td>
+            <td class="td-sogo">Standard in all account types</td>
+            <td class="td-alt">Premium feature only</td>
+            <td class="td-alt">Unavailable</td>
           </tr>
           <tr>
-            <td>Skip logic &amp; branching</td>
-            <td><span class="check-icon">✓</span> Free plan included</td>
-            <td><span class="partial-text">Paid plans only</span></td>
-            <td><span class="cross-icon">✗</span> Not available</td>
+            <td>Guaranteed Complete Anonymity</td>
+            <td class="td-sogo">Generate more candid responses</td>
+            <td class="td-alt">Unavailable</td>
+            <td class="td-alt">Partial anonymity</td>
           </tr>
           <tr>
-            <td>Analytics dashboard</td>
-            <td><span class="check-icon">✓</span> Real-time, all plans</td>
-            <td><span class="partial-text">Basic or export-only</span></td>
-            <td><span class="cross-icon">✗</span> Not available</td>
+            <td>Omnichannel Distribution</td>
+            <td class="td-sogo">Launch through your choice of channels</td>
+            <td class="td-alt">Public link, email only</td>
+            <td class="td-alt">Public link, email, social</td>
           </tr>
           <tr>
-            <td>Custom branding</td>
-            <td><span class="check-icon">✓</span> Free plan included</td>
-            <td><span class="partial-text">Paid plans only</span></td>
-            <td><span class="cross-icon">✗</span> Not available</td>
+            <td>Data Pre-Population</td>
+            <td class="td-sogo">Pre-fill known data to optimize reporting</td>
+            <td class="td-alt">Available with upgrade</td>
+            <td class="td-alt">Unavailable</td>
           </tr>
           <tr>
-            <td>AI-assisted design</td>
-            <td><span class="check-icon">✓</span> All plans</td>
-            <td><span class="cross-icon">✗</span> Not available</td>
-            <td><span class="cross-icon">✗</span> Not available</td>
+            <td>Advanced Logic</td>
+            <td class="td-sogo">Multiple forms to boost engagement</td>
+            <td class="td-alt">Single-question branching skip logic</td>
+            <td class="td-alt">Same-page display logic</td>
           </tr>
           <tr>
-            <td>Anonymous responses</td>
-            <td><span class="check-icon">✓</span> Free plan included</td>
-            <td><span class="partial-text">Limited or paid</span></td>
-            <td><span class="cross-icon">✗</span> Not available</td>
+            <td>Integrated Analytics</td>
+            <td class="td-sogo">Drill down through dozens of reports</td>
+            <td class="td-alt">Report by exporting to Excel</td>
+            <td class="td-alt">Basic bar graphs and tables</td>
           </tr>
           <tr>
-            <td>Question types</td>
-            <td><span class="check-icon">✓</span> 20+ types, all plans</td>
-            <td><span class="partial-text">Basic set only</span></td>
-            <td><span class="partial-text">Basic set only</span></td>
-          </tr>
-          <tr>
-            <td>Data export formats</td>
-            <td><span class="check-icon">✓</span> CSV, Excel, PDF, SPSS</td>
-            <td><span class="partial-text">CSV only</span></td>
-            <td><span class="partial-text">CSV only</span></td>
-          </tr>
-          <tr>
-            <td>Support</td>
-            <td><span class="check-icon">✓</span> Email + chat, all plans</td>
-            <td><span class="partial-text">Community only</span></td>
-            <td><span class="partial-text">Community only</span></td>
+            <td>Share Real-Time Reports</td>
+            <td class="td-sogo">Keep your team informed as you go</td>
+            <td class="td-alt">Reports available only to logged-in users</td>
+            <td class="td-alt">Static reports can be downloaded</td>
           </tr>
         </tbody>
       </table>
