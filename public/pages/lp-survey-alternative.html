@@ -14,10 +14,14 @@
   GTM IDs:            GTM-PQJTBL4 and GTM-KPTMPJJ4 already inserted
   ============================================================
   COLOR REFERENCE
-  --blue:     #0A2463   Primary brand blue
-  --red:      #E84855   Accent red / CTA hover
-  --bg-light: #F4F7FF   Alternate section background
-  --bg-dark:  #071540   Hero + footer dark background
+  --blue:     #005EEE   SogoSurvey primary brand blue
+  --blue-dark:#0047cc   Hover state
+  --accent:   #00C2CB   Teal accent (SogoSurvey brand teal)
+  --bg-light: #F0F5FF   Alternate section background
+  --bg-dark:  #091a3e   Hero + footer dark background
+  --text:     #1F1F1F   Body text
+  --text-muted:#808080  Muted / secondary text
+  --border:   #DEE0E3   Borders and dividers
   ============================================================
 -->
 <html lang="en">
@@ -44,22 +48,22 @@
     html { scroll-behavior: smooth; }
     body {
       font-family: 'Epilogue', system-ui, sans-serif;
-      color: #1a1a1a;
+      color: #1F1F1F;
       background: #fff;
       -webkit-font-smoothing: antialiased;
     }
 
     :root {
-      --blue: #0A2463;
-      --blue-dark: #071b4d;
-      --red: #E84855;
-      --red-hover: #d03a46;
-      --bg-light: #F4F7FF;
-      --bg-dark: #071540;
-      --bg-dark2: #040e2e;
-      --text: #1a1a1a;
-      --text-muted: #5a6472;
-      --border: #e2e6ea;
+      --blue: #005EEE;
+      --blue-dark: #0047cc;
+      --blue-light: #3381F5;
+      --accent: #00C2CB;
+      --bg-light: #F0F5FF;
+      --bg-dark: #091a3e;
+      --bg-dark2: #060f2a;
+      --text: #1F1F1F;
+      --text-muted: #808080;
+      --border: #DEE0E3;
     }
 
     .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
@@ -69,7 +73,7 @@
       font-weight: 700;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--red);
+      color: var(--accent);
       margin-bottom: 12px;
     }
     .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
@@ -110,7 +114,7 @@
 
     /* ── Hero ── */
     .hero {
-      background: linear-gradient(135deg, #040e2e 0%, var(--bg-dark) 60%, #0d1f5c 100%);
+      background: linear-gradient(135deg, #001a4d 0%, #003399 50%, #0047cc 100%);
       color: #fff;
       padding: 88px 24px 80px;
       overflow: hidden;
@@ -120,7 +124,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse 60% 80% at 80% 50%, rgba(232,72,85,0.07) 0%, transparent 70%);
+      background: radial-gradient(ellipse 60% 80% at 80% 50%, rgba(0,194,203,0.1) 0%, transparent 70%);
       pointer-events: none;
     }
     .hero-inner {
@@ -133,9 +137,9 @@
     }
     .hero-badge {
       display: inline-block;
-      background: rgba(232,72,85,0.15);
-      border: 1px solid rgba(232,72,85,0.3);
-      color: #ff8a93;
+      background: rgba(0,194,203,0.15);
+      border: 1px solid rgba(0,194,203,0.35);
+      color: #00C2CB;
       font-size: 11px;
       font-weight: 700;
       letter-spacing: 0.1em;
@@ -155,7 +159,7 @@
       font-family: 'Crimson Pro', Georgia, serif;
       font-style: italic;
       font-weight: 400;
-      color: #ff8a93;
+      color: #00C2CB;
     }
     .hero-sub {
       font-size: clamp(15px, 2vw, 17px);
@@ -181,7 +185,7 @@
     }
     .hero-bullets li::before {
       content: '✓';
-      color: #ff8a93;
+      color: #00C2CB;
       font-weight: 700;
       flex-shrink: 0;
     }
@@ -189,7 +193,7 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      background: var(--red);
+      background: var(--blue);
       color: #fff;
       font-size: 16px;
       font-weight: 700;
@@ -201,7 +205,7 @@
       border: none;
       cursor: pointer;
     }
-    .btn-hero:hover { background: var(--red-hover); transform: translateY(-1px); }
+    .btn-hero:hover { background: var(--blue-dark); transform: translateY(-1px); }
     .hero-note {
       font-size: 12px;
       color: rgba(255,255,255,0.4);
@@ -246,7 +250,7 @@
     .hero-visual-stat .num {
       font-size: 24px;
       font-weight: 800;
-      color: #ff8a93;
+      color: #00C2CB;
       display: block;
     }
     .hero-visual-stat .lbl {
@@ -266,7 +270,7 @@
     .logo-bar-label {
       font-size: 13px;
       font-weight: 600;
-      color: var(--text-muted);
+      color: #808080;
       margin-bottom: 28px;
     }
     .logo-strip img {
@@ -300,7 +304,7 @@
     }
     .stat-label {
       font-size: 13px;
-      color: var(--text-muted);
+      color: #808080;
       margin-top: 6px;
       line-height: 1.5;
     }
@@ -318,7 +322,7 @@
     }
     .section-intro {
       font-size: 16px;
-      color: var(--text-muted);
+      color: #808080;
       line-height: 1.7;
       max-width: 620px;
       margin-bottom: 48px;
@@ -360,7 +364,7 @@
       text-transform: uppercase;
       border-bottom: 2px solid var(--border);
     }
-    .comparison-table thead th:first-child { color: var(--text-muted); }
+    .comparison-table thead th:first-child { color: #808080; }
     .comparison-table thead th.col-sogo {
       color: var(--blue);
       background: rgba(10,36,99,0.06);
@@ -378,7 +382,7 @@
     }
     .comparison-table tbody td:first-child {
       font-weight: 600;
-      color: var(--text-muted);
+      color: #808080;
       font-size: 13px;
     }
     .check { color: #16a34a; font-size: 16px; font-weight: 700; }
@@ -411,7 +415,7 @@
       color: var(--blue);
     }
     .card h3 { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
-    .card p { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+    .card p { font-size: 14px; color: #808080; line-height: 1.6; }
     .msr {
       font-family: 'Material Symbols Rounded';
       font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
@@ -455,13 +459,13 @@
     }
     .timeline-content { padding-top: 12px; }
     .timeline-content h3 { font-size: 17px; font-weight: 700; margin-bottom: 6px; }
-    .timeline-content p { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+    .timeline-content p { font-size: 14px; color: #808080; line-height: 1.6; }
     .timeline-step-label {
       font-size: 10px;
       font-weight: 700;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--red);
+      color: var(--blue);
       margin-bottom: 4px;
     }
 
@@ -499,7 +503,7 @@
       line-height: 1.5;
     }
     .product-bullets li .bullet-check {
-      color: #ff8a93;
+      color: #00C2CB;
       font-size: 18px;
       line-height: 1;
       flex-shrink: 0;
@@ -514,7 +518,7 @@
 
     /* ── Testimonials ── */
     .testimonial-band {
-      background: linear-gradient(135deg, #040e2e 0%, var(--bg-dark) 100%);
+      background: linear-gradient(135deg, #060f2a 0%, var(--bg-dark) 100%);
       padding: 80px 24px;
       color: #fff;
     }
@@ -546,7 +550,7 @@
     .testimonial-footer { margin-top: auto; }
     .testimonial-name { font-size: 14px; font-weight: 700; color: #fff; }
     .testimonial-title { font-size: 12px; color: rgba(255,255,255,0.5); margin-top: 2px; }
-    .testimonial-link { font-size: 12px; color: #ff8a93; text-decoration: none; margin-top: 8px; display: inline-block; }
+    .testimonial-link { font-size: 12px; color: #00C2CB; text-decoration: none; margin-top: 8px; display: inline-block; }
     .testimonial-link:hover { text-decoration: underline; }
 
     /* ── Outcome Stats ── */
@@ -573,7 +577,7 @@
     }
     .outcome-sub {
       font-size: 13px;
-      color: var(--text-muted);
+      color: #808080;
       margin-top: 4px;
     }
 
@@ -621,7 +625,7 @@
     .faq-answer-inner {
       padding-bottom: 20px;
       font-size: 14px;
-      color: var(--text-muted);
+      color: #808080;
       line-height: 1.7;
     }
 
@@ -651,7 +655,7 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      background: var(--red);
+      background: var(--blue);
       color: #fff;
       font-size: 16px;
       font-weight: 700;
@@ -663,7 +667,7 @@
       border: none;
       cursor: pointer;
     }
-    .btn-cta:hover { background: var(--red-hover); transform: translateY(-1px); }
+    .btn-cta:hover { background: var(--blue-dark); transform: translateY(-1px); }
     .cta-trust {
       font-size: 12px;
       color: rgba(255,255,255,0.4);
@@ -746,7 +750,7 @@
       <img src="https://cdn.sogolytics.com/wp-content/uploads/2022/07/sogolytics-wbg.png"
            alt="Sogolytics"
            onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-      <span style="display:none;color:#0A2463;font-weight:800;font-size:18px;letter-spacing:-0.02em">Sogolytics</span>
+      <span style="display:none;color:#005EEE;font-weight:800;font-size:18px;letter-spacing:-0.02em">Sogolytics</span>
     </a>
     <!-- TODO: Insert free signup URL on all CTA buttons — confirm with Imroz -->
     <a href="#INSERT_SIGNUP_URL" class="nav-login">Login</a>
@@ -949,7 +953,7 @@
 
       <div class="card" style="background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.12);">
         <div class="card-icon" style="background:rgba(255,255,255,0.08);">
-          <span class="msr" style="color:#ff8a93">edit</span>
+          <span class="msr" style="color:#00C2CB">edit</span>
         </div>
         <h3 style="color:#fff">AI-Assisted Survey Design</h3>
         <p style="color:rgba(255,255,255,0.6)">Build better surveys faster. AI suggests questions, optimises flow, and flags issues before you publish.</p>
@@ -957,7 +961,7 @@
 
       <div class="card" style="background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.12);">
         <div class="card-icon" style="background:rgba(255,255,255,0.08);">
-          <span class="msr" style="color:#ff8a93">analytics</span>
+          <span class="msr" style="color:#00C2CB">analytics</span>
         </div>
         <h3 style="color:#fff">Real-Time Analytics Dashboard</h3>
         <p style="color:rgba(255,255,255,0.6)">Live results, trend tracking, and exportable reports — not just a spreadsheet of raw responses.</p>
@@ -965,7 +969,7 @@
 
       <div class="card" style="background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.12);">
         <div class="card-icon" style="background:rgba(255,255,255,0.08);">
-          <span class="msr" style="color:#ff8a93">account_tree</span>
+          <span class="msr" style="color:#00C2CB">account_tree</span>
         </div>
         <h3 style="color:#fff">Advanced Logic &amp; Branching</h3>
         <p style="color:rgba(255,255,255,0.6)">Skip logic, display logic, and page branching on every plan. Ask the right question to the right person.</p>
@@ -973,7 +977,7 @@
 
       <div class="card" style="background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.12);">
         <div class="card-icon" style="background:rgba(255,255,255,0.08);">
-          <span class="msr" style="color:#ff8a93">palette</span>
+          <span class="msr" style="color:#00C2CB">palette</span>
         </div>
         <h3 style="color:#fff">Custom Branding</h3>
         <p style="color:rgba(255,255,255,0.6)">Your logo, your colours, your domain. Every survey looks like it came from your team.</p>
@@ -981,7 +985,7 @@
 
       <div class="card" style="background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.12);">
         <div class="card-icon" style="background:rgba(255,255,255,0.08);">
-          <span class="msr" style="color:#ff8a93">lock</span>
+          <span class="msr" style="color:#00C2CB">lock</span>
         </div>
         <h3 style="color:#fff">Guaranteed Anonymous Responses</h3>
         <p style="color:rgba(255,255,255,0.6)">When anonymity matters, respondents can trust it. No IP logging, no tracking, guaranteed.</p>
@@ -989,7 +993,7 @@
 
       <div class="card" style="background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.12);">
         <div class="card-icon" style="background:rgba(255,255,255,0.08);">
-          <span class="msr" style="color:#ff8a93">share</span>
+          <span class="msr" style="color:#00C2CB">share</span>
         </div>
         <h3 style="color:#fff">Multi-Channel Distribution</h3>
         <p style="color:rgba(255,255,255,0.6)">Email, SMS, web embed, QR code, and social. One survey, every channel.</p>
