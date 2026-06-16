@@ -145,7 +145,7 @@
 
     /* ── Hero ── */
     .hero {
-      background: #fff;
+      background: linear-gradient(160deg, #DCEBFF 0%, #EAF2FF 45%, #F4F8FF 100%);
       padding: 72px 24px 0;
       overflow: hidden;
     }
@@ -188,14 +188,32 @@
       margin-bottom: 32px;
       max-width: 460px;
     }
-    /* CTA row: button inline */
-    .hero-cta-row {
+    /* CTA row: email input + button inline */
+    .hero-signup {
       display: flex;
-      align-items: center;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-bottom: 14px;
+      align-items: stretch;
+      gap: 0;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 6px;
+      max-width: 460px;
+      box-shadow: 0 6px 24px rgba(13,27,75,0.08);
+      margin-bottom: 10px;
     }
+    .hero-signup input {
+      flex: 1;
+      border: none;
+      outline: none;
+      background: transparent;
+      font-family: inherit;
+      font-size: 15px;
+      color: var(--navy);
+      padding: 10px 14px;
+      min-width: 0;
+    }
+    .hero-signup input::placeholder { color: var(--text-muted); }
+    .hero-signup .btn-primary { border-radius: 7px; padding: 12px 22px; }
     .btn-primary {
       display: inline-flex;
       align-items: center;
@@ -217,7 +235,29 @@
     .hero-note {
       font-size: 13px;
       color: var(--text-muted);
+      margin-bottom: 22px;
     }
+    /* Social sign-up */
+    .hero-social {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .hero-social-label { font-size: 14px; color: var(--text-body); font-weight: 500; }
+    .hero-social-icons { display: flex; align-items: center; gap: 10px; }
+    .hero-social-icons a {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: #fff;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: box-shadow 0.2s, transform 0.15s;
+    }
+    .hero-social-icons a:hover { box-shadow: 0 4px 14px rgba(13,27,75,0.14); transform: translateY(-1px); }
+    .hero-social-icons svg { width: 20px; height: 20px; display: block; }
     /* Right: human image with floating stat chips */
     .hero-image-wrap {
       position: relative;
@@ -667,6 +707,8 @@
       .hero-image-wrap img { border-radius: 16px; }
       .hero-float-br { bottom: 8px; }
       .hero h1 { font-size: clamp(30px, 8vw, 42px); }
+      .hero-signup { flex-direction: column; gap: 8px; padding: 10px; }
+      .hero-signup .btn-primary { width: 100%; justify-content: center; }
       .hero-sub { font-size: 16px; }
       .stats-grid { grid-template-columns: 1fr; gap: 20px; }
       .section { padding: 60px 20px; }
@@ -717,11 +759,24 @@
       <div class="hero-badge">✦ More Features · Same Free Price</div>
       <h1 id="hero-heading">Your survey tool has limits.<br>SogoSurvey doesn't.</h1>
       <p class="hero-sub">Advanced logic, AI-assisted design, and real analytics — all on a free plan with no response limits.</p>
-      <!-- TODO: Insert free signup URL — confirm with Imroz -->
-      <div class="hero-cta-row">
-        <a href="#INSERT_SIGNUP_URL" class="btn-primary">Start Free — No Credit Card</a>
-      </div>
+      <!-- TODO: Insert free signup URL / wire form action — confirm with Imroz -->
+      <form class="hero-signup" action="#INSERT_SIGNUP_URL" method="post">
+        <input type="email" name="email" placeholder="Email address" aria-label="Email address" required autocomplete="email">
+        <button type="submit" class="btn-primary">Start Free — No Credit Card</button>
+      </form>
       <p class="hero-note">Plans differ only by usage limits. No credit card required!</p>
+      <div class="hero-social">
+        <span class="hero-social-label">Or sign up with</span>
+        <div class="hero-social-icons">
+          <!-- TODO: Wire social sign-up URLs — confirm with Imroz -->
+          <a href="#INSERT_SIGNUP_URL" aria-label="Sign up with Google">
+            <svg viewBox="0 0 48 48"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3c-1.6 4.7-6.1 8-11.3 8-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.5 6.1 29.6 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.3-.4-3.5z"/><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 16 19 13 24 13c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.5 6.1 29.6 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.5 0 10.3-2.1 14-5.5l-6.5-5.5c-2 1.5-4.6 2.5-7.5 2.5-5.2 0-9.6-3.3-11.2-7.9l-6.5 5C9.6 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.1-4 5.5l6.5 5.5c-.5.4 7.2-5.3 7.2-15 0-1.3-.1-2.3-.4-3.5z"/></svg>
+          </a>
+          <a href="#INSERT_SIGNUP_URL" aria-label="Sign up with Facebook">
+            <svg viewBox="0 0 48 48"><path fill="#1877F2" d="M24 4C12.95 4 4 12.95 4 24c0 9.98 7.31 18.25 16.88 19.75V29.78h-5.08V24h5.08v-4.41c0-5.02 2.99-7.79 7.56-7.79 2.19 0 4.48.39 4.48.39v4.92h-2.52c-2.49 0-3.27 1.54-3.27 3.13V24h5.56l-.89 5.78h-4.67v13.97C36.69 42.25 44 33.98 44 24 44 12.95 35.05 4 24 4z"/></svg>
+          </a>
+        </div>
+      </div>
     </div>
 
     <!-- RIGHT: human imagery — person building surveys -->
