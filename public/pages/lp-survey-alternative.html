@@ -33,17 +33,17 @@
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PQJTBL4');</script>
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KPTMPJJ4');</script>
 
-  <!-- Fonts -->
+  <!-- Fonts — Plus Jakarta Sans (SaaS, friendly, professional) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0&display=block" rel="stylesheet">
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
-      font-family: 'DM Sans', system-ui, sans-serif;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
       color: #0D1B4B;
       background: #fff;
       -webkit-font-smoothing: antialiased;
@@ -65,6 +65,10 @@
     .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
     .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.55s ease, transform 0.55s ease; }
     .fade-in.visible { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) {
+      * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+      .fade-in { opacity: 1; transform: none; }
+    }
     .centered { text-align: center; }
     .section-label {
       display: inline-block;
@@ -214,19 +218,40 @@
       font-size: 13px;
       color: var(--text-muted);
     }
-    /* Right: image bleeds to bottom */
+    /* Right: human image with floating stat chips */
     .hero-image-wrap {
       position: relative;
       display: flex;
       align-items: flex-end;
       justify-content: center;
+      padding-bottom: 64px;
     }
     .hero-image-wrap img {
       width: 100%;
-      max-width: 600px;
+      max-width: 560px;
       display: block;
-      border-radius: 12px 12px 0 0;
-      box-shadow: 0 -8px 40px rgba(13,27,75,0.1);
+      border-radius: 20px;
+      box-shadow: 0 24px 60px rgba(13,27,75,0.18);
+      object-fit: cover;
+      aspect-ratio: 4 / 3.4;
+    }
+    .hero-float {
+      position: absolute;
+      background: #fff;
+      border-radius: 14px;
+      padding: 12px 16px;
+      box-shadow: 0 8px 28px rgba(13,27,75,0.16);
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+    .hero-float-num { font-size: 22px; font-weight: 800; color: var(--navy); }
+    .hero-float-lbl { font-size: 11px; font-weight: 600; color: var(--text-muted); margin-top: 2px; }
+    .hero-float-tl { top: 24px; left: -8px; }
+    .hero-float-br { bottom: 96px; right: -8px; }
+    @media (max-width: 480px) {
+      .hero-float-tl { left: 4px; }
+      .hero-float-br { right: 4px; }
     }
 
 
@@ -522,7 +547,7 @@
       margin-top: 48px;
     }
     .testimonial-card {
-      background: var(--bg-card);
+      background: #fff;
       border: 1px solid var(--border);
       border-radius: 16px;
       padding: 28px;
@@ -530,18 +555,23 @@
       flex-direction: column;
       gap: 16px;
       position: relative;
+      transition: box-shadow 0.2s, transform 0.2s;
     }
+    .testimonial-card:hover { box-shadow: 0 12px 40px rgba(13,27,75,0.1); transform: translateY(-2px); }
+    .testimonial-head { display: flex; align-items: center; gap: 14px; }
     .testimonial-avatar {
-      width: 52px; height: 52px; border-radius: 50%;
+      width: 56px; height: 56px; border-radius: 50%;
       background: var(--bg-page);
-      border: 2px solid var(--border);
+      border: 2px solid #fff;
+      box-shadow: 0 2px 10px rgba(13,27,75,0.12);
       display: flex; align-items: center; justify-content: center;
       font-size: 20px; font-weight: 800; color: var(--blue);
-      overflow: hidden;
+      overflow: hidden; flex-shrink: 0;
     }
     .testimonial-avatar img { width: 100%; height: 100%; object-fit: cover; }
     .testimonial-name { font-size: 15px; font-weight: 700; color: var(--navy); }
     .testimonial-title-text { font-size: 13px; color: var(--text-muted); margin-top: 2px; }
+    .testimonial-stars { color: #FFB400; font-size: 15px; letter-spacing: 1px; }
     .testimonial-quote {
       font-size: 15px;
       color: var(--text-body);
@@ -633,7 +663,9 @@
       .hero-inner { grid-template-columns: 1fr; gap: 32px; }
       .hero { padding: 48px 20px 0; }
       .hero-left { padding-bottom: 0; }
-      .hero-image-wrap img { border-radius: 12px; }
+      .hero-image-wrap { padding-bottom: 40px; }
+      .hero-image-wrap img { border-radius: 16px; }
+      .hero-float-br { bottom: 8px; }
       .hero h1 { font-size: clamp(30px, 8vw, 42px); }
       .hero-sub { font-size: 16px; }
       .stats-grid { grid-template-columns: 1fr; gap: 20px; }
@@ -692,12 +724,22 @@
       <p class="hero-note">Plans differ only by usage limits. No credit card required!</p>
     </div>
 
-    <!-- RIGHT: product screenshot, bleeds to bottom edge -->
-    <!-- TODO: Replace with SogoSurvey product/UI screenshot — confirm with Imroz -->
+    <!-- RIGHT: human imagery — person building surveys -->
+    <!-- TODO: Swap for branded SogoSurvey lifestyle photo if available — confirm with Imroz -->
     <div class="hero-image-wrap fade-in">
-      <img src="https://cdn.sogolytics.com/wp-content/uploads/2023/07/sogocx-product-hub-top-banner-img.png"
-           alt="SogoSurvey platform in use"
+      <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=900&q=80"
+           alt="Marketing professional building a survey on SogoSurvey"
+           loading="eager"
            onerror="this.style.background='var(--bg-page)'">
+      <!-- Floating stat chips -->
+      <div class="hero-float hero-float-tl">
+        <span class="hero-float-num">4.7<span style="color:#FFB400">★</span></span>
+        <span class="hero-float-lbl">G2 &amp; Capterra rating</span>
+      </div>
+      <div class="hero-float hero-float-br">
+        <span class="hero-float-num">∞</span>
+        <span class="hero-float-lbl">Free responses, no caps</span>
+      </div>
     </div>
 
   </div>
@@ -967,9 +1009,9 @@
       </ul>
     </div>
     <div class="product-img fade-in">
-      <!-- TODO: Replace with SogoSurvey analytics screenshot — confirm with Imroz -->
-      <img src="https://cdn.sogolytics.com/wp-content/uploads/2023/07/sogocx-product-hub-top-banner-img.png"
-           alt="SogoSurvey analytics dashboard" loading="lazy"
+      <!-- TODO: Swap for branded SogoSurvey analytics + team photo — confirm with Imroz -->
+      <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=900&q=80"
+           alt="Team reviewing survey results together" loading="lazy"
            onerror="this.style.display='none'">
     </div>
   </div>
@@ -988,32 +1030,44 @@
     </div>
     <div class="testimonial-grid fade-in">
       <div class="testimonial-card">
-        <div class="testimonial-avatar">C</div>
-        <!-- TODO: Replace with real customer name — confirm with Deb -->
-        <div>
-          <div class="testimonial-name">CUSTOMER_NAME</div>
-          <div class="testimonial-title-text">CUSTOMER_TITLE</div>
+        <div class="testimonial-head">
+          <!-- TODO: Replace placeholder avatar with real customer photo — confirm with Deb -->
+          <div class="testimonial-avatar"><img src="https://randomuser.me/api/portraits/women/44.jpg" alt=""></div>
+          <div>
+            <!-- TODO: Replace with real customer name — confirm with Deb -->
+            <div class="testimonial-name">CUSTOMER_NAME</div>
+            <div class="testimonial-title-text">CUSTOMER_TITLE</div>
+          </div>
         </div>
+        <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
         <p class="testimonial-quote">The reporting alone made it worth switching. I can pull a full breakdown in minutes and share it with my team — something I couldn't do with our old tool.</p>
         <a href="#" class="testimonial-link">Read success story →</a>
       </div>
       <div class="testimonial-card">
-        <div class="testimonial-avatar">C</div>
-        <!-- TODO: Replace with real customer name — confirm with Deb -->
-        <div>
-          <div class="testimonial-name">CUSTOMER_NAME</div>
-          <div class="testimonial-title-text">CUSTOMER_TITLE</div>
+        <div class="testimonial-head">
+          <!-- TODO: Replace placeholder avatar with real customer photo — confirm with Deb -->
+          <div class="testimonial-avatar"><img src="https://randomuser.me/api/portraits/men/32.jpg" alt=""></div>
+          <div>
+            <!-- TODO: Replace with real customer name — confirm with Deb -->
+            <div class="testimonial-name">CUSTOMER_NAME</div>
+            <div class="testimonial-title-text">CUSTOMER_TITLE</div>
+          </div>
         </div>
+        <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
         <p class="testimonial-quote">Setup took less than an hour. The branching logic is intuitive and the response rate on our first survey was higher than anything we'd seen before.</p>
         <a href="#" class="testimonial-link">Read success story →</a>
       </div>
       <div class="testimonial-card">
-        <div class="testimonial-avatar">C</div>
-        <!-- TODO: Replace with real customer name — confirm with Deb -->
-        <div>
-          <div class="testimonial-name">CUSTOMER_NAME</div>
-          <div class="testimonial-title-text">CUSTOMER_TITLE</div>
+        <div class="testimonial-head">
+          <!-- TODO: Replace placeholder avatar with real customer photo — confirm with Deb -->
+          <div class="testimonial-avatar"><img src="https://randomuser.me/api/portraits/women/68.jpg" alt=""></div>
+          <div>
+            <!-- TODO: Replace with real customer name — confirm with Deb -->
+            <div class="testimonial-name">CUSTOMER_NAME</div>
+            <div class="testimonial-title-text">CUSTOMER_TITLE</div>
+          </div>
         </div>
+        <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
         <p class="testimonial-quote">We needed anonymous surveys our team could actually trust. SogoSurvey was the only free tool that genuinely guaranteed it.</p>
         <a href="#" class="testimonial-link">Read success story →</a>
       </div>
