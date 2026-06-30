@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { SectionHead } from "./ui";
 
 const faqs = [
   {
@@ -22,17 +23,10 @@ export default function Objections() {
 
   return (
     <section style={{ padding: "72px 0", background: "var(--bg-soft)" }}>
-      <div style={{ maxWidth: 1160, margin: "0 auto", padding: "0 24px" }}>
-        <div style={{ textAlign: "center", marginBottom: 44 }}>
-          <p style={{ fontSize: 12, fontWeight: 600, color: "var(--green)", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 10 }}>
-            Common questions
-          </p>
-          <h2 style={{ fontSize: "clamp(26px,3vw,36px)", fontWeight: 700, lineHeight: 1.2, letterSpacing: "-0.02em" }}>
-            Quick answers before your demo
-          </h2>
-        </div>
+      <div style={{ maxWidth: 1180, margin: "0 auto", padding: "0 24px" }}>
+        <SectionHead eyebrow="Common questions" title="Quick answers before your demo" />
 
-        <div style={{ maxWidth: 720, margin: "0 auto" }}>
+        <div style={{ maxWidth: 760, margin: "0 auto" }}>
           {faqs.map((faq, i) => (
             <div key={faq.q} style={{ borderBottom: "1px solid var(--border)" }}>
               <button

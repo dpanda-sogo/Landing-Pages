@@ -5,6 +5,103 @@ export function scrollToForm() {
   document.getElementById("finalCTA")?.scrollIntoView({ behavior: "smooth" });
 }
 
+export function Eyebrow({ children, light = false }: { children: React.ReactNode; light?: boolean }) {
+  return (
+    <p
+      style={{
+        fontSize: 12,
+        fontWeight: 700,
+        color: light ? "var(--teal)" : "var(--green)",
+        letterSpacing: "0.1em",
+        textTransform: "uppercase",
+        marginBottom: 12,
+      }}
+    >
+      {children}
+    </p>
+  );
+}
+
+export function SectionHead({
+  eyebrow,
+  title,
+  sub,
+  light = false,
+  align = "center",
+}: {
+  eyebrow?: string;
+  title: React.ReactNode;
+  sub?: React.ReactNode;
+  light?: boolean;
+  align?: "center" | "left";
+}) {
+  return (
+    <div style={{ textAlign: align, marginBottom: 56, maxWidth: align === "center" ? 680 : undefined, marginInline: align === "center" ? "auto" : undefined }}>
+      {eyebrow && <Eyebrow light={light}>{eyebrow}</Eyebrow>}
+      <h2
+        style={{
+          fontSize: "clamp(28px,3.4vw,40px)",
+          fontWeight: 800,
+          lineHeight: 1.12,
+          letterSpacing: "-0.025em",
+          marginBottom: sub ? 16 : 0,
+          color: light ? "#fff" : "var(--text)",
+        }}
+      >
+        {title}
+      </h2>
+      {sub && (
+        <p
+          style={{
+            fontSize: 17,
+            color: light ? "rgba(255,255,255,0.82)" : "var(--text-muted)",
+            lineHeight: 1.65,
+            maxWidth: 600,
+            marginInline: align === "center" ? "auto" : undefined,
+          }}
+        >
+          {sub}
+        </p>
+      )}
+    </div>
+  );
+}
+
+export function GhostButton({ children, onClick }: { children: React.ReactNode; onClick?: () => void }) {
+  return (
+    <button
+      onClick={onClick}
+      style={{
+        display: "inline-flex",
+        alignItems: "center",
+        gap: 10,
+        background: "transparent",
+        color: "#fff",
+        fontWeight: 600,
+        borderRadius: 50,
+        padding: "13px 24px",
+        border: "1.5px solid rgba(255,255,255,0.35)",
+        cursor: "pointer",
+        fontSize: 15,
+        fontFamily: "inherit",
+        transition: "border-color 0.2s, background 0.2s",
+      }}
+      onMouseEnter={(e) => {
+        const b = e.currentTarget as HTMLButtonElement;
+        b.style.borderColor = "rgba(255,255,255,0.7)";
+        b.style.background = "rgba(255,255,255,0.06)";
+      }}
+      onMouseLeave={(e) => {
+        const b = e.currentTarget as HTMLButtonElement;
+        b.style.borderColor = "rgba(255,255,255,0.35)";
+        b.style.background = "transparent";
+      }}
+    >
+      {children}
+    </button>
+  );
+}
+
 export function YellowButton({
   children,
   onClick,
