@@ -57,6 +57,16 @@ const pages: LandingPage[] = [
     tagColor: "#856404",
     htmlFile: "lp-cx-switch-wp.html",
   },
+  {
+    slug: "pages/lp-k12-school-climate.html",
+    title: "K-12 School Climate Survey — District Leaders",
+    description: "Measure school climate, belonging, safety, and engagement across every school in a district. Executive-level vertical page targeting superintendents and district research teams.",
+    date: "2026-07-14",
+    tag: "Vertical",
+    tagBg: "#e0f0ff",
+    tagColor: "#1d4ed8",
+    htmlFile: "lp-k12-school-climate-wp.html",
+  },
 ];
 
 export default function IndexPage() {
