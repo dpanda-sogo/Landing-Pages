@@ -65,7 +65,7 @@ const pages: LandingPage[] = [
     tag: "Vertical",
     tagBg: "#e0f0ff",
     tagColor: "#1d4ed8",
-    htmlFile: "lp-k12-school-climate-wp.html",
+    htmlFile: "lp-k12-school-climate.html",
   },
 ];
 
