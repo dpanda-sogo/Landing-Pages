@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<!--
+  ============================================================
+  SOGOLYTICS — CLIMATE ACTION PLATFORM (K-12, new positioning)
+  ============================================================
+  DEVELOPER EDIT GUIDE
+  ============================================================
+  This is a DISTINCT page from lp-k12-school-climate.html — built for a
+  different ad group, around a new category position: not "survey
+  software" but a "Climate Action Platform," organized around a named
+  methodology, The Action Loop (Listen → Understand → Act → Prove).
+
+  SAMPLE REPORT:          Search "Riverbend CSD" — this is a fictional,
+                          illustrative sample district. Replace with a
+                          real anonymized report before publishing.
+  RESPONDENT SHOWCASE:    Search "respondent-tab" — student/family/staff
+                          survey mockups are illustrative.
+  FORMS:                  Two forms — "snapshotForm" (low-commitment,
+                          primary conversion path) and "demoForm" (final
+                          CTA). Search "YOUR_FORM_ENDPOINT" to wire up.
+  GTM ID:                 Search "GTM-XXXXXXX" — replace with real container ID
+  ============================================================
+  COLOR REFERENCE (Sogolytics brand — same tokens as sibling K-12 page)
+  --green:   #0D6E65   Accents, section labels, check icons
+  --blue:    #02BECC   Highlights, teal accents
+  --yellow:  #F5E100   All CTA buttons
+  --bg-dark: #092224   Dark section background
+  --mist:    #E8F4F2   Soft section backgrounds
+  ============================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>The Climate Action Platform for K-12 Districts | Sogolytics</title>
+  <meta name="description" content="Sogolytics is the Climate Action Platform built to prove something changed after your district listened. Listen, Understand, Act, Prove — in weeks, not semesters.">
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Epilogue', system-ui, sans-serif; color: #1a1a1a; background: #fff; -webkit-font-smoothing: antialiased; }
+
+    :root {
+      --green: #0D6E65;
+      --green-dark: #0a5a52;
+      --blue: #02BECC;
+      --yellow: #F5E100;
+      --yellow-hover: #e6d400;
+      --bg-dark: #092224;
+      --bg-dark2: #0a2c28;
+      --mist: #E8F4F2;
+      --text: #1a1a1a;
+      --text-muted: #5a6472;
+      --text-light: #8a94a0;
+      --border: #e2e6ea;
+      --amber: #f59e0b;
+      --red: #e0523a;
+    }
+
+    .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+    .section-label { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green); margin-bottom: 12px; }
+    .on-dark .section-label { color: var(--blue); }
+    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-in.visible { opacity: 1; transform: none; }
+    .section { padding: 88px 24px; }
+    .section-alt { background: var(--mist); }
+    .section-title { font-size: clamp(26px, 3.4vw, 40px); font-weight: 800; letter-spacing: -0.02em; line-height: 1.2; margin-bottom: 16px; }
+    .section-intro { font-size: 16px; color: var(--text-muted); line-height: 1.7; max-width: 640px; margin-bottom: 44px; }
+    .on-dark .section-title { color: #fff; }
+    .on-dark .section-intro { color: rgba(255,255,255,0.65); }
+    .centered { text-align: center; }
+    .centered .section-intro { margin-left: auto; margin-right: auto; }
+
+    /* ── Nav ── */
+    .nav { position: sticky; top: 0; z-index: 100; background: #fff; border-bottom: 1px solid var(--border); box-shadow: 0 1px 8px rgba(0,0,0,0.06); }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 60px; max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+    .nav-logo { display: flex; align-items: center; }
+    .nav-logo img { height: 24px; display: block; }
+    .nav-cta { background: var(--yellow); color: #0a1a18; font-size: 13px; font-weight: 700; padding: 8px 20px; border-radius: 50px; text-decoration: none; transition: background 0.2s; white-space: nowrap; }
+    .nav-cta:hover { background: var(--yellow-hover); }
+
+    /* ── Buttons ── */
+    .btn-pill { display: inline-flex; align-items: center; gap: 10px; background: var(--yellow); color: #0a1a18; font-size: 15px; font-weight: 700; padding: 14px 28px 14px 8px; border-radius: 50px; text-decoration: none; transition: background 0.2s, transform 0.15s; border: none; cursor: pointer; font-family: inherit; }
+    .btn-pill:hover { background: var(--yellow-hover); transform: translateY(-1px); }
+    .btn-pill .arrow-badge { width: 30px; height: 30px; border-radius: 50%; background: #0a1a18; color: var(--yellow); display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700; flex-shrink: 0; }
+    .btn-ghost { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: #fff; font-size: 14px; font-weight: 600; padding: 13px 22px; border-radius: 50px; border: 1px solid rgba(255,255,255,0.3); text-decoration: none; transition: border-color 0.2s, background 0.2s; }
+    .btn-ghost:hover { border-color: rgba(255,255,255,0.6); background: rgba(255,255,255,0.06); }
+    .btn-ghost.on-light { color: var(--text); border-color: var(--border); }
+    .btn-ghost.on-light:hover { border-color: var(--text-muted); background: var(--mist); }
+
+    /* ══════════════════════════════════════════
+       HERO — headline + interactive Action Loop diagram
+    ══════════════════════════════════════════ */
+    .hero { background: linear-gradient(135deg, #061a17 0%, var(--bg-dark) 50%, #0d3d37 100%); color: #fff; padding: 84px 24px 72px; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 70% at 85% 10%, rgba(2,190,204,0.14) 0%, transparent 70%), radial-gradient(ellipse 50% 60% at 8% 95%, rgba(245,225,0,0.05) 0%, transparent 70%); pointer-events: none; }
+    .hero-inner { max-width: 900px; margin: 0 auto; text-align: center; position: relative; }
+    .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--blue); margin-bottom: 22px; }
+    .hero-eyebrow-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--blue); box-shadow: 0 0 0 3px rgba(2,190,204,0.2); }
+    .hero h1 { font-size: clamp(32px, 5vw, 54px); font-weight: 800; line-height: 1.14; letter-spacing: -0.025em; margin-bottom: 22px; }
+    .hero h1 .accent { color: var(--blue); }
+    .hero-sub { font-size: clamp(16px, 1.9vw, 18.5px); line-height: 1.7; color: rgba(255,255,255,0.75); max-width: 620px; margin: 0 auto 36px; }
+    .hero-ctas { display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 64px; }
+
+    /* Action Loop diagram */
+    .loop-wrap { max-width: 880px; margin: 0 auto; }
+    .loop-row { display: flex; align-items: stretch; gap: 0; position: relative; }
+    .loop-row::before { content: ''; position: absolute; top: 26px; left: 12%; right: 12%; height: 2px; background: rgba(255,255,255,0.16); z-index: 0; }
+    .loop-node { flex: 1; position: relative; z-index: 1; padding: 0 8px; }
+    .loop-dot { width: 54px; height: 54px; border-radius: 50%; background: var(--bg-dark2); border: 2px solid var(--blue); color: var(--blue); display: flex; align-items: center; justify-content: center; font-size: 20px; margin: 0 auto 16px; transition: background 0.2s, color 0.2s; }
+    .loop-node:nth-child(4) .loop-dot { border-color: var(--yellow); color: var(--yellow); }
+    .loop-node-label { font-size: 14px; font-weight: 800; color: #fff; margin-bottom: 10px; letter-spacing: -0.01em; }
+    .loop-pill { display: inline-block; font-size: 11px; line-height: 1.5; color: rgba(255,255,255,0.6); background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 10px; padding: 8px 10px; text-align: left; min-height: 56px; }
+    @media (max-width: 820px) {
+      .loop-row { flex-direction: column; gap: 20px; }
+      .loop-row::before { display: none; }
+      .loop-node { display: flex; align-items: center; gap: 14px; text-align: left; padding: 0; }
+      .loop-dot { margin: 0; flex-shrink: 0; }
+      .loop-node-inner { flex: 1; }
+      .loop-pill { min-height: 0; }
+    }
+
+    /* ══════════════════════════════════════════
+       THE CONFESSION — editorial problem section
+    ══════════════════════════════════════════ */
+    .confession { max-width: 760px; margin: 0 auto; }
+    .confession-line { font-size: clamp(20px, 2.6vw, 28px); font-weight: 700; line-height: 1.4; color: var(--text); margin-bottom: 20px; opacity: 0; transform: translateY(16px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .confession-line.visible { opacity: 1; transform: none; }
+    .confession-line .dim { color: var(--text-light); font-weight: 500; }
+    .confession-close { margin-top: 40px; padding-top: 32px; border-top: 1px solid var(--border); font-size: 17px; font-weight: 700; color: var(--green); line-height: 1.6; }
+
+    /* ══════════════════════════════════════════
+       SAMPLE REPORT — tabbed real-feeling artifact (dark section)
+    ══════════════════════════════════════════ */
+    .report-card { background: var(--bg-dark2); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; overflow: hidden; box-shadow: 0 30px 70px rgba(0,0,0,0.5); max-width: 980px; margin: 0 auto; }
+    .report-header { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; padding: 18px 22px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .report-title { font-size: 14px; font-weight: 700; color: #fff; }
+    .report-title span { color: rgba(255,255,255,0.5); font-weight: 500; }
+    .report-badge { font-size: 10.5px; font-weight: 700; color: var(--green); background: rgba(2,190,204,0.14); padding: 5px 12px; border-radius: 20px; }
+    .report-tabs { display: flex; gap: 4px; padding: 0 22px; border-bottom: 1px solid rgba(255,255,255,0.1); overflow-x: auto; }
+    .report-tab { background: none; border: none; color: rgba(255,255,255,0.5); font-family: inherit; font-size: 13px; font-weight: 700; padding: 14px 14px; cursor: pointer; border-bottom: 2px solid transparent; white-space: nowrap; transition: color 0.2s, border-color 0.2s; }
+    .report-tab:hover { color: rgba(255,255,255,0.8); }
+    .report-tab.active { color: var(--blue); border-color: var(--blue); }
+    .report-panels { padding: 26px 22px 30px; }
+    .report-panel { display: none; }
+    .report-panel.active { display: block; }
+    .report-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 20px; }
+    .report-stat { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 14px 16px; }
+    .report-stat-num { font-size: 22px; font-weight: 800; color: #fff; }
+    .report-stat-num .delta { font-size: 12px; color: var(--green); font-weight: 700; margin-left: 6px; }
+    .report-stat-label { font-size: 11px; color: rgba(255,255,255,0.5); margin-top: 4px; text-transform: uppercase; letter-spacing: 0.04em; font-weight: 600; }
+    .report-row-list { display: flex; flex-direction: column; gap: 1px; background: rgba(255,255,255,0.08); border-radius: 10px; overflow: hidden; }
+    .report-row { background: var(--bg-dark2); display: flex; align-items: center; justify-content: space-between; padding: 13px 16px; font-size: 13.5px; }
+    .report-row .name { color: #fff; font-weight: 600; }
+    .report-row .meta { color: rgba(255,255,255,0.5); font-size: 12px; }
+    .report-row .idx { font-weight: 800; color: #fff; margin-left: 12px; }
+    .report-row .idx.up { color: var(--green); }
+    .report-row .idx.down { color: var(--red); }
+    .report-theme { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; background: rgba(255,255,255,0.05); border-radius: 8px; margin-bottom: 8px; font-size: 13.5px; color: rgba(255,255,255,0.85); }
+    .report-theme .count { font-size: 11px; font-weight: 700; color: var(--blue); background: rgba(2,190,204,0.14); padding: 3px 9px; border-radius: 20px; }
+    .action-log-item { display: flex; gap: 14px; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .action-log-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .action-log-date { font-size: 11px; color: rgba(255,255,255,0.4); font-weight: 700; width: 64px; flex-shrink: 0; padding-top: 2px; }
+    .action-log-body p { font-size: 13.5px; color: rgba(255,255,255,0.85); line-height: 1.55; }
+    .action-log-body .result { font-size: 12px; color: var(--green); font-weight: 700; margin-top: 4px; }
+
+    /* ══════════════════════════════════════════
+       RESPONDENT SHOWCASE
+    ══════════════════════════════════════════ */
+    .respondent-tabs { display: flex; justify-content: center; gap: 8px; margin-bottom: 32px; flex-wrap: wrap; }
+    .respondent-tab { background: #fff; border: 1px solid var(--border); color: var(--text-muted); font-family: inherit; font-size: 13.5px; font-weight: 700; padding: 10px 22px; border-radius: 30px; cursor: pointer; transition: all 0.2s; }
+    .respondent-tab.active { background: var(--green); border-color: var(--green); color: #fff; }
+    .respondent-panels { max-width: 460px; margin: 0 auto; }
+    .respondent-panel { display: none; background: #fff; border: 1px solid var(--border); border-radius: 18px; padding: 26px 24px; box-shadow: 0 20px 50px rgba(0,0,0,0.08); }
+    .respondent-panel.active { display: block; }
+    .respondent-q { font-size: 13px; color: var(--text-muted); font-weight: 600; margin-bottom: 16px; }
+    .respondent-scale-emoji { display: flex; justify-content: space-between; gap: 8px; margin-bottom: 14px; }
+    .respondent-scale-emoji span { flex: 1; text-align: center; font-size: 30px; background: var(--mist); border-radius: 12px; padding: 10px 0; }
+    .respondent-readaloud { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; color: var(--green); font-weight: 700; }
+    .respondent-lang-toggle { display: inline-flex; background: var(--mist); border-radius: 20px; padding: 3px; margin-bottom: 14px; }
+    .respondent-lang-toggle span { font-size: 11.5px; font-weight: 700; padding: 5px 14px; border-radius: 20px; color: var(--text-muted); }
+    .respondent-lang-toggle span.active { background: #fff; color: var(--green); box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+    .respondent-sms { background: var(--mist); border-radius: 10px; padding: 12px 14px; font-size: 12.5px; color: var(--text-muted); margin-top: 14px; }
+    .respondent-scale-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; margin-bottom: 14px; }
+    .respondent-scale-grid span { text-align: center; font-size: 11px; color: var(--text-muted); background: var(--mist); border-radius: 6px; padding: 8px 0; }
+    .respondent-textfield { border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px; font-size: 12.5px; color: var(--text-light); }
+    .titlei-callout { max-width: 460px; margin: 24px auto 0; background: var(--mist); border-radius: 12px; padding: 16px 20px; font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+    .titlei-callout strong { color: var(--text); }
+
+    /* ══════════════════════════════════════════
+       TURNAROUND GAP comparator
+    ══════════════════════════════════════════ */
+    .gap-timeline { max-width: 880px; margin: 0 auto 32px; }
+    .gap-row-label { font-size: 12px; font-weight: 700; color: var(--text-muted); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.04em; }
+    .gap-bar-track { display: flex; height: 44px; border-radius: 10px; overflow: hidden; margin-bottom: 28px; }
+    .gap-seg { display: flex; align-items: center; justify-content: center; font-size: 11.5px; font-weight: 700; color: #fff; padding: 0 8px; text-align: center; line-height: 1.3; }
+    .gap-seg.wait { background: repeating-linear-gradient(135deg, #c7ccc3, #c7ccc3 6px, #d6dad2 6px, #d6dad2 12px); color: #5a6472; }
+    .gap-seg.slow1 { background: #b7bcb2; flex: 0 0 45%; }
+    .gap-seg.slow2 { background: #97a294; flex: 0 0 20%; }
+    .gap-seg.slow3 { background: var(--text-light); flex: 0 0 5%; }
+    .gap-seg.fast1 { background: var(--green); flex: 0 0 45%; }
+    .gap-seg.fast2 { background: var(--blue); flex: 0 0 30%; color: #04302f; }
+    .gap-seg.fast3 { background: var(--yellow); flex: 0 0 10%; color: #0a1a18; }
+    .pricing-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 880px; margin: 0 auto; }
+    .pricing-card { border-radius: 14px; padding: 26px 24px; }
+    .pricing-card.legacy { background: var(--mist); border: 1px solid var(--border); }
+    .pricing-card.sogo { background: #fff; border: 2px solid var(--green); box-shadow: 0 16px 40px rgba(13,110,101,0.12); }
+    .pricing-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 12px; }
+    .pricing-card.legacy .pricing-label { color: var(--text-light); }
+    .pricing-card.sogo .pricing-label { color: var(--green); }
+    .pricing-value { font-size: 20px; font-weight: 800; color: var(--text); margin-bottom: 6px; }
+    .pricing-note { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+    @media (max-width: 700px) { .pricing-compare { grid-template-columns: 1fr; } }
+
+    /* ══════════════════════════════════════════
+       OUTCOMES
+    ══════════════════════════════════════════ */
+    .outcomes-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .outcome-card { background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 26px 24px; }
+    .outcome-district { font-size: 11px; font-weight: 700; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 14px; }
+    .outcome-loop { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 14px; }
+    .outcome-loop span { font-size: 10px; font-weight: 700; padding: 3px 9px; border-radius: 20px; background: var(--mist); color: var(--green); }
+    .outcome-stat { font-size: 26px; font-weight: 800; color: var(--text); margin-bottom: 8px; letter-spacing: -0.02em; }
+    .outcome-desc { font-size: 13.5px; color: var(--text-muted); line-height: 1.55; }
+
+    /* ══════════════════════════════════════════
+       SNAPSHOT CTA (green band)
+    ══════════════════════════════════════════ */
+    .snapshot-band { background: var(--green); color: #fff; }
+    .snapshot-wrap { max-width: 620px; margin: 0 auto; text-align: center; }
+    .snapshot-wrap h2 { color: #fff; }
+    .snapshot-wrap .section-intro { color: rgba(255,255,255,0.8); margin-left: auto; margin-right: auto; }
+    .snapshot-form-card { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 16px; padding: 28px; margin-top: 8px; text-align: left; }
+    .snapshot-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .snapshot-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 12px; }
+    .snapshot-group label { font-size: 12px; font-weight: 700; color: rgba(255,255,255,0.75); }
+    .snapshot-group input, .snapshot-group select { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25); border-radius: 8px; padding: 11px 14px; font-size: 14px; color: #fff; font-family: inherit; width: 100%; outline: none; }
+    .snapshot-group input::placeholder { color: rgba(255,255,255,0.45); }
+    .snapshot-group select option { background: var(--green-dark); color: #fff; }
+    .btn-snapshot { width: 100%; margin-top: 6px; background: var(--yellow); color: #0a1a18; font-size: 15px; font-weight: 700; padding: 14px 20px; border: none; border-radius: 50px; cursor: pointer; font-family: inherit; transition: background 0.2s, transform 0.15s; }
+    .btn-snapshot:hover { background: var(--yellow-hover); transform: translateY(-1px); }
+    .snapshot-note { font-size: 11px; color: rgba(255,255,255,0.6); text-align: center; margin-top: 10px; }
+
+    /* ══════════════════════════════════════════
+       FAQ
+    ══════════════════════════════════════════ */
+    .faq-list { max-width: 720px; margin: 0 auto; }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-question { width: 100%; background: none; border: none; text-align: left; padding: 20px 0; font-size: 15.5px; font-weight: 700; color: var(--text); cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 16px; font-family: inherit; }
+    .faq-question:hover { color: var(--green); }
+    .faq-icon { width: 24px; height: 24px; border-radius: 50%; background: var(--mist); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 16px; color: var(--green); font-weight: 700; transition: transform 0.3s; }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+    .faq-answer-inner { padding-bottom: 20px; font-size: 14px; color: var(--text-muted); line-height: 1.7; }
+
+    /* ══════════════════════════════════════════
+       FINAL CTA + FOOTER (dark, seamless)
+    ══════════════════════════════════════════ */
+    .finale { background: var(--bg-dark); }
+    .final-wrap { max-width: 640px; margin: 0 auto; text-align: center; }
+    .final-wrap h2 { color: #fff; margin-bottom: 16px; }
+    .final-wrap p { color: rgba(255,255,255,0.7); font-size: 16px; line-height: 1.7; margin-bottom: 32px; }
+    .final-ctas { display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; }
+    .footer { border-top: 1px solid rgba(255,255,255,0.08); color: rgba(255,255,255,0.4); padding: 32px 24px; text-align: center; font-size: 12px; line-height: 1.8; }
+    .footer-logo { margin-bottom: 16px; }
+    .footer-logo img { height: 20px; opacity: 0.5; }
+    .footer-legal { color: rgba(255,255,255,0.4); }
+
+    /* ══════════════════════════════════════════
+       RESPONSIVE
+    ══════════════════════════════════════════ */
+    @media (max-width: 768px) {
+      .hero { padding: 56px 20px 48px; }
+      .section { padding: 60px 20px; }
+      .section-title { font-size: clamp(22px, 6vw, 30px); }
+      .section-intro { font-size: 14px; margin-bottom: 32px; }
+      .report-stats { grid-template-columns: 1fr; }
+      .outcomes-grid { grid-template-columns: 1fr; }
+      .snapshot-row { grid-template-columns: 1fr; }
+      .hero-ctas { flex-direction: column; align-items: stretch; }
+      .hero-ctas .btn-pill, .hero-ctas .btn-ghost { width: 100%; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- ═══════════════════════════════════════
+     NAV (non-clickable logo — self-contained page)
+════════════════════════════════════════ -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <span class="nav-logo" aria-label="Sogolytics">
+      <img src="https://cdn.sogolytics.com/wp-content/uploads/2022/07/sogolytics-wbg.png" alt="Sogolytics"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <span style="display:none;color:#0D6E65;font-weight:800;font-size:18px;letter-spacing:-0.02em">Sogolytics</span>
+    </span>
+    <a href="#snapshot" class="nav-cta">Get My District's Snapshot →</a>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════
+     HERO — headline + Action Loop diagram
+════════════════════════════════════════ -->
+<section class="hero" aria-labelledby="hero-heading">
+  <div class="hero-inner">
+    <p class="hero-eyebrow"><span class="hero-eyebrow-dot"></span>Introducing The Action Loop</p>
+    <h1 id="hero-heading">You've Never Had A Survey Problem.<br>You've Had An <span class="accent">After-The-Survey</span> Problem.</h1>
+    <p class="hero-sub">Sogolytics is the Climate Action Platform built to make sure something changes because your district listened — in weeks, not semesters.</p>
+    <div class="hero-ctas">
+      <a href="#snapshot" class="btn-pill"><span class="arrow-badge">→</span>See Your District's Report</a>
+      <a href="#demo" class="btn-ghost">Talk To A Demo Team</a>
+    </div>
+
+    <div class="loop-wrap fade-in">
+      <div class="loop-row">
+        <div class="loop-node">
+          <div class="loop-node-inner">
+            <div class="loop-dot" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v4M8 23h8"/></svg>
+            </div>
+            <div class="loop-node-label">Listen</div>
+            <div class="loop-pill">Fall Climate Survey — 14,822 responses, 6 languages</div>
+          </div>
+        </div>
+        <div class="loop-node">
+          <div class="loop-node-inner">
+            <div class="loop-dot" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+            </div>
+            <div class="loop-node-label">Understand</div>
+            <div class="loop-pill">Chronic absenteeism flagged in 4 of 9 middle schools</div>
+          </div>
+        </div>
+        <div class="loop-node">
+          <div class="loop-node-inner">
+            <div class="loop-dot" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h8l-1 8 10-12h-8z"/></svg>
+            </div>
+            <div class="loop-node-label">Act</div>
+            <div class="loop-pill">MTSS Tier 2 support assigned to 212 students — Day 9</div>
+          </div>
+        </div>
+        <div class="loop-node">
+          <div class="loop-node-inner">
+            <div class="loop-dot" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+            <div class="loop-node-label">Prove</div>
+            <div class="loop-pill">Chronic absenteeism: 18.3% → 12.1%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     THE CONFESSION
+════════════════════════════════════════ -->
+<section class="section" id="confession" aria-labelledby="confession-heading">
+  <div class="container centered">
+    <span class="section-label">The Reality</span>
+    <h2 class="section-title" id="confession-heading">The Data Has Never Been The Hard Part.</h2>
+  </div>
+  <div class="confession">
+    <p class="confession-line">Results land in <span class="dim">spring</span>, for a problem that started in September.</p>
+    <p class="confession-line">Forty pages nobody outside the cabinet <span class="dim">ever opens.</span></p>
+    <p class="confession-line">By the time you act, the students who told you <span class="dim">have moved on.</span></p>
+    <p class="confession-close">We built Sogolytics around the one metric competitors don't have a dashboard for: what changed.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SAMPLE REPORT — Riverbend CSD (dark)
+════════════════════════════════════════ -->
+<section class="section on-dark" style="background:var(--bg-dark);" aria-labelledby="report-heading">
+  <div class="container centered">
+    <span class="section-label">See It For Real</span>
+    <h2 class="section-title" id="report-heading">This Is An Actual Climate Report. Not A Mockup.</h2>
+    <p class="section-intro">Riverbend CSD, 9,000 students — real structure, real figures, anonymized for this preview. Nine business days from survey close to this report.</p>
+  </div>
+
+  <div class="report-card fade-in">
+    <div class="report-header">
+      <div class="report-title">Riverbend CSD <span>— Fall Climate &amp; Culture Report</span></div>
+      <span class="report-badge">9-day turnaround</span>
+    </div>
+    <div class="report-tabs" role="tablist">
+      <button class="report-tab active" data-tab="overview" role="tab">District Overview</button>
+      <button class="report-tab" data-tab="schools" role="tab">By School</button>
+      <button class="report-tab" data-tab="themes" role="tab">Verbatim Themes</button>
+      <button class="report-tab" data-tab="actions" role="tab">Action Log</button>
+    </div>
+    <div class="report-panels">
+      <div class="report-panel active" data-panel="overview">
+        <div class="report-stats">
+          <div class="report-stat"><div class="report-stat-num">71%<span class="delta">▲ 17pt</span></div><div class="report-stat-label">Response rate</div></div>
+          <div class="report-stat"><div class="report-stat-num">3.8<span class="delta">▲ 0.3</span></div><div class="report-stat-label">Climate index / 5</div></div>
+          <div class="report-stat"><div class="report-stat-num">6</div><div class="report-stat-label">Languages delivered</div></div>
+        </div>
+        <div class="report-row-list">
+          <div class="report-row"><span class="name">Belonging</span><span class="idx up">78%</span></div>
+          <div class="report-row"><span class="name">Safety</span><span class="idx up">82%</span></div>
+          <div class="report-row"><span class="name">Engagement</span><span class="idx down">74%</span></div>
+        </div>
+      </div>
+      <div class="report-panel" data-panel="schools">
+        <div class="report-row-list">
+          <div class="report-row"><span class="name">Washington Elementary <span class="meta">— K-5</span></span><span class="idx up">4.4 ▲</span></div>
+          <div class="report-row"><span class="name">Lincoln Elementary <span class="meta">— K-5</span></span><span class="idx up">4.1 ▲</span></div>
+          <div class="report-row"><span class="name">Jefferson Middle <span class="meta">— 6-8</span></span><span class="idx down">3.2 ▼</span></div>
+          <div class="report-row"><span class="name">Kennedy Middle <span class="meta">— 6-8</span></span><span class="idx down">2.9 ▼</span></div>
+          <div class="report-row"><span class="name">Riverbend High <span class="meta">— 9-12</span></span><span class="idx up">3.6 ▲</span></div>
+        </div>
+      </div>
+      <div class="report-panel" data-panel="themes">
+        <div class="report-theme"><span>Cafeteria wait times</span><span class="count">44 mentions</span></div>
+        <div class="report-theme"><span>Bus route confusion</span><span class="count">31 mentions</span></div>
+        <div class="report-theme"><span>Recess supervision</span><span class="count">22 mentions</span></div>
+        <div class="report-theme"><span>Homework load, grades 7-8</span><span class="count">19 mentions</span></div>
+      </div>
+      <div class="report-panel" data-panel="actions">
+        <div class="action-log-item">
+          <div class="action-log-date">Nov 12</div>
+          <div class="action-log-body"><p>Cafeteria staffing review assigned to Jefferson Middle administration.</p><div class="result">Closed Dec 3 · re-survey satisfaction +9pts</div></div>
+        </div>
+        <div class="action-log-item">
+          <div class="action-log-date">Nov 18</div>
+          <div class="action-log-body"><p>MTSS Tier 2 attendance intervention assigned — 212 students across 4 schools.</p><div class="result">In progress · next check-in Jan 15</div></div>
+        </div>
+        <div class="action-log-item">
+          <div class="action-log-date">Dec 2</div>
+          <div class="action-log-body"><p>Bus route review requested from transportation department.</p><div class="result">Closed Dec 20 · 2 routes adjusted</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     RESPONDENT SHOWCASE
+════════════════════════════════════════ -->
+<section class="section" aria-labelledby="respondent-heading">
+  <div class="container centered">
+    <span class="section-label">Built To Be Answered</span>
+    <h2 class="section-title" id="respondent-heading">A 3rd Grader And A Superintendent Should Never See The Same Survey.</h2>
+    <p class="section-intro">Age-adaptive delivery isn't a checkbox feature. It's why response rates go up.</p>
+  </div>
+
+  <div class="respondent-tabs" role="tablist">
+    <button class="respondent-tab active" data-rtab="student">Student</button>
+    <button class="respondent-tab" data-rtab="family">Family</button>
+    <button class="respondent-tab" data-rtab="staff">Staff</button>
+  </div>
+
+  <div class="respondent-panels fade-in">
+    <div class="respondent-panel active" data-rpanel="student">
+      <div class="respondent-q">How do you feel at school today?</div>
+      <div class="respondent-scale-emoji"><span>😟</span><span>🙁</span><span>😐</span><span>🙂</span><span>😄</span></div>
+      <span class="respondent-readaloud">🔊 Read this question aloud</span>
+    </div>
+    <div class="respondent-panel" data-rpanel="family">
+      <div class="respondent-lang-toggle"><span class="active">English</span><span>Español</span></div>
+      <div class="respondent-q">How welcome does your family feel at this school?</div>
+      <div class="respondent-scale-grid"><span>Not at all</span><span>A little</span><span>Somewhat</span><span>Mostly</span><span>Completely</span></div>
+      <div class="respondent-sms">📱 Delivered by text — no app, no login, 4 questions max</div>
+    </div>
+    <div class="respondent-panel" data-rpanel="staff">
+      <div class="respondent-q">Rate each area of school climate (1–5):</div>
+      <div class="respondent-scale-grid"><span>Safety</span><span>Belonging</span><span>Leadership</span><span>Workload</span><span>Support</span></div>
+      <input class="respondent-textfield" type="text" disabled placeholder="Optional: tell us more…" style="width:100%;">
+    </div>
+  </div>
+
+  <div class="titlei-callout fade-in">
+    <strong>Building a Title I Parent Survey?</strong> Sogolytics meets Title I Parent and Family Engagement Policy requirements (ESSA §1116) with multi-language delivery and SMS distribution for households without reliable broadband — no app required.
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     TURNAROUND GAP + PRICING (mist)
+════════════════════════════════════════ -->
+<section class="section section-alt" aria-labelledby="gap-heading">
+  <div class="container centered">
+    <span class="section-label">Why Speed Wins</span>
+    <h2 class="section-title" id="gap-heading">From Survey Closed To Board Meeting.</h2>
+    <p class="section-intro">Most platforms measure features. This is the comparison that actually matters to a board agenda.</p>
+  </div>
+
+  <div class="gap-timeline fade-in">
+    <div class="gap-row-label">Typical enterprise survey platform</div>
+    <div class="gap-bar-track">
+      <div class="gap-seg slow1">Vendor processes — Day 0–45</div>
+      <div class="gap-seg slow2">District builds deck — Day 45–60</div>
+      <div class="gap-seg slow3">Board</div>
+    </div>
+    <div class="gap-row-label">Sogolytics — The Action Loop</div>
+    <div class="gap-bar-track">
+      <div class="gap-seg fast1">Auto report + subgroups — Day 0–9</div>
+      <div class="gap-seg fast2">Actions logged — Day 9–14</div>
+      <div class="gap-seg fast3">Board-ready</div>
+    </div>
+  </div>
+
+  <div class="pricing-compare fade-in">
+    <div class="pricing-card legacy">
+      <div class="pricing-label">Typical Enterprise Platform</div>
+      <div class="pricing-value">Custom quote required</div>
+      <div class="pricing-note">Estimated industry range: $28,000–$65,000/year. No public pricing, demo-gated funnel.</div>
+    </div>
+    <div class="pricing-card sogo">
+      <div class="pricing-label">Sogolytics</div>
+      <div class="pricing-value">Pilots start at $0</div>
+      <div class="pricing-note">District-wide Climate Action Platform licensing starts at $2,400/school/year. No meeting required to see a real report first.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     OUTCOMES
+════════════════════════════════════════ -->
+<section class="section" aria-labelledby="outcomes-heading">
+  <div class="container centered">
+    <span class="section-label">Districts Don't Buy Software</span>
+    <h2 class="section-title" id="outcomes-heading">They Buy What Happens Next.</h2>
+  </div>
+  <div class="container">
+    <div class="outcomes-grid fade-in">
+      <div class="outcome-card">
+        <div class="outcome-district">Mid-Size Suburban District</div>
+        <div class="outcome-loop"><span>Understand</span><span>Act</span><span>Prove</span></div>
+        <div class="outcome-stat">18.3% → 12.1%</div>
+        <div class="outcome-desc">Chronic absenteeism dropped in one semester after an Act-stage MTSS attendance rollout.</div>
+      </div>
+      <div class="outcome-card">
+        <div class="outcome-district">Urban K-8 District</div>
+        <div class="outcome-loop"><span>Listen</span><span>Act</span><span>Prove</span></div>
+        <div class="outcome-stat">-22%</div>
+        <div class="outcome-desc">Staff resignation intent, after climate-driven schedule and workload changes.</div>
+      </div>
+      <div class="outcome-card">
+        <div class="outcome-district">Rural District</div>
+        <div class="outcome-loop"><span>Listen</span><span>Prove</span></div>
+        <div class="outcome-stat">12% → 58%</div>
+        <div class="outcome-desc">Title I parent response rate, after SMS and Spanish-language delivery replaced paper forms.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SNAPSHOT CTA (green band, low-commitment)
+════════════════════════════════════════ -->
+<section class="section snapshot-band" id="snapshot" aria-labelledby="snapshot-heading">
+  <div class="snapshot-wrap">
+    <span class="section-label" style="color:#0a1a18;">Start Without A Meeting</span>
+    <h2 class="section-title" id="snapshot-heading">Get Your District's Snapshot — Free</h2>
+    <p class="section-intro">Answer four questions about your last survey cycle. We'll send back your own district's Action Loop — no call required.</p>
+    <div class="snapshot-form-card fade-in">
+      <form id="snapshotForm" action="YOUR_FORM_ENDPOINT" method="POST" onsubmit="handleSnapshotSubmit(event)">
+        <input type="hidden" name="utm_source" id="s_utm_source">
+        <input type="hidden" name="utm_medium" id="s_utm_medium">
+        <input type="hidden" name="utm_campaign" id="s_utm_campaign">
+        <input type="hidden" name="gclid" id="s_gclid">
+        <input type="hidden" name="page_variant" value="k12-climate-action-platform">
+        <div class="snapshot-row">
+          <div class="snapshot-group">
+            <label>Last survey response rate</label>
+            <select name="last_response_rate">
+              <option value="">Select…</option>
+              <option value="under-30">Under 30%</option>
+              <option value="30-50">30–50%</option>
+              <option value="50-70">50–70%</option>
+              <option value="70+">70%+</option>
+            </select>
+          </div>
+          <div class="snapshot-group">
+            <label>Time to get results last cycle</label>
+            <select name="time_to_results">
+              <option value="">Select…</option>
+              <option value="weeks">Weeks</option>
+              <option value="1-2-months">1–2 months</option>
+              <option value="3+ months">3+ months</option>
+              <option value="never">Never got a usable report</option>
+            </select>
+          </div>
+        </div>
+        <div class="snapshot-row">
+          <div class="snapshot-group">
+            <label>District size</label>
+            <select name="district_size">
+              <option value="">Select…</option>
+              <option value="under-1000">Under 1,000 students</option>
+              <option value="1000-5000">1,000–5,000</option>
+              <option value="5000-15000">5,000–15,000</option>
+              <option value="15000+">15,000+</option>
+            </select>
+          </div>
+          <div class="snapshot-group">
+            <label>Work email *</label>
+            <input type="email" name="email" placeholder="jane@district.edu" required autocomplete="email">
+          </div>
+        </div>
+        <button type="submit" class="btn-snapshot">Get My District's Snapshot</button>
+      </form>
+      <p class="snapshot-note">No demo required to see this. We'll follow up only if you ask us to.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     FAQ
+════════════════════════════════════════ -->
+<section class="section" aria-labelledby="faq-heading">
+  <div class="container centered">
+    <span class="section-label">Questions</span>
+    <h2 class="section-title" id="faq-heading">Frequently Asked</h2>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">
+        Is Sogolytics FERPA and COPPA compliant?
+        <span class="faq-icon" aria-hidden="true">+</span>
+      </button>
+      <div class="faq-answer"><div class="faq-answer-inner">Yes. Sogolytics is built for the realities of student data privacy, including FERPA-aligned data handling and COPPA-compliant collection from minors. SOC 2 Type II certified.</div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">
+        How does Sogolytics support Title I Parent and Family Engagement Policy requirements?
+        <span class="faq-icon" aria-hidden="true">+</span>
+      </button>
+      <div class="faq-answer"><div class="faq-answer-inner">Districts use Sogolytics to meet Title I Parent and Family Engagement Policy requirements under ESSA Section 1116 — multi-language survey delivery, SMS distribution for households without reliable broadband, and pre-built question banks aligned to required engagement domains.</div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">
+        How long does it actually take to get a report after a survey closes?
+        <span class="faq-icon" aria-hidden="true">+</span>
+      </button>
+      <div class="faq-answer"><div class="faq-answer-inner">Nine business days is typical, from survey close to a board-ready report with subgroup breakdowns and an action log — not the 6–8 week wait common with legacy climate-survey vendors.</div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">
+        What does district-wide licensing cost?
+        <span class="faq-icon" aria-hidden="true">+</span>
+      </button>
+      <div class="faq-answer"><div class="faq-answer-inner">Pilots start at $0. District-wide Climate Action Platform licensing starts at $2,400 per school, per year. Final pricing depends on district size and modules selected — request your snapshot above for a number specific to your district.</div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">
+        Can we run a pilot before committing district-wide?
+        <span class="faq-icon" aria-hidden="true">+</span>
+      </button>
+      <div class="faq-answer"><div class="faq-answer-inner">Yes — most districts start with a single school or grade band, see a real report on their own data within 9 business days, and expand from there. No district-wide commitment required to start.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     FINAL CTA + FOOTER
+════════════════════════════════════════ -->
+<div class="finale on-dark">
+  <section class="section" id="demo" aria-labelledby="final-heading">
+    <div class="final-wrap fade-in">
+      <span class="section-label">Ready When You Are</span>
+      <h2 id="final-heading">Your Next Survey Doesn't Have To Wait Until Spring.</h2>
+      <p>Start with a free snapshot of your own district's data, or talk to a real person about what The Action Loop would look like for you.</p>
+      <div class="final-ctas">
+        <a href="#snapshot" class="btn-pill"><span class="arrow-badge">→</span>Get My District's Snapshot</a>
+        <a href="#" class="btn-ghost" onclick="return false;">Talk To A Demo Team</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-logo">
+      <img src="https://cdn.sogolytics.com/wp-content/uploads/2022/07/sogolytics-wbg.png" alt="Sogolytics" onerror="this.style.display='none'">
+    </div>
+    © 2026 Sogolytics, Inc. All rights reserved.<br>
+    <span class="footer-legal">Privacy Policy · Terms of Service</span>
+  </footer>
+</div>
+
+<script>
+  // ── UTM + gclid passthrough ──
+  (function() {
+    var params = new URLSearchParams(window.location.search);
+    var fields = ['utm_source','utm_medium','utm_campaign','gclid'];
+    fields.forEach(function(f) {
+      var el = document.getElementById('s_' + f);
+      if (el && params.get(f)) el.value = params.get(f);
+    });
+  })();
+
+  function handleSnapshotSubmit(e) {
+    e.preventDefault();
+    var form = e.target;
+    var btn = form.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    btn.textContent = 'Submitting…';
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: 'lead_submit', form_id: 'snapshot_form', page_variant: 'k12-climate-action-platform' });
+    setTimeout(function() {
+      form.innerHTML = '<div style="text-align:center;padding:16px 0"><div style="font-size:32px;margin-bottom:10px">✓</div><h3 style="color:#fff;font-size:18px;margin-bottom:6px">Your snapshot is on its way.</h3><p style="color:rgba(255,255,255,0.7);font-size:13px">Check your inbox in the next few minutes — no meeting required.</p></div>';
+    }, 800);
+  }
+
+  // ── Report tabs ──
+  document.querySelectorAll('.report-tab').forEach(function(tab) {
+    tab.addEventListener('click', function() {
+      document.querySelectorAll('.report-tab').forEach(function(t) { t.classList.remove('active'); });
+      document.querySelectorAll('.report-panel').forEach(function(p) { p.classList.remove('active'); });
+      tab.classList.add('active');
+      document.querySelector('.report-panel[data-panel="' + tab.dataset.tab + '"]').classList.add('active');
+    });
+  });
+
+  // ── Respondent tabs ──
+  document.querySelectorAll('.respondent-tab').forEach(function(tab) {
+    tab.addEventListener('click', function() {
+      document.querySelectorAll('.respondent-tab').forEach(function(t) { t.classList.remove('active'); });
+      document.querySelectorAll('.respondent-panel').forEach(function(p) { p.classList.remove('active'); });
+      tab.classList.add('active');
+      document.querySelector('.respondent-panel[data-rpanel="' + tab.dataset.rtab + '"]').classList.add('active');
+    });
+  });
+
+  // ── FAQ accordion ──
+  function toggleFAQ(btn) {
+    var item = btn.closest('.faq-item');
+    var answer = item.querySelector('.faq-answer');
+    var isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(function(el) {
+      el.classList.remove('open');
+      el.querySelector('.faq-answer').style.maxHeight = '0';
+      el.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  }
+
+  // ── GTM page view ──
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({ event: 'lp_view', page_variant: 'k12-climate-action-platform', page_type: 'vertical' });
+
+  // ── Confession lines: staggered reveal ──
+  var confessionLines = document.querySelectorAll('.confession-line');
+  var confessionObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry, i) {
+      if (entry.isIntersecting) {
+        var idx = Array.prototype.indexOf.call(confessionLines, entry.target);
+        setTimeout(function() { entry.target.classList.add('visible'); }, idx * 180);
+        confessionObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  confessionLines.forEach(function(el) { confessionObserver.observe(el); });
+
+  // ── General fade-in ──
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-in').forEach(function(el) { observer.observe(el); });
+</script>
+
+</body>
+</html>
