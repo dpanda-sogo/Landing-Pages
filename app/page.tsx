@@ -9,6 +9,14 @@ export const metadata: Metadata = {
 
 const pages: LandingPage[] = [
   {
+    slug: "customer-experience-management-software",
+    title: "Customer Experience Management Software",
+    description: "Storytelling-driven Google Ads landing page: Voice of Customer, AI sentiment analysis, closed-loop workflows, and an interactive customer journey. Targets the core CX management software keyword cluster.",
+    date: "2026-07-21",
+    tag: "Google Ads",
+    htmlFile: "customer-experience-management-software.html",
+  },
+  {
     slug: "pages/lp-cx-complete.html",
     title: "CX Platform — Complete / Combined Variant",
     description: "Broad conquesting page combining platform capabilities, ROI value, and 30-day migration. Targets wide keyword groups. Includes live industry news fold.",

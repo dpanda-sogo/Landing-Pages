@@ -1,0 +1,565 @@
+<!--
+  ============================================================
+  SOGOLYTICS — CUSTOMER EXPERIENCE MANAGEMENT SOFTWARE
+  (WordPress / WPBakery snippet)
+  ============================================================
+  PASTE THIS into WPBakery → Add Element → Raw HTML
+  ============================================================
+  DEVELOPER EDIT GUIDE
+  LOGOS:           Search "LOGO 1" through "LOGO 6"
+                   Replace the placeholder <div> with:
+                   <img src="URL" alt="Company" style="height:36px;width:auto;">
+  TESTIMONIAL:     Search [TESTIMONIAL QUOTE], [AUTHOR NAME],
+                   [AUTHOR TITLE], [AUTHOR COMPANY], [CO. LOGO]
+  FORM ACTION:     Search "YOUR_FORM_ENDPOINT" — wire up CF7 or HubSpot
+  GTM ID:          Search GTM-XXXXXXX → replace with real ID
+  ============================================================
+  DO NOT add <html> <head> <body> <nav> <footer> — WordPress
+  provides those. No @font-face or :root CSS vars needed either.
+  ============================================================
+-->
+
+<!-- ── Responsive layout overrides only ── -->
+<style>
+.lp-two-col { display:flex; gap:56px; align-items:center; }
+.lp-grid-3  { display:flex; gap:20px; }
+.lp-grid-2  { display:flex; gap:20px; }
+.lp-fade    { opacity:0; transform:translateY(24px); transition:opacity .6s,transform .6s; }
+.lp-fade.on { opacity:1; transform:none; }
+.lp-faq-answer { max-height:0; overflow:hidden; transition:max-height .35s ease; }
+.lp-faq-item.open .lp-faq-icon { transform:rotate(45deg); }
+.lp-form-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+.lp-journey-steps { display:flex; flex-wrap:wrap; gap:6px; justify-content:center; }
+.lp-journey-step-btn { display:inline-flex; align-items:center; gap:8px; padding:10px 16px; border-radius:50px; border:1.5px solid #e2e6ea; background:#fff; color:#1a1a1a; cursor:pointer; font-size:1.3rem; font-weight:600; white-space:nowrap; }
+.lp-journey-step-btn.active { border-color:var(--color-primary-v2); background:var(--color-primary-v2); color:#fff; }
+.lp-journey-panel { display:none; }
+.lp-journey-panel.active { display:block; }
+.lp-switch-row { display:flex; align-items:center; gap:0; background:#fff; border:1px solid #e2e6ea; border-radius:10px; margin-bottom:10px; padding:16px 18px; }
+.lp-switch-row > div { flex:1; }
+.lp-switch-header { display:flex; margin-bottom:4px; }
+.lp-switch-header > div { flex:1; text-align:center; font-size:1.1rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase; padding-bottom:12px; color:#8a94a0; }
+.lp-mock-bar-row { display:flex; align-items:center; gap:8px; margin-bottom:6px; }
+.lp-mock-bar-track { flex:1; height:8px; background:#f0f4f3; border-radius:4px; overflow:hidden; }
+.lp-mock-bar-fill { height:100%; border-radius:4px; background:var(--color-primary-v2); }
+@media (max-width:768px) {
+  .lp-two-col { flex-direction:column !important; gap:32px !important; }
+  .lp-grid-3  { flex-direction:column !important; }
+  .lp-grid-2  { flex-direction:column !important; }
+  .lp-hero-visual { display:none !important; }
+  .lp-switch-header { display:none !important; }
+  .lp-switch-row { flex-direction:column !important; align-items:flex-start !important; gap:4px !important; }
+  .lp-form-row { grid-template-columns:1fr !important; }
+}
+</style>
+
+<!-- GTM dataLayer -->
+<script>
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({ event: 'lp_view', page_variant: 'customer-experience-management-software', page_type: 'google_ads' });
+</script>
+
+<!-- ═══════════════════════════════════════════════════
+     SECTION 1 — HERO
+════════════════════════════════════════════════════ -->
+<div class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:linear-gradient(135deg,#061a17 0%,#0a2e29 60%,#0d3d37 100%);padding:80px 24px 60px;">
+  <div class="col span_12 color-dark left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding color-dark" data-animation="" data-delay="">
+      <div class="wpb_wrapper">
+        <div class="lp-two-col" style="max-width:1120px;margin:0 auto;">
+
+          <div style="flex:1;min-width:0;">
+            <p style="display:inline-flex;align-items:center;gap:6px;background:#fff;color:#0a1a18;font-size:1.1rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 14px;border-radius:20px;margin-bottom:20px;font-family:var(--font-Epilogue-Bold);">Customer Experience Management Software</p>
+            <h1 class="fs-epilogue-h1 white-text" style="margin-bottom:20px;">
+              You Don&rsquo;t Have a Customer Feedback Problem.<br>
+              You Have an <span style="color:var(--color-secondary-v2);">Action</span> Problem.
+            </h1>
+            <p class="fs-pm white-text" style="opacity:.85;margin-bottom:32px;max-width:520px;">
+              Most teams already collect enough Voice of Customer data to fill a warehouse — NPS, CSAT, reviews, support tickets — yet churn keeps climbing. Sogolytics is the <strong>customer experience management software</strong> built to close that gap: AI detects the signal, workflow automation routes it to the right owner, and every piece of feedback ends in a resolved action.
+            </p>
+            <div style="display:flex;flex-wrap:wrap;gap:14px;margin-bottom:28px;">
+              <a href="https://www.sogolytics.com/request-a-demo/" class="slide-btn-wrapper slide-button fill-bg" style="text-decoration:none;">
+                <i class="fa fa-arrow-right"></i>
+                <span>Request a Demo</span>
+              </a>
+              <a href="#lp-journey" class="slide-btn-wrapper slide-button transparent-bg" style="text-decoration:none;">
+                <i class="fa fa-arrow-down"></i>
+                <span>See how it works</span>
+              </a>
+            </div>
+            <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:1.2rem;color:rgba(255,255,255,.7);font-family:var(--font-Epilogue-Regular);">
+              <span>✓ SOC 2 Type II</span>
+              <span>✓ HIPAA-ready</span>
+              <span>✓ GDPR</span>
+              <span>✓ 500+ Organizations</span>
+            </div>
+          </div>
+
+          <!-- Workflow visual -->
+          <div class="lp-hero-visual" style="flex:1;min-width:0;">
+            <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);border-radius:16px;padding:28px 24px;">
+              <p style="font-size:1.1rem;font-weight:700;color:rgba(255,255,255,.55);letter-spacing:.08em;text-transform:uppercase;margin-bottom:22px;font-family:var(--font-Epilogue-Bold);">From signal to action — automatically</p>
+              <div style="display:flex;flex-direction:column;gap:18px;">
+                <div style="display:flex;align-items:center;gap:12px;"><span style="width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.2rem;font-weight:700;flex-shrink:0;">1</span><div><div class="font-Epilogue-Bold white-text" style="font-size:1.4rem;">Feedback captured</div><div style="font-size:1.2rem;color:rgba(255,255,255,.55);font-family:var(--font-Epilogue-Regular);">Survey, review, support ticket</div></div></div>
+                <div style="display:flex;align-items:center;gap:12px;"><span style="width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.2rem;font-weight:700;flex-shrink:0;">2</span><div><div class="font-Epilogue-Bold white-text" style="font-size:1.4rem;">AI detects signal</div><div style="font-size:1.2rem;color:rgba(255,255,255,.55);font-family:var(--font-Epilogue-Regular);">Sentiment + intent analysis</div></div></div>
+                <div style="display:flex;align-items:center;gap:12px;"><span style="width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.2rem;font-weight:700;flex-shrink:0;">3</span><div><div class="font-Epilogue-Bold white-text" style="font-size:1.4rem;">Alert triggered</div><div style="font-size:1.2rem;color:rgba(255,255,255,.55);font-family:var(--font-Epilogue-Regular);">Detractor flagged in real time</div></div></div>
+                <div style="display:flex;align-items:center;gap:12px;"><span style="width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.2rem;font-weight:700;flex-shrink:0;">4</span><div><div class="font-Epilogue-Bold white-text" style="font-size:1.4rem;">Owner assigned</div><div style="font-size:1.2rem;color:rgba(255,255,255,.55);font-family:var(--font-Epilogue-Regular);">Routed via workflow automation</div></div></div>
+                <div style="display:flex;align-items:center;gap:12px;"><span style="width:28px;height:28px;border-radius:50%;background:var(--color-secondary-v2);color:#061a17;display:flex;align-items:center;justify-content:center;font-size:1.2rem;font-weight:700;flex-shrink:0;">&#10003;</span><div><div class="font-Epilogue-Bold white-text" style="font-size:1.4rem;">Action closed</div><div style="font-size:1.2rem;color:rgba(255,255,255,.55);font-family:var(--font-Epilogue-Regular);">Customer retained</div></div></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     SECTION 2 — THE HIDDEN COST
+════════════════════════════════════════════════════ -->
+<div class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:#0a1614;padding:76px 24px;">
+  <div class="col span_12 color-dark left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding color-dark" data-animation="" data-delay="">
+      <div class="wpb_wrapper" style="max-width:1120px;margin:0 auto;">
+        <div class="lp-fade" style="max-width:720px;margin-bottom:44px;">
+          <p style="font-size:1.1rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--color-secondary-v2);margin-bottom:12px;font-family:var(--font-Epilogue-Bold);">The hidden cost of customer churn</p>
+          <h2 class="fs-epilogue-h2 white-text" style="margin-bottom:16px;">The Real Cost of Feedback Nobody Acts On</h2>
+          <p class="fs-pm white-text" style="opacity:.75;">You&rsquo;re not short on data. Most CX teams run NPS programs, CSAT surveys, and review monitoring every quarter — and still watch customers churn without warning. That&rsquo;s revenue leakage happening in plain sight, one unresolved response at a time.</p>
+        </div>
+        <div class="lp-grid-3 lp-fade">
+          <div style="flex:1;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:28px 24px;">
+            <div style="font-size:3.6rem;font-weight:700;color:var(--color-secondary-v2);margin-bottom:12px;font-family:var(--font-Epilogue-Bold);">96%</div>
+            <div class="font-Epilogue-Bold white-text" style="font-size:1.5rem;margin-bottom:10px;">of unhappy customers never complain</div>
+            <p style="font-size:1.3rem;color:rgba(255,255,255,.6);line-height:1.65;font-family:var(--font-Epilogue-Regular);">They just leave — showing up as a churn number, not a support ticket.</p>
+          </div>
+          <div style="flex:1;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:28px 24px;">
+            <div style="font-size:3.6rem;font-weight:700;color:var(--color-secondary-v2);margin-bottom:12px;font-family:var(--font-Epilogue-Bold);">1 in 26</div>
+            <div class="font-Epilogue-Bold white-text" style="font-size:1.5rem;margin-bottom:10px;">detractors are ever contacted</div>
+            <p style="font-size:1.3rem;color:rgba(255,255,255,.6);line-height:1.65;font-family:var(--font-Epilogue-Regular);">The rest sit in a report nobody opens until it&rsquo;s too late.</p>
+          </div>
+          <div style="flex:1;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:28px 24px;">
+            <div style="font-size:3.6rem;font-weight:700;color:var(--color-secondary-v2);margin-bottom:12px;font-family:var(--font-Epilogue-Bold);">6&ndash;7x</div>
+            <div class="font-Epilogue-Bold white-text" style="font-size:1.5rem;margin-bottom:10px;">more expensive to win than keep a customer</div>
+            <p style="font-size:1.3rem;color:rgba(255,255,255,.6);line-height:1.65;font-family:var(--font-Epilogue-Regular);">Every unresolved response is a retention cost paid later, at a markup.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     SECTION 3 — INTRODUCE SOGOLYTICS
+════════════════════════════════════════════════════ -->
+<div class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:#fff;padding:76px 24px;">
+  <div class="col span_12 left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding" data-animation="" data-delay="">
+      <div class="wpb_wrapper lp-two-col" style="max-width:1120px;margin:0 auto;">
+        <div style="flex:1;min-width:0;">
+          <p style="font-size:1.1rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--color-primary-v2);margin-bottom:12px;font-family:var(--font-Epilogue-Bold);">Introducing the Sogolytics approach</p>
+          <h2 class="fs-epilogue-h3" style="margin-bottom:18px;">Most Customer Experience Platforms Tell You What Happened.<br>Sogolytics Helps You Decide What Happens Next.</h2>
+          <p class="fs-pm" style="color:#5a6472;margin-bottom:24px;">A dashboard that reports a dropping NPS score isn&rsquo;t a solution — it&rsquo;s a symptom. Sogolytics is a <strong>Voice of Customer platform</strong> with action at the center: AI reads every response, journey analytics show where friction lives, and closed-loop workflows make sure the right person acts.</p>
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <p style="font-size:1.4rem;color:#5a6472;font-family:var(--font-Epilogue-Regular);">✓ <strong>Voice of Customer</strong> — every channel unified into one signal</p>
+            <p style="font-size:1.4rem;color:#5a6472;font-family:var(--font-Epilogue-Regular);">✓ <strong>AI Analytics</strong> — sentiment and intent detection on every response</p>
+            <p style="font-size:1.4rem;color:#5a6472;font-family:var(--font-Epilogue-Regular);">✓ <strong>Journey Analytics</strong> — see where experience breaks down</p>
+            <p style="font-size:1.4rem;color:#5a6472;font-family:var(--font-Epilogue-Regular);">✓ <strong>Closed-Loop Feedback</strong> — every flagged response gets an owner</p>
+            <p style="font-size:1.4rem;color:#5a6472;font-family:var(--font-Epilogue-Regular);">✓ <strong>Workflow Automation</strong> — alerts and case assignment happen automatically</p>
+          </div>
+        </div>
+        <div style="flex:1;min-width:0;background:linear-gradient(160deg,#061a17 0%,#0d3d37 100%);border-radius:16px;padding:36px 32px;color:#fff;">
+          <p style="font-size:1.1rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:18px;font-family:var(--font-Epilogue-Bold);">Reports vs. resolutions</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,.06);border-radius:10px;padding:16px 18px;margin-bottom:16px;gap:12px;">
+            <span style="font-size:1.3rem;color:rgba(255,255,255,.7);">Legacy CX reporting</span>
+            <span class="font-Epilogue-Bold" style="font-size:1.9rem;">&ldquo;NPS dropped 6 pts&rdquo;</span>
+          </div>
+          <div style="text-align:center;color:var(--color-secondary-v2);font-size:2rem;margin-bottom:16px;">&darr;</div>
+          <div style="display:flex;justify-content:space-between;align-items:center;background:rgba(2,190,204,.14);border:1px solid rgba(2,190,204,.3);border-radius:10px;padding:16px 18px;gap:12px;">
+            <span style="font-size:1.3rem;color:rgba(255,255,255,.85);">Sogolytics</span>
+            <span class="font-Epilogue-Bold" style="font-size:1.6rem;color:var(--color-secondary-v2);text-align:right;">&ldquo;18 detractors flagged, 14 resolved today&rdquo;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     SECTION 4 — INTERACTIVE CUSTOMER JOURNEY
+════════════════════════════════════════════════════ -->
+<div class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:#f0f4f3;padding:76px 24px;" id="lp-journey">
+  <div class="col span_12 left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding" data-animation="" data-delay="">
+      <div class="wpb_wrapper" style="max-width:1120px;margin:0 auto;">
+        <div class="lp-fade" style="text-align:center;margin-bottom:40px;">
+          <p style="font-size:1.1rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--color-primary-v2);margin-bottom:12px;font-family:var(--font-Epilogue-Bold);">Closed-loop feedback in action</p>
+          <h2 class="fs-epilogue-h3" style="margin-bottom:14px;">From Feedback to Fixed — Follow One Customer&rsquo;s Journey</h2>
+          <p class="fs-pm" style="color:#5a6472;max-width:640px;margin:0 auto;">This is what customer journey analytics and workflow automation look like when they&rsquo;re actually connected. Click each step.</p>
+        </div>
+
+        <div class="lp-journey-steps lp-fade" style="margin-bottom:36px;">
+          <button class="lp-journey-step-btn active" onclick="lpShowJourneyStep(0,this)">&#128172; Feedback left</button>
+          <button class="lp-journey-step-btn" onclick="lpShowJourneyStep(1,this)">&#129504; AI detects issue</button>
+          <button class="lp-journey-step-btn" onclick="lpShowJourneyStep(2,this)">&#128680; Alert triggered</button>
+          <button class="lp-journey-step-btn" onclick="lpShowJourneyStep(3,this)">&#128100; Owner assigned</button>
+          <button class="lp-journey-step-btn" onclick="lpShowJourneyStep(4,this)">&#9989; Action taken</button>
+          <button class="lp-journey-step-btn" onclick="lpShowJourneyStep(5,this)">&#129309; Customer retained</button>
+        </div>
+
+        <div class="lp-journey-panel active" data-lp-panel="0">
+          <div class="lp-two-col lp-fade">
+            <div style="flex:1;min-width:0;"><p style="color:var(--color-primary-v2);font-weight:700;font-size:1.2rem;text-transform:uppercase;letter-spacing:.05em;margin-bottom:12px;">Step 1 of 6</p><h3 class="fs-epilogue-h4" style="margin-bottom:14px;">A customer leaves feedback</h3><p class="fs-pm" style="color:#5a6472;">A mid-tier account completes a post-support CSAT survey and rates the experience 2 out of 5, citing slow response time.</p></div>
+            <div style="flex:1;min-width:0;background:#fff;border:1px solid #e2e6ea;border-radius:12px;padding:20px;"><p style="font-size:1.3rem;color:#5a6472;font-style:italic;">&ldquo;Support took three days to reply. Really disappointing for a paid plan.&rdquo;</p></div>
+          </div>
+        </div>
+        <div class="lp-journey-panel" data-lp-panel="1">
+          <div class="lp-two-col lp-fade">
+            <div style="flex:1;min-width:0;"><p style="color:var(--color-primary-v2);font-weight:700;font-size:1.2rem;text-transform:uppercase;letter-spacing:.05em;margin-bottom:12px;">Step 2 of 6</p><h3 class="fs-epilogue-h4" style="margin-bottom:14px;">AI detects the issue</h3><p class="fs-pm" style="color:#5a6472;">Sogolytics AI reads the comment, scores sentiment as strongly negative, and tags the theme as &ldquo;support responsiveness&rdquo; — no analyst required.</p></div>
+            <div style="flex:1;min-width:0;background:#fff;border:1px solid #e2e6ea;border-radius:12px;padding:20px;">
+              <div class="lp-mock-bar-row"><span style="font-size:1.1rem;color:#A32D2D;width:80px;">Negative</span><div class="lp-mock-bar-track"><div class="lp-mock-bar-fill" style="width:88%;background:#E24B4A;"></div></div><span style="font-size:1.1rem;">88%</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="lp-journey-panel" data-lp-panel="2">
+          <div class="lp-two-col lp-fade">
+            <div style="flex:1;min-width:0;"><p style="color:var(--color-primary-v2);font-weight:700;font-size:1.2rem;text-transform:uppercase;letter-spacing:.05em;margin-bottom:12px;">Step 3 of 6</p><h3 class="fs-epilogue-h4" style="margin-bottom:14px;">An alert triggers instantly</h3><p class="fs-pm" style="color:#5a6472;">The moment the response is scored, a real-time alert fires — before the survey report even runs.</p></div>
+            <div style="flex:1;min-width:0;background:#fff;border:1px solid #e2e6ea;border-radius:12px;padding:20px;display:flex;gap:8px;flex-wrap:wrap;"><span style="font-size:1.1rem;padding:4px 10px;border-radius:10px;background:#fef3c7;color:#92400e;font-weight:600;">Detractor alert</span><span style="font-size:1.1rem;padding:4px 10px;border-radius:10px;background:#e6f0ff;color:#2563eb;font-weight:600;">Priority: High</span></div>
+          </div>
+        </div>
+        <div class="lp-journey-panel" data-lp-panel="3">
+          <div class="lp-two-col lp-fade">
+            <div style="flex:1;min-width:0;"><p style="color:var(--color-primary-v2);font-weight:700;font-size:1.2rem;text-transform:uppercase;letter-spacing:.05em;margin-bottom:12px;">Step 4 of 6</p><h3 class="fs-epilogue-h4" style="margin-bottom:14px;">A manager is assigned</h3><p class="fs-pm" style="color:#5a6472;">Workflow automation routes the case to the account manager based on tier and issue type — automatically.</p></div>
+            <div style="flex:1;min-width:0;background:#fff;border:1px solid #e2e6ea;border-radius:12px;padding:20px;"><span style="font-size:1.1rem;padding:4px 10px;border-radius:10px;background:#e6f0ff;color:#2563eb;font-weight:600;">Owner: J. Alvarez, CSM</span></div>
+          </div>
+        </div>
+        <div class="lp-journey-panel" data-lp-panel="4">
+          <div class="lp-two-col lp-fade">
+            <div style="flex:1;min-width:0;"><p style="color:var(--color-primary-v2);font-weight:700;font-size:1.2rem;text-transform:uppercase;letter-spacing:.05em;margin-bottom:12px;">Step 5 of 6</p><h3 class="fs-epilogue-h4" style="margin-bottom:14px;">The manager takes action</h3><p class="fs-pm" style="color:#5a6472;">The CSM resolves the delay within the SLA window and logs the resolution — closing the loop.</p></div>
+            <div style="flex:1;min-width:0;background:#fff;border:1px solid #e2e6ea;border-radius:12px;padding:20px;display:flex;gap:8px;flex-wrap:wrap;"><span style="font-size:1.1rem;padding:4px 10px;border-radius:10px;background:#e8f4f3;color:var(--color-primary-v2);font-weight:600;">Resolved &#10003;</span><span style="font-size:1.1rem;padding:4px 10px;border-radius:10px;background:#e6f0ff;color:#2563eb;font-weight:600;">3h 12m</span></div>
+          </div>
+        </div>
+        <div class="lp-journey-panel" data-lp-panel="5">
+          <div class="lp-two-col lp-fade">
+            <div style="flex:1;min-width:0;"><p style="color:var(--color-primary-v2);font-weight:700;font-size:1.2rem;text-transform:uppercase;letter-spacing:.05em;margin-bottom:12px;">Step 6 of 6</p><h3 class="fs-epilogue-h4" style="margin-bottom:14px;">The customer is retained</h3><p class="fs-pm" style="color:#5a6472;">The account renews. What could have been silent churn becomes proof that closing the loop works.</p></div>
+            <div style="flex:1;min-width:0;background:#fff;border:1px solid #e2e6ea;border-radius:12px;padding:20px;display:flex;gap:8px;flex-wrap:wrap;"><span style="font-size:1.1rem;padding:4px 10px;border-radius:10px;background:#e8f4f3;color:var(--color-primary-v2);font-weight:600;">Renewed &#10003;</span><span style="font-size:1.1rem;padding:4px 10px;border-radius:10px;background:#e6f0ff;color:#2563eb;font-weight:600;">Follow-up NPS +41</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     SECTION 5 — BUSINESS OUTCOMES
+════════════════════════════════════════════════════ -->
+<div class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:#fff;padding:76px 24px;">
+  <div class="col span_12 left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding" data-animation="" data-delay="">
+      <div class="wpb_wrapper" style="max-width:1120px;margin:0 auto;">
+        <div class="lp-fade" style="text-align:center;margin-bottom:48px;">
+          <p style="font-size:1.1rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--color-primary-v2);margin-bottom:12px;font-family:var(--font-Epilogue-Bold);">Business outcomes, not just dashboards</p>
+          <h2 class="fs-epilogue-h3" style="margin-bottom:14px;">Measurable Impact, Not Just Metrics</h2>
+          <p class="fs-pm" style="color:#5a6472;max-width:640px;margin:0 auto;">Every capability in Sogolytics exists to move one of these numbers.</p>
+        </div>
+        <div class="lp-grid-3 lp-fade" style="flex-wrap:wrap;">
+          <div style="flex:1;min-width:240px;background:#f0f4f3;border:1px solid #e2e6ea;border-radius:12px;padding:26px 22px;"><div style="font-size:2rem;font-weight:700;color:var(--color-primary-v2);margin-bottom:12px;">&darr; Churn</div><h3 style="font-size:1.5rem;font-weight:700;margin-bottom:8px;">Reduce customer churn</h3><p style="font-size:1.3rem;color:#5a6472;">Resolve detractor feedback within hours, not weeks.</p></div>
+          <div style="flex:1;min-width:240px;background:#f0f4f3;border:1px solid #e2e6ea;border-radius:12px;padding:26px 22px;"><div style="font-size:2rem;font-weight:700;color:var(--color-primary-v2);margin-bottom:12px;">&uarr; NPS</div><h3 style="font-size:1.5rem;font-weight:700;margin-bottom:8px;">Improve Net Promoter Score</h3><p style="font-size:1.3rem;color:#5a6472;">Closed-loop follow-up lifts NPS faster than survey changes alone.</p></div>
+          <div style="flex:1;min-width:240px;background:#f0f4f3;border:1px solid #e2e6ea;border-radius:12px;padding:26px 22px;"><div style="font-size:2rem;font-weight:700;color:var(--color-primary-v2);margin-bottom:12px;">&uarr; CSAT</div><h3 style="font-size:1.5rem;font-weight:700;margin-bottom:8px;">Increase satisfaction scores</h3><p style="font-size:1.3rem;color:#5a6472;">Customers rate the experience higher when feedback leads to a real response.</p></div>
+        </div>
+        <div class="lp-grid-3 lp-fade" style="flex-wrap:wrap;margin-top:20px;">
+          <div style="flex:1;min-width:240px;background:#f0f4f3;border:1px solid #e2e6ea;border-radius:12px;padding:26px 22px;"><div style="font-size:2rem;font-weight:700;color:var(--color-primary-v2);margin-bottom:12px;">&darr; Effort</div><h3 style="font-size:1.5rem;font-weight:700;margin-bottom:8px;">Reduce manual reporting</h3><p style="font-size:1.3rem;color:#5a6472;">Always-on dashboards replace hours of manual spreadsheet building.</p></div>
+          <div style="flex:1;min-width:240px;background:#f0f4f3;border:1px solid #e2e6ea;border-radius:12px;padding:26px 22px;"><div style="font-size:2rem;font-weight:700;color:var(--color-primary-v2);margin-bottom:12px;">&uarr; Visibility</div><h3 style="font-size:1.5rem;font-weight:700;margin-bottom:8px;">Improve leadership visibility</h3><p style="font-size:1.3rem;color:#5a6472;">Every team and region rolls up into one view.</p></div>
+          <div style="flex:1;min-width:240px;background:#f0f4f3;border:1px solid #e2e6ea;border-radius:12px;padding:26px 22px;"><div style="font-size:2rem;font-weight:700;color:var(--color-primary-v2);margin-bottom:12px;">&uarr; CLV</div><h3 style="font-size:1.5rem;font-weight:700;margin-bottom:8px;">Increase customer lifetime value</h3><p style="font-size:1.3rem;color:#5a6472;">Accounts in a proactive, closed-loop program renew longer and expand more.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     SECTION 6 — WHY TEAMS SWITCH
+════════════════════════════════════════════════════ -->
+<div class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:#f0f4f3;padding:76px 24px;">
+  <div class="col span_12 left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding" data-animation="" data-delay="">
+      <div class="wpb_wrapper" style="max-width:900px;margin:0 auto;">
+        <div class="lp-fade" style="text-align:center;margin-bottom:44px;">
+          <p style="font-size:1.1rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--color-primary-v2);margin-bottom:12px;font-family:var(--font-Epilogue-Bold);">Why teams switch to Sogolytics</p>
+          <h2 class="fs-epilogue-h3" style="margin-bottom:14px;">Enterprise Depth. Mid-Market Speed.</h2>
+          <p class="fs-pm" style="color:#5a6472;max-width:640px;margin:0 auto;">Most enterprise CX management software makes you choose between capability and time-to-value. Sogolytics ends that trade-off.</p>
+        </div>
+        <div class="lp-fade">
+          <div class="lp-switch-header"><div></div><div>Legacy platforms</div><div style="color:var(--color-primary-v2);">Sogolytics</div></div>
+          <div class="lp-switch-row"><div style="font-weight:700;font-size:1.3rem;">Time to first live survey</div><div style="text-align:center;color:#8a94a0;font-size:1.3rem;">6&ndash;12 months</div><div style="text-align:center;font-weight:700;color:var(--color-primary-v2);font-size:1.3rem;">3&ndash;4 weeks</div></div>
+          <div class="lp-switch-row"><div style="font-weight:700;font-size:1.3rem;">Onboarding model</div><div style="text-align:center;color:#8a94a0;font-size:1.3rem;">Self-serve documentation</div><div style="text-align:center;font-weight:700;color:var(--color-primary-v2);font-size:1.3rem;">Named CSM, white-glove</div></div>
+          <div class="lp-switch-row"><div style="font-weight:700;font-size:1.3rem;">Platform depth</div><div style="text-align:center;color:#8a94a0;font-size:1.3rem;">Core + paid module add-ons</div><div style="text-align:center;font-weight:700;color:var(--color-primary-v2);font-size:1.3rem;">Full platform included</div></div>
+          <div class="lp-switch-row"><div style="font-weight:700;font-size:1.3rem;">Pricing model</div><div style="text-align:center;color:#8a94a0;font-size:1.3rem;">Per-module, usage-tiered</div><div style="text-align:center;font-weight:700;color:var(--color-primary-v2);font-size:1.3rem;">Transparent, predictable</div></div>
+          <div class="lp-switch-row"><div style="font-weight:700;font-size:1.3rem;">Support model</div><div style="text-align:center;color:#8a94a0;font-size:1.3rem;">Ticket queue, tiered SLAs</div><div style="text-align:center;font-weight:700;color:var(--color-primary-v2);font-size:1.3rem;">Direct access to your team</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     SECTION 7 — PRODUCT EXPERIENCE
+════════════════════════════════════════════════════ -->
+<div class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:#fff;padding:76px 24px;">
+  <div class="col span_12 left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding" data-animation="" data-delay="">
+      <div class="wpb_wrapper" style="max-width:1120px;margin:0 auto;">
+        <div class="lp-fade" style="text-align:center;margin-bottom:48px;">
+          <p style="font-size:1.1rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--color-primary-v2);margin-bottom:12px;font-family:var(--font-Epilogue-Bold);">Inside the platform</p>
+          <h2 class="fs-epilogue-h3" style="margin-bottom:14px;">One Platform. Every Capability Your CX Program Needs.</h2>
+          <p class="fs-pm" style="color:#5a6472;max-width:640px;margin:0 auto;">Dashboards, AI analytics, journey mapping, survey automation, alerts, and integrations — built to work together.</p>
+        </div>
+        <div class="lp-grid-3 lp-fade" style="flex-wrap:wrap;">
+          <div style="flex:1;min-width:280px;background:#f0f4f3;border:1px solid #e2e6ea;border-radius:12px;padding:26px 22px;"><h3 style="font-size:1.6rem;font-weight:700;margin-bottom:10px;">AI Analytics &amp; Journey Mapping</h3><p style="font-size:1.3rem;color:#5a6472;line-height:1.6;">Sentiment analysis and predictive analytics process every open-ended response automatically, mapped to the customer journey stage driving detractor scores.</p></div>
+          <div style="flex:1;min-width:280px;background:#f0f4f3;border:1px solid #e2e6ea;border-radius:12px;padding:26px 22px;"><h3 style="font-size:1.6rem;font-weight:700;margin-bottom:10px;">Survey Automation &amp; Omnichannel</h3><p style="font-size:1.3rem;color:#5a6472;line-height:1.6;">Trigger NPS, CSAT, and CES surveys automatically across email, SMS, web, in-app, and QR code from one platform.</p></div>
+          <div style="flex:1;min-width:280px;background:#f0f4f3;border:1px solid #e2e6ea;border-radius:12px;padding:26px 22px;"><h3 style="font-size:1.6rem;font-weight:700;margin-bottom:10px;">Alerts, Case Management &amp; Security</h3><p style="font-size:1.3rem;color:#5a6472;line-height:1.6;">Real-time alerts and case management, on a SOC 2 Type II, HIPAA, and GDPR compliant foundation with 50+ integrations.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     SECTION 8 — SOCIAL PROOF (logos + stats + testimonial)
+════════════════════════════════════════════════════ -->
+<div class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:#fff;padding:36px 24px;border-bottom:1px solid #e2e6ea;">
+  <div class="col span_12 left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding" data-animation="" data-delay="">
+      <div class="wpb_wrapper" style="max-width:1120px;margin:0 auto;text-align:center;">
+        <p style="font-size:1.1rem;font-weight:600;color:#8a94a0;letter-spacing:.06em;text-transform:uppercase;margin-bottom:20px;">Enterprise and mid-market teams trust Sogolytics</p>
+        <div class="lp-grid-3" style="justify-content:center;flex-wrap:wrap;">
+          <!-- LOGO 1: Replace with <img src="URL" alt="Company" style="height:36px;width:auto;"> -->
+          <div style="height:36px;min-width:100px;background:#f0f4f3;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:600;color:#b0b8c1;padding:0 16px;">LOGO 1</div>
+          <div style="height:36px;min-width:100px;background:#f0f4f3;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:600;color:#b0b8c1;padding:0 16px;">LOGO 2</div>
+          <div style="height:36px;min-width:100px;background:#f0f4f3;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:600;color:#b0b8c1;padding:0 16px;">LOGO 3</div>
+          <div style="height:36px;min-width:100px;background:#f0f4f3;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:600;color:#b0b8c1;padding:0 16px;">LOGO 4</div>
+          <div style="height:36px;min-width:100px;background:#f0f4f3;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:600;color:#b0b8c1;padding:0 16px;">LOGO 5</div>
+          <div style="height:36px;min-width:100px;background:#f0f4f3;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:600;color:#b0b8c1;padding:0 16px;">LOGO 6</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:var(--color-primary-v2);padding:40px 24px;">
+  <div class="col span_12 color-dark left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding color-dark" data-animation="" data-delay="">
+      <div class="wpb_wrapper lp-grid-3" style="max-width:800px;margin:0 auto;text-align:center;">
+        <div style="flex:1;"><div class="font-Epilogue-Bold white-text" style="font-size:3.6rem;">500+</div><div style="font-size:1.3rem;color:rgba(255,255,255,.8);margin-top:6px;">Organizations worldwide</div></div>
+        <div style="flex:1;"><div class="font-Epilogue-Bold white-text" style="font-size:3.6rem;">96</div><div style="font-size:1.3rem;color:rgba(255,255,255,.8);margin-top:6px;">Countries served</div></div>
+        <div style="flex:1;"><div class="font-Epilogue-Bold white-text" style="font-size:3.6rem;">10M+</div><div style="font-size:1.3rem;color:rgba(255,255,255,.8);margin-top:6px;">Survey responses processed</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:var(--color-primary-v2);padding:72px 24px;text-align:center;">
+  <div class="col span_12 color-dark left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding color-dark" data-animation="" data-delay="">
+      <div class="wpb_wrapper lp-fade" style="max-width:780px;margin:0 auto;">
+        <p class="fs-italic white-text" style="font-size:2rem;line-height:1.55;margin-bottom:28px;">&ldquo;[TESTIMONIAL QUOTE — 2&ndash;3 sentences from a CX Director, VP Customer Experience, or COO on the impact of closing the loop on customer feedback with Sogolytics.]&rdquo;</p>
+        <div style="display:flex;align-items:center;justify-content:center;gap:14px;">
+          <div style="width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.2);border:2px solid rgba(255,255,255,.3);display:flex;align-items:center;justify-content:center;font-size:1.6rem;font-weight:700;color:#fff;">[I]</div>
+          <div style="text-align:left;"><div class="font-Epilogue-Bold white-text" style="font-size:1.5rem;">[Name]</div><div style="font-size:1.3rem;color:rgba(255,255,255,.75);">[Title], [Company]</div></div>
+          <div style="height:28px;background:rgba(255,255,255,.15);border-radius:4px;padding:4px 10px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:700;color:#fff;min-width:80px;">[CO. LOGO]</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     SECTION 9 — FAQ
+════════════════════════════════════════════════════ -->
+<div class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:#fff;padding:76px 24px;">
+  <div class="col span_12 left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding" data-animation="" data-delay="">
+      <div class="wpb_wrapper" style="max-width:1120px;margin:0 auto;">
+
+        <div class="lp-fade" style="text-align:center;margin-bottom:48px;">
+          <p style="font-size:1.1rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--color-primary-v2);margin-bottom:12px;font-family:var(--font-Epilogue-Bold);">Common questions</p>
+          <h2 class="fs-epilogue-h2" style="margin-bottom:0;">Customer Experience Management Software — FAQ</h2>
+        </div>
+
+        <div class="lp-fade" style="max-width:760px;margin:0 auto;">
+
+          <div class="lp-faq-item" style="border-bottom:1px solid #e2e6ea;">
+            <button class="lp-faq-question" style="width:100%;background:none;border:none;text-align:left;padding:20px 0;font-size:1.5rem;font-weight:600;color:#1a1a1a;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:var(--font-Epilogue-Bold);">
+              What is customer experience management software?
+              <span class="lp-faq-icon" style="width:24px;height:24px;border-radius:50%;background:#E8F4F2;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.6rem;color:var(--color-primary-v2);font-weight:700;transition:transform .3s;">+</span>
+            </button>
+            <div class="lp-faq-answer"><p style="padding-bottom:20px;font-size:1.4rem;color:#5a6472;line-height:1.7;margin:0;font-family:var(--font-Epilogue-Regular);">Customer experience management software is a platform that captures customer feedback across every channel — surveys, reviews, support tickets, social — and turns it into action through AI analytics, journey mapping, and closed-loop workflows. Sogolytics goes further than reporting tools by automatically routing flagged feedback to an owner and tracking it through to resolution.</p></div>
+          </div>
+
+          <div class="lp-faq-item" style="border-bottom:1px solid #e2e6ea;">
+            <button class="lp-faq-question" style="width:100%;background:none;border:none;text-align:left;padding:20px 0;font-size:1.5rem;font-weight:600;color:#1a1a1a;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:var(--font-Epilogue-Bold);">
+              What is a Voice of Customer (VoC) platform?
+              <span class="lp-faq-icon" style="width:24px;height:24px;border-radius:50%;background:#E8F4F2;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.6rem;color:var(--color-primary-v2);font-weight:700;transition:transform .3s;">+</span>
+            </button>
+            <div class="lp-faq-answer"><p style="padding-bottom:20px;font-size:1.4rem;color:#5a6472;line-height:1.7;margin:0;font-family:var(--font-Epilogue-Regular);">A Voice of Customer platform aggregates every signal a customer sends — direct feedback, behavioral data, support interactions, and reviews — into one unified view. Sogolytics&rsquo; VoC platform adds AI sentiment analysis and automated alerting so teams act on it in real time.</p></div>
+          </div>
+
+          <div class="lp-faq-item" style="border-bottom:1px solid #e2e6ea;">
+            <button class="lp-faq-question" style="width:100%;background:none;border:none;text-align:left;padding:20px 0;font-size:1.5rem;font-weight:600;color:#1a1a1a;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:var(--font-Epilogue-Bold);">
+              How does customer journey analytics work?
+              <span class="lp-faq-icon" style="width:24px;height:24px;border-radius:50%;background:#E8F4F2;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.6rem;color:var(--color-primary-v2);font-weight:700;transition:transform .3s;">+</span>
+            </button>
+            <div class="lp-faq-answer"><p style="padding-bottom:20px;font-size:1.4rem;color:#5a6472;line-height:1.7;margin:0;font-family:var(--font-Epilogue-Regular);">Customer journey analytics maps feedback and behavioral data to specific stages of the customer lifecycle — onboarding, support, renewal, and beyond — to show exactly where experience breaks down, so teams can prioritize fixes at the stage with the highest churn risk.</p></div>
+          </div>
+
+          <div class="lp-faq-item" style="border-bottom:1px solid #e2e6ea;">
+            <button class="lp-faq-question" style="width:100%;background:none;border:none;text-align:left;padding:20px 0;font-size:1.5rem;font-weight:600;color:#1a1a1a;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:var(--font-Epilogue-Bold);">
+              What is closed-loop feedback management?
+              <span class="lp-faq-icon" style="width:24px;height:24px;border-radius:50%;background:#E8F4F2;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.6rem;color:var(--color-primary-v2);font-weight:700;transition:transform .3s;">+</span>
+            </button>
+            <div class="lp-faq-answer"><p style="padding-bottom:20px;font-size:1.4rem;color:#5a6472;line-height:1.7;margin:0;font-family:var(--font-Epilogue-Regular);">Closed-loop feedback management means every piece of customer feedback is assigned an owner, tracked to resolution, and reported back to leadership — instead of sitting unread in a survey report.</p></div>
+          </div>
+
+          <div class="lp-faq-item" style="border-bottom:1px solid #e2e6ea;">
+            <button class="lp-faq-question" style="width:100%;background:none;border:none;text-align:left;padding:20px 0;font-size:1.5rem;font-weight:600;color:#1a1a1a;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:var(--font-Epilogue-Bold);">
+              How is Sogolytics different from a basic survey tool?
+              <span class="lp-faq-icon" style="width:24px;height:24px;border-radius:50%;background:#E8F4F2;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.6rem;color:var(--color-primary-v2);font-weight:700;transition:transform .3s;">+</span>
+            </button>
+            <div class="lp-faq-answer"><p style="padding-bottom:20px;font-size:1.4rem;color:#5a6472;line-height:1.7;margin:0;font-family:var(--font-Epilogue-Regular);">Survey tools stop at data collection. Sogolytics adds AI-powered sentiment analysis, customer journey analytics, automated workflow routing, and closed-loop case management — so feedback drives a resolved action instead of just a report.</p></div>
+          </div>
+
+          <div class="lp-faq-item" style="border-bottom:1px solid #e2e6ea;">
+            <button class="lp-faq-question" style="width:100%;background:none;border:none;text-align:left;padding:20px 0;font-size:1.5rem;font-weight:600;color:#1a1a1a;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:var(--font-Epilogue-Bold);">
+              How long does implementation take?
+              <span class="lp-faq-icon" style="width:24px;height:24px;border-radius:50%;background:#E8F4F2;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.6rem;color:var(--color-primary-v2);font-weight:700;transition:transform .3s;">+</span>
+            </button>
+            <div class="lp-faq-answer"><p style="padding-bottom:20px;font-size:1.4rem;color:#5a6472;line-height:1.7;margin:0;font-family:var(--font-Epilogue-Regular);">Most teams are fully live within 3&ndash;4 weeks, including integration setup, user provisioning, and your first automated survey launch. A dedicated Customer Success Manager runs the process.</p></div>
+          </div>
+
+          <div class="lp-faq-item" style="border-bottom:1px solid #e2e6ea;">
+            <button class="lp-faq-question" style="width:100%;background:none;border:none;text-align:left;padding:20px 0;font-size:1.5rem;font-weight:600;color:#1a1a1a;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:var(--font-Epilogue-Bold);">
+              Does Sogolytics integrate with our CRM and helpdesk?
+              <span class="lp-faq-icon" style="width:24px;height:24px;border-radius:50%;background:#E8F4F2;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.6rem;color:var(--color-primary-v2);font-weight:700;transition:transform .3s;">+</span>
+            </button>
+            <div class="lp-faq-answer"><p style="padding-bottom:20px;font-size:1.4rem;color:#5a6472;line-height:1.7;margin:0;font-family:var(--font-Epilogue-Regular);">Yes. Pre-built integrations include Salesforce, HubSpot, Zendesk, ServiceNow, Microsoft Dynamics, Slack, Teams, and Power BI, plus a REST API for custom connections.</p></div>
+          </div>
+
+          <div class="lp-faq-item" style="border-bottom:1px solid #e2e6ea;">
+            <button class="lp-faq-question" style="width:100%;background:none;border:none;text-align:left;padding:20px 0;font-size:1.5rem;font-weight:600;color:#1a1a1a;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:var(--font-Epilogue-Bold);">
+              Is Sogolytics secure enough for enterprise and regulated industries?
+              <span class="lp-faq-icon" style="width:24px;height:24px;border-radius:50%;background:#E8F4F2;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.6rem;color:var(--color-primary-v2);font-weight:700;transition:transform .3s;">+</span>
+            </button>
+            <div class="lp-faq-answer"><p style="padding-bottom:20px;font-size:1.4rem;color:#5a6472;line-height:1.7;margin:0;font-family:var(--font-Epilogue-Regular);">Yes. Sogolytics is SOC 2 Type II audited, HIPAA compliant, and GDPR ready, with role-based access controls, SSO/SAML, and full audit logging built in.</p></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     FINAL CTA
+════════════════════════════════════════════════════ -->
+<div class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:linear-gradient(135deg,#061a17 0%,#0a2e29 60%,#0d3d37 100%);padding:80px 24px;text-align:center;">
+  <div class="col span_12 color-dark left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding color-dark" data-animation="" data-delay="">
+      <div class="wpb_wrapper lp-fade" style="max-width:680px;margin:0 auto;">
+        <h2 class="fs-epilogue-h2 white-text" style="margin-bottom:16px;">Somewhere in your feedback right now, a customer is telling you exactly how to keep them.</h2>
+        <p class="fs-pm white-text" style="opacity:.75;margin-bottom:32px;">The only question is whether anyone acts on it before they leave. See how Sogolytics closes that loop — book a 30-minute demo.</p>
+
+        <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);border-radius:16px;padding:32px;max-width:520px;margin:0 auto;text-align:left;">
+          <form id="lpFinalCtaForm" action="YOUR_FORM_ENDPOINT" method="POST" onsubmit="lpHandleSubmit(event,this)">
+            <input type="hidden" name="utm_source" id="lp_utm_source">
+            <input type="hidden" name="utm_medium" id="lp_utm_medium">
+            <input type="hidden" name="utm_campaign" id="lp_utm_campaign">
+            <input type="hidden" name="utm_term" id="lp_utm_term">
+            <input type="hidden" name="utm_content" id="lp_utm_content">
+            <input type="hidden" name="gclid" id="lp_gclid">
+            <input type="hidden" name="page_variant" value="customer-experience-management-software">
+
+            <div class="lp-form-row" style="margin-bottom:12px;">
+              <input type="text" name="full_name" placeholder="Full name" required style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:8px;padding:1rem 1.4rem;font-size:1.4rem;color:#fff;font-family:var(--font-Epilogue-Regular);outline:none;width:100%;box-sizing:border-box;">
+              <input type="email" name="email" placeholder="Work email" required style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:8px;padding:1rem 1.4rem;font-size:1.4rem;color:#fff;font-family:var(--font-Epilogue-Regular);outline:none;width:100%;box-sizing:border-box;">
+            </div>
+            <select name="company_size" required style="width:100%;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:8px;padding:1rem 1.4rem;font-size:1.4rem;color:#fff;font-family:var(--font-Epilogue-Regular);outline:none;margin-bottom:16px;box-sizing:border-box;">
+              <option value="" disabled selected>Company size</option>
+              <option>1&ndash;50 employees</option>
+              <option>51&ndash;200 employees</option>
+              <option>201&ndash;500 employees</option>
+              <option>501&ndash;1,000 employees</option>
+              <option>1,001&ndash;5,000 employees</option>
+              <option>5,000+ employees</option>
+            </select>
+            <a href="javascript:void(0)" role="button" onclick="this.closest('form').requestSubmit ? this.closest('form').requestSubmit() : lpHandleSubmit(event,this.closest('form'))" class="slide-btn-wrapper slide-button fill-bg" style="text-decoration:none;width:100%;justify-content:center;display:flex;">
+              <i class="fa fa-arrow-right"></i>
+              <span>Request a Demo</span>
+            </a>
+            <p style="font-size:1.1rem;color:rgba(255,255,255,0.5);text-align:center;margin-top:12px;">No credit card required &middot; No commitment &middot; We respond within 1 business day</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     JAVASCRIPT — journey stepper, FAQ accordion, fade-in
+════════════════════════════════════════════════════ -->
+<script>
+(function(){
+  // FAQ accordion
+  document.querySelectorAll('.lp-faq-question').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var item = btn.closest('.lp-faq-item');
+      var answer = item.querySelector('.lp-faq-answer');
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.lp-faq-item.open').forEach(function(el){
+        el.classList.remove('open');
+        el.querySelector('.lp-faq-answer').style.maxHeight = '0';
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  });
+  // Fade-in on scroll
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('on'); obs.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.lp-fade').forEach(function(el){ obs.observe(el); });
+})();
+
+// Interactive customer journey stepper
+function lpShowJourneyStep(i, btn) {
+  document.querySelectorAll('.lp-journey-step-btn').forEach(function(b){ b.classList.remove('active'); });
+  btn.classList.add('active');
+  document.querySelectorAll('.lp-journey-panel').forEach(function(p){
+    p.classList.toggle('active', p.getAttribute('data-lp-panel') === String(i));
+  });
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({ event: 'journey_step_view', step_index: i });
+}
+
+// UTM passthrough
+(function(){
+  var params = new URLSearchParams(window.location.search);
+  ['utm_source','utm_medium','utm_campaign','utm_term','utm_content','gclid'].forEach(function(f){
+    var el = document.getElementById('lp_' + f);
+    if(el && params.get(f)) el.value = params.get(f);
+  });
+})();
+
+// Final CTA form submit handler
+function lpHandleSubmit(e, form) {
+  e.preventDefault();
+  if (!form || form.tagName !== 'FORM') form = document.getElementById('lpFinalCtaForm');
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({ event: 'lead_submit', form_id: 'final_cta', page_variant: 'customer-experience-management-software' });
+  setTimeout(function(){
+    var card = form.closest('div[style*="border-radius:16px"]');
+    if(card) card.innerHTML = '<div style="text-align:center;padding:24px 0"><div style="font-size:4rem;margin-bottom:12px">&#10003;</div><h3 class="font-Epilogue-Bold white-text" style="font-size:2rem;margin-bottom:8px;">You\'re on the calendar!</h3><p style="color:rgba(255,255,255,0.6);font-size:1.4rem;font-family:var(--font-Epilogue-Regular)">A Sogolytics expert will reach out within 1 business day.</p></div>';
+  }, 700);
+}
+</script>

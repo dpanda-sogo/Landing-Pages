@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<!--
+  ============================================================
+  SOGOLYTICS — CUSTOMER EXPERIENCE MANAGEMENT SOFTWARE
+  Google Ads landing page (storytelling / problem-first)
+  ============================================================
+  DEVELOPER EDIT GUIDE
+  ============================================================
+  LOGOS (Trust Bar):      Search "LOGO 1" through "LOGO 6"
+                          Replace <div class="logo-slot"> with <img>
+  TESTIMONIAL QUOTE:      Search "[TESTIMONIAL QUOTE]"
+  TESTIMONIAL AUTHOR:     Search "[AUTHOR NAME]", "[AUTHOR TITLE]", "[AUTHOR COMPANY]"
+  TESTIMONIAL CO. LOGO:   Search "[CO. LOGO]"
+  FORM ACTION:            Search "YOUR_FORM_ENDPOINT" — wire up CF7 or HubSpot
+  GTM ID:                 Search "GTM-XXXXXXX" — replace with real container ID
+  ============================================================
+  COLOR REFERENCE
+  --green:   #0D6E65   Accents, checkmarks, section labels
+  --teal:    #02BECC   Highlights, teal accents
+  --yellow:  #F5E100   All CTA buttons
+  --bg-dark: #061a17   Hero + footer / dark section backgrounds
+  --mist:    #f0f4f3   Soft section backgrounds
+  ============================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <title>Customer Experience Management Software | Turn Feedback Into Action — Sogolytics</title>
+  <meta name="description" content="Sogolytics customer experience management software unifies Voice of Customer data, AI sentiment analysis, and closed-loop workflows — so every signal drives action, not just reports. Request a demo.">
+  <link rel="canonical" href="https://www.sogolytics.com/customer-experience-management-software/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Customer Experience Management Software | Sogolytics">
+  <meta property="og:description" content="Unify Voice of Customer data, AI analytics, and closed-loop workflows in one customer experience management platform. Request a demo.">
+  <meta property="og:url" content="https://www.sogolytics.com/customer-experience-management-software/">
+  <meta property="og:image" content="https://cdn.sogolytics.com/wp-content/uploads/2022/07/sogolytics-wbg.png">
+  <meta property="og:site_name" content="Sogolytics">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Customer Experience Management Software | Sogolytics">
+  <meta name="twitter:description" content="Unify Voice of Customer data, AI analytics, and closed-loop workflows in one customer experience management platform.">
+  <meta name="twitter:image" content="https://cdn.sogolytics.com/wp-content/uploads/2022/07/sogolytics-wbg.png">
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Structured data: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Sogolytics",
+    "url": "https://www.sogolytics.com/",
+    "logo": "https://cdn.sogolytics.com/wp-content/uploads/2022/07/sogolytics-wbg.png",
+    "sameAs": ["https://www.linkedin.com/company/sogolytics/", "https://twitter.com/sogolytics"]
+  }
+  </script>
+  <!-- Structured data: SoftwareApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Sogolytics Customer Experience Management Software",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "description": "Customer experience management software unifying Voice of Customer data, AI sentiment analysis, customer journey analytics, and closed-loop workflow automation.",
+    "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://www.sogolytics.com/customer-experience-management-software/" },
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.6", "reviewCount": "500" }
+  }
+  </script>
+  <!-- Structured data: Breadcrumb -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Sogolytics", "item": "https://www.sogolytics.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Customer Experience Management Software", "item": "https://www.sogolytics.com/customer-experience-management-software/" }
+    ]
+  }
+  </script>
+  <!-- Structured data: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What is customer experience management software?", "acceptedAnswer": { "@type": "Answer", "text": "Customer experience management software is a platform that captures customer feedback across every channel — surveys, reviews, support tickets, social — and turns it into action through AI analytics, journey mapping, and closed-loop workflows. Sogolytics goes further than reporting tools by automatically routing flagged feedback to an owner and tracking it through to resolution." } },
+      { "@type": "Question", "name": "What is a Voice of Customer (VoC) platform?", "acceptedAnswer": { "@type": "Answer", "text": "A Voice of Customer platform aggregates every signal a customer sends — direct feedback, behavioral data, support interactions, and reviews — into one unified view. Sogolytics' VoC platform adds AI sentiment analysis and automated alerting so teams don't just collect the voice of the customer, they act on it in real time." } },
+      { "@type": "Question", "name": "How does customer journey analytics work?", "acceptedAnswer": { "@type": "Answer", "text": "Customer journey analytics maps feedback and behavioral data to specific stages of the customer lifecycle — onboarding, support, renewal, and beyond — to show exactly where experience breaks down. Sogolytics visualizes this automatically, so teams can prioritize fixes at the stage with the highest churn risk instead of guessing." } },
+      { "@type": "Question", "name": "What is closed-loop feedback management?", "acceptedAnswer": { "@type": "Answer", "text": "Closed-loop feedback management means every piece of customer feedback is assigned an owner, tracked to resolution, and reported back to leadership — instead of sitting unread in a survey report. It's the difference between measuring customer experience and actually managing it." } },
+      { "@type": "Question", "name": "How is Sogolytics different from a basic survey tool?", "acceptedAnswer": { "@type": "Answer", "text": "Survey tools stop at data collection. Sogolytics adds AI-powered sentiment analysis, customer journey analytics, automated workflow routing, and closed-loop case management — so feedback drives a resolved action instead of just a report." } },
+      { "@type": "Question", "name": "How long does implementation take?", "acceptedAnswer": { "@type": "Answer", "text": "Most teams are fully live within 3–4 weeks, including integration setup, user provisioning, and your first automated survey launch. A dedicated Customer Success Manager runs the process." } },
+      { "@type": "Question", "name": "Does Sogolytics integrate with our CRM and helpdesk?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Pre-built integrations include Salesforce, HubSpot, Zendesk, ServiceNow, Microsoft Dynamics, Slack, Teams, and Power BI, plus a REST API for custom connections." } },
+      { "@type": "Question", "name": "Is Sogolytics secure enough for enterprise and regulated industries?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Sogolytics is SOC 2 Type II audited, HIPAA compliant, and GDPR ready, with role-based access controls, SSO/SAML, and full audit logging built in." } }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Epilogue', system-ui, sans-serif; color: #1a1a1a; background: #fff; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    :root {
+      --green: #0D6E65;
+      --green-dark: #0a5a52;
+      --green-light: #e8f4f3;
+      --teal: #02BECC;
+      --yellow: #F5E100;
+      --yellow-hover: #e6d400;
+      --mist: #f0f4f3;
+      --text: #1a1a1a;
+      --text-muted: #5a6472;
+      --text-light: #8a94a0;
+      --border: #e2e6ea;
+    }
+
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+    .section-label { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--green); margin-bottom: 12px; }
+    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-in.visible { opacity: 1; transform: none; }
+
+    /* Nav */
+    .nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.97); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 60px; max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+    .nav-logo img { height: 26px; display: block; }
+    .btn-yellow { display: inline-flex; align-items: center; gap: 10px; background: var(--yellow); color: #0a1a18; font-weight: 700; border-radius: 50px; padding: 8px 20px 8px 6px; border: none; cursor: pointer; font-size: 14px; font-family: inherit; text-decoration: none; transition: background 0.2s; }
+    .btn-yellow:hover { background: var(--yellow-hover); }
+    .btn-yellow .btn-dot { width: 28px; height: 28px; border-radius: 50%; background: #0a1a18; color: var(--yellow); flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700; }
+    .btn-yellow-lg { padding: 14px 28px 14px 8px; font-size: 16px; }
+    .btn-yellow-lg .btn-dot { width: 36px; height: 36px; font-size: 16px; }
+    .btn-ghost { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: #fff; font-weight: 600; border-radius: 50px; padding: 13px 22px; border: 1.5px solid rgba(255,255,255,0.3); cursor: pointer; font-size: 15px; font-family: inherit; text-decoration: none; transition: border-color 0.2s, background 0.2s; }
+    .btn-ghost:hover { border-color: rgba(255,255,255,0.7); background: rgba(255,255,255,0.06); }
+
+    /* Hero */
+    .hero { padding: 80px 24px 60px; background: linear-gradient(135deg, #061a17 0%, #0a2e29 60%, #0d3d37 100%); color: #fff; overflow: hidden; position: relative; }
+    .hero-inner { max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 48px; align-items: center; }
+    .hero-eyebrow { display: inline-flex; align-items: center; gap: 6px; background: #fff; color: #0a1a18; font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 5px 14px; border-radius: 20px; margin-bottom: 20px; }
+    .hero-eyebrow .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); flex-shrink: 0; }
+    .hero h1 { font-size: clamp(30px,3.6vw,44px); font-weight: 700; line-height: 1.14; margin-bottom: 20px; letter-spacing: -0.02em; }
+    .hero h1 span { color: var(--teal); }
+    .hero-sub { font-size: 17px; line-height: 1.65; color: rgba(255,255,255,0.88); margin-bottom: 32px; max-width: 540px; }
+    .hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 32px; }
+    .hero-trust { display: flex; flex-wrap: wrap; gap: 20px; align-items: center; }
+    .hero-trust span { display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.85); }
+
+    .flow-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.14); border-radius: 16px; padding: 28px 24px; backdrop-filter: blur(8px); }
+    .flow-card-label { font-size: 11px; font-weight: 700; color: rgba(255,255,255,0.55); margin-bottom: 22px; letter-spacing: 0.08em; text-transform: uppercase; }
+    .flow-step { display: flex; align-items: flex-start; gap: 14px; opacity: 0; animation: flowIn 0.5s ease forwards; }
+    .flow-step:nth-child(1){animation-delay:.1s} .flow-step:nth-child(2){animation-delay:.3s} .flow-step:nth-child(3){animation-delay:.5s} .flow-step:nth-child(4){animation-delay:.7s} .flow-step:nth-child(5){animation-delay:.9s}
+    @keyframes flowIn { from{opacity:0;transform:translateX(-16px);} to{opacity:1;transform:translateX(0);} }
+    .flow-dotcol { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; }
+    .flow-num { width: 30px; height: 30px; border-radius: 50%; background: rgba(255,255,255,0.12); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; border: 1px solid rgba(255,255,255,0.25); }
+    .flow-num.done { background: var(--teal); color: #061a17; border: none; }
+    .flow-line { width: 1.5px; flex: 1; min-height: 22px; background: rgba(255,255,255,0.18); }
+    .flow-body { padding-bottom: 22px; }
+    .flow-body:last-child { padding-bottom: 0; }
+    .flow-title { font-size: 15px; font-weight: 700; color: #fff; margin-bottom: 2px; }
+    .flow-sub { font-size: 13px; color: rgba(255,255,255,0.55); }
+
+    /* Section commons */
+    .section { padding: 76px 0; }
+    .section-title { font-size: clamp(26px,3vw,36px); font-weight: 700; line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 14px; }
+    .section-intro { font-size: 17px; color: var(--text-muted); line-height: 1.65; max-width: 620px; }
+    .centered { text-align: center; margin-bottom: 48px; }
+    .centered .section-intro { margin-left: auto; margin-right: auto; }
+
+    /* Hidden cost */
+    .hidden-cost { background: #0a1614; color: #fff; }
+    .hidden-cost .section-label { color: var(--teal); }
+    .leak-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+    .leak-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 28px 24px; }
+    .leak-stat { font-size: clamp(30px,3.4vw,40px); font-weight: 700; color: var(--teal); letter-spacing: -0.02em; line-height: 1; margin-bottom: 12px; }
+    .leak-label { font-size: 15px; font-weight: 700; margin-bottom: 10px; line-height: 1.4; }
+    .leak-detail { font-size: 13.5px; color: rgba(255,255,255,0.6); line-height: 1.65; }
+
+    /* Intro */
+    .intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+    .pillar-list { display: flex; flex-direction: column; gap: 14px; margin-top: 24px; }
+    .pillar-row { display: flex; align-items: flex-start; gap: 12px; }
+    .pillar-check { width: 22px; height: 22px; border-radius: 50%; background: var(--green-light); color: var(--green); flex-shrink: 0; display: flex; align-items: center; justify-content: center; margin-top: 1px; }
+    .intro-panel { background: linear-gradient(160deg, #061a17 0%, #0d3d37 100%); border-radius: 16px; padding: 36px 32px; color: #fff; }
+    .intro-panel-label { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 18px; }
+    .intro-row { display: flex; justify-content: space-between; align-items: center; border-radius: 10px; padding: 16px 18px; gap: 12px; }
+    .intro-row.old { background: rgba(255,255,255,0.06); }
+    .intro-row.new { background: rgba(2,190,204,0.14); border: 1px solid rgba(2,190,204,0.3); }
+    .intro-arrow { text-align: center; color: var(--teal); font-size: 20px; margin: 16px 0; }
+
+    /* Journey */
+    .journey { background: var(--mist); }
+    .journey-steps { display: flex; justify-content: center; gap: 6px; flex-wrap: wrap; margin-bottom: 40px; }
+    .journey-step-btn { display: flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: 50px; border: 1.5px solid var(--border); background: #fff; color: var(--text); cursor: pointer; font-family: inherit; font-size: 13px; font-weight: 600; transition: all 0.2s; white-space: nowrap; }
+    .journey-step-btn.active { border-color: var(--green); background: var(--green); color: #fff; }
+    .journey-detail { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+    .journey-eyebrow { display: inline-flex; font-size: 12px; font-weight: 700; color: var(--green); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 12px; }
+    .journey-detail h3 { font-size: clamp(20px,2.2vw,26px); font-weight: 700; margin-bottom: 14px; letter-spacing: -0.01em; }
+    .journey-detail p { font-size: 15.5px; color: var(--text-muted); line-height: 1.7; }
+    .journey-panel { display: none; }
+    .journey-panel.active { display: block; }
+
+    /* Mock screen */
+    .mock-screen { background: var(--mist); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.1); }
+    .mock-header { background: var(--green); padding: 10px 16px; display: flex; align-items: center; gap: 8px; }
+    .mock-header .dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.4); }
+    .mock-header .title { font-size: 12px; color: rgba(255,255,255,0.8); font-weight: 500; }
+    .mock-body { padding: 20px; }
+    .mock-stat-row { display: grid; gap: 10px; margin-bottom: 16px; }
+    .mock-stat { background: #fff; border-radius: 8px; padding: 12px; text-align: center; border: 1px solid var(--border); }
+    .mock-stat .num { font-size: 20px; font-weight: 700; color: var(--green); }
+    .mock-stat .label { font-size: 10px; color: var(--text-light); margin-top: 2px; }
+    .mock-chart-area { background: #fff; border-radius: 8px; padding: 14px; border: 1px solid var(--border); margin-bottom: 12px; }
+    .mock-chart-label { font-size: 11px; color: var(--text-light); margin-bottom: 8px; font-weight: 600; }
+    .mock-bar-row { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+    .mock-bar-label { font-size: 10px; color: var(--text-muted); width: 76px; text-align: right; flex-shrink: 0; }
+    .mock-bar-track { flex: 1; height: 8px; background: var(--mist); border-radius: 4px; overflow: hidden; }
+    .mock-bar-fill { height: 100%; border-radius: 4px; background: var(--green); }
+    .mock-bar-val { font-size: 10px; color: var(--text-muted); width: 34px; flex-shrink: 0; }
+    .mock-tag { font-size: 10px; padding: 3px 8px; border-radius: 10px; font-weight: 600; display: inline-block; }
+    .mock-tag.green { background: #e8f4f3; color: var(--green); }
+    .mock-tag.blue { background: #e6f0ff; color: #2563eb; }
+    .mock-tag.amber { background: #fef3c7; color: #92400e; }
+    .mock-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+
+    /* Outcomes */
+    .outcome-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+    .outcome-card { background: var(--mist); border: 1px solid var(--border); border-radius: 12px; padding: 26px 22px; }
+    .outcome-stat { font-size: 22px; font-weight: 700; color: var(--green); margin-bottom: 12px; }
+    .outcome-card h3 { font-size: 15.5px; font-weight: 700; margin-bottom: 8px; }
+    .outcome-card p { font-size: 13.5px; color: var(--text-muted); line-height: 1.6; }
+
+    /* Switch */
+    .switch-section { background: var(--mist); }
+    .switch-wrap { max-width: 860px; margin: 0 auto; }
+    .switch-header { display: grid; grid-template-columns: 1.4fr 1fr 1fr; margin-bottom: 4px; }
+    .switch-header div { text-align: center; font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding-bottom: 12px; color: var(--text-light); }
+    .switch-header div.sogo { color: var(--green); }
+    .switch-header div:first-child { visibility: hidden; }
+    .switch-row { display: grid; grid-template-columns: 1.4fr 1fr 1fr; align-items: center; background: #fff; border: 1px solid var(--border); border-radius: 10px; margin-bottom: 10px; padding: 16px 18px; }
+    .switch-row .label { font-size: 14px; font-weight: 700; }
+    .switch-row .old-val { text-align: center; font-size: 13.5px; color: var(--text-light); }
+    .switch-row .new-val { text-align: center; font-size: 13.5px; font-weight: 700; color: var(--green); display: flex; align-items: center; justify-content: center; gap: 6px; }
+
+    /* Product rows */
+    .alt-row { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; margin-bottom: 72px; }
+    .alt-row:last-child { margin-bottom: 0; }
+    .checklist { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .checklist li { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: var(--text-muted); }
+    .checklist .chk { width: 18px; height: 18px; border-radius: 50%; background: var(--green-light); flex-shrink: 0; margin-top: 1px; display: inline-flex; align-items: center; justify-content: center; }
+
+    /* Logo bar / stats / testimonial */
+    .logo-bar { padding: 36px 0; border-bottom: 1px solid var(--border); }
+    .logo-bar-label { text-align: center; font-size: 12px; font-weight: 600; color: var(--text-light); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 20px; }
+    .logo-row { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 32px; }
+    .logo-slot { width: 110px; height: 40px; background: var(--mist); border: 1px dashed var(--border); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 600; color: var(--text-light); letter-spacing: 0.05em; }
+
+    .stats-band { padding: 40px 0; background: var(--green); color: #fff; }
+    .stats-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; text-align: center; }
+    .stats-grid .num { font-size: clamp(32px,4vw,44px); font-weight: 700; letter-spacing: -0.02em; line-height: 1; }
+    .stats-grid .label { font-size: 14px; opacity: 0.8; margin-top: 6px; }
+
+    .testimonial-band { background: var(--green); color: #fff; padding: 72px 0; }
+    .testimonial-inner { max-width: 780px; margin: 0 auto; text-align: center; }
+    .testimonial-quote-mark { font-size: 56px; line-height: 1; opacity: 0.3; margin-bottom: 16px; font-family: Georgia, serif; }
+    .testimonial-quote { font-size: clamp(18px,2.2vw,24px); font-weight: 500; line-height: 1.55; margin-bottom: 28px; opacity: 0.95; }
+    .testimonial-author { display: flex; align-items: center; justify-content: center; gap: 14px; }
+    .testimonial-avatar { width: 48px; height: 48px; border-radius: 50%; background: rgba(255,255,255,0.2); border: 2px solid rgba(255,255,255,0.3); display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 700; }
+    .testimonial-name { font-size: 15px; font-weight: 700; text-align: left; }
+    .testimonial-title { font-size: 13px; opacity: 0.75; text-align: left; }
+    .testimonial-co-logo { height: 28px; background: rgba(255,255,255,0.15); border-radius: 4px; padding: 4px 10px; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; letter-spacing: 0.05em; min-width: 80px; }
+
+    /* FAQ */
+    .faq-list { max-width: 760px; margin: 0 auto; }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-question { width: 100%; text-align: left; background: none; border: none; padding: 20px 0; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-family: inherit; font-size: 15px; font-weight: 600; color: var(--text); gap: 16px; }
+    .faq-question:hover { color: var(--green); }
+    .faq-item.open .faq-question { color: var(--green); }
+    .faq-icon { flex-shrink: 0; color: var(--text-light); transition: transform 0.3s; }
+    .faq-item.open .faq-icon { transform: rotate(180deg); color: var(--green); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+    .faq-answer-inner { font-size: 14px; color: var(--text-muted); line-height: 1.7; padding-bottom: 18px; }
+
+    /* Final CTA */
+    .final-cta { padding: 84px 0; text-align: center; background: linear-gradient(135deg, #061a17 0%, #0a2e29 60%, #0d3d37 100%); color: #fff; }
+    .final-cta h2 { font-size: clamp(26px,3.2vw,40px); font-weight: 700; margin: 0 auto 16px; letter-spacing: -0.02em; line-height: 1.25; max-width: 680px; }
+    .final-cta-sub { font-size: 17px; color: rgba(255,255,255,0.75); max-width: 560px; margin: 0 auto 36px; line-height: 1.65; }
+    .cta-form { max-width: 520px; margin: 0 auto; }
+    .cta-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px; }
+    .form-input { width: 100%; padding: 10px 14px; border: 1.5px solid var(--border); border-radius: 7px; font-size: 14px; color: var(--text); background: rgba(255,255,255,0.95); outline: none; font-family: inherit; }
+    .form-input:focus { border-color: var(--green); box-shadow: 0 0 0 3px rgba(13,110,101,0.15); }
+    .form-note { font-size: 13px; color: rgba(255,255,255,0.55); margin-top: 12px; display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap; }
+
+    /* Footer */
+    .footer { background: #0a2c28; color: rgba(255,255,255,0.7); padding: 24px; text-align: center; font-size: 13px; }
+    .footer a { color: rgba(255,255,255,0.6); margin: 0 10px; text-decoration: none; }
+    .footer a:hover { color: #fff; }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .leak-grid { grid-template-columns: 1fr; }
+      .intro-grid { grid-template-columns: 1fr; gap: 32px; }
+      .journey-detail { grid-template-columns: 1fr; gap: 28px; }
+      .outcome-grid { grid-template-columns: 1fr 1fr; }
+      .alt-row { grid-template-columns: 1fr !important; gap: 32px; }
+      .alt-row.reverse .content { order: 1; } .alt-row.reverse .mock { order: 2; }
+      .stats-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 700px) {
+      .switch-header { display: none; }
+      .switch-row { grid-template-columns: 1fr; text-align: left; gap: 6px; }
+      .switch-row .old-val, .switch-row .new-val { text-align: left; justify-content: flex-start; }
+    }
+    @media (max-width: 600px) {
+      .outcome-grid { grid-template-columns: 1fr; }
+      .cta-form-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- ═══════════════════════════════════════
+     NAV — logo + Request Demo only
+════════════════════════════════════════ -->
+<nav class="nav" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="https://www.sogolytics.com" aria-label="Sogolytics home">
+      <img src="https://cdn.sogolytics.com/wp-content/uploads/2022/07/sogolytics-wbg.png" alt="Sogolytics — Customer Experience Management Software" style="height:26px">
+    </a>
+    <a href="#finalCTA" class="btn-yellow"><span class="btn-dot">→</span>Request a Demo</a>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════
+     SECTION 1 — HERO
+════════════════════════════════════════ -->
+<section class="hero" aria-labelledby="hero-heading">
+  <div class="hero-inner">
+    <div>
+      <span class="hero-eyebrow"><span class="dot"></span>Customer Experience Management Software</span>
+      <h1 id="hero-heading">You Don't Have a Customer Feedback Problem.<br>You Have an <span>Action</span> Problem.</h1>
+      <p class="hero-sub">Most teams already collect enough Voice of Customer data to fill a warehouse — NPS, CSAT, reviews, support tickets — yet churn keeps climbing. Sogolytics is the <strong>customer experience management software</strong> built to close that gap: AI detects the signal, workflow automation routes it to the right owner, and every piece of feedback ends in a resolved action, not an ignored dashboard.</p>
+      <div class="hero-ctas">
+        <a href="#finalCTA" class="btn-yellow btn-yellow-lg"><span class="btn-dot">→</span>Request a Demo</a>
+        <a href="#customer-journey" class="btn-ghost">See how it works ↓</a>
+      </div>
+      <div class="hero-trust">
+        <span>✓ SOC 2 Type II</span>
+        <span>✓ HIPAA-ready</span>
+        <span>✓ GDPR</span>
+        <span>✓ 500+ Organizations</span>
+      </div>
+    </div>
+    <div class="flow-card">
+      <div class="flow-card-label">From signal to action — automatically</div>
+      <div class="flow-step">
+        <div class="flow-dotcol"><span class="flow-num">1</span><span class="flow-line"></span></div>
+        <div class="flow-body"><div class="flow-title">Feedback captured</div><div class="flow-sub">Survey, review, support ticket</div></div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-dotcol"><span class="flow-num">2</span><span class="flow-line"></span></div>
+        <div class="flow-body"><div class="flow-title">AI detects signal</div><div class="flow-sub">Sentiment + intent analysis</div></div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-dotcol"><span class="flow-num">3</span><span class="flow-line"></span></div>
+        <div class="flow-body"><div class="flow-title">Alert triggered</div><div class="flow-sub">Detractor flagged in real time</div></div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-dotcol"><span class="flow-num">4</span><span class="flow-line"></span></div>
+        <div class="flow-body"><div class="flow-title">Owner assigned</div><div class="flow-sub">Routed via workflow automation</div></div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-dotcol"><span class="flow-num done">✓</span></div>
+        <div class="flow-body"><div class="flow-title">Action closed</div><div class="flow-sub">Customer retained</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 2 — THE HIDDEN COST
+════════════════════════════════════════ -->
+<section class="section hidden-cost" aria-labelledby="cost-heading">
+  <div class="container">
+    <div class="fade-in" style="max-width:720px;margin-bottom:48px;">
+      <span class="section-label">The hidden cost of customer churn</span>
+      <h2 class="section-title" id="cost-heading">The Real Cost of Feedback Nobody Acts On</h2>
+      <p style="font-size:17px;line-height:1.7;color:rgba(255,255,255,0.75);">You're not short on data. Most CX teams run NPS programs, CSAT surveys, and review monitoring every quarter — and still watch customers churn without warning. That's not a measurement gap. It's revenue leakage happening in plain sight, one unresolved response at a time.</p>
+    </div>
+    <div class="leak-grid fade-in">
+      <div class="leak-card">
+        <div class="leak-stat">96%</div>
+        <div class="leak-label">of unhappy customers never complain</div>
+        <p class="leak-detail">They just leave — and the first sign of it shows up as a churn number, not a support ticket.</p>
+      </div>
+      <div class="leak-card">
+        <div class="leak-stat">1 in 26</div>
+        <div class="leak-label">detractors are ever contacted</div>
+        <p class="leak-detail">The rest sit in a spreadsheet, a dashboard, or a monthly report nobody opens until it's too late.</p>
+      </div>
+      <div class="leak-card">
+        <div class="leak-stat">6–7x</div>
+        <div class="leak-label">more expensive to win a customer than keep one</div>
+        <p class="leak-detail">Every unresolved piece of negative feedback is a retention cost you're choosing to pay later, at a markup.</p>
+      </div>
+    </div>
+    <p class="fade-in" style="font-size:13px;color:rgba(255,255,255,0.4);margin-top:20px;">Industry benchmarks cited for illustration. Ask us for the Sogolytics customer benchmark report specific to your industry.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 3 — INTRODUCE SOGOLYTICS
+════════════════════════════════════════ -->
+<section class="section" aria-labelledby="intro-heading">
+  <div class="container intro-grid fade-in">
+    <div>
+      <span class="section-label">Introducing the Sogolytics approach</span>
+      <h2 class="section-title" id="intro-heading" style="font-size:clamp(24px,2.8vw,34px)">Most Customer Experience Platforms Tell You What Happened.<br>Sogolytics Helps You Decide What Happens Next.</h2>
+      <p style="font-size:16px;color:var(--text-muted);line-height:1.7;margin-bottom:0">A dashboard that reports a dropping NPS score isn't a solution — it's a symptom. Sogolytics was built as a <strong>Voice of Customer platform</strong> with action at the center: AI reads every response, journey analytics show where friction lives, and closed-loop workflows make sure the right person acts before the customer decides to leave.</p>
+      <div class="pillar-list">
+        <div class="pillar-row"><span class="pillar-check"><svg width="11" height="9" viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke="#0D6E65" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><strong>Voice of Customer</strong> — Every channel — survey, review, support, social — unified into one signal.</div></div>
+        <div class="pillar-row"><span class="pillar-check"><svg width="11" height="9" viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke="#0D6E65" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><strong>AI Analytics</strong> — Sentiment, theme, and intent detection across every open-ended response.</div></div>
+        <div class="pillar-row"><span class="pillar-check"><svg width="11" height="9" viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke="#0D6E65" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><strong>Journey Analytics</strong> — See where experience breaks down across the full customer lifecycle.</div></div>
+        <div class="pillar-row"><span class="pillar-check"><svg width="11" height="9" viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke="#0D6E65" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><strong>Closed-Loop Feedback</strong> — Every flagged response gets an owner, a deadline, and a resolution.</div></div>
+        <div class="pillar-row"><span class="pillar-check"><svg width="11" height="9" viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke="#0D6E65" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><strong>Workflow Automation</strong> — Alerts and case assignment happen automatically — no manual triage.</div></div>
+      </div>
+    </div>
+    <div class="intro-panel">
+      <div class="intro-panel-label">Reports vs. resolutions</div>
+      <div class="intro-row old"><span style="font-size:14px;color:rgba(255,255,255,0.7)">Legacy CX reporting</span><span style="font-size:20px;font-weight:700">"NPS dropped 6 pts"</span></div>
+      <div class="intro-arrow">↓</div>
+      <div class="intro-row new"><span style="font-size:14px;color:rgba(255,255,255,0.85)">Sogolytics</span><span style="font-size:16px;font-weight:700;color:var(--teal);text-align:right">"18 detractors flagged, owners assigned, 14 resolved today"</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 4 — INTERACTIVE CUSTOMER STORY
+════════════════════════════════════════ -->
+<section class="section journey" id="customer-journey" aria-labelledby="journey-heading">
+  <div class="container">
+    <div class="centered fade-in">
+      <span class="section-label">Closed-loop feedback in action</span>
+      <h2 class="section-title" id="journey-heading">From Feedback to Fixed — Follow One Customer's Journey</h2>
+      <p class="section-intro" style="margin:0 auto">This is what customer journey analytics and workflow automation look like when they're actually connected. Click each step.</p>
+    </div>
+
+    <div class="journey-steps fade-in">
+      <button class="journey-step-btn active" data-step="0" onclick="showJourneyStep(0)">💬 Feedback left</button>
+      <button class="journey-step-btn" data-step="1" onclick="showJourneyStep(1)">🧠 AI detects issue</button>
+      <button class="journey-step-btn" data-step="2" onclick="showJourneyStep(2)">🚨 Alert triggered</button>
+      <button class="journey-step-btn" data-step="3" onclick="showJourneyStep(3)">👤 Owner assigned</button>
+      <button class="journey-step-btn" data-step="4" onclick="showJourneyStep(4)">✅ Action taken</button>
+      <button class="journey-step-btn" data-step="5" onclick="showJourneyStep(5)">🤝 Customer retained</button>
+    </div>
+
+    <div class="journey-panel active" data-panel="0">
+      <div class="journey-detail fade-in">
+        <div><span class="journey-eyebrow">Step 1 of 6</span><h3>A customer leaves feedback</h3><p>A mid-tier account completes a post-support CSAT survey and rates the experience 2 out of 5, mentioning slow response time in the open-ended comment.</p></div>
+        <div class="mock-screen"><div class="mock-header"><span class="dot"></span><span class="dot"></span><span class="title">Customer Feedback Management</span></div><div class="mock-body">
+          <div class="mock-stat-row" style="grid-template-columns:repeat(3,1fr)"><div class="mock-stat"><div class="num">2/5</div><div class="label">CSAT Score</div></div><div class="mock-stat"><div class="num">94%</div><div class="label">Response Rate</div></div><div class="mock-stat"><div class="num">1</div><div class="label">New Response</div></div></div>
+          <div class="mock-chart-area"><div class="mock-chart-label">Open-ended comment</div><p style="font-size:12px;color:var(--text-muted);font-style:italic">"Support took three days to reply. Really disappointing for a paid plan."</p></div>
+        </div></div>
+      </div>
+    </div>
+    <div class="journey-panel" data-panel="1">
+      <div class="journey-detail fade-in">
+        <div><span class="journey-eyebrow">Step 2 of 6</span><h3>AI detects the issue</h3><p>Sogolytics AI reads the open-ended response, scores sentiment as strongly negative, and tags the theme as "support responsiveness" — no analyst required.</p></div>
+        <div class="mock-screen"><div class="mock-header"><span class="dot"></span><span class="dot"></span><span class="title">AI Sentiment Analysis</span></div><div class="mock-body">
+          <div class="mock-chart-area"><div class="mock-chart-label">Sentiment breakdown — this response</div>
+            <div class="mock-bar-row"><div class="mock-bar-label" style="color:#A32D2D">Negative</div><div class="mock-bar-track"><div class="mock-bar-fill" style="width:88%;background:#E24B4A"></div></div><div class="mock-bar-val">88%</div></div>
+            <div style="margin-top:8px" class="mock-tags"><span class="mock-tag amber">Support responsiveness</span></div>
+          </div>
+        </div></div>
+      </div>
+    </div>
+    <div class="journey-panel" data-panel="2">
+      <div class="journey-detail fade-in">
+        <div><span class="journey-eyebrow">Step 3 of 6</span><h3>An alert triggers instantly</h3><p>The moment the response is scored, a real-time alert fires — before the survey report even runs. No one is waiting for a weekly digest.</p></div>
+        <div class="mock-screen"><div class="mock-header"><span class="dot"></span><span class="dot"></span><span class="title">Real-Time Alerts</span></div><div class="mock-body">
+          <div class="mock-chart-area"><div class="mock-chart-label">Live alert feed</div><div class="mock-tags"><span class="mock-tag amber">Detractor alert ⚠</span><span class="mock-tag blue">Priority: High</span><span class="mock-tag green">SLA: 4 hours</span></div></div>
+        </div></div>
+      </div>
+    </div>
+    <div class="journey-panel" data-panel="3">
+      <div class="journey-detail fade-in">
+        <div><span class="journey-eyebrow">Step 4 of 6</span><h3>A manager is assigned</h3><p>Workflow automation routes the case to the customer's account manager based on account tier and issue type — automatically, with full context attached.</p></div>
+        <div class="mock-screen"><div class="mock-header"><span class="dot"></span><span class="dot"></span><span class="title">Workflow Automation</span></div><div class="mock-body">
+          <div class="mock-chart-area"><div class="mock-chart-label">Case routing</div>
+            <div class="mock-bar-row"><div class="mock-bar-label">Assigned</div><div class="mock-bar-track"><div class="mock-bar-fill" style="width:100%"></div></div><div class="mock-bar-val">✓</div></div>
+            <div style="margin-top:8px" class="mock-tags"><span class="mock-tag blue">Owner: J. Alvarez, CSM</span></div>
+          </div>
+        </div></div>
+      </div>
+    </div>
+    <div class="journey-panel" data-panel="4">
+      <div class="journey-detail fade-in">
+        <div><span class="journey-eyebrow">Step 5 of 6</span><h3>The manager takes action</h3><p>The CSM reaches out within the SLA window, resolves the support delay, and logs the resolution — closing the loop directly inside the platform.</p></div>
+        <div class="mock-screen"><div class="mock-header"><span class="dot"></span><span class="dot"></span><span class="title">Closed-Loop Case</span></div><div class="mock-body">
+          <div class="mock-chart-area"><div class="mock-chart-label">Case status</div><div class="mock-tags"><span class="mock-tag green">Contacted ✓</span><span class="mock-tag green">Resolved ✓</span><span class="mock-tag blue">Resolution time: 3h 12m</span></div></div>
+        </div></div>
+      </div>
+    </div>
+    <div class="journey-panel" data-panel="5">
+      <div class="journey-detail fade-in">
+        <div><span class="journey-eyebrow">Step 6 of 6</span><h3>The customer is retained</h3><p>The account renews at the next cycle. What could have been a silent churn is now a data point proving the value of closing the loop — every time.</p></div>
+        <div class="mock-screen"><div class="mock-header"><span class="dot"></span><span class="dot"></span><span class="title">Retention Outcome</span></div><div class="mock-body">
+          <div class="mock-stat-row" style="grid-template-columns:repeat(3,1fr)"><div class="mock-stat"><div class="num">✓</div><div class="label">Renewed</div></div><div class="mock-stat"><div class="num">+41</div><div class="label">Follow-up NPS</div></div><div class="mock-stat"><div class="num">0</div><div class="label">Churn Risk</div></div></div>
+        </div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 5 — BUSINESS OUTCOMES
+════════════════════════════════════════ -->
+<section class="section" aria-labelledby="outcomes-heading">
+  <div class="container">
+    <div class="centered fade-in">
+      <span class="section-label">Business outcomes, not just dashboards</span>
+      <h2 class="section-title" id="outcomes-heading">Measurable Impact, Not Just Metrics</h2>
+      <p class="section-intro" style="margin:0 auto">Every capability in Sogolytics exists to move one of these numbers. Here's what customer experience management software should actually deliver.</p>
+    </div>
+    <div class="outcome-grid fade-in">
+      <div class="outcome-card"><div class="outcome-stat">↓ Churn</div><h3>Reduce customer churn</h3><p>Resolve detractor feedback within hours instead of letting it go unanswered for weeks.</p></div>
+      <div class="outcome-card"><div class="outcome-stat">↑ NPS</div><h3>Improve Net Promoter Score</h3><p>Closed-loop follow-up with detractors consistently lifts NPS faster than survey changes alone.</p></div>
+      <div class="outcome-card"><div class="outcome-stat">↑ CSAT</div><h3>Increase satisfaction scores</h3><p>Customers rate the experience higher when they see their feedback lead to a real response.</p></div>
+      <div class="outcome-card"><div class="outcome-stat">↓ Effort</div><h3>Reduce manual reporting</h3><p>Always-on executive dashboards replace hours of manual spreadsheet building every month.</p></div>
+      <div class="outcome-card"><div class="outcome-stat">↑ Visibility</div><h3>Improve leadership visibility</h3><p>Every team, region, and program rolls up into one view — no more waiting on a quarterly deck.</p></div>
+      <div class="outcome-card"><div class="outcome-stat">↑ CLV</div><h3>Increase customer lifetime value</h3><p>Accounts enrolled in a proactive, closed-loop program renew longer and expand more.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 6 — WHY TEAMS SWITCH
+════════════════════════════════════════ -->
+<section class="section switch-section" aria-labelledby="switch-heading">
+  <div class="container">
+    <div class="centered fade-in">
+      <span class="section-label">Why teams switch to Sogolytics</span>
+      <h2 class="section-title" id="switch-heading">Enterprise Depth. Mid-Market Speed.</h2>
+      <p class="section-intro" style="margin:0 auto;max-width:640px">Most enterprise CX management software makes you choose between capability and time-to-value. Teams switch to Sogolytics because they stop having to choose.</p>
+    </div>
+    <div class="switch-wrap fade-in">
+      <div class="switch-header"><div></div><div>Legacy platforms</div><div class="sogo">Sogolytics</div></div>
+      <div class="switch-row"><div class="label">Time to first live survey</div><div class="old-val">6–12 months</div><div class="new-val"><svg width="14" height="11" viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke="#0D6E65" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>3–4 weeks</div></div>
+      <div class="switch-row"><div class="label">Onboarding model</div><div class="old-val">Self-serve documentation</div><div class="new-val"><svg width="14" height="11" viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke="#0D6E65" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Named CSM, white-glove setup</div></div>
+      <div class="switch-row"><div class="label">Platform depth</div><div class="old-val">Core plan + paid module add-ons</div><div class="new-val"><svg width="14" height="11" viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke="#0D6E65" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Full platform included</div></div>
+      <div class="switch-row"><div class="label">Mid-market usability</div><div class="old-val">Built for dedicated analyst teams</div><div class="new-val"><svg width="14" height="11" viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke="#0D6E65" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Adopted by teams in week one</div></div>
+      <div class="switch-row"><div class="label">Pricing model</div><div class="old-val">Per-module, usage-tiered licensing</div><div class="new-val"><svg width="14" height="11" viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke="#0D6E65" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Transparent, predictable pricing</div></div>
+      <div class="switch-row"><div class="label">Support model</div><div class="old-val">Ticket queue, tiered SLAs</div><div class="new-val"><svg width="14" height="11" viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke="#0D6E65" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Direct access to your success team</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 7 — PRODUCT EXPERIENCE
+════════════════════════════════════════ -->
+<section class="section" aria-labelledby="product-heading">
+  <div class="container">
+    <div class="centered fade-in">
+      <span class="section-label">Inside the platform</span>
+      <h2 class="section-title" id="product-heading">One Platform. Every Capability Your CX Program Needs.</h2>
+      <p class="section-intro" style="margin:0 auto">Dashboards, AI analytics, journey mapping, survey automation, alerts, and integrations — built to work together, not as five separate purchases.</p>
+    </div>
+
+    <div class="alt-row fade-in">
+      <div class="mock-screen"><div class="mock-header"><span class="dot"></span><span class="dot"></span><span class="title">AI Analytics &amp; Journey Mapping</span></div><div class="mock-body">
+        <div class="mock-chart-area"><div class="mock-chart-label">Customer journey — friction points</div>
+          <div class="mock-bar-row"><div class="mock-bar-label">Onboarding</div><div class="mock-bar-track"><div class="mock-bar-fill" style="width:22%"></div></div><div class="mock-bar-val">Low</div></div>
+          <div class="mock-bar-row"><div class="mock-bar-label" style="color:#A32D2D">Support</div><div class="mock-bar-track"><div class="mock-bar-fill" style="width:78%;background:#E24B4A"></div></div><div class="mock-bar-val">High</div></div>
+          <div class="mock-bar-row"><div class="mock-bar-label">Renewal</div><div class="mock-bar-track"><div class="mock-bar-fill" style="width:40%;background:#02BECC"></div></div><div class="mock-bar-val">Med</div></div>
+        </div>
+        <div class="mock-chart-area"><div class="mock-chart-label">AI-detected themes this week</div><div class="mock-tags"><span class="mock-tag amber">Response time ↑</span><span class="mock-tag green">Onboarding praised</span><span class="mock-tag blue">Feature request: API</span></div></div>
+      </div></div>
+      <div>
+        <span class="section-label">AI Analytics &amp; Customer Journey Analytics</span>
+        <h3 style="font-size:clamp(22px,2.5vw,30px);font-weight:700;line-height:1.25;margin-bottom:14px;letter-spacing:-0.01em">See exactly where the experience breaks down.</h3>
+        <p style="font-size:15px;color:var(--text-muted);line-height:1.7;margin-bottom:18px">Sentiment analysis and predictive analytics process every open-ended response automatically, while journey mapping shows which stage — onboarding, support, renewal — is driving detractor scores. No manual coding of verbatims required.</p>
+        <ul class="checklist">
+          <li><span class="chk"><svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke="#0D6E65" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>AI sentiment analysis across every open-ended response</li>
+          <li><span class="chk"><svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke="#0D6E65" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Predictive analytics flags at-risk accounts before renewal</li>
+          <li><span class="chk"><svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke="#0D6E65" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Journey mapping across the full customer lifecycle</li>
+          <li><span class="chk"><svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke="#0D6E65" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Automated theme clustering and emerging-issue detection</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="alt-row reverse fade-in">
+      <div class="content">
+        <span class="section-label">Survey Automation &amp; Omnichannel Feedback</span>
+        <h3 style="font-size:clamp(22px,2.5vw,30px);font-weight:700;line-height:1.25;margin-bottom:14px;letter-spacing:-0.01em">Capture feedback everywhere your customers already are.</h3>
+        <p style="font-size:15px;color:var(--text-muted);line-height:1.7;margin-bottom:18px">Trigger NPS, CSAT, and CES surveys automatically on the events that matter — a support ticket closes, a renewal window opens, a product milestone is hit. Deploy across email, SMS, web, in-app, and QR code from one platform.</p>
+        <ul class="checklist">
+          <li><span class="chk"><svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke="#0D6E65" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Automated survey triggers tied to lifecycle events</li>
+          <li><span class="chk"><svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke="#0D6E65" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Omnichannel deployment: email, SMS, web, in-app, QR</li>
+          <li><span class="chk"><svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke="#0D6E65" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>NPS, CSAT, and CES templates built in</li>
+          <li><span class="chk"><svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke="#0D6E65" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>50+ languages with regional compliance support</li>
+        </ul>
+      </div>
+      <div class="mock">
+        <div class="mock-screen"><div class="mock-header"><span class="dot"></span><span class="dot"></span><span class="title">Survey Automation</span></div><div class="mock-body">
+          <div class="mock-stat-row" style="grid-template-columns:repeat(3,1fr)"><div class="mock-stat"><div class="num">5</div><div class="label">Active Channels</div></div><div class="mock-stat"><div class="num">82%</div><div class="label">Response Rate</div></div><div class="mock-stat"><div class="num">24/7</div><div class="label">Automated</div></div></div>
+          <div class="mock-chart-area"><div class="mock-chart-label">Feedback volume by channel</div>
+            <div class="mock-bar-row"><div class="mock-bar-label">Email</div><div class="mock-bar-track"><div class="mock-bar-fill" style="width:64%"></div></div><div class="mock-bar-val">64%</div></div>
+            <div class="mock-bar-row"><div class="mock-bar-label">In-app</div><div class="mock-bar-track"><div class="mock-bar-fill" style="width:48%;background:#02BECC"></div></div><div class="mock-bar-val">48%</div></div>
+            <div class="mock-bar-row"><div class="mock-bar-label">SMS</div><div class="mock-bar-track"><div class="mock-bar-fill" style="width:31%"></div></div><div class="mock-bar-val">31%</div></div>
+          </div>
+        </div></div>
+      </div>
+    </div>
+
+    <div class="alt-row fade-in" style="margin-bottom:0">
+      <div class="mock-screen"><div class="mock-header"><span class="dot"></span><span class="dot"></span><span class="title">Alerts, Case Management &amp; Security</span></div><div class="mock-body">
+        <div class="mock-chart-area"><div class="mock-chart-label">Case management — this week</div>
+          <div class="mock-bar-row"><div class="mock-bar-label">Assigned</div><div class="mock-bar-track"><div class="mock-bar-fill" style="width:100%"></div></div><div class="mock-bar-val">38</div></div>
+          <div class="mock-bar-row"><div class="mock-bar-label">Resolved</div><div class="mock-bar-track"><div class="mock-bar-fill" style="width:82%;background:#02BECC"></div></div><div class="mock-bar-val">31</div></div>
+          <div class="mock-bar-row"><div class="mock-bar-label" style="color:#A32D2D">Escalated</div><div class="mock-bar-track"><div class="mock-bar-fill" style="width:13%;background:#E24B4A"></div></div><div class="mock-bar-val">5</div></div>
+        </div>
+        <div class="mock-chart-area"><div class="mock-chart-label">Compliance &amp; integrations</div><div class="mock-tags"><span class="mock-tag green">SOC 2 ✓</span><span class="mock-tag green">HIPAA ✓</span><span class="mock-tag blue">Salesforce connected</span></div></div>
+      </div></div>
+      <div>
+        <span class="section-label">Alerts, Case Management &amp; Integrations</span>
+        <h3 style="font-size:clamp(22px,2.5vw,30px);font-weight:700;line-height:1.25;margin-bottom:14px;letter-spacing:-0.01em">Real-time alerts and reporting your leadership team will actually use.</h3>
+        <p style="font-size:15px;color:var(--text-muted);line-height:1.7;margin-bottom:18px">Real-time alerts trigger the moment a detractor response comes in, case management assigns and tracks resolution, and executive dashboards roll everything up — all built on enterprise-grade security your IT team will sign off on.</p>
+        <ul class="checklist">
+          <li><span class="chk"><svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke="#0D6E65" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Real-time alerts and automated case assignment</li>
+          <li><span class="chk"><svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke="#0D6E65" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Executive dashboards with drill-down reporting</li>
+          <li><span class="chk"><svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke="#0D6E65" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>50+ integrations: Salesforce, Zendesk, HubSpot, Power BI</li>
+          <li><span class="chk"><svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke="#0D6E65" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>SOC 2 Type II, HIPAA, and GDPR compliant</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 8 — SOCIAL PROOF
+════════════════════════════════════════ -->
+<section class="logo-bar">
+  <div class="container">
+    <div class="logo-bar-label fade-in">Enterprise and mid-market teams trust Sogolytics for mission-critical feedback</div>
+    <div class="logo-row fade-in">
+      <!-- LOGO 1: Replace with <img src="..." alt="Company" style="height:40px;width:auto;object-fit:contain"> -->
+      <div class="logo-slot">LOGO 1</div>
+      <div class="logo-slot">LOGO 2</div>
+      <div class="logo-slot">LOGO 3</div>
+      <div class="logo-slot">LOGO 4</div>
+      <div class="logo-slot">LOGO 5</div>
+      <div class="logo-slot">LOGO 6</div>
+    </div>
+  </div>
+</section>
+
+<section class="stats-band">
+  <div class="container">
+    <div class="stats-grid fade-in">
+      <div><div class="num">500+</div><div class="label">Organizations worldwide</div></div>
+      <div><div class="num">96</div><div class="label">Countries served</div></div>
+      <div><div class="num">10M+</div><div class="label">Survey responses processed</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonial-band">
+  <div class="container">
+    <div class="testimonial-inner fade-in">
+      <div class="testimonial-quote-mark">&ldquo;</div>
+      <p class="testimonial-quote">[TESTIMONIAL QUOTE — 2–3 sentences from a CX Director, VP Customer Experience, or COO on the impact of closing the loop on customer feedback with Sogolytics.]</p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">[I]</div>
+        <div><div class="testimonial-name">[Name]</div><div class="testimonial-title">[Title], [Company]</div></div>
+        <div class="testimonial-co-logo">[CO. LOGO]</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 9 — FAQ
+════════════════════════════════════════ -->
+<section class="section" aria-labelledby="faq-heading">
+  <div class="container">
+    <div class="centered fade-in">
+      <span class="section-label">Common questions</span>
+      <h2 class="section-title" id="faq-heading">Customer Experience Management Software — Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list fade-in" role="list">
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">What is customer experience management software?<svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="faq-answer"><div class="faq-answer-inner">Customer experience management software is a platform that captures customer feedback across every channel — surveys, reviews, support tickets, social — and turns it into action through AI analytics, journey mapping, and closed-loop workflows. Sogolytics goes further than reporting tools by automatically routing flagged feedback to an owner and tracking it through to resolution.</div></div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">What is a Voice of Customer (VoC) platform?<svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="faq-answer"><div class="faq-answer-inner">A Voice of Customer platform aggregates every signal a customer sends — direct feedback, behavioral data, support interactions, and reviews — into one unified view. Sogolytics' VoC platform adds AI sentiment analysis and automated alerting so teams don't just collect the voice of the customer, they act on it in real time.</div></div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">How does customer journey analytics work?<svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="faq-answer"><div class="faq-answer-inner">Customer journey analytics maps feedback and behavioral data to specific stages of the customer lifecycle — onboarding, support, renewal, and beyond — to show exactly where experience breaks down. Sogolytics visualizes this automatically, so teams can prioritize fixes at the stage with the highest churn risk instead of guessing.</div></div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">What is closed-loop feedback management?<svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="faq-answer"><div class="faq-answer-inner">Closed-loop feedback management means every piece of customer feedback is assigned an owner, tracked to resolution, and reported back to leadership — instead of sitting unread in a survey report. It's the difference between measuring customer experience and actually managing it.</div></div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">How is Sogolytics different from a basic survey tool?<svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="faq-answer"><div class="faq-answer-inner">Survey tools stop at data collection. Sogolytics adds AI-powered sentiment analysis, customer journey analytics, automated workflow routing, and closed-loop case management — so feedback drives a resolved action instead of just a report.</div></div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">How long does implementation take?<svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="faq-answer"><div class="faq-answer-inner">Most teams are fully live within 3–4 weeks, including integration setup, user provisioning, and your first automated survey launch. A dedicated Customer Success Manager runs the process — you're not handed a knowledge base and left to figure it out.</div></div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">Does Sogolytics integrate with our CRM and helpdesk?<svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="faq-answer"><div class="faq-answer-inner">Yes. Pre-built integrations include Salesforce, HubSpot, Zendesk, ServiceNow, Microsoft Dynamics, Slack, Teams, and Power BI, plus a REST API for custom connections. Most integrations take under an hour to configure.</div></div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">Is Sogolytics secure enough for enterprise and regulated industries?<svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="faq-answer"><div class="faq-answer-inner">Yes. Sogolytics is SOC 2 Type II audited, HIPAA compliant, and GDPR ready, with role-based access controls, SSO/SAML, and full audit logging built in — so your IT and security teams can sign off without a lengthy exception process.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     FINAL CTA
+════════════════════════════════════════ -->
+<section class="final-cta" id="finalCTA">
+  <div class="container fade-in">
+    <h2>Somewhere in your feedback right now, a customer is telling you exactly how to keep them.</h2>
+    <p class="final-cta-sub">The only question is whether anyone acts on it before they leave. See how Sogolytics closes that loop — book a 30-minute demo built around your CX program.</p>
+    <form class="cta-form" id="finalCtaForm" action="YOUR_FORM_ENDPOINT" method="POST" onsubmit="handleCtaSubmit(event)">
+      <input type="hidden" name="utm_source" id="f_utm_source">
+      <input type="hidden" name="utm_medium" id="f_utm_medium">
+      <input type="hidden" name="utm_campaign" id="f_utm_campaign">
+      <input type="hidden" name="utm_term" id="f_utm_term">
+      <input type="hidden" name="utm_content" id="f_utm_content">
+      <input type="hidden" name="gclid" id="f_gclid">
+      <input type="hidden" name="page_variant" value="customer-experience-management-software">
+      <div class="cta-form-row">
+        <input type="text" name="full_name" placeholder="Full name" class="form-input" required>
+        <input type="email" name="email" placeholder="Work email" class="form-input" required>
+      </div>
+      <div style="margin-bottom:10px">
+        <select name="company_size" class="form-input" required>
+          <option value="" disabled selected>Company size</option>
+          <option>1–50 employees</option>
+          <option>51–200 employees</option>
+          <option>201–500 employees</option>
+          <option>501–1,000 employees</option>
+          <option>1,001–5,000 employees</option>
+          <option>5,000+ employees</option>
+        </select>
+      </div>
+      <button type="submit" class="btn-yellow btn-yellow-lg" style="width:100%;justify-content:center"><span class="btn-dot">→</span>Request a Demo</button>
+      <p class="form-note">No credit card required <span style="opacity:.4">·</span> No commitment <span style="opacity:.4">·</span> We respond within 1 business day</p>
+    </form>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
+<footer class="footer">
+  <p style="margin-bottom:10px">
+    <a href="https://www.sogolytics.com/privacy-policy/">Privacy Policy</a>
+    <a href="https://www.sogolytics.com/terms-of-service/">Terms of Service</a>
+    <a href="https://www.sogolytics.com/anti-spam-policy/">Anti-Spam Policy</a>
+    <a href="https://www.sogolytics.com/safe-harbour-and-survey-data-security/">Data &amp; Security</a>
+  </p>
+  <p>© 2026 Sogolytics, Inc. All rights reserved.</p>
+</footer>
+
+<!-- ═══════════════════════════════════════
+     JAVASCRIPT
+════════════════════════════════════════ -->
+<script>
+  // ── UTM + gclid passthrough ──
+  (function() {
+    var params = new URLSearchParams(window.location.search);
+    var fields = ['utm_source','utm_medium','utm_campaign','utm_term','utm_content','gclid'];
+    fields.forEach(function(f) {
+      var el = document.getElementById('f_' + f);
+      if (el && params.get(f)) el.value = params.get(f);
+    });
+  })();
+
+  // ── Interactive customer journey stepper ──
+  function showJourneyStep(i) {
+    document.querySelectorAll('.journey-step-btn').forEach(function(btn) {
+      btn.classList.toggle('active', btn.getAttribute('data-step') === String(i));
+    });
+    document.querySelectorAll('.journey-panel').forEach(function(panel) {
+      panel.classList.toggle('active', panel.getAttribute('data-panel') === String(i));
+    });
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: 'journey_step_view', step_index: i });
+  }
+
+  // ── FAQ accordion ──
+  function toggleFAQ(btn) {
+    var item = btn.closest('.faq-item');
+    var answer = item.querySelector('.faq-answer');
+    var isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(function(el) {
+      el.classList.remove('open');
+      el.querySelector('.faq-answer').style.maxHeight = '0';
+      el.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  }
+
+  // ── Final CTA form submit ──
+  function handleCtaSubmit(e) {
+    e.preventDefault();
+    var form = e.target;
+    var btn = form.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: 'lead_submit', form_id: 'final_cta', page_variant: 'customer-experience-management-software' });
+    // TODO: replace with real submission — CF7 shortcode, HubSpot embed, or fetch POST to YOUR_FORM_ENDPOINT
+    setTimeout(function() {
+      form.innerHTML = '<div style="text-align:center;padding:24px 0"><div style="font-size:40px;margin-bottom:12px">✓</div><h3 style="color:#fff;margin-bottom:8px">You\'re on the calendar!</h3><p style="color:rgba(255,255,255,0.6);font-size:14px">A Sogolytics expert will reach out within 1 business day.</p></div>';
+    }, 700);
+  }
+
+  // ── GTM dataLayer: page view ──
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({ event: 'lp_view', page_variant: 'customer-experience-management-software', page_type: 'google_ads' });
+
+  // ── IntersectionObserver fade-in ──
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-in').forEach(function(el) { observer.observe(el); });
+</script>
+
+</body>
+</html>
