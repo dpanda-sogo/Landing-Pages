@@ -2,248 +2,245 @@
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 
-const trustItems = ["SOC 2 Type II", "HIPAA-ready", "GDPR", "500+ Organizations"];
-
-function TrustRow() {
-  return (
-    <div style={{ display: "flex", flexWrap: "wrap", gap: 20, alignItems: "center" }}>
-      {trustItems.map((item) => (
-        <span
-          key={item}
-          style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 13, fontWeight: 500, color: "rgba(255,255,255,0.85)" }}
-        >
-          <svg viewBox="0 0 24 24" fill="none" stroke="#02BECC" strokeWidth={2.5} width={16} height={16}>
-            <circle cx={12} cy={12} r={10} />
-            <path d="M8 12l3 3 5-5" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-          {item}
-        </span>
-      ))}
-    </div>
-  );
-}
-
-function YellowButton({ children, onClick }: { children: React.ReactNode; onClick?: () => void }) {
-  return (
-    <button
-      onClick={onClick}
-      style={{
-        display: "inline-flex",
-        alignItems: "center",
-        gap: 12,
-        background: "#F5E100",
-        color: "#0a1a18",
-        fontWeight: 700,
-        borderRadius: 50,
-        padding: "14px 28px 14px 8px",
-        border: "none",
-        cursor: "pointer",
-        fontSize: 16,
-        fontFamily: "inherit",
-        transition: "background 0.2s",
-      }}
-      onMouseEnter={(e) => ((e.currentTarget as HTMLButtonElement).style.background = "#e6d400")}
-      onMouseLeave={(e) => ((e.currentTarget as HTMLButtonElement).style.background = "#F5E100")}
-    >
-      <span
-        style={{
-          width: 36,
-          height: 36,
-          borderRadius: "50%",
-          background: "#0a1a18",
-          color: "#F5E100",
-          flexShrink: 0,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          fontSize: 16,
-          fontWeight: 700,
-        }}
-      >
-        →
-      </span>
-      {children}
-    </button>
-  );
-}
-
-function GhostButton({ children, onClick }: { children: React.ReactNode; onClick?: () => void }) {
-  return (
-    <button
-      onClick={onClick}
-      style={{
-        display: "inline-flex",
-        alignItems: "center",
-        gap: 8,
-        background: "transparent",
-        color: "#fff",
-        fontWeight: 600,
-        borderRadius: 50,
-        padding: "13px 22px",
-        border: "1.5px solid rgba(255,255,255,0.3)",
-        cursor: "pointer",
-        fontSize: 15,
-        fontFamily: "inherit",
-        transition: "border-color 0.2s, background 0.2s",
-      }}
-      onMouseEnter={(e) => {
-        (e.currentTarget as HTMLButtonElement).style.borderColor = "rgba(255,255,255,0.7)";
-        (e.currentTarget as HTMLButtonElement).style.background = "rgba(255,255,255,0.06)";
-      }}
-      onMouseLeave={(e) => {
-        (e.currentTarget as HTMLButtonElement).style.borderColor = "rgba(255,255,255,0.3)";
-        (e.currentTarget as HTMLButtonElement).style.background = "transparent";
-      }}
-    >
-      {children}
-      <span aria-hidden>↓</span>
-    </button>
-  );
-}
-
-const flowSteps = [
-  { label: "Feedback captured", sub: "Survey, review, support ticket" },
-  { label: "AI detects signal", sub: "Sentiment + intent analysis" },
-  { label: "Alert triggered", sub: "Detractor flagged in real time" },
-  { label: "Owner assigned", sub: "Routed via workflow automation" },
-  { label: "Action closed", sub: "Customer retained" },
-];
-
-function WorkflowVisual() {
+function FloatCard({
+  style,
+  label,
+  children,
+}: {
+  style: React.CSSProperties;
+  label: string;
+  children: React.ReactNode;
+}) {
   return (
     <div
       style={{
-        background: "rgba(255,255,255,0.06)",
+        position: "absolute",
+        background: "#0a2c28",
         border: "1px solid rgba(255,255,255,0.14)",
-        borderRadius: 16,
-        padding: "28px 24px",
-        backdropFilter: "blur(8px)",
+        borderRadius: 14,
+        padding: "12px 14px",
+        boxShadow: "0 16px 36px rgba(0,0,0,0.4)",
+        width: 128,
+        ...style,
       }}
     >
-      <div style={{ fontSize: 11, fontWeight: 700, color: "rgba(255,255,255,0.55)", marginBottom: 22, letterSpacing: "0.08em", textTransform: "uppercase" }}>
-        From signal to action — automatically
+      <div style={{ fontSize: 9.5, fontWeight: 700, letterSpacing: "0.04em", textTransform: "uppercase", color: "rgba(255,255,255,0.55)", marginBottom: 8 }}>
+        {label}
       </div>
-      <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
-        {flowSteps.map((step, i) => (
-          <motion.div
-            key={step.label}
-            initial={{ opacity: 0, x: -16 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 + i * 0.15 }}
-            style={{ display: "flex", alignItems: "flex-start", gap: 14 }}
-          >
-            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", flexShrink: 0 }}>
-              <span
-                style={{
-                  width: 30,
-                  height: 30,
-                  borderRadius: "50%",
-                  background: i === flowSteps.length - 1 ? "#02BECC" : "rgba(255,255,255,0.12)",
-                  color: i === flowSteps.length - 1 ? "#061a17" : "#fff",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontSize: 13,
-                  fontWeight: 700,
-                  border: i === flowSteps.length - 1 ? "none" : "1px solid rgba(255,255,255,0.25)",
-                }}
-              >
-                {i === flowSteps.length - 1 ? "✓" : i + 1}
-              </span>
-              {i < flowSteps.length - 1 && (
-                <span style={{ width: 1.5, flex: 1, minHeight: 22, background: "rgba(255,255,255,0.18)" }} />
-              )}
-            </div>
-            <div style={{ paddingBottom: i < flowSteps.length - 1 ? 22 : 0 }}>
-              <div style={{ fontSize: 15, fontWeight: 700, color: "#fff", marginBottom: 2 }}>{step.label}</div>
-              <div style={{ fontSize: 13, color: "rgba(255,255,255,0.55)" }}>{step.sub}</div>
-            </div>
-          </motion.div>
-        ))}
-      </div>
+      {children}
     </div>
   );
 }
 
-export default function CemsHero() {
+function useUtmCapture() {
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
-    ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term", "gclid"].forEach((key) => {
-      const el = document.getElementById(key) as HTMLInputElement | null;
+    ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "gclid"].forEach((key) => {
+      const el = document.getElementById("h_" + key) as HTMLInputElement | null;
       if (el && params.get(key)) el.value = params.get(key)!;
     });
   }, []);
+}
 
-  const scrollToFinalCTA = () => {
-    document.getElementById("finalCTA")?.scrollIntoView({ behavior: "smooth" });
-  };
-  const scrollToStory = () => {
-    document.getElementById("customer-journey")?.scrollIntoView({ behavior: "smooth" });
-  };
+export default function CemsHero() {
+  useUtmCapture();
 
   return (
     <section
       style={{
-        padding: "80px 0 60px",
-        background: "linear-gradient(135deg, #061a17 0%, #0a2e29 60%, #0d3d37 100%)",
+        padding: "72px 24px 64px",
+        background: "linear-gradient(135deg, #061a17 0%, #092224 50%, #0d3d37 100%)",
         color: "#fff",
-        overflow: "hidden",
         position: "relative",
+        overflow: "hidden",
       }}
     >
-      <div style={{ maxWidth: 1160, margin: "0 auto", padding: "0 24px" }}>
-        <div
-          style={{ display: "grid", gridTemplateColumns: "1.05fr 0.95fr", gap: 48, alignItems: "center", position: "relative", zIndex: 1 }}
-          className="hero-grid"
-        >
-          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: "easeOut" }}>
-            <span
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: 6,
-                background: "#fff",
-                color: "#0a1a18",
-                fontSize: 12,
-                fontWeight: 600,
-                letterSpacing: "0.08em",
-                textTransform: "uppercase",
-                padding: "5px 14px",
-                borderRadius: 20,
-                marginBottom: 20,
-              }}
-            >
-              <span style={{ width: 7, height: 7, borderRadius: "50%", background: "#0D6E65", flexShrink: 0, display: "inline-block" }} />
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          backgroundImage:
+            "linear-gradient(rgba(255,255,255,0.045) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.045) 1px, transparent 1px), radial-gradient(ellipse 60% 70% at 85% 15%, rgba(2,190,204,0.14) 0%, transparent 70%), radial-gradient(ellipse 50% 60% at 5% 95%, rgba(245,225,0,0.05) 0%, transparent 70%)",
+          backgroundSize: "32px 32px, 32px 32px, 100% 100%, 100% 100%",
+          pointerEvents: "none",
+        }}
+      />
+
+      <div style={{ maxWidth: 1160, margin: "0 auto", position: "relative" }}>
+        <div className="hero-inner" style={{ display: "grid", gridTemplateColumns: "1.15fr 0.85fr", gap: 48, alignItems: "start" }}>
+          {/* Left: headline + photo/metrics visual */}
+          <div>
+            <p style={{ display: "inline-flex", alignItems: "center", gap: 8, fontSize: 11, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--teal)", marginBottom: 18 }}>
+              <span style={{ width: 6, height: 6, borderRadius: "50%", background: "var(--teal)", boxShadow: "0 0 0 3px rgba(2,190,204,0.2)", flexShrink: 0 }} />
               Customer Experience Management Software
-            </span>
-
-            <h1 style={{ fontSize: "clamp(30px,3.6vw,44px)", fontWeight: 700, lineHeight: 1.14, marginBottom: 20, letterSpacing: "-0.02em", color: "#fff" }}>
-              You Don&apos;t Have a Customer Feedback Problem.
-              <br />
-              You Have an <span style={{ color: "var(--teal)" }}>Action</span> Problem.
+            </p>
+            <h1 style={{ fontSize: "clamp(32px,4vw,46px)", fontWeight: 800, lineHeight: 1.15, letterSpacing: "-0.025em", marginBottom: 20 }}>
+              You Don&apos;t Have a Customer Feedback Problem. <span style={{ color: "var(--teal)" }}>You Have an Action Problem.</span>
             </h1>
-
-            <p style={{ fontSize: 17, lineHeight: 1.6, color: "rgba(255,255,255,0.88)", marginBottom: 32, maxWidth: 480 }}>
+            <p style={{ fontSize: "clamp(16px,1.8vw,17.5px)", lineHeight: 1.6, color: "rgba(255,255,255,0.8)", marginBottom: 24, maxWidth: 480 }}>
               You&apos;re already drowning in NPS and CSAT data. Sogolytics is the <strong>customer experience management software</strong> that turns every signal into a resolved action — automatically.
             </p>
-
-            <div style={{ display: "flex", flexWrap: "wrap", gap: 14, marginBottom: 32 }}>
-              <YellowButton onClick={scrollToFinalCTA}>Request a Demo</YellowButton>
-              <GhostButton onClick={scrollToStory}>See how it works</GhostButton>
+            <div style={{ display: "flex", alignItems: "center", gap: 12, fontSize: 12, color: "rgba(255,255,255,0.5)", flexWrap: "wrap", marginBottom: 44 }}>
+              <span>✓ SOC 2 Type II &amp; HIPAA-ready</span>
+              <span style={{ width: 4, height: 4, borderRadius: "50%", background: "rgba(255,255,255,0.3)", flexShrink: 0 }} />
+              <span>✓ 500+ organizations nationwide</span>
+              <span style={{ width: 4, height: 4, borderRadius: "50%", background: "rgba(255,255,255,0.3)", flexShrink: 0 }} />
+              <a
+                href="#problem"
+                style={{ display: "inline-flex", alignItems: "center", gap: 6, color: "rgba(255,255,255,0.85)", fontSize: 13.5, fontWeight: 600, textDecoration: "none", borderBottom: "1px solid rgba(255,255,255,0.35)", paddingBottom: 2 }}
+              >
+                Explore the hidden cost ↓
+              </a>
             </div>
 
-            <TrustRow />
-          </motion.div>
+            {/* Photo + floating CX-metric cards */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              style={{ position: "relative", maxWidth: 420, margin: "0 auto" }}
+              className="hero-photo-wrap"
+            >
+              <div style={{ aspectRatio: "4/5", borderRadius: 20, overflow: "hidden", boxShadow: "0 30px 60px rgba(0,0,0,0.4)", background: "#0a2c28" }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&q=80"
+                  alt="Customer experience manager reviewing feedback dashboards"
+                  style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                />
+              </div>
 
-          <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}>
-            <WorkflowVisual />
+              <FloatCard label="Detractors Flagged" style={{ top: -18, left: -28 }}>
+                <div style={{ height: 7, background: "rgba(255,255,255,0.12)", borderRadius: 4, overflow: "hidden", marginBottom: 6 }}>
+                  <div style={{ width: "78%", height: "100%", borderRadius: 4, background: "var(--green)" }} />
+                </div>
+                <div style={{ fontSize: 13, fontWeight: 800, color: "#fff" }}>18 today</div>
+              </FloatCard>
+
+              <FloatCard label="Response Rate" style={{ top: "36%", right: -34, textAlign: "center" }}>
+                <div
+                  style={{
+                    width: 44,
+                    height: 44,
+                    borderRadius: "50%",
+                    background: "conic-gradient(var(--teal) 0% 91%, rgba(255,255,255,.15) 91% 100%)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    margin: "0 auto",
+                  }}
+                >
+                  <div style={{ width: 34, height: 34, borderRadius: "50%", background: "#0a2c28", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 10.5, fontWeight: 800, color: "#fff" }}>91%</div>
+                </div>
+              </FloatCard>
+
+              <FloatCard label="NPS Trend" style={{ bottom: 54, left: -40, textAlign: "center" }}>
+                <div style={{ fontSize: 15, color: "var(--yellow)", letterSpacing: 1 }}>+41 ↑</div>
+              </FloatCard>
+
+              <FloatCard label="Cases Resolved" style={{ bottom: -20, right: -18, textAlign: "center" }}>
+                <div
+                  style={{
+                    width: 44,
+                    height: 44,
+                    borderRadius: "50%",
+                    background: "conic-gradient(var(--yellow) 0% 94%, rgba(255,255,255,.15) 94% 100%)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    margin: "0 auto",
+                  }}
+                >
+                  <div style={{ width: 34, height: 34, borderRadius: "50%", background: "#0a2c28", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 10.5, fontWeight: 800, color: "#fff" }}>94%</div>
+                </div>
+              </FloatCard>
+            </motion.div>
+          </div>
+
+          {/* Right: compact demo request form card */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            style={{ background: "#fff", borderRadius: 16, padding: "28px 26px", boxShadow: "0 30px 70px rgba(0,0,0,0.4)" }}
+          >
+            <h3 style={{ fontSize: 19, fontWeight: 800, color: "var(--green)", textAlign: "center", marginBottom: 8, letterSpacing: "-0.01em" }}>
+              Book a Personalized Demo
+            </h3>
+            <p style={{ fontSize: 13, color: "var(--text-muted)", textAlign: "center", marginBottom: 20, lineHeight: 1.5 }}>
+              See the platform live in 30 minutes — no commitment required.
+            </p>
+            <form
+              id="heroForm"
+              onSubmit={(e) => {
+                e.preventDefault();
+                const form = e.currentTarget;
+                const btn = form.querySelector("button[type=submit]") as HTMLButtonElement;
+                btn.disabled = true;
+                btn.textContent = "Submitting…";
+                setTimeout(() => {
+                  form.innerHTML =
+                    '<div style="text-align:center;padding:16px 0"><div style="font-size:32px;margin-bottom:10px">✓</div><h3 style="color:#0a1a18;font-size:16px;margin-bottom:6px">You\'re on the calendar!</h3><p style="color:#5a6472;font-size:13px">A Sogolytics specialist will reach out within 1 business day.</p></div>';
+                }, 700);
+              }}
+            >
+              <input type="hidden" id="h_utm_source" name="utm_source" />
+              <input type="hidden" id="h_utm_medium" name="utm_medium" />
+              <input type="hidden" id="h_utm_campaign" name="utm_campaign" />
+              <input type="hidden" id="h_gclid" name="gclid" />
+              <input type="hidden" name="page_variant" value="customer-experience-management-software-hero" />
+              {[
+                { name: "full_name", type: "text", placeholder: "Name (First, Last)*", required: true },
+                { name: "email", type: "email", placeholder: "Work email*", required: true },
+                { name: "phone", type: "tel", placeholder: "Phone number", required: false },
+                { name: "company", type: "text", placeholder: "Company name", required: false },
+              ].map((f) => (
+                <div key={f.name} style={{ marginBottom: 12 }}>
+                  <input
+                    type={f.type}
+                    name={f.name}
+                    placeholder={f.placeholder}
+                    required={f.required}
+                    className="form-input"
+                    style={{ background: "#edf0f1", border: "none", padding: "13px 15px" }}
+                  />
+                </div>
+              ))}
+              <button
+                type="submit"
+                style={{
+                  width: "100%",
+                  marginTop: 6,
+                  background: "#F5E100",
+                  color: "#0a1a18",
+                  fontSize: 15,
+                  fontWeight: 700,
+                  padding: "14px 20px",
+                  border: "none",
+                  borderRadius: 10,
+                  cursor: "pointer",
+                  fontFamily: "inherit",
+                  transition: "background 0.2s",
+                }}
+                onMouseEnter={(e) => ((e.currentTarget as HTMLButtonElement).style.background = "#e6d400")}
+                onMouseLeave={(e) => ((e.currentTarget as HTMLButtonElement).style.background = "#F5E100")}
+              >
+                Submit
+              </button>
+            </form>
+            <p style={{ fontSize: 10.5, color: "var(--text-light)", textAlign: "center", marginTop: 10, lineHeight: 1.4 }}>
+              By submitting you agree to our Privacy Policy. We never sell your data.
+            </p>
           </motion.div>
         </div>
       </div>
 
       <style>{`
-        @media(max-width:900px){
-          .hero-grid{grid-template-columns:1fr !important;}
+        @media(max-width:980px){
+          .hero-inner{grid-template-columns:1fr !important;gap:40px !important;}
+        }
+        @media(max-width:768px){
+          .hero-photo-wrap{max-width:300px !important;}
         }
       `}</style>
     </section>

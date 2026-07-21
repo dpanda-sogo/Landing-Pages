@@ -1,19 +1,17 @@
 import type { Metadata } from "next";
 import StickyBar from "@/components/StickyBar";
 import CemsHero from "@/components/CemsHero";
-import CemsHiddenCost from "@/components/CemsHiddenCost";
-import CemsIntro from "@/components/CemsIntro";
-import CemsJourney from "@/components/CemsJourney";
-import CemsOutcomes from "@/components/CemsOutcomes";
-import CemsSwitch from "@/components/CemsSwitch";
-import CemsProduct from "@/components/CemsProduct";
-import LogoBar from "@/components/LogoBar";
-import StatRow from "@/components/StatRow";
-import Testimonial from "@/components/Testimonial";
+import CemsLogoBar from "@/components/CemsLogoBar";
+import CemsProblem from "@/components/CemsProblem";
+import CemsComparison from "@/components/CemsComparison";
+import CemsCapabilities from "@/components/CemsCapabilities";
+import CemsHowItWorks from "@/components/CemsHowItWorks";
+import CemsWhyChoose from "@/components/CemsWhyChoose";
+import CemsResource from "@/components/CemsResource";
+import CemsTrust from "@/components/CemsTrust";
 import CemsFAQ from "@/components/CemsFAQ";
 import { faqs } from "@/components/cemsFaqData";
 import CemsFinalCTA from "@/components/CemsFinalCTA";
-import Footer from "@/components/Footer";
 
 const PAGE_URL = "https://www.sogolytics.com/customer-experience-management-software/";
 
@@ -127,18 +125,16 @@ export default function CustomerExperienceManagementSoftwarePage() {
 
       <StickyBar />
       <CemsHero />
-      <CemsHiddenCost />
-      <CemsIntro />
-      <CemsJourney />
-      <CemsOutcomes />
-      <CemsSwitch />
-      <CemsProduct />
-      <LogoBar />
-      <StatRow />
-      <Testimonial />
+      <CemsLogoBar />
+      <CemsProblem />
+      <CemsComparison />
+      <CemsCapabilities />
+      <CemsHowItWorks />
+      <CemsWhyChoose />
+      <CemsResource />
+      <CemsTrust />
       <CemsFAQ />
       <CemsFinalCTA />
-      <Footer />
     </>
   );
 }

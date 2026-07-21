@@ -11,7 +11,7 @@ const pages: LandingPage[] = [
   {
     slug: "customer-experience-management-software",
     title: "Customer Experience Management Software",
-    description: "Storytelling-driven Google Ads landing page: Voice of Customer, AI sentiment analysis, closed-loop workflows, and an interactive customer journey. Targets the core CX management software keyword cluster.",
+    description: "Google Ads landing page for the core CX management software keyword cluster. Hero+form, comparison table, capabilities grid, how-it-works flow, lead-magnet resource, and trust/testimonials — structured after the K-12 climate page's conversion pattern.",
     date: "2026-07-21",
     tag: "Google Ads",
     htmlFile: "customer-experience-management-software.html",
