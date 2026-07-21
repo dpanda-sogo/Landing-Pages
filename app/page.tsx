@@ -9,6 +9,21 @@ export const metadata: Metadata = {
 
 const pages: LandingPage[] = [
   {
+    slug: "customer-experience-management-software",
+    title: "Customer Experience Management Software",
+    description: "Google Ads landing page for the core CX management software keyword cluster. Hero+form, comparison table, capabilities grid, how-it-works flow, lead-magnet resource, and trust/testimonials — structured after the K-12 climate page's conversion pattern.",
+    date: "2026-07-21",
+    tag: "Google Ads",
+    htmlFile: "customer-experience-management-software.html",
+  },
+  {
+    slug: "lp/360-feedback-software",
+    title: "360-Degree Feedback Software",
+    description: "Complete multi-rater 360 programs: customizable competency frameworks, automated routing and anonymity controls, and analytics that go deeper than averages. Targets 360 / performance buyers.",
+    date: "2026-06-25",
+    tag: "Google Ads",
+  },
+  {
     slug: "pages/lp-cx-complete.html",
     title: "CX Platform — Complete / Combined Variant",
     description: "Broad conquesting page combining platform capabilities, ROI value, and 30-day migration. Targets wide keyword groups. Includes live industry news fold.",
@@ -66,6 +81,16 @@ const pages: LandingPage[] = [
     tagBg: "#e0f0ff",
     tagColor: "#1d4ed8",
     htmlFile: "lp-k12-school-climate.html",
+  },
+  {
+    slug: "pages/lp-k12-climate-action-platform.html",
+    title: "The Climate Action Platform — District Leaders",
+    description: "New category positioning built from competitive research: not survey software, a Climate Action Platform organized around The Action Loop (Listen, Understand, Act, Prove). Separate ad-group variant from the K-12 School Climate page.",
+    date: "2026-07-17",
+    tag: "Vertical",
+    tagBg: "#e0f0ff",
+    tagColor: "#1d4ed8",
+    htmlFile: "lp-k12-climate-action-platform.html",
   },
 ];
 
