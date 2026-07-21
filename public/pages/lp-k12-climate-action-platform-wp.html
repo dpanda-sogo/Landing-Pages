@@ -1,0 +1,441 @@
+<!--
+  ============================================================
+  SOGOLYTICS — CLIMATE ACTION PLATFORM (WordPress / WPBakery snippet)
+  ============================================================
+  PASTE THIS into WPBakery → Add Element → Raw HTML
+  ============================================================
+  This is a DISTINCT page from lp-k12-school-climate-wp.html — a
+  different ad group, positioned around The Action Loop (Listen,
+  Understand, Act, Prove). Structure follows the proven pattern of the
+  live k12-school-climate page, with a single consistent CTA
+  ("Request a Demo") throughout.
+  ============================================================
+  DEVELOPER EDIT GUIDE
+  LOGOS:           Search "LOGO 1" through "LOGO 6"
+  TESTIMONIALS:    Search "testimonial" blocks — quotes/authors are
+                   illustrative placeholder copy, replace with real districts.
+  FORMS:           "lpHeroForm" — search "YOUR_FORM_ENDPOINT" to wire up.
+  PHONE NUMBER:    Search "703) 570-6254" — Sogolytics main line.
+  GTM ID:          Search GTM-XXXXXXX → replace with real ID
+  ============================================================
+  DO NOT add <html> <head> <body> <nav> <footer> — WordPress
+  provides those. No @font-face or :root CSS vars needed either.
+  ============================================================
+-->
+
+<!-- ── Responsive layout overrides only ── -->
+<style>
+.lp-two-col  { display:flex; gap:48px; align-items:flex-start; }
+.lp-grid-3   { display:flex; gap:20px; }
+.lp-grid-6   { display:flex; gap:22px; flex-wrap:wrap; }
+.lp-why-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px 40px; max-width:920px; margin:0 auto; }
+.lp-flow-row { display:flex; gap:12px; position:relative; max-width:1040px; margin:0 auto 40px; }
+.lp-flow-row::before { content:''; position:absolute; top:25px; left:12%; right:12%; height:2px; background:#e2e6ea; z-index:0; }
+.lp-flow-step { flex:1; text-align:center; padding:0 10px; position:relative; z-index:1; }
+.lp-fade     { opacity:0; transform:translateY(24px); transition:opacity .6s,transform .6s; }
+.lp-fade.on  { opacity:1; transform:none; }
+.lp-cmp-wrap { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+.lp-hero-photo-cards { display:block; }
+@media (max-width:980px) {
+  .lp-two-col  { flex-direction:column !important; gap:32px !important; }
+  .lp-why-grid { grid-template-columns:1fr !important; max-width:560px; }
+}
+@media (max-width:768px) {
+  .lp-grid-3   { flex-direction:column !important; }
+  .lp-grid-6   { flex-direction:column !important; }
+  .lp-flow-row { flex-direction:column !important; gap:28px !important; max-width:360px; margin-left:auto; margin-right:auto; }
+  .lp-flow-row::before { display:none !important; }
+  .lp-hero-photo-cards { display:none !important; }
+}
+</style>
+
+<script>
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({ event: 'lp_view', page_variant: 'k12-climate-action-platform', page_type: 'vertical' });
+</script>
+
+<!-- ═══════════════════════════════════════════════════
+     SECTION 1 — HERO (photo + floating stats left, demo form right)
+════════════════════════════════════════════════════ -->
+<div class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:linear-gradient(135deg,#061a17 0%,#092224 50%,#0d3d37 100%);background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(135deg,#061a17 0%,#092224 50%,#0d3d37 100%);background-size:32px 32px,32px 32px,100% 100%;padding:72px 24px 64px;">
+  <div class="col span_12 color-dark left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding color-dark" data-animation="" data-delay="">
+      <div class="wpb_wrapper">
+        <div class="lp-two-col" style="max-width:1160px;margin:0 auto;">
+
+          <div style="flex:1.15;min-width:0;">
+            <p style="font-size:1.1rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--color-secondary-v2);margin-bottom:18px;font-family:var(--font-Epilogue-Bold);">The Climate Action Platform</p>
+            <h1 class="fs-epilogue-h1 white-text" style="margin-bottom:20px;">
+              You've Never Had A Survey Problem. You've Had An <span style="color:var(--color-secondary-v2);">After-The-Survey</span> Problem.
+            </h1>
+            <p class="fs-pm white-text" style="opacity:.75;margin-bottom:24px;max-width:480px;">
+              Sogolytics turns climate data into board-ready action — Listen, Understand, Act, Prove — in weeks, not semesters.
+            </p>
+            <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:1.2rem;color:rgba(255,255,255,.5);font-family:var(--font-Epilogue-Regular);margin-bottom:44px;">
+              <span>✓ FERPA-aligned &amp; COPPA compliant</span>
+              <span style="width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.3);flex-shrink:0;"></span>
+              <span>✓ 500+ districts nationwide</span>
+            </div>
+
+            <div class="lp-fade" style="position:relative;max-width:420px;margin:0 auto;">
+              <div style="aspect-ratio:4/5;border-radius:20px;overflow:hidden;box-shadow:0 30px 60px rgba(0,0,0,.4);background:#0a2c28;">
+                <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&q=80" alt="District leaders reviewing climate action data" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;">
+              </div>
+
+              <div class="lp-hero-photo-cards" style="position:absolute;top:-18px;left:-28px;background:#0a2c28;border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:12px 14px;box-shadow:0 16px 36px rgba(0,0,0,.4);width:128px;">
+                <div style="font-size:9.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:8px;">Belonging</div>
+                <div style="height:7px;background:rgba(255,255,255,.12);border-radius:4px;overflow:hidden;margin-bottom:6px;"><div style="width:78%;height:100%;border-radius:4px;background:var(--color-primary-v2);"></div></div>
+                <div style="font-size:13px;font-weight:800;color:#fff;">78%</div>
+              </div>
+
+              <div class="lp-hero-photo-cards" style="position:absolute;top:36%;right:-34px;text-align:center;background:#0a2c28;border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:12px 14px;box-shadow:0 16px 36px rgba(0,0,0,.4);width:128px;">
+                <div style="font-size:9.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:8px;">Actions Logged</div>
+                <div style="width:44px;height:44px;border-radius:50%;margin:0 auto;background:conic-gradient(var(--color-secondary-v2) 0% 91%, rgba(255,255,255,.15) 91% 100%);display:flex;align-items:center;justify-content:center;">
+                  <div style="width:34px;height:34px;border-radius:50%;background:#0a2c28;display:flex;align-items:center;justify-content:center;font-size:10.5px;font-weight:800;color:#fff;">91%</div>
+                </div>
+              </div>
+
+              <div class="lp-hero-photo-cards" style="position:absolute;bottom:54px;left:-40px;text-align:center;background:#0a2c28;border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:12px 14px;box-shadow:0 16px 36px rgba(0,0,0,.4);width:128px;">
+                <div style="font-size:9.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:8px;">District Rating</div>
+                <div style="font-size:15px;color:var(--color-neonYellow);letter-spacing:1px;">★★★★★</div>
+              </div>
+
+              <div class="lp-hero-photo-cards" style="position:absolute;bottom:-20px;right:-18px;text-align:center;background:#0a2c28;border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:12px 14px;box-shadow:0 16px 36px rgba(0,0,0,.4);width:128px;">
+                <div style="font-size:9.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:8px;">Time To Report</div>
+                <div style="width:44px;height:44px;border-radius:50%;margin:0 auto;background:conic-gradient(var(--color-neonYellow) 0% 88%, rgba(255,255,255,.15) 88% 100%);display:flex;align-items:center;justify-content:center;">
+                  <div style="width:34px;height:34px;border-radius:50%;background:#0a2c28;display:flex;align-items:center;justify-content:center;font-size:9.5px;font-weight:800;color:#fff;">9 days</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lp-fade" style="flex:0.85;min-width:280px;background:#fff;border-radius:16px;padding:28px 26px;box-shadow:0 30px 70px rgba(0,0,0,.4);">
+            <h3 class="font-Epilogue-Bold" style="font-size:1.8rem;color:var(--color-primary-v2);text-align:center;margin-bottom:8px;">Book a Personalized Demo</h3>
+            <p style="font-size:1.25rem;color:#5a6472;text-align:center;margin-bottom:20px;line-height:1.5;font-family:var(--font-Epilogue-Regular);">Prefer to talk now? Call us at <a href="tel:+17035706254" style="color:#1a1a1a;font-weight:700;text-decoration:none;">(703) 570-6254</a></p>
+            <form id="lpHeroForm" action="YOUR_FORM_ENDPOINT" method="POST" onsubmit="lpHandleHeroSubmit(event)">
+              <input type="hidden" name="utm_source" id="lph_utm_source">
+              <input type="hidden" name="utm_medium" id="lph_utm_medium">
+              <input type="hidden" name="utm_campaign" id="lph_utm_campaign">
+              <input type="hidden" name="gclid" id="lph_gclid">
+              <input type="hidden" name="page_variant" value="k12-climate-action-platform-hero">
+              <div style="margin-bottom:12px;"><input type="text" name="full_name" placeholder="Name (First, Last)*" required autocomplete="name" style="border:none;border-radius:8px;padding:1rem 1.3rem;font-size:1.4rem;color:#1a1a1a;font-family:var(--font-Epilogue-Regular);width:100%;outline:none;background:#edf0f1;box-sizing:border-box;"></div>
+              <div style="margin-bottom:12px;"><input type="email" name="email" placeholder="Email*" required autocomplete="email" style="border:none;border-radius:8px;padding:1rem 1.3rem;font-size:1.4rem;color:#1a1a1a;font-family:var(--font-Epilogue-Regular);width:100%;outline:none;background:#edf0f1;box-sizing:border-box;"></div>
+              <div style="margin-bottom:12px;"><input type="tel" name="phone" placeholder="Phone Number" autocomplete="tel" style="border:none;border-radius:8px;padding:1rem 1.3rem;font-size:1.4rem;color:#1a1a1a;font-family:var(--font-Epilogue-Regular);width:100%;outline:none;background:#edf0f1;box-sizing:border-box;"></div>
+              <div style="margin-bottom:14px;"><input type="text" name="district" placeholder="District Name" autocomplete="organization" style="border:none;border-radius:8px;padding:1rem 1.3rem;font-size:1.4rem;color:#1a1a1a;font-family:var(--font-Epilogue-Regular);width:100%;outline:none;background:#edf0f1;box-sizing:border-box;"></div>
+              <a onclick="lpHandleHeroSubmit(event, this)" href="#" role="button" style="display:block;width:100%;text-align:center;box-sizing:border-box;text-decoration:none;background:var(--color-neonYellow);color:#0a1a18;font-size:1.5rem;font-weight:700;padding:14px 20px;border-radius:10px;font-family:var(--font-Epilogue-Bold);">Submit</a>
+            </form>
+            <p style="font-size:1.05rem;color:#8a94a0;text-align:center;margin-top:10px;line-height:1.4;font-family:var(--font-Epilogue-Regular);">By submitting you agree to our Privacy Policy. We never sell your data.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     SECTION 2 — LOGO / TRUST BAR
+════════════════════════════════════════════════════ -->
+<div class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:#fff;border-bottom:1px solid #e2e6ea;padding:36px 24px;">
+  <div class="col span_12 left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding" data-animation="" data-delay="">
+      <div class="wpb_wrapper">
+        <p style="font-size:1.2rem;font-weight:600;color:#5a6472;letter-spacing:.06em;text-transform:uppercase;text-align:center;margin-bottom:24px;font-family:var(--font-Epilogue-SemiBold);">Supporting District Leaders To Achieve Their Mission</p>
+        <div style="display:flex;align-items:center;justify-content:center;gap:40px;flex-wrap:wrap;max-width:1160px;margin:0 auto;">
+          <div style="height:34px;min-width:110px;background:#E8F4F2;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:1.05rem;font-weight:600;color:#a8b4b2;padding:0 16px;">LOGO 1</div>
+          <div style="height:34px;min-width:110px;background:#E8F4F2;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:1.05rem;font-weight:600;color:#a8b4b2;padding:0 16px;">LOGO 2</div>
+          <div style="height:34px;min-width:110px;background:#E8F4F2;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:1.05rem;font-weight:600;color:#a8b4b2;padding:0 16px;">LOGO 3</div>
+          <div style="height:34px;min-width:110px;background:#E8F4F2;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:1.05rem;font-weight:600;color:#a8b4b2;padding:0 16px;">LOGO 4</div>
+          <div style="height:34px;min-width:110px;background:#E8F4F2;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:1.05rem;font-weight:600;color:#a8b4b2;padding:0 16px;">LOGO 5</div>
+          <div style="height:34px;min-width:110px;background:#E8F4F2;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:1.05rem;font-weight:600;color:#a8b4b2;padding:0 16px;">LOGO 6</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 3 — PROBLEM -->
+<div id="lp-problem" class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:#fff;padding:84px 24px;">
+  <div class="col span_12 left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding" data-animation="" data-delay="">
+      <div class="wpb_wrapper" style="max-width:1160px;margin:0 auto;">
+        <div class="lp-fade" style="text-align:center;margin-bottom:48px;">
+          <p style="font-size:1.1rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--color-primary-v2);margin-bottom:12px;font-family:var(--font-Epilogue-Bold);">The After-The-Survey Problem</p>
+          <h2 class="fs-epilogue-h2" style="margin-bottom:16px;">You Can't Act On Data You Get Too Late.</h2>
+          <p class="fs-pm" style="color:#5a6472;max-width:640px;margin:0 auto;">Climate surveys go out every year. Too often, results land months later, action never gets logged, and the schools that need help most stay invisible until a crisis forces attention.</p>
+        </div>
+        <div class="lp-fade lp-grid-3">
+          <div style="flex:1;background:#fff;border:1px solid #e2e6ea;border-radius:14px;padding:32px 28px;">
+            <div style="width:48px;height:48px;border-radius:12px;background:#E8F4F2;display:flex;align-items:center;justify-content:center;margin-bottom:20px;color:var(--color-primary-v2);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 7v5l3 3"/></svg>
+            </div>
+            <h3 class="font-Epilogue-Bold" style="font-size:1.9rem;margin-bottom:10px;">Results Arrive Too Late</h3>
+            <p style="font-size:1.4rem;color:#5a6472;line-height:1.65;font-family:var(--font-Epilogue-Regular);">By the time a report lands, the semester it describes is already over — and the students who told you have moved on.</p>
+          </div>
+          <div style="flex:1;background:#fff;border:1px solid #e2e6ea;border-radius:14px;padding:32px 28px;">
+            <div style="width:48px;height:48px;border-radius:12px;background:#E8F4F2;display:flex;align-items:center;justify-content:center;margin-bottom:20px;color:var(--color-primary-v2);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="12" r="3"/><path d="M8.5 7.5 15.5 10.5M8.5 16.5 15.5 13.5" stroke-dasharray="3 3"/></svg>
+            </div>
+            <h3 class="font-Epilogue-Bold" style="font-size:1.9rem;margin-bottom:10px;">Nothing Gets Logged</h3>
+            <p style="font-size:1.4rem;color:#5a6472;line-height:1.65;font-family:var(--font-Epilogue-Regular);">Forty-page reports nobody outside the cabinet ever opens — with no record of what was actually done about them.</p>
+          </div>
+          <div style="flex:1;background:#fff;border:1px solid #e2e6ea;border-radius:14px;padding:32px 28px;">
+            <div style="width:48px;height:48px;border-radius:12px;background:#E8F4F2;display:flex;align-items:center;justify-content:center;margin-bottom:20px;color:var(--color-primary-v2);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.94 17.94A10.94 10.94 0 0 1 12 20c-7 0-11-8-11-8a21.6 21.6 0 0 1 5.06-6.06M9.9 4.24A10.94 10.94 0 0 1 12 4c7 0 11 8 11 8a21.6 21.6 0 0 1-2.61 3.87M14.12 14.12a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
+            </div>
+            <h3 class="font-Epilogue-Bold" style="font-size:1.9rem;margin-bottom:10px;">Progress Is Invisible</h3>
+            <p style="font-size:1.4rem;color:#5a6472;line-height:1.65;font-family:var(--font-Epilogue-Regular);">Without a system for proving what changed, families and staff stop believing next year's survey will matter either.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 4 — COMPARISON TABLE -->
+<div class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:#E8F4F2;padding:84px 24px;">
+  <div class="col span_12 left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding" data-animation="" data-delay="">
+      <div class="wpb_wrapper" style="max-width:1160px;margin:0 auto;">
+        <div class="lp-fade" style="text-align:center;margin-bottom:48px;">
+          <p style="font-size:1.1rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--color-primary-v2);margin-bottom:12px;font-family:var(--font-Epilogue-Bold);">Why Sogolytics</p>
+          <h2 class="fs-epilogue-h2" style="margin-bottom:16px;">More Than A Survey. A District Action System.</h2>
+          <p class="fs-pm" style="color:#5a6472;max-width:640px;margin:0 auto;">Most climate survey tools stop at data collection. See exactly how Sogolytics compares to the legacy tools and generic platforms most districts are stuck with today.</p>
+        </div>
+        <div class="lp-fade lp-cmp-wrap">
+          <table style="width:100%;min-width:720px;border-collapse:collapse;font-size:1.4rem;font-family:var(--font-Epilogue-Regular);">
+            <thead>
+              <tr>
+                <th style="padding:16px 18px;text-align:left;font-size:1.15rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border-bottom:2px solid #e2e6ea;color:#5a6472;font-family:var(--font-Epilogue-Bold);">Capability</th>
+                <th style="padding:16px 18px;text-align:left;font-size:1.15rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border-bottom:2px solid #e2e6ea;color:var(--color-primary-v2);background:rgba(0,97,89,.06);border-radius:8px 8px 0 0;font-family:var(--font-Epilogue-Bold);">Sogolytics</th>
+                <th style="padding:16px 18px;text-align:left;font-size:1.15rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border-bottom:2px solid #e2e6ea;color:#5a6472;font-family:var(--font-Epilogue-Bold);">Legacy Climate<br>Survey Tools</th>
+                <th style="padding:16px 18px;text-align:left;font-size:1.15rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border-bottom:2px solid #e2e6ea;color:#5a6472;font-family:var(--font-Epilogue-Bold);">Generic Survey<br>Platforms</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid #e2e6ea;"><td style="padding:13px 18px;font-weight:600;color:#5a6472;font-size:1.35rem;">Time to board-ready report</td><td style="padding:13px 18px;background:rgba(0,97,89,.04);color:var(--color-primary-v2);font-weight:700;">✓ ~9 business days</td><td style="padding:13px 18px;color:#c0c8d0;">✗ 6–8 weeks</td><td style="padding:13px 18px;color:#f59e0b;">~ Weeks</td></tr>
+              <tr style="border-bottom:1px solid #e2e6ea;"><td style="padding:13px 18px;font-weight:600;color:#5a6472;font-size:1.35rem;">Built-in action tracking, not just dashboards</td><td style="padding:13px 18px;background:rgba(0,97,89,.04);color:var(--color-primary-v2);font-weight:700;">✓</td><td style="padding:13px 18px;color:#c0c8d0;">✗</td><td style="padding:13px 18px;color:#c0c8d0;">✗</td></tr>
+              <tr style="border-bottom:1px solid #e2e6ea;"><td style="padding:13px 18px;font-weight:600;color:#5a6472;font-size:1.35rem;">Student, staff &amp; family feedback in one platform</td><td style="padding:13px 18px;background:rgba(0,97,89,.04);color:var(--color-primary-v2);font-weight:700;">✓</td><td style="padding:13px 18px;color:#f59e0b;">~ Separate tools per group</td><td style="padding:13px 18px;color:#c0c8d0;">✗</td></tr>
+              <tr style="border-bottom:1px solid #e2e6ea;"><td style="padding:13px 18px;font-weight:600;color:#5a6472;font-size:1.35rem;">AI-powered sentiment &amp; theme analysis</td><td style="padding:13px 18px;background:rgba(0,97,89,.04);color:var(--color-primary-v2);font-weight:700;">✓ Included</td><td style="padding:13px 18px;color:#c0c8d0;">✗</td><td style="padding:13px 18px;color:#f59e0b;">~ Add-on</td></tr>
+              <tr style="border-bottom:1px solid #e2e6ea;"><td style="padding:13px 18px;font-weight:600;color:#5a6472;font-size:1.35rem;">District-wide benchmarking across schools</td><td style="padding:13px 18px;background:rgba(0,97,89,.04);color:var(--color-primary-v2);font-weight:700;">✓</td><td style="padding:13px 18px;color:#f59e0b;">~ Manual spreadsheets</td><td style="padding:13px 18px;color:#c0c8d0;">✗</td></tr>
+              <tr style="border-bottom:1px solid #e2e6ea;"><td style="padding:13px 18px;font-weight:600;color:#5a6472;font-size:1.35rem;">Multi-language surveys for families</td><td style="padding:13px 18px;background:rgba(0,97,89,.04);color:var(--color-primary-v2);font-weight:700;">✓</td><td style="padding:13px 18px;color:#f59e0b;">~ Limited languages</td><td style="padding:13px 18px;color:#c0c8d0;">✗</td></tr>
+              <tr style="border-bottom:1px solid #e2e6ea;"><td style="padding:13px 18px;font-weight:600;color:#5a6472;font-size:1.35rem;">FERPA-aligned &amp; COPPA-compliant</td><td style="padding:13px 18px;background:rgba(0,97,89,.04);color:var(--color-primary-v2);font-weight:700;">✓</td><td style="padding:13px 18px;color:var(--color-primary-v2);">✓</td><td style="padding:13px 18px;color:#c0c8d0;">✗</td></tr>
+              <tr><td style="padding:13px 18px;font-weight:600;color:#5a6472;font-size:1.35rem;">Transparent pricing</td><td style="padding:13px 18px;background:rgba(0,97,89,.04);color:var(--color-primary-v2);font-weight:700;">✓ Pilots from $0</td><td style="padding:13px 18px;color:#c0c8d0;">✗ Custom quote only</td><td style="padding:13px 18px;color:var(--color-primary-v2);">✓</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="lp-fade" style="text-align:center;margin-top:36px;">
+          <a href="#lp-demo" class="slide-btn-wrapper slide-button fill-bg" style="text-decoration:none;"><i class="fa fa-arrow-right"></i><span>Request a Demo</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 5 — CAPABILITIES -->
+<div class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:#fff;padding:84px 24px;">
+  <div class="col span_12 left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding" data-animation="" data-delay="">
+      <div class="wpb_wrapper" style="max-width:1160px;margin:0 auto;">
+        <div class="lp-fade" style="text-align:center;margin-bottom:48px;">
+          <p style="font-size:1.1rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--color-primary-v2);margin-bottom:12px;font-family:var(--font-Epilogue-Bold);">Platform Capabilities</p>
+          <h2 class="fs-epilogue-h2" style="margin-bottom:16px;">One Unified Climate Platform — Purpose-Built For K-12</h2>
+          <p class="fs-pm" style="color:#5a6472;max-width:640px;margin:0 auto;">Six integrated capabilities, one login, one source of truth for every school in your district.</p>
+        </div>
+        <div class="lp-fade lp-grid-6">
+          <div style="flex:1;min-width:280px;background:#fff;border:1px solid #e2e6ea;border-radius:14px;overflow:hidden;">
+            <div style="height:148px;display:flex;align-items:center;justify-content:center;position:relative;background:linear-gradient(145deg,#E8F4F2 0%,#dcecea 100%);">
+              <div style="width:52px;height:52px;border-radius:14px;background:#fff;box-shadow:0 8px 20px rgba(13,110,101,.15);display:flex;align-items:center;justify-content:center;color:var(--color-primary-v2);"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 6v16l7-4 8 4 7-4V0l-7 4-8-4-7 4z"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg></div>
+              <span style="position:absolute;bottom:10px;left:10px;font-size:9.5px;font-weight:700;padding:4px 9px;border-radius:20px;background:rgba(9,34,36,.75);color:#fff;">District Map</span>
+            </div>
+            <div style="padding:22px 22px 24px;"><h3 class="font-Epilogue-Bold" style="font-size:1.6rem;margin-bottom:7px;">District-Wide Climate Measurement</h3><p style="font-size:1.35rem;color:#5a6472;line-height:1.6;font-family:var(--font-Epilogue-Regular);">Understand every school, classroom, and community — from a single building to your entire district.</p></div>
+          </div>
+          <div style="flex:1;min-width:280px;background:#fff;border:1px solid #e2e6ea;border-radius:14px;overflow:hidden;">
+            <div style="height:148px;display:flex;align-items:center;justify-content:center;position:relative;background:linear-gradient(145deg,#E8F4F2 0%,#dcecea 100%);">
+              <div style="width:52px;height:52px;border-radius:14px;background:#fff;box-shadow:0 8px 20px rgba(13,110,101,.15);display:flex;align-items:center;justify-content:center;color:var(--color-primary-v2);"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg></div>
+              <span style="position:absolute;bottom:10px;left:10px;font-size:9.5px;font-weight:700;padding:4px 9px;border-radius:20px;background:rgba(9,34,36,.75);color:#fff;">Live Dashboard</span>
+            </div>
+            <div style="padding:22px 22px 24px;"><h3 class="font-Epilogue-Bold" style="font-size:1.6rem;margin-bottom:7px;">Actionable Dashboards</h3><p style="font-size:1.35rem;color:#5a6472;line-height:1.6;font-family:var(--font-Epilogue-Regular);">Give leaders insights they can act on — role-based views for principals, coordinators, and cabinet-level reporting.</p></div>
+          </div>
+          <div style="flex:1;min-width:280px;background:#fff;border:1px solid #e2e6ea;border-radius:14px;overflow:hidden;">
+            <div style="height:148px;display:flex;align-items:center;justify-content:center;position:relative;background:linear-gradient(145deg,#E8F4F2 0%,#dcecea 100%);">
+              <div style="width:52px;height:52px;border-radius:14px;background:#fff;box-shadow:0 8px 20px rgba(13,110,101,.15);display:flex;align-items:center;justify-content:center;color:var(--color-primary-v2);"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+              <span style="position:absolute;bottom:10px;left:10px;font-size:9.5px;font-weight:700;padding:4px 9px;border-radius:20px;background:rgba(9,34,36,.75);color:#fff;">Benchmarks</span>
+            </div>
+            <div style="padding:22px 22px 24px;"><h3 class="font-Epilogue-Bold" style="font-size:1.6rem;margin-bottom:7px;">Benchmark School Climate</h3><p style="font-size:1.35rem;color:#5a6472;line-height:1.6;font-family:var(--font-Epilogue-Regular);">Compare trends across schools and time periods to see which interventions are actually working.</p></div>
+          </div>
+          <div style="flex:1;min-width:280px;background:#fff;border:1px solid #e2e6ea;border-radius:14px;overflow:hidden;">
+            <div style="height:148px;position:relative;"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=700&q=80" alt="Students collaborating in a classroom" style="width:100%;height:100%;object-fit:cover;display:block;"><span style="position:absolute;bottom:10px;left:10px;font-size:9.5px;font-weight:700;padding:4px 9px;border-radius:20px;background:rgba(9,34,36,.75);color:#fff;">Student Voice</span></div>
+            <div style="padding:22px 22px 24px;"><h3 class="font-Epilogue-Bold" style="font-size:1.6rem;margin-bottom:7px;">Student Voice Analytics</h3><p style="font-size:1.35rem;color:#5a6472;line-height:1.6;font-family:var(--font-Epilogue-Regular);">Hear what students think, feel, and experience, with age-appropriate design and sentiment analysis.</p></div>
+          </div>
+          <div style="flex:1;min-width:280px;background:#fff;border:1px solid #e2e6ea;border-radius:14px;overflow:hidden;">
+            <div style="height:148px;position:relative;"><img src="https://images.unsplash.com/photo-1544717305-2782549b5136?w=700&q=80" alt="Family reviewing a survey together" style="width:100%;height:100%;object-fit:cover;display:block;"><span style="position:absolute;bottom:10px;left:10px;font-size:9.5px;font-weight:700;padding:4px 9px;border-radius:20px;background:rgba(9,34,36,.75);color:#fff;">Family Reach</span></div>
+            <div style="padding:22px 22px 24px;"><h3 class="font-Epilogue-Bold" style="font-size:1.6rem;margin-bottom:7px;">Multi-Language Feedback</h3><p style="font-size:1.35rem;color:#5a6472;line-height:1.6;font-family:var(--font-Epilogue-Regular);">Reach every family in your community with surveys available in the languages your families actually speak.</p></div>
+          </div>
+          <div style="flex:1;min-width:280px;background:#fff;border:1px solid #e2e6ea;border-radius:14px;overflow:hidden;">
+            <div style="height:148px;position:relative;"><img src="https://images.unsplash.com/photo-1573497491208-6b1acb260507?w=700&q=80" alt="Educator reviewing climate data with a colleague" style="width:100%;height:100%;object-fit:cover;display:block;"><span style="position:absolute;bottom:10px;left:10px;font-size:9.5px;font-weight:700;padding:4px 9px;border-radius:20px;background:rgba(9,34,36,.75);color:#fff;">Early Warning</span></div>
+            <div style="padding:22px 22px 24px;"><h3 class="font-Epilogue-Bold" style="font-size:1.6rem;margin-bottom:7px;">Real-Time Alerts</h3><p style="font-size:1.35rem;color:#5a6472;line-height:1.6;font-family:var(--font-Epilogue-Regular);">Flag emerging concerns automatically so counselors and administrators can respond before small issues escalate.</p></div>
+          </div>
+        </div>
+        <div class="lp-fade" style="text-align:center;margin-top:36px;">
+          <a href="#lp-demo" class="slide-btn-wrapper slide-button fill-bg" style="text-decoration:none;"><i class="fa fa-arrow-right"></i><span>Request a Demo</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 6 — HOW IT WORKS: THE ACTION LOOP -->
+<div class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:#E8F4F2;padding:84px 24px;">
+  <div class="col span_12 left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding" data-animation="" data-delay="">
+      <div class="wpb_wrapper" style="max-width:1160px;margin:0 auto;">
+        <div class="lp-fade" style="text-align:center;margin-bottom:48px;">
+          <p style="font-size:1.1rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--color-primary-v2);margin-bottom:12px;font-family:var(--font-Epilogue-Bold);">How It Works</p>
+          <h2 class="fs-epilogue-h2" style="margin-bottom:16px;">Meet The Action Loop.</h2>
+          <p class="fs-pm" style="color:#5a6472;max-width:640px;margin:0 auto;">Sogolytics turns climate data collection into a continuous improvement cycle — not a once-a-year compliance exercise.</p>
+        </div>
+        <div class="lp-fade lp-flow-row">
+          <div class="lp-flow-step">
+            <div style="width:52px;height:52px;border-radius:50%;background:var(--color-primary-v2);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.7rem;font-weight:800;margin:0 auto 16px;">1</div>
+            <h4 class="font-Epilogue-Bold" style="font-size:1.55rem;margin-bottom:6px;">Listen</h4>
+            <p style="font-size:1.3rem;color:#5a6472;line-height:1.55;max-width:220px;margin:0 auto;font-family:var(--font-Epilogue-Regular);">Accessible, age-appropriate, multi-language surveys — online, on paper, or by phone.</p>
+          </div>
+          <div class="lp-flow-step">
+            <div style="width:52px;height:52px;border-radius:50%;background:var(--color-primary-v2);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.7rem;font-weight:800;margin:0 auto 16px;">2</div>
+            <h4 class="font-Epilogue-Bold" style="font-size:1.55rem;margin-bottom:6px;">Understand</h4>
+            <p style="font-size:1.3rem;color:#5a6472;line-height:1.55;max-width:220px;margin:0 auto;font-family:var(--font-Epilogue-Regular);">AI surfaces sentiment, themes, and emerging concerns across schools in real time.</p>
+          </div>
+          <div class="lp-flow-step">
+            <div style="width:52px;height:52px;border-radius:50%;background:var(--color-primary-v2);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.7rem;font-weight:800;margin:0 auto 16px;">3</div>
+            <h4 class="font-Epilogue-Bold" style="font-size:1.55rem;margin-bottom:6px;">Act</h4>
+            <p style="font-size:1.3rem;color:#5a6472;line-height:1.55;max-width:220px;margin:0 auto;font-family:var(--font-Epilogue-Regular);">Role-based action plans and logged next steps give leaders a clear path forward.</p>
+          </div>
+          <div class="lp-flow-step">
+            <div style="width:52px;height:52px;border-radius:50%;background:var(--color-secondary-v2);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.7rem;font-weight:800;margin:0 auto 16px;">✓</div>
+            <h4 class="font-Epilogue-Bold" style="font-size:1.55rem;margin-bottom:6px;">Prove</h4>
+            <p style="font-size:1.3rem;color:#5a6472;line-height:1.55;max-width:220px;margin:0 auto;font-family:var(--font-Epilogue-Regular);">Benchmark against prior cycles to show your board exactly what changed, and why.</p>
+          </div>
+        </div>
+        <div class="lp-fade lp-grid-6" style="justify-content:center;">
+          <span style="display:flex;align-items:center;gap:8px;background:#fff;border:1px solid #e2e6ea;border-radius:30px;padding:9px 16px;font-size:1.25rem;font-weight:600;color:#5a6472;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0D6E65" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>Student surveys</span>
+          <span style="display:flex;align-items:center;gap:8px;background:#fff;border:1px solid #e2e6ea;border-radius:30px;padding:9px 16px;font-size:1.25rem;font-weight:600;color:#5a6472;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0D6E65" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>Staff surveys</span>
+          <span style="display:flex;align-items:center;gap:8px;background:#fff;border:1px solid #e2e6ea;border-radius:30px;padding:9px 16px;font-size:1.25rem;font-weight:600;color:#5a6472;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0D6E65" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>Parent surveys</span>
+          <span style="display:flex;align-items:center;gap:8px;background:#fff;border:1px solid #e2e6ea;border-radius:30px;padding:9px 16px;font-size:1.25rem;font-weight:600;color:#5a6472;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0D6E65" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>Climate benchmarks</span>
+          <span style="display:flex;align-items:center;gap:8px;background:#fff;border:1px solid #e2e6ea;border-radius:30px;padding:9px 16px;font-size:1.25rem;font-weight:600;color:#5a6472;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0D6E65" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>Action tracking</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 7 — WHY K-12 DISTRICTS CHOOSE SOGOLYTICS -->
+<div class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:#fff;padding:84px 24px;">
+  <div class="col span_12 left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding" data-animation="" data-delay="">
+      <div class="wpb_wrapper" style="max-width:1160px;margin:0 auto;">
+        <div class="lp-fade" style="text-align:center;margin-bottom:48px;">
+          <p style="font-size:1.1rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--color-primary-v2);margin-bottom:12px;font-family:var(--font-Epilogue-Bold);">Built For K-12</p>
+          <h2 class="fs-epilogue-h2" style="margin-bottom:16px;">Why K-12 Districts Choose Sogolytics</h2>
+          <p class="fs-pm" style="color:#5a6472;max-width:640px;margin:0 auto;">Enterprise-grade security and support, purpose-built for the realities of a school district — not retrofitted from a generic survey tool.</p>
+        </div>
+        <div class="lp-fade lp-why-grid">
+          <div style="display:flex;gap:16px;align-items:flex-start;"><div style="flex-shrink:0;width:30px;height:30px;border-radius:50%;background:#E8F4F2;color:var(--color-primary-v2);display:flex;align-items:center;justify-content:center;font-weight:800;">✓</div><div><h4 class="font-Epilogue-Bold" style="font-size:1.6rem;margin-bottom:4px;">Purpose-Built For K-12</h4><p style="font-size:1.35rem;color:#5a6472;line-height:1.55;font-family:var(--font-Epilogue-Regular);">Not a generic survey tool retrofitted for schools — built around the way districts actually operate.</p></div></div>
+          <div style="display:flex;gap:16px;align-items:flex-start;"><div style="flex-shrink:0;width:30px;height:30px;border-radius:50%;background:#E8F4F2;color:var(--color-primary-v2);display:flex;align-items:center;justify-content:center;font-weight:800;">✓</div><div><h4 class="font-Epilogue-Bold" style="font-size:1.6rem;margin-bottom:4px;">FERPA-Aligned &amp; COPPA-Compliant</h4><p style="font-size:1.35rem;color:#5a6472;line-height:1.55;font-family:var(--font-Epilogue-Regular);">Built for the realities of student data privacy, from the ground up.</p></div></div>
+          <div style="display:flex;gap:16px;align-items:flex-start;"><div style="flex-shrink:0;width:30px;height:30px;border-radius:50%;background:#E8F4F2;color:var(--color-primary-v2);display:flex;align-items:center;justify-content:center;font-weight:800;">✓</div><div><h4 class="font-Epilogue-Bold" style="font-size:1.6rem;margin-bottom:4px;">Multi-Language By Design</h4><p style="font-size:1.35rem;color:#5a6472;line-height:1.55;font-family:var(--font-Epilogue-Regular);">Reach every family in the language they speak at home, not just English.</p></div></div>
+          <div style="display:flex;gap:16px;align-items:flex-start;"><div style="flex-shrink:0;width:30px;height:30px;border-radius:50%;background:#E8F4F2;color:var(--color-primary-v2);display:flex;align-items:center;justify-content:center;font-weight:800;">✓</div><div><h4 class="font-Epilogue-Bold" style="font-size:1.6rem;margin-bottom:4px;">AI-Powered Sentiment Analysis</h4><p style="font-size:1.35rem;color:#5a6472;line-height:1.55;font-family:var(--font-Epilogue-Regular);">Understand what open-ended responses really mean, at the scale of an entire district.</p></div></div>
+          <div style="display:flex;gap:16px;align-items:flex-start;"><div style="flex-shrink:0;width:30px;height:30px;border-radius:50%;background:#E8F4F2;color:var(--color-primary-v2);display:flex;align-items:center;justify-content:center;font-weight:800;">✓</div><div><h4 class="font-Epilogue-Bold" style="font-size:1.6rem;margin-bottom:4px;">Dedicated Education Success Team</h4><p style="font-size:1.35rem;color:#5a6472;line-height:1.55;font-family:var(--font-Epilogue-Regular);">Real people who understand school districts — not a generic support queue.</p></div></div>
+          <div style="display:flex;gap:16px;align-items:flex-start;"><div style="flex-shrink:0;width:30px;height:30px;border-radius:50%;background:#E8F4F2;color:var(--color-primary-v2);display:flex;align-items:center;justify-content:center;font-weight:800;">✓</div><div><h4 class="font-Epilogue-Bold" style="font-size:1.6rem;margin-bottom:4px;">Board-Ready Reporting</h4><p style="font-size:1.35rem;color:#5a6472;line-height:1.55;font-family:var(--font-Epilogue-Regular);">Insights formatted for your next board meeting, not just a raw data export.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 8 — TRUST: STATS + TESTIMONIALS -->
+<div class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:#E8F4F2;padding:84px 24px;">
+  <div class="col span_12 left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding" data-animation="" data-delay="">
+      <div class="wpb_wrapper" style="max-width:1160px;margin:0 auto;">
+        <div class="lp-fade" style="text-align:center;margin-bottom:44px;">
+          <p style="font-size:1.1rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--color-primary-v2);margin-bottom:12px;font-family:var(--font-Epilogue-Bold);">Trusted Nationwide</p>
+          <h2 class="fs-epilogue-h2" style="margin-bottom:16px;">Trusted By Districts Who Take Climate Seriously</h2>
+          <p class="fs-pm" style="color:#5a6472;max-width:640px;margin:0 auto;">500+ districts nationwide rely on Sogolytics to hear every student, staff, and family voice — and prove what they did about it.</p>
+        </div>
+        <div class="lp-fade lp-grid-3" style="max-width:820px;margin:0 auto 48px;text-align:center;justify-content:center;">
+          <div style="flex:1;"><div class="fs-epilogue-h2" style="color:var(--color-primary-v2);line-height:1;margin-bottom:8px;">500+</div><p style="font-size:1.35rem;color:#5a6472;line-height:1.4;margin:0;font-family:var(--font-Epilogue-Regular);">Districts nationwide<br>using Sogolytics</p></div>
+          <div style="flex:1;"><div class="fs-epilogue-h2" style="color:var(--color-primary-v2);line-height:1;margin-bottom:8px;">3.2M+</div><p style="font-size:1.35rem;color:#5a6472;line-height:1.4;margin:0;font-family:var(--font-Epilogue-Regular);">Student, staff &amp; family<br>voices heard every year</p></div>
+          <div style="flex:1;"><div class="fs-epilogue-h2" style="color:var(--color-primary-v2);line-height:1;margin-bottom:8px;">9 days</div><p style="font-size:1.35rem;color:#5a6472;line-height:1.4;margin:0;font-family:var(--font-Epilogue-Regular);">Average time from<br>survey close to report</p></div>
+        </div>
+        <div class="lp-fade lp-grid-3">
+          <div style="flex:1;background:#0a2c28;border-radius:16px;padding:28px 26px;display:flex;flex-direction:column;gap:16px;">
+            <div class="font-Epilogue-Bold" style="font-size:1.7rem;color:var(--color-neonYellow);">"Major difference"</div>
+            <p style="font-size:1.35rem;line-height:1.7;color:rgba(255,255,255,.82);font-family:var(--font-Epilogue-Regular);">Sogolytics has been a major difference in our ability to see what's actually happening across our schools — and to show our board what we did about it.</p>
+            <div style="display:flex;align-items:center;gap:12px;margin-top:auto;"><div style="width:40px;height:40px;border-radius:50%;background:rgba(2,190,204,.18);display:flex;align-items:center;justify-content:center;font-size:1.4rem;font-weight:700;color:var(--color-secondary-v2);flex-shrink:0;">BH</div><div><div class="white-text" style="font-size:1.3rem;font-weight:700;">Bexley Hatfield</div><div style="font-size:1.15rem;color:rgba(255,255,255,.5);">Director of Assessment, Cedar Valley SD</div></div></div>
+          </div>
+          <div style="flex:1;background:#0a2c28;border-radius:16px;padding:28px 26px;display:flex;flex-direction:column;gap:16px;">
+            <div class="font-Epilogue-Bold" style="font-size:1.7rem;color:var(--color-neonYellow);">"Two-way communication"</div>
+            <p style="font-size:1.35rem;line-height:1.7;color:rgba(255,255,255,.82);font-family:var(--font-Epilogue-Regular);">Sogolytics made real two-way communication possible for the first time — families and staff can see that something happens with what they tell us.</p>
+            <div style="display:flex;align-items:center;gap:12px;margin-top:auto;"><div style="width:40px;height:40px;border-radius:50%;background:rgba(2,190,204,.18);display:flex;align-items:center;justify-content:center;font-size:1.4rem;font-weight:700;color:var(--color-secondary-v2);flex-shrink:0;">KD</div><div><div class="white-text" style="font-size:1.3rem;font-weight:700;">Karen Derby</div><div style="font-size:1.15rem;color:rgba(255,255,255,.5);">Assistant Superintendent, Northbrook USD</div></div></div>
+          </div>
+          <div style="flex:1;background:#0a2c28;border-radius:16px;padding:28px 26px;display:flex;flex-direction:column;gap:16px;">
+            <div class="font-Epilogue-Bold" style="font-size:1.7rem;color:var(--color-neonYellow);">"Powerful feedback"</div>
+            <p style="font-size:1.35rem;line-height:1.7;color:rgba(255,255,255,.82);font-family:var(--font-Epilogue-Regular);">The action log alone changed how our cabinet works — we finally have a record of what we heard and what we did, in one place.</p>
+            <div style="display:flex;align-items:center;gap:12px;margin-top:auto;"><div style="width:40px;height:40px;border-radius:50%;background:rgba(2,190,204,.18);display:flex;align-items:center;justify-content:center;font-size:1.4rem;font-weight:700;color:var(--color-secondary-v2);flex-shrink:0;">JR</div><div><div class="white-text" style="font-size:1.3rem;font-weight:700;">James Rook</div><div style="font-size:1.15rem;color:rgba(255,255,255,.5);">Superintendent, Riverbend CSD</div></div></div>
+          </div>
+        </div>
+        <div class="lp-fade" style="text-align:center;margin-top:36px;">
+          <a href="#lp-demo" class="slide-btn-wrapper slide-button fill-bg" style="text-decoration:none;"><i class="fa fa-arrow-right"></i><span>Request a Demo</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 9 — FINAL CTA -->
+<div id="lp-demo" class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:var(--color-primary-v2);padding:84px 24px;text-align:center;">
+  <div class="col span_12 color-dark left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding color-dark" data-animation="" data-delay="">
+      <div class="wpb_wrapper lp-fade" style="max-width:640px;margin:0 auto;">
+        <p style="font-size:1.1rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#0a1a18;margin-bottom:12px;font-family:var(--font-Epilogue-Bold);">Ready When You Are</p>
+        <h2 class="fs-epilogue-h2 white-text" style="margin-bottom:16px;">Your Schools Are Speaking. Are You Listening?</h2>
+        <p class="fs-pm white-text" style="opacity:.85;margin-bottom:32px;">See how Sogolytics helps district leaders turn climate survey data into board-ready action — request a personalized demo for your district.</p>
+        <a href="#lpHeroForm" class="slide-btn-wrapper slide-button fill-bg" style="text-decoration:none;"><i class="fa fa-arrow-right"></i><span>Request a Demo</span></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     JAVASCRIPT
+════════════════════════════════════════════════════ -->
+<script>
+(function(){
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('on'); obs.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.lp-fade').forEach(function(el){ obs.observe(el); });
+})();
+
+  (function(){
+    var params = new URLSearchParams(window.location.search);
+    ['utm_source','utm_medium','utm_campaign','gclid'].forEach(function(f){
+      var el = document.getElementById('lph_' + f);
+      if(el && params.get(f)) el.value = params.get(f);
+    });
+  })();
+
+  function lpHandleHeroSubmit(e, btn) {
+    e.preventDefault();
+    var form = document.getElementById('lpHeroForm');
+    if(!form) return;
+    var submitBtn = btn || form.querySelector('[role="button"]');
+    if(submitBtn) { submitBtn.style.pointerEvents = 'none'; submitBtn.textContent = 'Submitting…'; }
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: 'lead_submit', form_id: 'hero_form', page_variant: 'k12-climate-action-platform' });
+    setTimeout(function(){
+      var card = form.closest('div[style*="border-radius:16px"]');
+      if(card) card.innerHTML = '<div style="text-align:center;padding:16px 0"><div style="font-size:3rem;margin-bottom:10px">✓</div><h3 class="font-Epilogue-Bold" style="font-size:1.8rem;color:#1a1a1a;margin-bottom:6px;">You\'re on the calendar!</h3><p style="color:#5a6472;font-size:1.3rem;font-family:var(--font-Epilogue-Regular)">A Sogolytics education specialist will reach out within 1 business day.</p></div>';
+    }, 800);
+  }
+</script>

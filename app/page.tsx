@@ -82,6 +82,16 @@ const pages: LandingPage[] = [
     tagColor: "#1d4ed8",
     htmlFile: "lp-k12-school-climate.html",
   },
+  {
+    slug: "pages/lp-k12-climate-action-platform.html",
+    title: "The Climate Action Platform — District Leaders",
+    description: "New category positioning built from competitive research: not survey software, a Climate Action Platform organized around The Action Loop (Listen, Understand, Act, Prove). Separate ad-group variant from the K-12 School Climate page.",
+    date: "2026-07-17",
+    tag: "Vertical",
+    tagBg: "#e0f0ff",
+    tagColor: "#1d4ed8",
+    htmlFile: "lp-k12-climate-action-platform.html",
+  },
 ];
 
 export default function IndexPage() {
