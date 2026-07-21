@@ -223,8 +223,8 @@ export default function CemsHero() {
               You Have an <span style={{ color: "var(--teal)" }}>Action</span> Problem.
             </h1>
 
-            <p style={{ fontSize: 17, lineHeight: 1.65, color: "rgba(255,255,255,0.88)", marginBottom: 32, maxWidth: 540 }}>
-              Most teams already collect enough Voice of Customer data to fill a warehouse — NPS, CSAT, reviews, support tickets — yet churn keeps climbing. Sogolytics is the <strong>customer experience management software</strong> built to close that gap: AI detects the signal, workflow automation routes it to the right owner, and every piece of feedback ends in a resolved action, not an ignored dashboard.
+            <p style={{ fontSize: 17, lineHeight: 1.6, color: "rgba(255,255,255,0.88)", marginBottom: 32, maxWidth: 480 }}>
+              You&apos;re already drowning in NPS and CSAT data. Sogolytics is the <strong>customer experience management software</strong> that turns every signal into a resolved action — automatically.
             </p>
 
             <div style={{ display: "flex", flexWrap: "wrap", gap: 14, marginBottom: 32 }}>

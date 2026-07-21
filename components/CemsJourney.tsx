@@ -8,7 +8,7 @@ const steps = [
     label: "Feedback left",
     icon: "💬",
     title: "A customer leaves feedback",
-    body: "A mid-tier account completes a post-support CSAT survey and rates the experience 2 out of 5, mentioning slow response time in the open-ended comment.",
+    body: "A customer rates support 2/5 and flags slow response time.",
     screen: {
       title: "Customer Feedback Management",
       content: (
@@ -25,7 +25,7 @@ const steps = [
     label: "AI detects issue",
     icon: "🧠",
     title: "AI detects the issue",
-    body: "Sogolytics AI reads the open-ended response, scores sentiment as strongly negative, and tags the theme as \"support responsiveness\" — no analyst required.",
+    body: "AI scores the comment negative and tags the theme — no analyst required.",
     screen: {
       title: "AI Sentiment Analysis",
       content: (
@@ -43,7 +43,7 @@ const steps = [
     label: "Alert triggered",
     icon: "🚨",
     title: "An alert triggers instantly",
-    body: "The moment the response is scored, a real-time alert fires — before the survey report even runs. No one is waiting for a weekly digest.",
+    body: "No one waits for a weekly report — the alert fires the moment it's scored.",
     screen: {
       title: "Real-Time Alerts",
       content: (
@@ -61,7 +61,7 @@ const steps = [
     label: "Owner assigned",
     icon: "👤",
     title: "A manager is assigned",
-    body: "Workflow automation routes the case to the customer's account manager based on account tier and issue type — automatically, with full context attached.",
+    body: "Workflow automation routes the case to the right owner, automatically.",
     screen: {
       title: "Workflow Automation",
       content: (
@@ -78,7 +78,7 @@ const steps = [
     label: "Action taken",
     icon: "✅",
     title: "The manager takes action",
-    body: "The CSM reaches out within the SLA window, resolves the support delay, and logs the resolution — closing the loop directly inside the platform.",
+    body: "The CSM resolves it within the SLA window and logs the outcome.",
     screen: {
       title: "Closed-Loop Case",
       content: (
@@ -96,7 +96,7 @@ const steps = [
     label: "Customer retained",
     icon: "🤝",
     title: "The customer is retained",
-    body: "The account renews at the next cycle. What could have been a silent churn is now a data point proving the value of closing the loop — every time.",
+    body: "The account renews. Silent churn just became proof the loop works.",
     screen: {
       title: "Retention Outcome",
       content: (
@@ -119,8 +119,8 @@ export default function CemsJourney() {
           <h2 style={{ fontSize: "clamp(26px,3vw,36px)", fontWeight: 700, lineHeight: 1.2, letterSpacing: "-0.02em", marginBottom: 14 }}>
             From Feedback to Fixed — Follow One Customer&apos;s Journey
           </h2>
-          <p style={{ fontSize: 17, color: "var(--text-muted)", lineHeight: 1.65, maxWidth: 620, margin: "0 auto" }}>
-            This is what customer journey analytics and workflow automation look like when they&apos;re actually connected. Click each step.
+          <p style={{ fontSize: 17, color: "var(--text-muted)", lineHeight: 1.6, maxWidth: 480, margin: "0 auto" }}>
+            Click each step to see it work.
           </p>
         </div>
 

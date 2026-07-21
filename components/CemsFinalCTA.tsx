@@ -9,8 +9,8 @@ export default function CemsFinalCTA() {
           <h2 style={{ fontSize: "clamp(26px,3.2vw,40px)", fontWeight: 700, marginBottom: 16, letterSpacing: "-0.02em", lineHeight: 1.25, maxWidth: 680, margin: "0 auto 16px" }}>
             Somewhere in your feedback right now, a customer is telling you exactly how to keep them.
           </h2>
-          <p style={{ fontSize: 17, color: "rgba(255,255,255,0.75)", maxWidth: 560, margin: "0 auto 36px", lineHeight: 1.65 }}>
-            The only question is whether anyone acts on it before they leave. See how Sogolytics closes that loop — book a 30-minute demo built around your CX program.
+          <p style={{ fontSize: 17, color: "rgba(255,255,255,0.75)", maxWidth: 460, margin: "0 auto 36px", lineHeight: 1.6 }}>
+            The only question is whether anyone acts on it before they leave.
           </p>
 
           <div style={{ maxWidth: 520, margin: "0 auto" }}>

@@ -21,8 +21,8 @@ export default function CemsSwitch() {
           <h2 style={{ fontSize: "clamp(26px,3vw,36px)", fontWeight: 700, lineHeight: 1.2, letterSpacing: "-0.02em", marginBottom: 14 }}>
             Enterprise Depth. Mid-Market Speed.
           </h2>
-          <p style={{ fontSize: 17, color: "var(--text-muted)", lineHeight: 1.65, maxWidth: 640, margin: "0 auto" }}>
-            Most enterprise CX management software makes you choose between capability and time-to-value. Teams switch to Sogolytics because they stop having to choose.
+          <p style={{ fontSize: 17, color: "var(--text-muted)", lineHeight: 1.6, maxWidth: 480, margin: "0 auto" }}>
+            Enterprise depth shouldn&apos;t cost you time-to-value.
           </p>
         </div>
 

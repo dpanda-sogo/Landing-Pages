@@ -2,12 +2,12 @@
 import { motion } from "framer-motion";
 
 const outcomes = [
-  { stat: "↓ Churn", label: "Reduce customer churn", desc: "Resolve detractor feedback within hours instead of letting it go unanswered for weeks." },
-  { stat: "↑ NPS", label: "Improve Net Promoter Score", desc: "Closed-loop follow-up with detractors consistently lifts NPS faster than survey changes alone." },
-  { stat: "↑ CSAT", label: "Increase satisfaction scores", desc: "Customers rate the experience higher when they see their feedback lead to a real response." },
-  { stat: "↓ Effort", label: "Reduce manual reporting", desc: "Always-on executive dashboards replace hours of manual spreadsheet building every month." },
-  { stat: "↑ Visibility", label: "Improve leadership visibility", desc: "Every team, region, and program rolls up into one view — no more waiting on a quarterly deck." },
-  { stat: "↑ CLV", label: "Increase customer lifetime value", desc: "Accounts enrolled in a proactive, closed-loop program renew longer and expand more." },
+  { stat: "↓ Churn", label: "Reduce customer churn", desc: "Resolve detractors in hours, not weeks." },
+  { stat: "↑ NPS", label: "Improve Net Promoter Score", desc: "Closed-loop follow-up lifts NPS fastest." },
+  { stat: "↑ CSAT", label: "Increase satisfaction scores", desc: "Feedback that gets a real response, scores higher." },
+  { stat: "↓ Effort", label: "Reduce manual reporting", desc: "Always-on dashboards, zero spreadsheets." },
+  { stat: "↑ Visibility", label: "Improve leadership visibility", desc: "Every team and region, one view." },
+  { stat: "↑ CLV", label: "Increase customer lifetime value", desc: "Closed-loop accounts renew longer." },
 ];
 
 export default function CemsOutcomes() {
@@ -21,8 +21,8 @@ export default function CemsOutcomes() {
           <h2 style={{ fontSize: "clamp(26px,3vw,36px)", fontWeight: 700, lineHeight: 1.2, letterSpacing: "-0.02em", marginBottom: 14 }}>
             Measurable Impact, Not Just Metrics
           </h2>
-          <p style={{ fontSize: 17, color: "var(--text-muted)", lineHeight: 1.65, maxWidth: 620, margin: "0 auto" }}>
-            Every capability in Sogolytics exists to move one of these numbers. Here&apos;s what customer experience management software should actually deliver.
+          <p style={{ fontSize: 17, color: "var(--text-muted)", lineHeight: 1.6, maxWidth: 480, margin: "0 auto" }}>
+            What customer experience management software should actually deliver.
           </p>
         </div>
 

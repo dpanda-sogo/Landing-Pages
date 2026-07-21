@@ -55,14 +55,14 @@ function Row1() {
         <h2 style={{ fontSize: "clamp(22px,2.5vw,30px)", fontWeight: 700, lineHeight: 1.25, marginBottom: 14, letterSpacing: "-0.01em" }}>
           See exactly where the experience breaks down.
         </h2>
-        <p style={{ fontSize: 15, color: "var(--text-muted)", lineHeight: 1.7, marginBottom: 18 }}>
-          Sentiment analysis and predictive analytics process every open-ended response automatically, while journey mapping shows which stage — onboarding, support, renewal — is driving detractor scores. No manual coding of verbatims required.
+        <p style={{ fontSize: 15, color: "var(--text-muted)", lineHeight: 1.6, marginBottom: 18 }}>
+          AI reads every response automatically. Journey mapping shows exactly which stage is driving detractors.
         </p>
         {checkList([
-          "AI sentiment analysis across every open-ended response",
-          "Predictive analytics flags at-risk accounts before renewal",
-          "Journey mapping across the full customer lifecycle",
-          "Automated theme clustering and emerging-issue detection",
+          "AI sentiment analysis on every response",
+          "Predictive churn-risk scoring",
+          "Full lifecycle journey mapping",
+          "Automated theme detection",
         ])}
       </motion.div>
     </div>
@@ -79,14 +79,14 @@ function Row2() {
         <h2 style={{ fontSize: "clamp(22px,2.5vw,30px)", fontWeight: 700, lineHeight: 1.25, marginBottom: 14, letterSpacing: "-0.01em" }}>
           Capture feedback everywhere your customers already are.
         </h2>
-        <p style={{ fontSize: 15, color: "var(--text-muted)", lineHeight: 1.7, marginBottom: 18 }}>
-          Trigger NPS, CSAT, and CES surveys automatically on the events that matter — a support ticket closes, a renewal window opens, a product milestone is hit. Deploy across email, SMS, web, in-app, and QR code from one platform.
+        <p style={{ fontSize: 15, color: "var(--text-muted)", lineHeight: 1.6, marginBottom: 18 }}>
+          Trigger NPS, CSAT, and CES surveys the moment they matter. Deploy anywhere your customers already are.
         </p>
         {checkList([
-          "Automated survey triggers tied to lifecycle events",
-          "Omnichannel deployment: email, SMS, web, in-app, QR",
-          "NPS, CSAT, and CES templates built in",
-          "50+ languages with regional compliance support",
+          "Automated, event-triggered surveys",
+          "Email, SMS, web, in-app, QR",
+          "NPS, CSAT, and CES built in",
+          "50+ languages, compliant everywhere",
         ])}
       </motion.div>
       <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.55 }} className="alt-row-mock">
@@ -129,13 +129,13 @@ function Row3() {
         <h2 style={{ fontSize: "clamp(22px,2.5vw,30px)", fontWeight: 700, lineHeight: 1.25, marginBottom: 14, letterSpacing: "-0.01em" }}>
           Real-time alerts and reporting your leadership team will actually use.
         </h2>
-        <p style={{ fontSize: 15, color: "var(--text-muted)", lineHeight: 1.7, marginBottom: 18 }}>
-          Real-time alerts trigger the moment a detractor response comes in, case management assigns and tracks resolution, and executive dashboards roll everything up — all built on enterprise-grade security your IT team will sign off on.
+        <p style={{ fontSize: 15, color: "var(--text-muted)", lineHeight: 1.6, marginBottom: 18 }}>
+          Alerts and case management on enterprise-grade security your IT team will sign off on.
         </p>
         {checkList([
-          "Real-time alerts and automated case assignment",
-          "Executive dashboards with drill-down reporting",
-          "50+ integrations: Salesforce, Zendesk, HubSpot, Power BI",
+          "Real-time alerts, automated routing",
+          "Executive dashboards, drill-down ready",
+          "50+ integrations: Salesforce, Zendesk, HubSpot",
           "SOC 2 Type II, HIPAA, and GDPR compliant",
         ])}
       </motion.div>
@@ -154,8 +154,8 @@ export default function CemsProduct() {
           <h2 style={{ fontSize: "clamp(26px,3vw,36px)", fontWeight: 700, lineHeight: 1.2, letterSpacing: "-0.02em", marginBottom: 14 }}>
             One Platform. Every Capability Your CX Program Needs.
           </h2>
-          <p style={{ fontSize: 17, color: "var(--text-muted)", lineHeight: 1.65, maxWidth: 620, margin: "0 auto" }}>
-            Dashboards, AI analytics, journey mapping, survey automation, alerts, and integrations — built to work together, not as five separate purchases.
+          <p style={{ fontSize: 17, color: "var(--text-muted)", lineHeight: 1.6, maxWidth: 480, margin: "0 auto" }}>
+            Built to work together, not sold as five separate modules.
           </p>
         </div>
         <Row1 />

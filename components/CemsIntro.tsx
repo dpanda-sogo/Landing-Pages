@@ -2,11 +2,11 @@
 import { motion } from "framer-motion";
 
 const pillars = [
-  { label: "Voice of Customer", desc: "Every channel — survey, review, support, social — unified into one signal." },
-  { label: "AI Analytics", desc: "Sentiment, theme, and intent detection across every open-ended response." },
-  { label: "Journey Analytics", desc: "See where experience breaks down across the full customer lifecycle." },
-  { label: "Closed-Loop Feedback", desc: "Every flagged response gets an owner, a deadline, and a resolution." },
-  { label: "Workflow Automation", desc: "Alerts and case assignment happen automatically — no manual triage." },
+  { label: "Voice of Customer", desc: "Every channel, one signal." },
+  { label: "AI Analytics", desc: "Sentiment and intent, detected automatically." },
+  { label: "Journey Analytics", desc: "See where experience breaks down." },
+  { label: "Closed-Loop Feedback", desc: "Every flag gets an owner and a deadline." },
+  { label: "Workflow Automation", desc: "No manual triage." },
 ];
 
 export default function CemsIntro() {
@@ -23,8 +23,8 @@ export default function CemsIntro() {
               <br />
               Sogolytics Helps You Decide What Happens Next.
             </h2>
-            <p style={{ fontSize: 16, color: "var(--text-muted)", lineHeight: 1.7, marginBottom: 24 }}>
-              A dashboard that reports a dropping NPS score isn&apos;t a solution — it&apos;s a symptom. Sogolytics was built as a <strong>Voice of Customer platform</strong> with action at the center: AI reads every response, journey analytics show where friction lives, and closed-loop workflows make sure the right person acts before the customer decides to leave.
+            <p style={{ fontSize: 16, color: "var(--text-muted)", lineHeight: 1.6, marginBottom: 24 }}>
+              A dropping NPS score is a symptom, not a solution. Sogolytics is a <strong>Voice of Customer platform</strong> built for action.
             </p>
             <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
               {pillars.map((p) => (
