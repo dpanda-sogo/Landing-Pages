@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<!--
+  ============================================================
+  SOGOLYTICS — CREDIT UNION NPS SURVEY LANDING PAGE
+  Campaign: CU-MX-US-v1 · Ad group: CU-Surveys-NPS
+  Anchor customer: All In Credit Union (Laurie Flanders)
+  ============================================================
+  DEVELOPER EDIT GUIDE — READ BEFORE PUBLISHING
+  ============================================================
+  This page was built from a written spec, without access to the live
+  reference page (https://www.sogolytics.com/lp/credit-union-member-experience/)
+  or its media library. Every asset below is a labeled placeholder that
+  MUST be swapped for the real reference-page asset before launch:
+
+  SOCIAL PROOF LOGO BAND:   Search "REUSE ASSET: logo band" — swap for the
+                            exact image used on the reference page.
+  DASHBOARD SCREENSHOT:     Search "REUSE ASSET: dashboard" — swap for the
+                            SogoCX reporting dashboard image from the
+                            reference page.
+  TESTIMONIAL HEADSHOTS:    Search "REUSE ASSET: headshot" — swap for the
+                            existing headshot for each named customer.
+  REVIEW BADGES:            Search "REUSE ASSET: review badge" — swap for
+                            the actual Capterra/G2/Trustpilot/TrustRadius
+                            badge images used on the reference page.
+  COMPLIANCE BADGES:        Search "REUSE ASSET: compliance badge" — swap
+                            for the SOC 2 / ISO / NCUA badge images.
+
+  FORM EMBED (HIGHEST PRIORITY):
+    Search "FORM EMBED" near the bottom. The real form lives at
+    /contact-forms/lp-page-rad-form-cx/ on the WordPress site. This file
+    has a placeholder form with id="cuBookForm" so both CTA buttons'
+    anchor links (#cuBookForm) work for preview. Before launch:
+      1. Replace the placeholder form with the actual embed/shortcode for
+         /contact-forms/lp-page-rad-form-cx/, keeping id="cuBookForm" on
+         the wrapping element so the anchor scroll still lands correctly.
+      2. Confirm the embedded form fires the Lead_SalesForce conversion in
+         GTM-PQJTBL4 and that gclid passes through to Salesforce. This is
+         called out as the highest-priority QA item — the campaign runs at
+         low click volume and cannot absorb a tracking gap.
+
+  CLAIMS FLAGGED FOR REVIEW (not resolved by this build):
+    - Peer benchmarking is intentionally NOT included anywhere on this page.
+    - The "Hours saved / Every week" stat is built as specified. If legal
+      wants it tightened, change both instances of the label to "Hours
+      saved on data analysis" with no frequency claim (search "EVERY WEEK
+      STAT" for both locations).
+  ============================================================
+  COLOR REFERENCE
+  --green:   #0D6E65   Accents, section labels, check icons
+  --blue:    #02BECC   Highlights, teal accents
+  --yellow:  #F5E100   All CTA buttons
+  --bg-dark: #092224   Hero + final CTA / footer background
+  --mist:    #E8F4F2   Soft section backgrounds
+  ============================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Credit Union NPS Survey Software | All In Credit Union Grew NPS 60 to 80 | Sogolytics</title>
+  <meta name="description" content="See how All In Credit Union moved Net Promoter Score from 60 to 80 with real-time member feedback and automatic detractor alerts. Request a demo.">
+  <link rel="canonical" href="https://www.sogolytics.com/lp/credit-union-nps-survey/">
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PQJTBL4');</script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0&display=block" rel="stylesheet">
+
+  <!-- Structured data: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "How often should a credit union measure NPS?", "acceptedAnswer": { "@type": "Answer", "text": "Continuously, not annually. Event-triggered surveys after a loan close, account opening, or branch visit give you a score tied to a specific interaction, which is the only version of the number you can actually act on." } },
+      { "@type": "Question", "name": "Can we track NPS separately by branch?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Scores segment by branch, product, member segment, and journey stage, so branch leaders see their own numbers rather than an organization wide average." } },
+      { "@type": "Question", "name": "What happens when a member leaves a low score?", "acceptedAnswer": { "@type": "Answer", "text": "The response routes to the assigned branch manager automatically. Follow up happens while the member interaction is still recent." } },
+      { "@type": "Question", "name": "How is member data and PII handled?", "acceptedAnswer": { "@type": "Answer", "text": "Sogolytics applies security practices aligned with NCUA expectations for member owned, regulated institutions. Data in transit is encrypted using HTTPS with TLS 1.2 and TLS 1.3; data at rest uses AES-256. SOC 2 Type II, ISO/IEC 27001:2022, and GDPR compliant." } },
+      { "@type": "Question", "name": "What is the difference between this and a general survey tool?", "acceptedAnswer": { "@type": "Answer", "text": "Context. A general tool does not know a survey went out right after a loan closed. Sogolytics ties each response to a real member transaction and routes issues to the right person automatically." } },
+      { "@type": "Question", "name": "Does this connect to our core banking system and CRM?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Sogolytics connects through CSV/Excel, Salesforce, or secure SFTP to trigger personalized surveys after a member transaction, with no direct pull from your core systems." } },
+      { "@type": "Question", "name": "Do we need developers to run this?", "acceptedAnswer": { "@type": "Answer", "text": "No. Your team builds and sends surveys directly, with 24/7 support available." } }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Epilogue', system-ui, sans-serif; color: #1a1a1a; background: #fff; -webkit-font-smoothing: antialiased; }
+
+    :root {
+      --green: #0D6E65; --green-dark: #0a5a52; --blue: #02BECC; --yellow: #F5E100; --yellow-hover: #e6d400;
+      --bg-dark: #092224; --bg-dark2: #0a2c28; --mist: #E8F4F2; --text: #1a1a1a; --text-muted: #5a6472;
+      --text-light: #8a94a0; --border: #e2e6ea;
+    }
+
+    .msr { font-family: 'Material Symbols Rounded'; font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24; display: inline-block; }
+
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+    .section-label { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green); margin-bottom: 12px; }
+    .on-dark .section-label { color: var(--blue); }
+    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-in.visible { opacity: 1; transform: none; }
+
+    .nav { position: sticky; top: 0; z-index: 100; background: #ffffff; border-bottom: 1px solid #e2e6ea; box-shadow: 0 1px 8px rgba(0,0,0,0.06); }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 60px; max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+    .nav-logo img { height: 24px; display: block; }
+    .nav-cta { background: var(--yellow); color: #0a1a18; font-size: 13px; font-weight: 700; padding: 8px 20px; border-radius: 50px; text-decoration: none; transition: background 0.2s; white-space: nowrap; }
+    .nav-cta:hover { background: var(--yellow-hover); }
+
+    /* Hero */
+    .hero { background: linear-gradient(135deg, #061a17 0%, var(--bg-dark) 50%, #0d3d37 100%); color: #fff; padding: 76px 24px 64px; text-align: center; }
+    .hero-inner { max-width: 780px; margin: 0 auto; }
+    .hero-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--blue); margin-bottom: 18px; }
+    .hero h1 { font-size: clamp(34px, 5vw, 54px); font-weight: 800; line-height: 1.1; letter-spacing: -0.025em; margin-bottom: 20px; }
+    .hero-sub { font-size: clamp(16px, 1.8vw, 18px); line-height: 1.65; color: rgba(255,255,255,0.8); margin: 0 auto 36px; max-width: 620px; }
+
+    .stat-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 720px; margin: 0 auto 32px; }
+    .stat-strip-item { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.14); border-radius: 12px; padding: 20px 14px; }
+    .stat-strip-val { font-size: clamp(22px, 2.6vw, 28px); font-weight: 800; color: var(--blue); letter-spacing: -0.02em; line-height: 1; margin-bottom: 6px; }
+    .stat-strip-label { font-size: 12.5px; color: rgba(255,255,255,0.65); line-height: 1.35; }
+
+    .trust-strip { display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap; font-size: 12.5px; color: rgba(255,255,255,0.55); margin-bottom: 32px; }
+    .trust-strip span.item { display: flex; align-items: center; gap: 6px; }
+    .trust-strip .dot { width: 4px; height: 4px; border-radius: 50%; background: rgba(255,255,255,0.3); flex-shrink: 0; }
+
+    .btn-pill { display: inline-flex; align-items: center; gap: 10px; background: var(--yellow); color: #0a1a18; font-size: 15px; font-weight: 700; padding: 14px 28px 14px 8px; border-radius: 50px; text-decoration: none; transition: background 0.2s, transform 0.15s; }
+    .btn-pill:hover { background: var(--yellow-hover); transform: translateY(-1px); }
+    .btn-pill .arrow-badge { width: 30px; height: 30px; border-radius: 50%; background: #0a1a18; color: var(--yellow); display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700; flex-shrink: 0; }
+
+    .review-badges { display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 32px; }
+    .review-badge { display: flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.14); border-radius: 10px; padding: 8px 14px; font-size: 13px; color: rgba(255,255,255,0.8); }
+    .review-badge strong { color: #fff; }
+
+    /* Section commons */
+    .section { padding: 84px 24px; }
+    .section-alt { background: var(--mist); }
+    .section-title { font-size: clamp(26px, 3.4vw, 40px); font-weight: 800; letter-spacing: -0.02em; line-height: 1.2; margin-bottom: 16px; }
+    .section-intro { font-size: 16px; color: var(--text-muted); line-height: 1.6; max-width: 620px; margin-bottom: 48px; }
+    .centered { text-align: center; }
+    .centered .section-intro { margin-left: auto; margin-right: auto; }
+    .finale { background: var(--bg-dark); }
+
+    /* Social proof band */
+    .proof-band { background: #fff; border-bottom: 1px solid var(--border); padding: 40px 24px; text-align: center; }
+    .proof-band p { font-size: 13px; font-weight: 600; color: var(--text-muted); letter-spacing: 0.04em; margin-bottom: 20px; }
+    .proof-band-asset { max-width: 720px; margin: 0 auto; height: 44px; background: var(--mist); border: 1px dashed var(--border); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 11px; color: var(--text-light); }
+
+    /* Icon cards (Challenge + Solution) */
+    .card-grid { display: grid; gap: 22px; }
+    .card-grid.g3 { grid-template-columns: repeat(3, 1fr); }
+    .card-grid.g4 { grid-template-columns: repeat(4, 1fr); }
+    .icon-card { background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 30px 26px; transition: transform 0.2s, box-shadow 0.2s; }
+    .icon-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.08); }
+    .icon-card .msr { font-size: 26px; color: var(--green); background: var(--mist); width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 18px; }
+    .icon-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 10px; }
+    .icon-card p { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+
+    /* See it in action */
+    .action-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+    .checklist { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-top: 20px; }
+    .checklist li { display: flex; align-items: flex-start; gap: 10px; font-size: 14.5px; color: var(--text-muted); }
+    .checklist .chk { width: 20px; height: 20px; border-radius: 50%; background: var(--mist); color: var(--green); flex-shrink: 0; display: flex; align-items: center; justify-content: center; margin-top: 1px; font-size: 13px; }
+    .dashboard-asset { aspect-ratio: 4/3; background: var(--mist); border: 1px dashed var(--border); border-radius: 14px; display: flex; align-items: center; justify-content: center; text-align: center; padding: 20px; font-size: 12px; color: var(--text-light); }
+
+    /* Outcomes */
+    .before-after { max-width: 720px; margin: 0 auto 40px; background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 40px; display: flex; align-items: center; justify-content: center; gap: 32px; text-align: center; }
+    .ba-block { flex: 1; }
+    .ba-label { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-light); margin-bottom: 10px; }
+    .ba-value { font-size: clamp(30px, 4vw, 44px); font-weight: 800; letter-spacing: -0.02em; }
+    .ba-block.before .ba-value { color: var(--text-light); }
+    .ba-block.after .ba-value { color: var(--green); }
+    .ba-arrow { font-size: 24px; color: var(--blue); flex-shrink: 0; }
+    .ba-caption { text-align: center; font-size: 13px; color: var(--text-light); max-width: 480px; margin: 0 auto 48px; }
+    .outcome-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 860px; margin: 0 auto; text-align: center; }
+    .outcome-card { background: var(--mist); border-radius: 12px; padding: 26px 18px; }
+    .outcome-card .val { font-size: clamp(24px, 3vw, 30px); font-weight: 800; color: var(--green); margin-bottom: 6px; }
+    .outcome-card .label { font-size: 13px; color: var(--text-muted); }
+
+    /* Testimonials */
+    .testimonial-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .testimonial-card { background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 18px; }
+    .testimonial-quote { font-size: 14.5px; line-height: 1.65; color: var(--text); font-style: italic; }
+    .testimonial-quote::before { content: '\201C'; color: var(--green); }
+    .testimonial-quote::after { content: '\201D'; color: var(--green); }
+    .testimonial-author { display: flex; align-items: center; gap: 12px; }
+    .author-avatar { width: 44px; height: 44px; border-radius: 50%; background: var(--mist); display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700; color: var(--green); flex-shrink: 0; }
+    .author-name { font-size: 13.5px; font-weight: 700; }
+    .author-title { font-size: 12px; color: var(--text-muted); margin-top: 1px; }
+    .testimonial-tag { align-self: flex-start; font-size: 11.5px; font-weight: 700; color: var(--green); background: var(--mist); padding: 5px 12px; border-radius: 20px; }
+
+    /* FAQ */
+    .faq-list { max-width: 760px; margin: 0 auto; }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-question { width: 100%; text-align: left; background: none; border: none; padding: 20px 0; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-family: inherit; font-size: 15px; font-weight: 600; color: var(--text); gap: 16px; }
+    .faq-question:hover { color: var(--green); }
+    .faq-item.open .faq-question { color: var(--green); }
+    .faq-icon { flex-shrink: 0; color: var(--text-light); transition: transform 0.3s; }
+    .faq-item.open .faq-icon { transform: rotate(180deg); color: var(--green); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+    .faq-answer-inner { font-size: 14px; color: var(--text-muted); line-height: 1.7; padding-bottom: 18px; }
+
+    /* Final CTA / form */
+    .final-cta-inner { max-width: 640px; margin: 0 auto; text-align: center; }
+    .final-cta-inner h2 { font-size: clamp(26px, 3.4vw, 38px); font-weight: 800; letter-spacing: -0.02em; margin-bottom: 16px; color: #fff; line-height: 1.25; }
+    .final-cta-inner p.lead { font-size: 16px; color: rgba(255,255,255,0.72); line-height: 1.6; margin-bottom: 32px; }
+    .cta-form-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.14); border-radius: 16px; padding: 30px; backdrop-filter: blur(8px); text-align: left; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 12px; }
+    .form-group label { font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.65); }
+    .form-group input { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); border-radius: 8px; padding: 10px 14px; font-size: 14px; color: #fff; font-family: inherit; width: 100%; outline: none; }
+    .form-group input::placeholder { color: rgba(255,255,255,0.3); }
+    .btn-submit { width: 100%; margin-top: 6px; background: var(--yellow); color: #0a1a18; font-size: 15px; font-weight: 700; padding: 14px 24px; border: none; border-radius: 50px; cursor: pointer; font-family: inherit; display: flex; align-items: center; justify-content: center; gap: 8px; }
+    .btn-submit:hover { background: var(--yellow-hover); }
+    .form-note { font-size: 11px; color: rgba(255,255,255,0.35); text-align: center; margin-top: 10px; }
+
+    /* Footer */
+    .footer { border-top: 1px solid rgba(255,255,255,0.08); color: rgba(255,255,255,0.4); padding: 32px 24px; text-align: center; font-size: 12px; line-height: 1.8; }
+    .footer a { color: rgba(255,255,255,0.4); text-decoration: underline; }
+    .footer-logo { margin-bottom: 16px; }
+    .footer-logo img { height: 20px; opacity: 0.5; }
+    .cookie-banner { position: fixed; bottom: 0; left: 0; right: 0; background: #fff; border-top: 1px solid var(--border); padding: 14px 24px; display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; font-size: 12.5px; color: var(--text-muted); z-index: 200; box-shadow: 0 -4px 16px rgba(0,0,0,0.06); }
+    .cookie-banner button { background: var(--green); color: #fff; border: none; padding: 8px 18px; border-radius: 20px; font-size: 12.5px; font-weight: 700; cursor: pointer; font-family: inherit; }
+
+    @media (max-width: 900px) {
+      .action-wrap { grid-template-columns: 1fr; gap: 32px; }
+      .card-grid.g3, .card-grid.g4 { grid-template-columns: 1fr 1fr; }
+      .outcome-grid { grid-template-columns: 1fr; }
+      .testimonial-grid { grid-template-columns: 1fr; }
+      .before-after { flex-direction: column; gap: 16px; }
+      .ba-arrow { transform: rotate(90deg); }
+    }
+    @media (max-width: 640px) {
+      .stat-strip { grid-template-columns: 1fr; }
+      .card-grid.g3, .card-grid.g4 { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .section { padding: 56px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQJTBL4" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- ═══════════════════════════════════════
+     NAV
+════════════════════════════════════════ -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a class="nav-logo" href="https://www.sogolytics.com" aria-label="Sogolytics home">
+      <img src="https://cdn.sogolytics.com/wp-content/uploads/2022/07/sogolytics-wbg.png" alt="Sogolytics" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <span style="display:none;color:#0D6E65;font-weight:800;font-size:18px;letter-spacing:-0.02em">Sogolytics</span>
+    </a>
+    <a href="#cuBookForm" class="nav-cta">Request a Demo →</a>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════
+     SECTION 1 — HERO
+════════════════════════════════════════ -->
+<section class="hero" aria-labelledby="hero-heading">
+  <div class="hero-inner">
+    <p class="hero-eyebrow">Customer Results &middot; Credit Unions &middot; All In Credit Union</p>
+    <h1 id="hero-heading">NPS from 60 to 80.</h1>
+    <p class="hero-sub">All In Credit Union stopped sifting through spreadsheets and started acting on member feedback. Their Net Promoter Score climbed 20 points.</p>
+
+    <div class="stat-strip fade-in">
+      <div class="stat-strip-item">
+        <div class="stat-strip-val">60 &rarr; 80</div>
+        <div class="stat-strip-label">Net Promoter Score</div>
+      </div>
+      <div class="stat-strip-item">
+        <div class="stat-strip-val">Real time</div>
+        <div class="stat-strip-label">Detractor alerts, not quarterly reports</div>
+      </div>
+      <!-- EVERY WEEK STAT: if legal wants it tightened, remove "Every week," and use "Hours saved on data analysis" -->
+      <div class="stat-strip-item">
+        <div class="stat-strip-val">Hours saved</div>
+        <div class="stat-strip-label">Every week, on data analysis</div>
+      </div>
+    </div>
+
+    <div class="trust-strip fade-in">
+      <span class="item">✓ NCUA-Aware Security Practices</span>
+      <span class="dot"></span>
+      <span class="item">✓ SOC 2 Type II</span>
+      <span class="dot"></span>
+      <span class="item">✓ ISO/IEC 27001:2022</span>
+      <span class="dot"></span>
+      <span class="item">✓ Dedicated Account Manager</span>
+    </div>
+
+    <a href="#cuBookForm" class="btn-pill"><span class="arrow-badge">&rarr;</span>Request a Demo</a>
+
+    <!-- REUSE ASSET: review badge — swap each badge below for the real Capterra/G2/Trustpilot/TrustRadius badge images from the reference page -->
+    <div class="review-badges fade-in">
+      <span class="review-badge"><strong>4.7</strong> Capterra</span>
+      <span class="review-badge"><strong>4.6</strong> G2</span>
+      <span class="review-badge"><strong>4.8</strong> Trustpilot</span>
+      <span class="review-badge"><strong>4.5</strong> TrustRadius</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 2 — SOCIAL PROOF BAND
+════════════════════════════════════════ -->
+<section class="proof-band">
+  <p>Trusted by 32,000+ customers in 96 countries</p>
+  <!-- REUSE ASSET: logo band — swap this placeholder for the existing logo band image/asset used on the reference page -->
+  <div class="proof-band-asset">REUSE ASSET: logo band image from reference page</div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 3 — THE CHALLENGE
+════════════════════════════════════════ -->
+<section class="section" aria-labelledby="challenge-heading">
+  <div class="container">
+    <div class="centered fade-in">
+      <span class="section-label">The Challenge</span>
+      <h2 class="section-title" id="challenge-heading">One survey a year, and a spreadsheet nobody opened.</h2>
+      <p class="section-intro">Most credit unions measure member satisfaction once a year, get a number, and have no idea which branch or which product moved it.</p>
+    </div>
+    <div class="card-grid g3 fade-in">
+      <div class="icon-card">
+        <span class="msr">event_repeat</span>
+        <h3>An annual number, not a signal</h3>
+        <p>An NPS score once a year tells you where you landed. It cannot tell you which member interaction moved it, or when.</p>
+      </div>
+      <div class="icon-card">
+        <span class="msr">table_chart</span>
+        <h3>Data buried in spreadsheets</h3>
+        <p>Responses arrive as raw exports. Someone has to sift, sort, and summarize before anyone can act, and by then the moment has passed.</p>
+      </div>
+      <div class="icon-card">
+        <span class="msr">notifications_off</span>
+        <h3>Detractors nobody hears about</h3>
+        <p>A member leaves a 2 out of 10 and no one is alerted. The follow-up conversation that would have saved the relationship never happens.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 4 — SEE IT IN ACTION
+════════════════════════════════════════ -->
+<section class="section section-alt" aria-labelledby="action-heading">
+  <div class="container">
+    <div class="action-wrap fade-in">
+      <div>
+        <span class="section-label">See it in action</span>
+        <h2 class="section-title" id="action-heading">Your NPS, segmented and live.</h2>
+        <p style="font-size:16px;color:var(--text-muted);line-height:1.6;max-width:480px;">Member scores land on the dashboard as they arrive. Track Net Promoter Score by branch, by product, and by journey stage, not just as one organization wide number.</p>
+        <ul class="checklist">
+          <li><span class="chk">✓</span>NPS, CSAT, and CES tracked in one view</li>
+          <li><span class="chk">✓</span>Segmented by branch, product, and member segment</li>
+          <li><span class="chk">✓</span>Detractor responses flagged the moment they are submitted</li>
+        </ul>
+      </div>
+      <!-- REUSE ASSET: dashboard — swap this placeholder for the SogoCX reporting dashboard image used on the reference page -->
+      <div class="dashboard-asset">REUSE ASSET: SogoCX reporting dashboard screenshot from reference page</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 5 — THE SOLUTION
+════════════════════════════════════════ -->
+<section class="section" aria-labelledby="solution-heading">
+  <div class="container">
+    <div class="centered fade-in">
+      <span class="section-label">The Solution</span>
+      <h2 class="section-title" id="solution-heading">Four changes that moved the score</h2>
+    </div>
+    <div class="card-grid g4 fade-in">
+      <div class="icon-card">
+        <span class="msr">bolt</span>
+        <h3>Event-triggered surveys</h3>
+        <p>Surveys fire after a loan closes, an account opens, or a branch visit ends. Feedback arrives while the interaction is still fresh in the member's mind.</p>
+      </div>
+      <div class="icon-card">
+        <span class="msr">monitoring</span>
+        <h3>Real-time NPS dashboards</h3>
+        <p>Scores update as responses arrive. No waiting for a quarterly rollup to find out something changed.</p>
+      </div>
+      <div class="icon-card">
+        <span class="msr">campaign</span>
+        <h3>Automatic detractor alerts</h3>
+        <p>Low scores route to the right branch manager immediately, so the follow-up happens in hours, not weeks.</p>
+      </div>
+      <div class="icon-card">
+        <span class="msr">psychology</span>
+        <h3>AI sentiment analysis</h3>
+        <p>Open-text comments are read and themed automatically, so the "why" behind the score does not sit unread in a spreadsheet.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 6 — THE OUTCOMES
+════════════════════════════════════════ -->
+<section class="section section-alt" aria-labelledby="outcomes-heading">
+  <div class="container">
+    <div class="centered fade-in">
+      <span class="section-label">The Outcomes</span>
+      <h2 class="section-title" id="outcomes-heading">Twenty points, and hours back every week</h2>
+      <p class="section-intro" style="margin-bottom:40px">All In Credit Union stopped analyzing and started acting. This is the shift.</p>
+    </div>
+
+    <div class="before-after fade-in">
+      <div class="ba-block before">
+        <div class="ba-label">Before Sogolytics</div>
+        <div class="ba-value">NPS 60</div>
+      </div>
+      <div class="ba-arrow">&rarr;</div>
+      <div class="ba-block after">
+        <div class="ba-label">With Sogolytics</div>
+        <div class="ba-value">NPS 80</div>
+      </div>
+    </div>
+    <p class="ba-caption fade-in">All In Credit Union: Net Promoter Score, before and after moving to continuous member feedback.</p>
+
+    <div class="outcome-grid fade-in">
+      <div class="outcome-card">
+        <div class="val">+20 points</div>
+        <div class="label">Net Promoter Score growth</div>
+      </div>
+      <!-- EVERY WEEK STAT: if legal wants it tightened, use "Hours saved on data analysis" with no frequency claim -->
+      <div class="outcome-card">
+        <div class="val">Hours</div>
+        <div class="label">Saved every week on data analysis</div>
+      </div>
+      <div class="outcome-card">
+        <div class="val">Real time</div>
+        <div class="label">From member response to branch manager alert</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 7 — TESTIMONIALS
+════════════════════════════════════════ -->
+<section class="section" aria-labelledby="testimonials-heading">
+  <div class="container">
+    <div class="centered fade-in">
+      <span class="section-label">What Credit Unions Say</span>
+      <h2 class="section-title" id="testimonials-heading">Member feedback, put to work</h2>
+    </div>
+    <div class="testimonial-grid fade-in">
+      <div class="testimonial-card">
+        <!-- REUSE ASSET: headshot — swap for Laurie Flanders' existing headshot from the reference page -->
+        <p class="testimonial-quote">[Reuse the existing Laurie Flanders quote text from the reference page testimonials. Do not rewrite.]</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">LF</div>
+          <div>
+            <div class="author-name">Laurie Flanders</div>
+            <div class="author-title">Sales and Accountability Leader, All In Credit Union</div>
+          </div>
+        </div>
+        <span class="testimonial-tag">NPS grew from 60 to 80</span>
+      </div>
+      <div class="testimonial-card">
+        <!-- REUSE ASSET: headshot — swap for Genice DeCorte's existing headshot from the reference page -->
+        <p class="testimonial-quote">[Reuse the existing Genice DeCorte quote text from the reference page testimonials. Do not rewrite.]</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">GD</div>
+          <div>
+            <div class="author-name">Genice DeCorte</div>
+            <div class="author-title">CEO, HealthShare Credit Union</div>
+          </div>
+        </div>
+        <span class="testimonial-tag">9.45/10 member satisfaction score</span>
+      </div>
+      <div class="testimonial-card">
+        <!-- REUSE ASSET: headshot — swap for Mauricio Jaime's existing headshot from the reference page -->
+        <p class="testimonial-quote">[Reuse the existing Mauricio Jaime quote text from the reference page testimonials. Do not rewrite.]</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">MJ</div>
+          <div>
+            <div class="author-name">Mauricio Jaime</div>
+            <div class="author-title">Regional Manager, First Credit Union</div>
+          </div>
+        </div>
+        <span class="testimonial-tag">6-week reporting gap eliminated</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 8 — FAQ
+════════════════════════════════════════ -->
+<section class="section section-alt" aria-labelledby="faq-heading">
+  <div class="container">
+    <div class="centered fade-in">
+      <span class="section-label">Frequently Asked Questions</span>
+      <h2 class="section-title" id="faq-heading">What credit unions ask before choosing a survey platform</h2>
+    </div>
+    <div class="faq-list fade-in" role="list">
+      <div class="faq-item" role="listitem"><button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">How often should a credit union measure NPS?<svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button><div class="faq-answer"><div class="faq-answer-inner">Continuously, not annually. Event-triggered surveys after a loan close, account opening, or branch visit give you a score tied to a specific interaction, which is the only version of the number you can actually act on.</div></div></div>
+      <div class="faq-item" role="listitem"><button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">Can we track NPS separately by branch?<svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button><div class="faq-answer"><div class="faq-answer-inner">Yes. Scores segment by branch, product, member segment, and journey stage, so branch leaders see their own numbers rather than an organization wide average.</div></div></div>
+      <div class="faq-item" role="listitem"><button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">What happens when a member leaves a low score?<svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button><div class="faq-answer"><div class="faq-answer-inner">The response routes to the assigned branch manager automatically. Follow up happens while the member interaction is still recent.</div></div></div>
+      <div class="faq-item" role="listitem"><button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">How is member data and PII handled?<svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button><div class="faq-answer"><div class="faq-answer-inner">Sogolytics applies security practices aligned with NCUA expectations for member owned, regulated institutions. Data in transit is encrypted using HTTPS with TLS 1.2 and TLS 1.3; data at rest uses AES-256. SOC 2 Type II, ISO/IEC 27001:2022, and GDPR compliant.</div></div></div>
+      <div class="faq-item" role="listitem"><button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">What is the difference between this and a general survey tool?<svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button><div class="faq-answer"><div class="faq-answer-inner">Context. A general tool does not know a survey went out right after a loan closed. Sogolytics ties each response to a real member transaction and routes issues to the right person automatically.</div></div></div>
+      <div class="faq-item" role="listitem"><button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">Does this connect to our core banking system and CRM?<svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button><div class="faq-answer"><div class="faq-answer-inner">Yes. Sogolytics connects through CSV/Excel, Salesforce, or secure SFTP to trigger personalized surveys after a member transaction, with no direct pull from your core systems.</div></div></div>
+      <div class="faq-item" role="listitem"><button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">Do we need developers to run this?<svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button><div class="faq-answer"><div class="faq-answer-inner">No. Your team builds and sends surveys directly, with 24/7 support available.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 9 — CLOSING CTA + FORM + FOOTER
+════════════════════════════════════════ -->
+<div class="finale on-dark">
+  <section class="section" id="closing-cta" aria-labelledby="final-cta-heading">
+    <div class="final-cta-inner fade-in">
+      <h2 id="final-cta-heading">All In moved 20 points. See what your score could do.</h2>
+      <p class="lead">Talk to our team about continuous member feedback for your credit union.</p>
+
+      <!--
+        FORM EMBED — HIGHEST PRIORITY QA ITEM
+        Replace everything inside #cuBookForm with the actual embed for
+        /contact-forms/lp-page-rad-form-cx/, keeping id="cuBookForm" on the
+        wrapping element. Confirm the real embed fires the Lead_SalesForce
+        GTM conversion and passes gclid through to Salesforce before launch.
+      -->
+      <div id="cuBookForm" class="cta-form-card">
+        <form id="cuDemoForm" action="/contact-forms/lp-page-rad-form-cx/" method="POST" onsubmit="handleCuSubmit(event)">
+          <input type="hidden" name="utm_source" id="cu_utm_source">
+          <input type="hidden" name="utm_medium" id="cu_utm_medium">
+          <input type="hidden" name="utm_campaign" id="cu_utm_campaign">
+          <input type="hidden" name="utm_term" id="cu_utm_term">
+          <input type="hidden" name="utm_content" id="cu_utm_content">
+          <input type="hidden" name="gclid" id="cu_gclid">
+          <input type="hidden" name="page_variant" value="credit-union-nps-survey">
+          <div class="form-row">
+            <div class="form-group"><label>First name *</label><input type="text" name="first_name" placeholder="Jane" required autocomplete="given-name"></div>
+            <div class="form-group"><label>Last name *</label><input type="text" name="last_name" placeholder="Smith" required autocomplete="family-name"></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Work email *</label><input type="email" name="email" placeholder="jane@creditunion.org" required autocomplete="email"></div>
+            <div class="form-group"><label>Credit union name *</label><input type="text" name="credit_union" placeholder="All In Credit Union" required autocomplete="organization"></div>
+          </div>
+          <button type="submit" class="btn-submit">
+            <span>Request a Demo</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+          <p class="form-note">By submitting you agree to our Privacy Policy. We never sell your data.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- REUSE ASSET: compliance badge row — swap for the identical footer/compliance badge row used on the reference page -->
+  <footer class="footer">
+    <div class="footer-logo"><img src="https://cdn.sogolytics.com/wp-content/uploads/2022/07/sogolytics-wbg.png" alt="Sogolytics" onerror="this.style.display='none'"></div>
+    © 2026 Sogolytics, Inc. All rights reserved.<br>
+    <a href="https://www.sogolytics.com/privacy-policy/">Privacy Policy</a> ·
+    <a href="https://www.sogolytics.com/terms-of-service/">Terms of Service</a>
+  </footer>
+</div>
+
+<!-- Cookie banner placeholder — swap for the reference page's identical cookie banner markup/copy -->
+<div class="cookie-banner" id="cookieBanner">
+  <span>We use cookies to improve your experience. <a href="https://www.sogolytics.com/privacy-policy/" style="color:var(--green);">Learn more</a></span>
+  <button onclick="document.getElementById('cookieBanner').style.display='none'">Accept</button>
+</div>
+
+<!-- ═══════════════════════════════════════
+     JAVASCRIPT
+════════════════════════════════════════ -->
+<script>
+  (function() {
+    var params = new URLSearchParams(window.location.search);
+    var fields = ['utm_source','utm_medium','utm_campaign','utm_term','utm_content','gclid'];
+    fields.forEach(function(f) {
+      var el = document.getElementById('cu_' + f);
+      if (el && params.get(f)) el.value = params.get(f);
+    });
+  })();
+
+  function toggleFAQ(btn) {
+    var item = btn.closest('.faq-item');
+    var answer = item.querySelector('.faq-answer');
+    var isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(function(el) {
+      el.classList.remove('open');
+      el.querySelector('.faq-answer').style.maxHeight = '0';
+      el.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  }
+
+  function handleCuSubmit(e) {
+    e.preventDefault();
+    var form = e.target;
+    var btn = form.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    btn.querySelector('span').textContent = 'Submitting…';
+    // TODO: this placeholder submit must be replaced by the real
+    // /contact-forms/lp-page-rad-form-cx/ embed, which is responsible for
+    // firing the Lead_SalesForce GTM conversion itself.
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: 'lead_submit', form_id: 'cu_demo_request', page_variant: 'credit-union-nps-survey' });
+    setTimeout(function() {
+      form.innerHTML = '<div style="text-align:center;padding:24px 0"><div style="font-size:40px;margin-bottom:12px">✓</div><h3 style="color:#fff;margin-bottom:8px">You\'re on the calendar!</h3><p style="color:rgba(255,255,255,0.6);font-size:14px">A Sogolytics specialist will reach out within 1 business day.</p></div>';
+    }, 700);
+  }
+
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({ event: 'lp_view', page_variant: 'credit-union-nps-survey', page_type: 'vertical', ad_group: 'CU-Surveys-NPS' });
+
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-in').forEach(function(el) { observer.observe(el); });
+</script>
+
+</body>
+</html>
