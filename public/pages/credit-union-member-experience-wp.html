@@ -1,0 +1,519 @@
+<!--
+  ============================================================
+  SOGOLYTICS — CREDIT UNION MEMBER EXPERIENCE (WordPress / WPBakery snippet)
+  Campaign: CU-MX-US-v1 · Ad group: CU-Member-Experience
+  Anchor customer: First Credit Union (Mauricio Jaime, Regional Manager)
+  ============================================================
+  PASTE THIS into WPBakery → Add Element → Raw HTML, on the EXISTING
+  /lp/credit-union-member-experience/ page. This is an AUDIT/UPDATE
+  snippet, not a full page rebuild — it only touches the sections named
+  below. Do not replace First Credit Union's existing story, stats,
+  testimonials, or FAQ content with this reconstruction; reconcile this
+  against the live page's actual blocks first.
+  ============================================================
+  READ BEFORE PUBLISHING — this was built from the written audit brief
+  without access to the live reference page or its media library.
+
+  AUDIT ITEMS THIS SNIPPET ADDRESSES:
+  1. Hero message match — added the eyebrow "Credit Union Member
+     Experience · First Credit Union" as the exact-phrase bridge above
+     the fold. H1 "Six weeks of waiting. Gone." is kept unchanged.
+  2. Each RSA ad promise gets its own dedicated section, not just an FAQ
+     mention: alerts to branch managers, event-triggered surveys, member
+     + employee feedback in one view, and journey stage mapping — see
+     SECTION 5 (The Solution).
+  3. Form: placeholder pointing at /contact-forms/lp-page-rad-form-cx/
+     anchored at id="cuBookForm" — search "FORM EMBED" below.
+  4. First Credit Union story/stats/testimonials/FAQ: reconstructed from
+     the brief (Mauricio Jaime, Regional Manager, "6-week reporting gap
+     eliminated"), not verified against the live page's exact wording —
+     swap for the real existing copy rather than publishing this as-is.
+
+  ASSET PLACEHOLDERS — same convention as credit-union-nps-survey-wp.html:
+  SOCIAL PROOF LOGO BAND:   Search "REUSE ASSET: logo band"
+  DASHBOARD SCREENSHOT:     Search "REUSE ASSET: dashboard"
+  HERO PHOTO:               Search "REUSE ASSET: photo"
+  TESTIMONIAL HEADSHOTS:    Search "REUSE ASSET: headshot" (x3)
+  COMPLIANCE/FOOTER:        Search "REUSE ASSET: compliance" and
+                            "REUSE ASSET: cookie banner"
+
+  FORM EMBED (HIGHEST PRIORITY):
+    Search "FORM EMBED" near the bottom. Replace the placeholder inside
+    id="cuBookForm" with the real embed/shortcode for
+    /contact-forms/lp-page-rad-form-cx/, keeping id="cuBookForm" on the
+    wrapping element so the nav CTA's #cuBookForm anchor still works.
+    Confirm the real embed fires the Lead_SalesForce conversion in
+    GTM-PQJTBL4 and passes gclid through to Salesforce, and that the
+    anchor scrolls correctly on mobile, before launch.
+  ============================================================
+  DO NOT add <html> <head> <body> <nav> <footer> — WordPress
+  provides those. No @font-face or :root CSS vars needed either.
+  ============================================================
+-->
+
+<!-- ── Responsive layout overrides only ── -->
+<style>
+.lp-grid-3   { display:flex; gap:20px; }
+.lp-grid-4   { display:flex; gap:20px; }
+.lp-two-col  { display:flex; gap:56px; align-items:center; }
+.lp-fade     { opacity:0; transform:translateY(24px); transition:opacity .6s,transform .6s; }
+.lp-fade.on  { opacity:1; transform:none; }
+.lp-faq-answer { max-height:0; overflow:hidden; transition:max-height .35s ease; }
+.lp-faq-item.open .lp-faq-icon { transform:rotate(45deg); }
+.lp-before-after { display:flex; align-items:center; justify-content:center; gap:32px; }
+.lp-hero-photo-wrap { position:relative; max-width:420px; margin:0 auto; }
+.lp-hero-photo-mask { aspect-ratio:4/5; border-radius:20px; overflow:hidden; box-shadow:0 30px 60px rgba(0,0,0,.4); background:#0a2c28; }
+.lp-float-card { position:absolute; background:#0a2c28; border:1px solid rgba(255,255,255,.14); border-radius:14px; padding:12px 14px; box-shadow:0 16px 36px rgba(0,0,0,.4); width:128px; }
+.lp-fc-1 { top:-18px; left:-28px; }
+.lp-fc-2 { top:36%; right:-34px; text-align:center; }
+.lp-fc-3 { bottom:54px; left:-40px; text-align:center; }
+.lp-fc-4 { bottom:-20px; right:-18px; text-align:center; }
+.lp-msr { font-family:'Material Symbols Rounded'; font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24; }
+@media (max-width:980px) {
+  .lp-two-col { flex-direction:column !important; gap:32px !important; }
+  .lp-grid-3, .lp-grid-4 { flex-direction:column !important; }
+  .lp-before-after { flex-direction:column !important; gap:16px !important; }
+}
+@media (max-width:768px) {
+  .lp-float-card { display:none; }
+  .lp-hero-photo-wrap { max-width:300px; }
+}
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PQJTBL4');</script>
+<script>
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({ event: 'lp_view', page_variant: 'credit-union-member-experience', page_type: 'vertical', ad_group: 'CU-Member-Experience' });
+</script>
+
+<!-- ═══════════════════════════════════════════════════
+     SECTION 1 — HERO
+     Audit fix: eyebrow carries the exact-phrase RSA bridge
+     ("Credit Union Member Experience"); H1 kept unchanged.
+════════════════════════════════════════════════════ -->
+<div class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:linear-gradient(135deg,#061a17 0%,#092224 50%,#0d3d37 100%);padding:76px 24px 64px;">
+  <div class="col span_12 color-dark left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding color-dark" data-animation="" data-delay="">
+      <div class="wpb_wrapper lp-two-col" style="max-width:1160px;margin:0 auto;">
+
+        <div style="flex:1.15;min-width:0;">
+          <p style="font-size:1.1rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--color-secondary-v2);margin-bottom:18px;font-family:var(--font-Epilogue-Bold);">Credit Union Member Experience &middot; First Credit Union</p>
+          <h1 class="fs-epilogue-h1 white-text" style="margin-bottom:20px;">Six weeks of waiting. Gone.</h1>
+          <p class="fs-pm white-text" style="opacity:.8;margin-bottom:24px;max-width:480px;">First Credit Union replaced a six-week reporting gap with same-day visibility into member and employee feedback, routed straight to the branch manager who can act on it.</p>
+
+          <div class="lp-fade" style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:1.2rem;color:rgba(255,255,255,.55);font-family:var(--font-Epilogue-Regular);margin-bottom:40px;">
+            <span>&#10003; NCUA-Aware Security Practices</span>
+            <span style="width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.3);flex-shrink:0;"></span>
+            <span>&#10003; SOC 2 Type II</span>
+            <span style="width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.3);flex-shrink:0;"></span>
+            <span>&#10003; ISO/IEC 27001:2022</span>
+            <span style="width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.3);flex-shrink:0;"></span>
+            <span>&#10003; Dedicated Account Manager</span>
+          </div>
+
+          <!-- REUSE ASSET: photo — swap for the reference page's actual hero photo -->
+          <div class="lp-hero-photo-wrap lp-fade">
+            <div class="lp-hero-photo-mask">
+              <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&amp;q=80" alt="Credit union branch manager reviewing member feedback on a laptop" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;">
+            </div>
+            <div class="lp-float-card lp-fc-1">
+              <div style="font-size:.95rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:8px;">Time to Report</div>
+              <div style="font-size:1.5rem;font-weight:800;color:#fff;">6 wks &rarr; Same day</div>
+            </div>
+            <div class="lp-float-card lp-fc-2">
+              <div style="font-size:.95rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:8px;">Alerts Routed</div>
+              <div style="width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto;background:conic-gradient(var(--color-secondary-v2) 0% 100%, rgba(255,255,255,.15) 100% 100%);">
+                <div style="width:34px;height:34px;border-radius:50%;background:#0a2c28;display:flex;align-items:center;justify-content:center;font-size:1.05rem;font-weight:800;color:#fff;">100%</div>
+              </div>
+            </div>
+            <div class="lp-float-card lp-fc-3">
+              <div style="font-size:.95rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:8px;">Feedback Unified</div>
+              <div style="height:7px;background:rgba(255,255,255,.12);border-radius:4px;overflow:hidden;margin-bottom:6px;"><div style="height:100%;width:92%;border-radius:4px;background:var(--color-primary-v2);"></div></div>
+              <div style="font-size:1.3rem;font-weight:800;color:#fff;">92%</div>
+            </div>
+            <div class="lp-float-card lp-fc-4">
+              <div style="font-size:.95rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:8px;">Member Rating</div>
+              <div style="font-size:1.5rem;color:var(--color-neonYellow);letter-spacing:1px;">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FORM EMBED — quick-capture hero duplicate; the primary form/QA note is on the closing CTA below -->
+        <div class="lp-fade" style="flex:.85;min-width:0;background:#fff;border-radius:16px;padding:28px 26px;box-shadow:0 30px 70px rgba(0,0,0,.4);">
+          <h3 style="font-size:1.9rem;font-weight:800;color:var(--color-primary-v2);text-align:center;margin-bottom:8px;font-family:var(--font-Epilogue-Bold);">Book a Personalized Demo</h3>
+          <p style="font-size:1.3rem;color:#5a6472;text-align:center;margin-bottom:20px;line-height:1.5;font-family:var(--font-Epilogue-Regular);">Prefer to talk now? Call a Sogolytics expert at <a href="tel:+17035429558" style="color:#1a1a1a;font-weight:700;text-decoration:none;">+1 (703) 542-9558</a></p>
+          <form action="/contact-forms/lp-page-rad-form-cx/" method="POST">
+            <input type="hidden" name="page_variant" value="credit-union-member-experience-hero">
+            <div style="margin-bottom:12px;"><input type="text" name="full_name" placeholder="Name (First, Last)*" required style="border:1.5px solid #e2e6ea;border-radius:8px;padding:13px 15px;font-size:1.4rem;color:#1a1a1a;width:100%;"></div>
+            <div style="margin-bottom:12px;"><input type="email" name="email" placeholder="Email*" required style="border:1.5px solid #e2e6ea;border-radius:8px;padding:13px 15px;font-size:1.4rem;color:#1a1a1a;width:100%;"></div>
+            <div style="margin-bottom:12px;"><input type="tel" name="phone" placeholder="Phone Number (optional)" style="border:1.5px solid #e2e6ea;border-radius:8px;padding:13px 15px;font-size:1.4rem;color:#1a1a1a;width:100%;"></div>
+            <div style="margin-bottom:12px;"><input type="text" name="organization" placeholder="Organization Name*" required style="border:1.5px solid #e2e6ea;border-radius:8px;padding:13px 15px;font-size:1.4rem;color:#1a1a1a;width:100%;"></div>
+            <button type="submit" class="slide-btn-wrapper slide-button fill-bg" style="width:100%;justify-content:center;">
+              <i class="fa fa-arrow-right"></i>
+              <span>Submit</span>
+            </button>
+          </form>
+          <p style="font-size:1.05rem;color:#8a94a0;text-align:center;margin-top:10px;line-height:1.4;">By submitting you agree to our Privacy Policy. We never sell your data.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     SECTION 2 — SOCIAL PROOF BAND
+════════════════════════════════════════════════════ -->
+<div class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:#fff;border-bottom:1px solid #e2e6ea;padding:40px 24px;text-align:center;">
+  <div class="col span_12 left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding" data-animation="" data-delay="">
+      <div class="wpb_wrapper">
+        <p style="font-size:1.15rem;font-weight:600;color:#5a6472;letter-spacing:.04em;margin-bottom:20px;font-family:var(--font-Epilogue-SemiBold);">Trusted by 32,000+ customers in 96 countries</p>
+        <!-- REUSE ASSET: logo band — swap this placeholder for the existing logo band image used on the reference page -->
+        <div style="max-width:720px;margin:0 auto;height:44px;background:#E8F4F2;border:1px dashed #e2e6ea;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.05rem;color:#8a94a0;">REUSE ASSET: logo band image from reference page</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     SECTION 3 — THE CHALLENGE
+════════════════════════════════════════════════════ -->
+<div class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:#fff;padding:84px 24px;">
+  <div class="col span_12 left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding" data-animation="" data-delay="">
+      <div class="wpb_wrapper" style="max-width:1160px;margin:0 auto;">
+
+        <div class="lp-fade" style="text-align:center;margin-bottom:48px;">
+          <p style="font-size:1.1rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--color-primary-v2);margin-bottom:12px;font-family:var(--font-Epilogue-Bold);">The Challenge</p>
+          <h2 class="fs-epilogue-h2" style="margin-bottom:16px;">A six-week gap between a member's feedback and a manager's response.</h2>
+          <p class="fs-pm" style="color:#5a6472;max-width:640px;margin:0 auto;">First Credit Union's member and employee feedback lived in separate tools, on separate schedules, with no way to route a bad experience to the person who could fix it.</p>
+        </div>
+
+        <div class="lp-fade lp-grid-3">
+          <div style="flex:1;background:#fff;border:1px solid #e2e6ea;border-radius:14px;padding:30px 26px;">
+            <span class="lp-msr" style="font-size:2.6rem;color:var(--color-primary-v2);background:#E8F4F2;width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;">hourglass_top</span>
+            <h3 class="font-Epilogue-Bold" style="font-size:1.8rem;margin-bottom:10px;">A six-week reporting cycle</h3>
+            <p style="font-size:1.4rem;color:#5a6472;line-height:1.6;font-family:var(--font-Epilogue-Regular);">By the time a quarterly report reached a branch manager, the member who left the feedback had already moved on, or moved their account.</p>
+          </div>
+          <div style="flex:1;background:#fff;border:1px solid #e2e6ea;border-radius:14px;padding:30px 26px;">
+            <span class="lp-msr" style="font-size:2.6rem;color:var(--color-primary-v2);background:#E8F4F2;width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;">call_split</span>
+            <h3 class="font-Epilogue-Bold" style="font-size:1.8rem;margin-bottom:10px;">Member and employee feedback, split apart</h3>
+            <p style="font-size:1.4rem;color:#5a6472;line-height:1.6;font-family:var(--font-Epilogue-Regular);">Two separate tools meant two separate stories. No one could see how a branch's employee experience connected to its member experience.</p>
+          </div>
+          <div style="flex:1;background:#fff;border:1px solid #e2e6ea;border-radius:14px;padding:30px 26px;">
+            <span class="lp-msr" style="font-size:2.6rem;color:var(--color-primary-v2);background:#E8F4F2;width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;">person_off</span>
+            <h3 class="font-Epilogue-Bold" style="font-size:1.8rem;margin-bottom:10px;">No owner, no follow-up</h3>
+            <p style="font-size:1.4rem;color:#5a6472;line-height:1.6;font-family:var(--font-Epilogue-Regular);">Feedback arrived in a shared inbox with no assigned owner. Without a name attached, follow-up quietly never happened.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     SECTION 4 — SEE IT IN ACTION
+════════════════════════════════════════════════════ -->
+<div class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:#E8F4F2;padding:84px 24px;">
+  <div class="col span_12 left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding" data-animation="" data-delay="">
+      <div class="wpb_wrapper lp-fade lp-two-col" style="max-width:1160px;margin:0 auto;">
+
+        <div style="flex:1;min-width:0;">
+          <p style="font-size:1.1rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--color-primary-v2);margin-bottom:12px;font-family:var(--font-Epilogue-Bold);">See it in action</p>
+          <h2 class="fs-epilogue-h2" style="margin-bottom:16px;">Member and employee feedback, one view.</h2>
+          <p style="font-size:1.6rem;color:#5a6472;line-height:1.6;max-width:480px;margin-bottom:20px;font-family:var(--font-Epilogue-Regular);">Every response is tagged to the journey stage that produced it, whether that's a loan close, a branch visit, or a new hire's first ninety days, so leadership sees the whole relationship, not two disconnected numbers.</p>
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <p style="font-size:1.4rem;color:#5a6472;font-family:var(--font-Epilogue-Regular);">&#10003; Member and employee feedback in one unified view</p>
+            <p style="font-size:1.4rem;color:#5a6472;font-family:var(--font-Epilogue-Regular);">&#10003; Every response mapped to a journey stage</p>
+            <p style="font-size:1.4rem;color:#5a6472;font-family:var(--font-Epilogue-Regular);">&#10003; Role-based dashboards for branch, region, and executive levels</p>
+          </div>
+        </div>
+
+        <!-- REUSE ASSET: dashboard — swap this placeholder for the SogoCX reporting dashboard image used on the reference page -->
+        <div style="flex:1;min-width:0;aspect-ratio:4/3;background:#fff;border:1px dashed #e2e6ea;border-radius:14px;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;font-size:1.1rem;color:#8a94a0;">REUSE ASSET: SogoCX reporting dashboard screenshot from reference page</div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     SECTION 5 — THE SOLUTION
+     Audit fix: each RSA-promised capability gets its own card.
+════════════════════════════════════════════════════ -->
+<div class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:#fff;padding:84px 24px;">
+  <div class="col span_12 left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding" data-animation="" data-delay="">
+      <div class="wpb_wrapper" style="max-width:1160px;margin:0 auto;">
+
+        <div class="lp-fade" style="text-align:center;margin-bottom:48px;">
+          <p style="font-size:1.1rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--color-primary-v2);margin-bottom:12px;font-family:var(--font-Epilogue-Bold);">The Solution</p>
+          <h2 class="fs-epilogue-h2" style="margin-bottom:0;">Four changes that closed the gap</h2>
+        </div>
+
+        <div class="lp-fade lp-grid-4">
+          <div style="flex:1;background:#fff;border:1px solid #e2e6ea;border-radius:14px;padding:26px 22px;">
+            <span class="lp-msr" style="font-size:2.4rem;color:var(--color-primary-v2);background:#E8F4F2;width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;">bolt</span>
+            <h3 class="font-Epilogue-Bold" style="font-size:1.6rem;margin-bottom:8px;">Event-triggered surveys</h3>
+            <p style="font-size:1.3rem;color:#5a6472;line-height:1.55;font-family:var(--font-Epilogue-Regular);">Surveys fire automatically after a loan closes, a branch visit ends, or an account opens, while the interaction is still fresh.</p>
+          </div>
+          <div style="flex:1;background:#fff;border:1px solid #e2e6ea;border-radius:14px;padding:26px 22px;">
+            <span class="lp-msr" style="font-size:2.4rem;color:var(--color-primary-v2);background:#E8F4F2;width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;">alt_route</span>
+            <h3 class="font-Epilogue-Bold" style="font-size:1.6rem;margin-bottom:8px;">Alerts routed to branch managers</h3>
+            <p style="font-size:1.3rem;color:#5a6472;line-height:1.55;font-family:var(--font-Epilogue-Regular);">A low score routes straight to the branch manager responsible, with full context, instead of sitting in a shared inbox.</p>
+          </div>
+          <div style="flex:1;background:#fff;border:1px solid #e2e6ea;border-radius:14px;padding:26px 22px;">
+            <span class="lp-msr" style="font-size:2.4rem;color:var(--color-primary-v2);background:#E8F4F2;width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;">diversity_3</span>
+            <h3 class="font-Epilogue-Bold" style="font-size:1.6rem;margin-bottom:8px;">Member and employee feedback, one view</h3>
+            <p style="font-size:1.3rem;color:#5a6472;line-height:1.55;font-family:var(--font-Epilogue-Regular);">Both programs run in the same platform with separate workspaces and one leadership view that connects the two stories.</p>
+          </div>
+          <div style="flex:1;background:#fff;border:1px solid #e2e6ea;border-radius:14px;padding:26px 22px;">
+            <span class="lp-msr" style="font-size:2.4rem;color:var(--color-primary-v2);background:#E8F4F2;width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;">route</span>
+            <h3 class="font-Epilogue-Bold" style="font-size:1.6rem;margin-bottom:8px;">Journey stage mapping</h3>
+            <p style="font-size:1.3rem;color:#5a6472;line-height:1.55;font-family:var(--font-Epilogue-Regular);">Every response is tagged to the stage of the member relationship it came from, so you know exactly where to focus.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     SECTION 6 — THE OUTCOMES
+════════════════════════════════════════════════════ -->
+<div class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:#E8F4F2;padding:84px 24px;">
+  <div class="col span_12 left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding" data-animation="" data-delay="">
+      <div class="wpb_wrapper" style="max-width:1160px;margin:0 auto;">
+
+        <div class="lp-fade" style="text-align:center;margin-bottom:40px;">
+          <p style="font-size:1.1rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--color-primary-v2);margin-bottom:12px;font-family:var(--font-Epilogue-Bold);">The Outcomes</p>
+          <h2 class="fs-epilogue-h2" style="margin-bottom:16px;">Six weeks to the same day</h2>
+          <p class="fs-pm" style="color:#5a6472;max-width:640px;margin:0 auto;">First Credit Union stopped waiting on a quarterly report and started acting the same day feedback arrives.</p>
+        </div>
+
+        <div class="lp-fade lp-before-after" style="max-width:720px;margin:0 auto 20px;background:#fff;border:1px solid #e2e6ea;border-radius:16px;padding:40px;text-align:center;">
+          <div style="flex:1;">
+            <div style="font-size:1.1rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#8a94a0;margin-bottom:10px;">Before Sogolytics</div>
+            <div style="font-size:2.6rem;font-weight:800;letter-spacing:-.02em;color:#8a94a0;">6-week reporting gap</div>
+          </div>
+          <div style="font-size:2rem;color:var(--color-secondary-v2);flex-shrink:0;">&rarr;</div>
+          <div style="flex:1;">
+            <div style="font-size:1.1rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#8a94a0;margin-bottom:10px;">With Sogolytics</div>
+            <div style="font-size:2.6rem;font-weight:800;letter-spacing:-.02em;color:var(--color-primary-v2);">Same-day visibility</div>
+          </div>
+        </div>
+        <p class="lp-fade" style="text-align:center;font-size:1.2rem;color:#8a94a0;max-width:480px;margin:0 auto 48px;">First Credit Union: time from member feedback to branch manager visibility, before and after moving to Sogolytics.</p>
+
+        <div class="lp-fade lp-grid-3" style="max-width:860px;margin:0 auto;text-align:center;">
+          <div style="flex:1;background:#fff;border-radius:12px;padding:26px 18px;">
+            <div style="font-size:2.2rem;font-weight:800;color:var(--color-primary-v2);margin-bottom:6px;">6 wks &rarr; Same day</div>
+            <div style="font-size:1.3rem;color:#5a6472;">Reporting gap eliminated</div>
+          </div>
+          <div style="flex:1;background:#fff;border-radius:12px;padding:26px 18px;">
+            <div style="font-size:2.4rem;font-weight:800;color:var(--color-primary-v2);margin-bottom:6px;">100%</div>
+            <div style="font-size:1.3rem;color:#5a6472;">Detractor alerts routed to branch managers</div>
+          </div>
+          <div style="flex:1;background:#fff;border-radius:12px;padding:26px 18px;">
+            <div style="font-size:2.4rem;font-weight:800;color:var(--color-primary-v2);margin-bottom:6px;">One view</div>
+            <div style="font-size:1.3rem;color:#5a6472;">Member and employee feedback, unified</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     SECTION 7 — TESTIMONIALS
+     First Credit Union leads, per this page's ad group.
+════════════════════════════════════════════════════ -->
+<div class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:#fff;padding:84px 24px;">
+  <div class="col span_12 left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding" data-animation="" data-delay="">
+      <div class="wpb_wrapper" style="max-width:1160px;margin:0 auto;">
+
+        <div class="lp-fade" style="text-align:center;margin-bottom:48px;">
+          <p style="font-size:1.1rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--color-primary-v2);margin-bottom:12px;font-family:var(--font-Epilogue-Bold);">What Credit Unions Say</p>
+          <h2 class="fs-epilogue-h2" style="margin-bottom:0;">Feedback, finally acted on</h2>
+        </div>
+
+        <div class="lp-fade lp-grid-3">
+          <div style="flex:1;background:#fff;border:1px solid #e2e6ea;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:18px;">
+            <!-- REUSE ASSET: headshot — swap for Mauricio Jaime's existing headshot from the reference page -->
+            <p style="font-size:1.35rem;line-height:1.65;color:#1a1a1a;font-style:italic;margin:0;font-family:var(--font-Epilogue-Regular);">&ldquo;[Reuse the existing Mauricio Jaime quote text from the reference page testimonials. Do not rewrite.]&rdquo;</p>
+            <div style="display:flex;align-items:center;gap:12px;">
+              <div style="width:44px;height:44px;border-radius:50%;background:#E8F4F2;display:flex;align-items:center;justify-content:center;font-size:1.3rem;font-weight:700;color:var(--color-primary-v2);flex-shrink:0;">MJ</div>
+              <div>
+                <div style="font-size:1.3rem;font-weight:700;">Mauricio Jaime</div>
+                <div style="font-size:1.15rem;color:#5a6472;margin-top:1px;">Regional Manager, First Credit Union</div>
+              </div>
+            </div>
+            <span style="align-self:flex-start;font-size:1.1rem;font-weight:700;color:var(--color-primary-v2);background:#E8F4F2;padding:5px 12px;border-radius:20px;">6-week reporting gap eliminated</span>
+          </div>
+          <div style="flex:1;background:#fff;border:1px solid #e2e6ea;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:18px;">
+            <!-- REUSE ASSET: headshot — swap for Laurie Flanders' existing headshot from the reference page -->
+            <p style="font-size:1.35rem;line-height:1.65;color:#1a1a1a;font-style:italic;margin:0;font-family:var(--font-Epilogue-Regular);">&ldquo;[Reuse the existing Laurie Flanders quote text from the reference page testimonials. Do not rewrite.]&rdquo;</p>
+            <div style="display:flex;align-items:center;gap:12px;">
+              <div style="width:44px;height:44px;border-radius:50%;background:#E8F4F2;display:flex;align-items:center;justify-content:center;font-size:1.3rem;font-weight:700;color:var(--color-primary-v2);flex-shrink:0;">LF</div>
+              <div>
+                <div style="font-size:1.3rem;font-weight:700;">Laurie Flanders</div>
+                <div style="font-size:1.15rem;color:#5a6472;margin-top:1px;">Sales and Accountability Leader, All In Credit Union</div>
+              </div>
+            </div>
+            <span style="align-self:flex-start;font-size:1.1rem;font-weight:700;color:var(--color-primary-v2);background:#E8F4F2;padding:5px 12px;border-radius:20px;">NPS grew from 60 to 80</span>
+          </div>
+          <div style="flex:1;background:#fff;border:1px solid #e2e6ea;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:18px;">
+            <!-- REUSE ASSET: headshot — swap for Genice DeCorte's existing headshot from the reference page -->
+            <p style="font-size:1.35rem;line-height:1.65;color:#1a1a1a;font-style:italic;margin:0;font-family:var(--font-Epilogue-Regular);">&ldquo;[Reuse the existing Genice DeCorte quote text from the reference page testimonials. Do not rewrite.]&rdquo;</p>
+            <div style="display:flex;align-items:center;gap:12px;">
+              <div style="width:44px;height:44px;border-radius:50%;background:#E8F4F2;display:flex;align-items:center;justify-content:center;font-size:1.3rem;font-weight:700;color:var(--color-primary-v2);flex-shrink:0;">GD</div>
+              <div>
+                <div style="font-size:1.3rem;font-weight:700;">Genice DeCorte</div>
+                <div style="font-size:1.15rem;color:#5a6472;margin-top:1px;">CEO, HealthShare Credit Union</div>
+              </div>
+            </div>
+            <span style="align-self:flex-start;font-size:1.1rem;font-weight:700;color:var(--color-primary-v2);background:#E8F4F2;padding:5px 12px;border-radius:20px;">9.45/10 member satisfaction score</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     SECTION 8 — FAQ
+════════════════════════════════════════════════════ -->
+<div class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:#E8F4F2;padding:84px 24px;">
+  <div class="col span_12 left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding" data-animation="" data-delay="">
+      <div class="wpb_wrapper" style="max-width:1160px;margin:0 auto;">
+
+        <div class="lp-fade" style="text-align:center;margin-bottom:48px;">
+          <p style="font-size:1.1rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--color-primary-v2);margin-bottom:12px;font-family:var(--font-Epilogue-Bold);">Frequently Asked Questions</p>
+          <h2 class="fs-epilogue-h2" style="margin-bottom:0;">What credit unions ask about member experience management</h2>
+        </div>
+
+        <div class="lp-fade" style="max-width:760px;margin:0 auto;">
+
+          <div class="lp-faq-item" style="border-bottom:1px solid #e2e6ea;">
+            <button class="lp-faq-question" style="width:100%;background:none;border:none;text-align:left;padding:20px 0;font-size:1.5rem;font-weight:600;color:#1a1a1a;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:var(--font-Epilogue-Bold);">
+              How fast can a low score reach a branch manager?
+              <span class="lp-faq-icon" style="width:24px;height:24px;border-radius:50%;background:#E8F4F2;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.6rem;color:var(--color-primary-v2);font-weight:700;transition:transform .3s;">+</span>
+            </button>
+            <div class="lp-faq-answer"><p style="padding-bottom:20px;font-size:1.4rem;color:#5a6472;line-height:1.7;margin:0;font-family:var(--font-Epilogue-Regular);">Alerts route to the assigned branch manager the moment a response is scored, not at the end of a reporting cycle.</p></div>
+          </div>
+
+          <div class="lp-faq-item" style="border-bottom:1px solid #e2e6ea;">
+            <button class="lp-faq-question" style="width:100%;background:none;border:none;text-align:left;padding:20px 0;font-size:1.5rem;font-weight:600;color:#1a1a1a;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:var(--font-Epilogue-Bold);">
+              Can member and employee feedback live in one view?
+              <span class="lp-faq-icon" style="width:24px;height:24px;border-radius:50%;background:#E8F4F2;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.6rem;color:var(--color-primary-v2);font-weight:700;transition:transform .3s;">+</span>
+            </button>
+            <div class="lp-faq-answer"><p style="padding-bottom:20px;font-size:1.4rem;color:#5a6472;line-height:1.7;margin:0;font-family:var(--font-Epilogue-Regular);">Yes. Member surveys and employee feedback sit in the same platform with separate workspaces and one rolled up view for leadership.</p></div>
+          </div>
+
+          <div class="lp-faq-item" style="border-bottom:1px solid #e2e6ea;">
+            <button class="lp-faq-question" style="width:100%;background:none;border:none;text-align:left;padding:20px 0;font-size:1.5rem;font-weight:600;color:#1a1a1a;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:var(--font-Epilogue-Bold);">
+              What is journey stage mapping?
+              <span class="lp-faq-icon" style="width:24px;height:24px;border-radius:50%;background:#E8F4F2;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.6rem;color:var(--color-primary-v2);font-weight:700;transition:transform .3s;">+</span>
+            </button>
+            <div class="lp-faq-answer"><p style="padding-bottom:20px;font-size:1.4rem;color:#5a6472;line-height:1.7;margin:0;font-family:var(--font-Epilogue-Regular);">Feedback is tagged to the member interaction that triggered it, such as a loan close, account opening, or branch visit, so you see which stage of the relationship needs attention.</p></div>
+          </div>
+
+          <div class="lp-faq-item" style="border-bottom:1px solid #e2e6ea;">
+            <button class="lp-faq-question" style="width:100%;background:none;border:none;text-align:left;padding:20px 0;font-size:1.5rem;font-weight:600;color:#1a1a1a;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:var(--font-Epilogue-Bold);">
+              How is member data and PII handled?
+              <span class="lp-faq-icon" style="width:24px;height:24px;border-radius:50%;background:#E8F4F2;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.6rem;color:var(--color-primary-v2);font-weight:700;transition:transform .3s;">+</span>
+            </button>
+            <div class="lp-faq-answer"><p style="padding-bottom:20px;font-size:1.4rem;color:#5a6472;line-height:1.7;margin:0;font-family:var(--font-Epilogue-Regular);">Sogolytics applies security practices aligned with NCUA expectations for member owned, regulated institutions. Data in transit is encrypted using HTTPS with TLS 1.2 and TLS 1.3; data at rest uses AES-256. SOC 2 Type II, ISO/IEC 27001:2022, and GDPR compliant.</p></div>
+          </div>
+
+          <div class="lp-faq-item" style="border-bottom:1px solid #e2e6ea;">
+            <button class="lp-faq-question" style="width:100%;background:none;border:none;text-align:left;padding:20px 0;font-size:1.5rem;font-weight:600;color:#1a1a1a;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:var(--font-Epilogue-Bold);">
+              Does this connect to our core banking system and CRM?
+              <span class="lp-faq-icon" style="width:24px;height:24px;border-radius:50%;background:#E8F4F2;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.6rem;color:var(--color-primary-v2);font-weight:700;transition:transform .3s;">+</span>
+            </button>
+            <div class="lp-faq-answer"><p style="padding-bottom:20px;font-size:1.4rem;color:#5a6472;line-height:1.7;margin:0;font-family:var(--font-Epilogue-Regular);">Yes. Sogolytics connects through CSV/Excel, Salesforce, or secure SFTP to trigger personalized surveys after a member transaction, with no direct pull from your core systems.</p></div>
+          </div>
+
+          <div class="lp-faq-item" style="border-bottom:1px solid #e2e6ea;">
+            <button class="lp-faq-question" style="width:100%;background:none;border:none;text-align:left;padding:20px 0;font-size:1.5rem;font-weight:600;color:#1a1a1a;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:var(--font-Epilogue-Bold);">
+              Do we need developers to run this?
+              <span class="lp-faq-icon" style="width:24px;height:24px;border-radius:50%;background:#E8F4F2;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.6rem;color:var(--color-primary-v2);font-weight:700;transition:transform .3s;">+</span>
+            </button>
+            <div class="lp-faq-answer"><p style="padding-bottom:20px;font-size:1.4rem;color:#5a6472;line-height:1.7;margin:0;font-family:var(--font-Epilogue-Regular);">No. Your team builds and sends surveys directly, with 24/7 support available.</p></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     SECTION 9 — CLOSING CTA + FORM
+════════════════════════════════════════════════════ -->
+<div class="wpb_row vc_row-fluid full-width-section section section-no-parallax cust-html-section stretch" data-speed="1" style="background:var(--color-deepOcean);padding:84px 24px;">
+  <div class="col span_12 color-dark left">
+    <div class="vc_col-sm-12 wpb_column column_container col no-padding color-dark" data-animation="" data-delay="">
+      <div class="wpb_wrapper lp-fade" style="max-width:640px;margin:0 auto;text-align:center;">
+
+        <h2 class="fs-epilogue-h2 white-text" style="margin-bottom:16px;">First Credit Union closed the gap. See how fast yours could close.</h2>
+        <p style="font-size:1.6rem;color:rgba(255,255,255,.72);line-height:1.6;margin-bottom:32px;font-family:var(--font-Epilogue-Regular);">Talk to our team about connecting member and employee feedback for your credit union.</p>
+
+        <!--
+          FORM EMBED — HIGHEST PRIORITY QA ITEM (per the CU-MX-US-v1 build spec)
+          Replace everything inside id="cuBookForm" with the actual embed
+          or shortcode for /contact-forms/lp-page-rad-form-cx/, keeping
+          id="cuBookForm" on the wrapping element so the nav CTA's
+          #cuBookForm anchor still scrolls here. Confirm the real embed
+          fires the Lead_SalesForce GTM conversion and that gclid passes
+          through to Salesforce, and that the anchor scrolls correctly on
+          mobile, before launch.
+        -->
+        <div id="cuBookForm" style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:30px;text-align:left;">
+          [REPLACE WITH THE FORM EMBED / SHORTCODE FOR /contact-forms/lp-page-rad-form-cx/ — see comment above]
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- REUSE ASSET: compliance badge row — swap for the identical footer/compliance badge row used on the reference page -->
+<!-- REUSE ASSET: cookie banner — swap for the reference page's identical cookie banner markup/copy -->
+
+<!-- ═══════════════════════════════════════════════════
+     JAVASCRIPT — fade-in + FAQ accordion
+════════════════════════════════════════════════════ -->
+<script>
+(function(){
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('on'); obs.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.lp-fade').forEach(function(el){ obs.observe(el); });
+
+  document.querySelectorAll('.lp-faq-question').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var item = btn.closest('.lp-faq-item');
+      var answer = item.querySelector('.lp-faq-answer');
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.lp-faq-item.open').forEach(function(el){
+        el.classList.remove('open');
+        el.querySelector('.lp-faq-answer').style.maxHeight = '0';
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  });
+})();
+</script>
