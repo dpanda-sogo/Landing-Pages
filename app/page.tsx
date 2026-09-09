@@ -9,6 +9,22 @@ export const metadata: Metadata = {
 
 const pages: LandingPage[] = [
   {
+    slug: "pages/credit-union-member-experience.html",
+    title: "Credit Union Member Experience Software",
+    description: "First Credit Union closed a six-week reporting gap with same-day visibility into member and employee feedback, routed straight to branch managers. Ad group CU-Member-Experience, campaign CU-MX-US-v1. Audit/update build on top of the existing live page; asset placeholders and the form embed need to be swapped for the reference page's real assets before launch.",
+    date: "2026-09-09",
+    tag: "Google Ads",
+    htmlFile: "credit-union-member-experience.html",
+  },
+  {
+    slug: "pages/credit-union-nps-survey.html",
+    title: "Credit Union NPS Survey Software",
+    description: "All In Credit Union grew NPS from 60 to 80 with continuous member feedback and automatic detractor alerts. Ad group CU-Surveys-NPS, campaign CU-MX-US-v1. Built from a written spec; asset placeholders and the form embed need to be swapped for the reference page's real assets before launch.",
+    date: "2026-09-09",
+    tag: "Google Ads",
+    htmlFile: "credit-union-nps-survey.html",
+  },
+  {
     slug: "customer-experience-management-software",
     title: "Customer Experience Management Software",
     description: "Google Ads landing page for the core CX management software keyword cluster. Hero+form, comparison table, capabilities grid, how-it-works flow, lead-magnet resource, and trust/testimonials — structured after the K-12 climate page's conversion pattern.",
